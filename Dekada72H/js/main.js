@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all modules
-    Preloader.init();
+    // Preloader.init();
     Navigation.init();
     ScrollAnimations.init();
     ScrollTop.init();
