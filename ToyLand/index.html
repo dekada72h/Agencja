@@ -1,0 +1,2262 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ToyLand - Magiczny sklep z zabawkami dla dzieci. Najlepsze zabawki edukacyjne, kreatywne i interaktywne. Bezpieczne i certyfikowane produkty.">
+    <meta name="keywords" content="zabawki, sklep z zabawkami, zabawki dla dzieci, zabawki edukacyjne, klocki, pluszaki, gry planszowe">
+
+    <title>ToyLand | Magiczny Swiat Zabawek dla Dzieci</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23a855f7' rx='20' width='100' height='100'/><text x='50' y='65' font-size='50' text-anchor='middle' fill='white'>&#9733;</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           TOYLAND - KIDS TOY SHOP WEBSITE
+           Playful, Modern, Futuristic Style
+           ============================================ */
+
+        :root {
+            /* Colors - Playful Futuristic Palette */
+            --purple: #a855f7;
+            --purple-dark: #9333ea;
+            --purple-light: #c084fc;
+            --pink: #ec4899;
+            --pink-light: #f472b6;
+            --blue: #3b82f6;
+            --blue-light: #60a5fa;
+            --cyan: #06b6d4;
+            --yellow: #fbbf24;
+            --orange: #f97316;
+            --green: #22c55e;
+            --navy: #1e1b4b;
+            --navy-light: #312e81;
+            --slate: #475569;
+            --gray: #94a3b8;
+            --light: #f8fafc;
+            --lighter: #fefefe;
+            --white: #ffffff;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--purple) 0%, var(--pink) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+            --gradient-fun: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
+            --gradient-hero: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
+
+            /* Typography */
+            --font-heading: 'Nunito', sans-serif;
+            --font-body: 'Quicksand', sans-serif;
+
+            /* Spacing */
+            --section-padding: 100px;
+            --container-max: 1200px;
+
+            /* Effects */
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px -10px rgba(168, 85, 247, 0.25);
+            --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+
+            /* Border Radius */
+            --radius-sm: 12px;
+            --radius: 20px;
+            --radius-lg: 28px;
+            --radius-xl: 40px;
+            --radius-full: 100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--slate);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--navy);
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+        h4 { font-size: clamp(1rem, 2vw, 1.125rem); }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-primary);
+            padding: 8px 24px;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-header h2 {
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--slate);
+            font-size: 1.125rem;
+        }
+
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: var(--radius-full);
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+            transition: transform var(--transition);
+        }
+
+        .btn:hover svg {
+            transform: translateX(4px);
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(168, 85, 247, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(168, 85, 247, 0.45);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--purple);
+            box-shadow: var(--shadow-card);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 3px solid var(--purple);
+            color: var(--purple);
+        }
+
+        .btn-outline:hover {
+            background: var(--purple);
+            color: var(--white);
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 10px 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: var(--white);
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--navy);
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+        }
+
+        .logo span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--slate);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+            transition: width var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--purple);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled .nav-icon {
+            background: var(--light);
+        }
+
+        .nav-icon:hover {
+            background: var(--purple);
+        }
+
+        .nav-icon:hover svg {
+            stroke: var(--white);
+        }
+
+        .nav-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 2;
+            transition: stroke var(--transition);
+        }
+
+        .navbar.scrolled .nav-icon svg {
+            stroke: var(--slate);
+        }
+
+        .nav-icon-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 20px;
+            height: 20px;
+            background: var(--pink);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-toggle span {
+            width: 24px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled .menu-toggle span {
+            background: var(--navy);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--gradient-hero);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-shapes {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .hero-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+        }
+
+        .hero-shape-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--purple);
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero-shape-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--pink);
+            bottom: -100px;
+            left: -100px;
+        }
+
+        .hero-shape-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--cyan);
+            top: 50%;
+            left: 30%;
+        }
+
+        .hero-stars {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(2px 2px at 20px 30px, white, transparent),
+                              radial-gradient(2px 2px at 40px 70px, white, transparent),
+                              radial-gradient(2px 2px at 50px 160px, white, transparent),
+                              radial-gradient(2px 2px at 90px 40px, white, transparent),
+                              radial-gradient(2px 2px at 130px 80px, white, transparent),
+                              radial-gradient(2px 2px at 160px 120px, white, transparent);
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            animation: twinkle 4s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .hero-badge-emoji {
+            font-size: 1.25rem;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 24px;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+            max-width: 480px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 40px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-feature-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-feature-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--yellow);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .hero-feature span {
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.3;
+            filter: blur(40px);
+        }
+
+        .hero-image-container img {
+            position: relative;
+            max-width: 90%;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-float {
+            position: absolute;
+            background: var(--white);
+            padding: 16px 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hero-float.float-1 {
+            top: 10%;
+            left: 0;
+            animation: floatUp 5s ease-in-out infinite;
+        }
+
+        .hero-float.float-2 {
+            bottom: 20%;
+            right: 0;
+            animation: floatUp 5s ease-in-out infinite 1.5s;
+        }
+
+        .hero-float.float-3 {
+            bottom: 5%;
+            left: 10%;
+            animation: floatUp 5s ease-in-out infinite 3s;
+        }
+
+        @keyframes floatUp {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .float-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .float-icon.purple { background: rgba(168, 85, 247, 0.15); }
+        .float-icon.pink { background: rgba(236, 72, 153, 0.15); }
+        .float-icon.blue { background: rgba(59, 130, 246, 0.15); }
+
+        .float-text h4 {
+            font-size: 0.9375rem;
+            margin-bottom: 2px;
+        }
+
+        .float-text p {
+            font-size: 0.8125rem;
+            color: var(--slate);
+        }
+
+        /* ============================================
+           CATEGORIES SECTION
+           ============================================ */
+        .categories {
+            background: var(--light);
+            position: relative;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 32px 20px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--purple-light);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transition: transform var(--transition);
+        }
+
+        .category-card:hover .category-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .category-icon.purple { background: rgba(168, 85, 247, 0.15); }
+        .category-icon.pink { background: rgba(236, 72, 153, 0.15); }
+        .category-icon.blue { background: rgba(59, 130, 246, 0.15); }
+        .category-icon.cyan { background: rgba(6, 182, 212, 0.15); }
+        .category-icon.yellow { background: rgba(251, 191, 36, 0.15); }
+        .category-icon.green { background: rgba(34, 197, 94, 0.15); }
+
+        .category-card h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .category-card p {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+
+        /* ============================================
+           PRODUCTS SECTION
+           ============================================ */
+        .products {
+            background: var(--white);
+        }
+
+        .products-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .products-tab {
+            padding: 12px 28px;
+            background: var(--light);
+            border: none;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.9375rem;
+            color: var(--slate);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .products-tab:hover,
+        .products-tab.active {
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition);
+            border: 2px solid var(--light);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--purple-light);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--white);
+            z-index: 1;
+        }
+
+        .product-badge.new { background: var(--green); }
+        .product-badge.sale { background: var(--pink); }
+        .product-badge.hot { background: var(--orange); }
+
+        .product-actions {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all var(--transition);
+            z-index: 1;
+        }
+
+        .product-card:hover .product-actions {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .product-action {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+
+        .product-action:hover {
+            background: var(--purple);
+        }
+
+        .product-action:hover svg {
+            stroke: var(--white);
+        }
+
+        .product-action svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--slate);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .product-image {
+            position: relative;
+            background: var(--light);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-category {
+            font-size: 0.8125rem;
+            color: var(--purple);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .product-name {
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .product-rating-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .product-rating svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--yellow);
+        }
+
+        .product-rating span {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .product-price-current {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--purple);
+        }
+
+        .product-price-old {
+            font-size: 1rem;
+            color: var(--gray);
+            text-decoration: line-through;
+        }
+
+        .product-add-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .product-add-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(168, 85, 247, 0.35);
+        }
+
+        .product-add-btn svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .products-cta {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* ============================================
+           FEATURES SECTION
+           ============================================ */
+        .features {
+            background: var(--gradient-hero);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features-shapes {
+            position: absolute;
+            inset: 0;
+        }
+
+        .features-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .features-shape-1 {
+            width: 400px;
+            height: 400px;
+            top: -200px;
+            left: -200px;
+        }
+
+        .features-shape-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -150px;
+            right: -150px;
+        }
+
+        .features .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .features .section-header h2,
+        .features .section-header p {
+            color: var(--white);
+        }
+
+        .features .section-header p {
+            opacity: 0.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 24px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition);
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-8px);
+        }
+
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.5rem;
+        }
+
+        .feature-card h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9375rem;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+           ============================================ */
+        .about {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-images {
+            position: relative;
+        }
+
+        .about-image-main {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-main img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .about-image-float {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 200px;
+            height: 200px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-float-number {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .about-image-float-text {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .about-text h2 {
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            color: var(--slate);
+            margin-bottom: 16px;
+        }
+
+        .about-list {
+            margin: 32px 0;
+        }
+
+        .about-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .about-list-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .about-list-icon svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 3;
+        }
+
+        .about-list span {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* ============================================
+           NEWSLETTER SECTION
+           ============================================ */
+        .newsletter {
+            background: var(--light);
+        }
+
+        .newsletter-card {
+            background: var(--gradient-primary);
+            border-radius: var(--radius-xl);
+            padding: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-shapes {
+            position: absolute;
+            inset: 0;
+        }
+
+        .newsletter-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .newsletter-shape-1 {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -100px;
+        }
+
+        .newsletter-shape-2 {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -50px;
+        }
+
+        .newsletter-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+        }
+
+        .newsletter-content h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .newsletter-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+        }
+
+        .newsletter-form {
+            position: relative;
+            z-index: 1;
+        }
+
+        .newsletter-input-group {
+            display: flex;
+            gap: 12px;
+            background: var(--white);
+            padding: 8px;
+            border-radius: var(--radius-full);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 16px 24px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--navy);
+        }
+
+        .newsletter-input::placeholder {
+            color: var(--gray);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+        }
+
+        .newsletter-submit {
+            padding: 16px 32px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .newsletter-submit:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+        }
+
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .contact-card {
+            background: var(--light);
+            padding: 36px 28px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            background: var(--white);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .contact-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .contact-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .contact-card p {
+            color: var(--slate);
+            font-size: 0.9375rem;
+            line-height: 1.7;
+        }
+
+        .contact-card a {
+            color: var(--purple);
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 46px;
+            height: 46px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--purple);
+            transform: translateY(-4px);
+        }
+
+        .footer-social svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--white);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-size: 1.125rem;
+            margin-bottom: 24px;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            font-size: 0.9375rem;
+            transition: all var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--purple-light);
+            padding-left: 8px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom a {
+            color: var(--purple-light);
+        }
+
+        .footer-payments {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .footer-payments span {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        .footer-payments-icons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .footer-payments-icons img {
+            height: 24px;
+            opacity: 0.7;
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 1024px) {
+            :root {
+                --section-padding: 80px;
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin: 0 auto 40px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-features {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .about-images {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .newsletter-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 60px 40px;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 350px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+                transition: right var(--transition);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu .nav-link {
+                color: var(--slate);
+            }
+
+            .menu-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 60px;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .about-image-float {
+                width: 150px;
+                height: 150px;
+                right: -15px;
+                bottom: -15px;
+            }
+
+            .about-image-float-number {
+                font-size: 2.5rem;
+            }
+
+            .newsletter-card {
+                padding: 40px 24px;
+            }
+
+            .newsletter-input-group {
+                flex-direction: column;
+            }
+
+            .newsletter-submit {
+                width: 100%;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">&#9733;</div>
+                Toy<span>Land</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#categories" class="nav-link">Kategorie</a></li>
+                <li><a href="#products" class="nav-link">Produkty</a></li>
+                <li><a href="#about" class="nav-link">O nas</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#" class="nav-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </a>
+                <a href="#" class="nav-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="nav-icon-badge">3</span>
+                </a>
+                <a href="#" class="nav-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span class="nav-icon-badge">2</span>
+                </a>
+            </div>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-shapes">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
+        <div class="hero-stars"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-emoji">&#127881;</span>
+                    Nowa kolekcja juz dostepna!
+                </div>
+
+                <h1>Magiczny swiat <span class="text-gradient">zabawek</span> dla dzieci</h1>
+
+                <p class="hero-description">
+                    Odkryj najlepsze zabawki edukacyjne, kreatywne i interaktywne.
+                    Bezpieczne, certyfikowane i pelne radosci dla Twojego dziecka!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        Odkryj produkty
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#categories" class="btn btn-secondary">Zobacz kategorie</a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <span>Bezpieczne produkty</span>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">
+                            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <span>Szybka dostawa</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-image-bg"></div>
+                    <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&q=80" alt="Zabawki dla dzieci">
+                </div>
+
+                <div class="hero-float float-1">
+                    <div class="float-icon purple">&#127912;</div>
+                    <div class="float-text">
+                        <h4>Klocki LEGO</h4>
+                        <p>Bestseller 2024</p>
+                    </div>
+                </div>
+
+                <div class="hero-float float-2">
+                    <div class="float-icon pink">&#129505;</div>
+                    <div class="float-text">
+                        <h4>Pluszaki</h4>
+                        <p>Nowa kolekcja</p>
+                    </div>
+                </div>
+
+                <div class="hero-float float-3">
+                    <div class="float-icon blue">&#127922;</div>
+                    <div class="float-text">
+                        <h4>Gry planszowe</h4>
+                        <p>Dla calej rodziny</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories" id="categories">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">&#127873; Kategorie</div>
+                <h2>Odkryj nasze kategorie</h2>
+                <p>Znajdz idealna zabawke dla swojego dziecka w naszych starannie dobranych kategoriach.</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card fade-in">
+                    <div class="category-icon purple">&#127912;</div>
+                    <h4>Klocki</h4>
+                    <p>250+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon pink">&#129505;</div>
+                    <h4>Pluszaki</h4>
+                    <p>180+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon blue">&#127922;</div>
+                    <h4>Gry planszowe</h4>
+                    <p>120+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon cyan">&#128218;</div>
+                    <h4>Edukacyjne</h4>
+                    <p>200+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon yellow">&#128663;</div>
+                    <h4>Pojazdy</h4>
+                    <p>150+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon green">&#127918;</div>
+                    <h4>Elektroniczne</h4>
+                    <p>90+ produktow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">&#11088; Bestsellery</div>
+                <h2>Najpopularniejsze produkty</h2>
+                <p>Sprawdz, co wybieraja inni rodzice dla swoich pociech.</p>
+            </div>
+
+            <div class="products-tabs fade-in">
+                <button class="products-tab active">Wszystkie</button>
+                <button class="products-tab">Klocki</button>
+                <button class="products-tab">Pluszaki</button>
+                <button class="products-tab">Gry</button>
+                <button class="products-tab">Edukacyjne</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <span class="product-badge hot">Hit!</span>
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400&q=80" alt="LEGO Classic">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Klocki</span>
+                        <h3 class="product-name">LEGO Classic - Zestaw Kreatywny</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(128 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">149 zl</span>
+                            <span class="product-price-old">189 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <span class="product-badge new">Nowosc!</span>
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=400&q=80" alt="Pluszowy mis">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pluszaki</span>
+                        <h3 class="product-name">Pluszowy Mis - Przyjaciel Snow</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(89 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">79 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <span class="product-badge sale">-25%</span>
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1611996575749-79a3a250f948?w=400&q=80" alt="Gra planszowa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Gry planszowe</span>
+                        <h3 class="product-name">Dixit - Gra wyobrazni</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(256 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">89 zl</span>
+                            <span class="product-price-old">119 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&q=80" alt="Zestaw naukowy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Edukacyjne</span>
+                        <h3 class="product-name">Maly Naukowiec - Zestaw chemiczny</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(67 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">129 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-cta fade-in">
+                <a href="#" class="btn btn-primary">Zobacz wszystkie produkty</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="features-shapes">
+            <div class="features-shape features-shape-1"></div>
+            <div class="features-shape features-shape-2"></div>
+        </div>
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge" style="background: rgba(255,255,255,0.2);">&#127775; Dlaczego my</div>
+                <h2>Dlaczego rodzice wybieraja ToyLand?</h2>
+                <p>Oferujemy najlepsze zabawki z gwarancja bezpieczenstwa i satysfakcji.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128737;</div>
+                    <h3>Bezpieczne zabawki</h3>
+                    <p>Wszystkie produkty posiadaja certyfikaty bezpieczenstwa i sa testowane.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128666;</div>
+                    <h3>Szybka dostawa</h3>
+                    <p>Wysylka w 24h. Darmowa dostawa przy zamowieniach powyzej 150 zl.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128257;</div>
+                    <h3>Latwy zwrot</h3>
+                    <p>30 dni na bezplatny zwrot, jesli zabawka nie spelni oczekiwan.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#127873;</div>
+                    <h3>Pakowanie na prezent</h3>
+                    <p>Bezplatne pakowanie prezentowe z dedykowana kartka.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-images fade-in">
+                    <div class="about-image-main">
+                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&q=80" alt="Szczesliwe dzieci z zabawkami">
+                    </div>
+                    <div class="about-image-float">
+                        <div class="about-image-float-number">10+</div>
+                        <div class="about-image-float-text">lat na rynku</div>
+                    </div>
+                </div>
+
+                <div class="about-text fade-in">
+                    <div class="section-badge">&#128155; O nas</div>
+                    <h2>Tworzymy radosc dla dzieci</h2>
+                    <p>
+                        ToyLand to wiecej niz sklep - to miejsce, gdzie magia spotyka sie z edukacja.
+                        Od ponad 10 lat pomagamy rodzicom wybierac najlepsze zabawki dla ich pociech.
+                    </p>
+                    <p>
+                        Wspieramy rozwoj dzieci poprzez starannie dobrane zabawki edukacyjne,
+                        kreatywne i interaktywne. Kazdy produkt jest przez nas testowany i sprawdzany.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>
+                            <div class="about-list-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <span>Ponad 10 000 zadowolonych rodzicow</span>
+                        </li>
+                        <li>
+                            <div class="about-list-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <span>Certyfikowane i bezpieczne produkty</span>
+                        </li>
+                        <li>
+                            <div class="about-list-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <span>Eksperci w doborze zabawek rozwojowych</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn-primary">Skontaktuj sie z nami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-shapes">
+                    <div class="newsletter-shape newsletter-shape-1"></div>
+                    <div class="newsletter-shape newsletter-shape-2"></div>
+                </div>
+
+                <div class="newsletter-content fade-in">
+                    <h2>Dolacz do naszego newslettera!</h2>
+                    <p>Otrzymuj informacje o nowosciach, promocjach i specjalnych ofertach. Zapisz sie i odbierz 10% rabatu na pierwsze zakupy!</p>
+                </div>
+
+                <div class="newsletter-form fade-in">
+                    <div class="newsletter-input-group">
+                        <input type="email" class="newsletter-input" placeholder="Wpisz swoj email...">
+                        <button class="newsletter-submit">Zapisz sie</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">&#128222; Kontakt</div>
+                <h2>Masz pytania? Napisz do nas!</h2>
+                <p>Nasz zespol chetnie pomoze Ci wybrac idealna zabawke.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h4>Adres</h4>
+                    <p>ul. Zabawkowa 15<br>00-001 Warszawa</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg>
+                    </div>
+                    <h4>Telefon</h4>
+                    <p><a href="tel:+48221234567">+48 22 123 45 67</a><br>Pn-Pt: 9:00-18:00</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:kontakt@toyland.pl">kontakt@toyland.pl</a></p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h4>Godziny pracy</h4>
+                    <p>Pon-Pt: 9:00-18:00<br>Sob: 10:00-14:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">&#9733;</div>
+                        Toy<span>Land</span>
+                    </a>
+                    <p>Magiczny swiat zabawek dla dzieci w kazdym wieku. Bezpieczne, edukacyjne i pelne radosci produkty dla Twojej rodziny.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Kategorie</h4>
+                    <ul class="footer-links">
+                        <li><a href="#categories">Klocki</a></li>
+                        <li><a href="#categories">Pluszaki</a></li>
+                        <li><a href="#categories">Gry planszowe</a></li>
+                        <li><a href="#categories">Edukacyjne</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Informacje</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">O nas</a></li>
+                        <li><a href="#">Dostawa</a></li>
+                        <li><a href="#">Zwroty</a></li>
+                        <li><a href="#">Regulamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li>ul. Zabawkowa 15</li>
+                        <li>00-001 Warszawa</li>
+                        <li><a href="tel:+48221234567">+48 22 123 45 67</a></li>
+                        <li><a href="mailto:kontakt@toyland.pl">kontakt@toyland.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 ToyLand. Wszystkie prawa zastrzezone. | Strona stworzona przez <a href="../Dekada72H/index.html">Dekada72H</a></p>
+                <div class="footer-payments">
+                    <span>Metody platnosci:</span>
+                    <div class="footer-payments-icons">
+                        <span style="background:#1a1f71;color:white;padding:4px 8px;border-radius:4px;font-size:0.7rem;font-weight:bold;">VISA</span>
+                        <span style="background:#eb001b;color:white;padding:4px 8px;border-radius:4px;font-size:0.7rem;font-weight:bold;">MC</span>
+                        <span style="background:#003087;color:white;padding:4px 8px;border-radius:4px;font-size:0.7rem;font-weight:bold;">PayPal</span>
+                        <span style="background:#ff5a00;color:white;padding:4px 8px;border-radius:4px;font-size:0.7rem;font-weight:bold;">BLIK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Products tabs
+        document.querySelectorAll('.products-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.products-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Add to cart buttons
+        document.querySelectorAll('.product-add-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;"><polyline points="20 6 9 17 4 12"/></svg> Dodano!';
+                btn.style.background = '#22c55e';
+                setTimeout(() => {
+                    btn.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> Dodaj do koszyka';
+                    btn.style.background = '';
+                }, 2000);
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-submit').addEventListener('click', function() {
+            const input = document.querySelector('.newsletter-input');
+            if (input.value) {
+                alert('Dziekujemy za zapisanie sie do newslettera! Twoj kod rabatowy: TOYLAND10');
+                input.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

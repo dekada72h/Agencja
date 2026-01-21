@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DomExpert - Twoja agencja nieruchomości w Warszawie. Sprzedaż, wynajem, doradztwo. Znajdź swój wymarzony dom.">
+    <meta name="keywords" content="nieruchomości, Warszawa, mieszkania, domy, wynajem, sprzedaż, agencja">
+
+    <title>DomExpert | Agencja Nieruchomości - Warszawa</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%231e3a5f' rx='15' width='100' height='100'/><text x='50' y='68' font-size='45' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>DE</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           DOMEXPERT - REAL ESTATE WEBSITE
+           Modern, Professional, Trust-Building
+           ============================================ */
+
+        :root {
+            /* Colors - Professional Blue Palette */
+            --primary: #1e3a5f;
+            --primary-light: #2d5a8a;
+            --primary-dark: #152a45;
+            --accent: #c9a227;
+            --accent-light: #e0b83a;
+            --accent-dark: #a88820;
+            --light: #f8f9fa;
+            --light-gray: #eef1f5;
+            --gray: #6c757d;
+            --gray-dark: #495057;
+            --white: #ffffff;
+            --dark: #1a1a2e;
+
+            /* Typography */
+            --font-heading: 'Montserrat', -apple-system, sans-serif;
+            --font-body: 'Open Sans', -apple-system, sans-serif;
+
+            /* Spacing */
+            --section-padding: 100px;
+            --container-max: 1200px;
+
+            /* Transitions */
+            --transition: 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--gray-dark);
+            background-color: var(--white);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+           ============================================ */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 1.75rem); }
+        h4 { font-size: clamp(1.125rem, 2vw, 1.25rem); }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-family: var(--font-heading);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.125rem;
+        }
+
+        /* ============================================
+           BUTTONS
+           ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 36px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border-radius: 4px;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .btn-dark {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-dark:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           NAVIGATION
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-link {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9375rem;
+            position: relative;
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--gray-dark);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 12px 28px;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--white);
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled .menu-toggle span {
+            background: var(--primary);
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.9), rgba(26, 26, 46, 0.8));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .hero-stat-label {
+            font-size: 0.9375rem;
+            opacity: 0.8;
+        }
+
+        /* ============================================
+           SEARCH SECTION
+           ============================================ */
+        .search-section {
+            background: var(--white);
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-box {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .search-box h3 {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .search-form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) auto;
+            gap: 20px;
+            align-items: end;
+        }
+
+        .search-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .search-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-dark);
+            margin-bottom: 8px;
+        }
+
+        .search-select,
+        .search-input {
+            padding: 14px 16px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--gray-dark);
+            background: var(--light);
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+
+        .search-select:focus,
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: var(--white);
+        }
+
+        .search-btn {
+            height: 52px;
+            padding: 0 40px;
+        }
+
+        /* ============================================
+           PROPERTIES SECTION
+           ============================================ */
+        .properties {
+            background: var(--light);
+        }
+
+        .properties-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .property-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all var(--transition);
+        }
+
+        .property-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .property-image {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .property-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .property-card:hover .property-image img {
+            transform: scale(1.1);
+        }
+
+        .property-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .property-badge.rent {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .property-content {
+            padding: 24px;
+        }
+
+        .property-price {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .property-price span {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .property-title {
+            font-size: 1.125rem;
+            margin-bottom: 12px;
+        }
+
+        .property-location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--gray);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
+        }
+
+        .property-location svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .property-features {
+            display: flex;
+            gap: 20px;
+            padding-top: 16px;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .property-feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            color: var(--gray-dark);
+        }
+
+        .property-feature svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--primary);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .property-card.hidden {
+            display: none;
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--gray);
+        }
+
+        .no-results svg {
+            width: 64px;
+            height: 64px;
+            stroke: var(--gray);
+            fill: none;
+            stroke-width: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .no-results h4 {
+            color: var(--gray-dark);
+            margin-bottom: 10px;
+        }
+
+        .no-results p {
+            margin-bottom: 20px;
+        }
+
+        .no-results .btn {
+            display: inline-flex;
+        }
+
+        /* ============================================
+           SERVICES SECTION
+           ============================================ */
+        .services {
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 50px 30px;
+            border-radius: 12px;
+            background: var(--light);
+            transition: all var(--transition);
+        }
+
+        .service-card:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-card:hover h4,
+        .service-card:hover p {
+            color: var(--white);
+        }
+
+        .service-card:hover .service-icon {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .service-card:hover .service-icon svg {
+            stroke: var(--white);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(30, 58, 95, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            transition: all var(--transition);
+        }
+
+        .service-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: var(--primary);
+            fill: none;
+            stroke-width: 1.5;
+            transition: stroke var(--transition);
+        }
+
+        .service-card h4 {
+            margin-bottom: 16px;
+            transition: color var(--transition);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            transition: color var(--transition);
+        }
+
+        /* ============================================
+           WHY US SECTION
+           ============================================ */
+        .why-us {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .why-us .section-header h2,
+        .why-us .section-header p {
+            color: var(--white);
+        }
+
+        .why-us .section-label {
+            color: var(--accent);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .why-us-item {
+            text-align: center;
+        }
+
+        .why-us-number {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .why-us-item h4 {
+            color: var(--white);
+            margin-bottom: 12px;
+            font-size: 1.125rem;
+        }
+
+        .why-us-item p {
+            opacity: 0.8;
+            font-size: 0.9375rem;
+        }
+
+        /* ============================================
+           TESTIMONIALS SECTION
+           ============================================ */
+        .testimonials {
+            background: var(--light);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            color: var(--accent);
+            opacity: 0.3;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-content p {
+            font-style: italic;
+            color: var(--gray-dark);
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-info span {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent);
+        }
+
+        /* ============================================
+           CONTACT SECTION
+           ============================================ */
+        .contact {
+            background: var(--light);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            background: var(--primary);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .contact-info > p {
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .contact-item-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .contact-item-content h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .contact-item-content p {
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .contact-form-wrapper h3 {
+            margin-bottom: 8px;
+        }
+
+        .contact-form-wrapper > p {
+            color: var(--gray);
+            margin-bottom: 32px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all var(--transition);
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--accent);
+        }
+
+        .footer-social svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--white);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            margin-bottom: 24px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+        }
+
+        /* ============================================
+           ANIMATIONS
+           ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 1200px) {
+            .search-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .search-btn {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 992px) {
+            :root {
+                --section-padding: 80px;
+            }
+
+            .properties-grid,
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-us-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 350px;
+                height: 100vh;
+                background: var(--primary);
+                flex-direction: column;
+                justify-content: center;
+                gap: 30px;
+                transition: right var(--transition);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-link {
+                color: var(--white) !important;
+                font-size: 1.125rem;
+            }
+
+            .menu-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 60px;
+            }
+
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+
+            .search-btn {
+                grid-column: span 1;
+            }
+
+            .properties-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-us-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-info,
+            .contact-form-wrapper {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Dom<span>Expert</span></a>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#properties" class="nav-link">Oferty</a></li>
+                <li><a href="#services" class="nav-link">Uslugi</a></li>
+                <li><a href="#testimonials" class="nav-link">Opinie</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-cta">Bezplatna wycena</a></li>
+            </ul>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Zaufana agencja od 2010 roku
+                </div>
+                <h1>Znajdz swoj wymarzony dom</h1>
+                <p class="hero-description">
+                    Specjalizujemy sie w sprzedazy i wynajmie nieruchomosci w Warszawie i okolicach.
+                    Z nami znajdziesz idealne miejsce do zycia lub inwestycji.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#properties" class="btn btn-primary">Zobacz oferty</a>
+                    <a href="#contact" class="btn btn-outline">Skontaktuj sie</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">500+</div>
+                        <div class="hero-stat-label">Sprzedanych nieruchomosci</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">15</div>
+                        <div class="hero-stat-label">Lat doswiadczenia</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">98%</div>
+                        <div class="hero-stat-label">Zadowolonych klientow</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box fade-in">
+                <h3>Wyszukaj nieruchomosc</h3>
+                <form class="search-form" id="search-form">
+                    <div class="search-group">
+                        <label class="search-label">Typ transakcji</label>
+                        <select class="search-select" id="search-transaction">
+                            <option value="">Wszystkie</option>
+                            <option value="sale">Sprzedaz</option>
+                            <option value="rent">Wynajem</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label class="search-label">Typ nieruchomosci</label>
+                        <select class="search-select" id="search-type">
+                            <option value="">Wszystkie</option>
+                            <option value="apartment">Mieszkanie</option>
+                            <option value="house">Dom</option>
+                            <option value="commercial">Lokal uzytkowy</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label class="search-label">Lokalizacja</label>
+                        <select class="search-select" id="search-location">
+                            <option value="">Wszystkie</option>
+                            <option value="srodmiescie">Srodmiescie</option>
+                            <option value="mokotow">Mokotow</option>
+                            <option value="wilanow">Wilanow</option>
+                            <option value="zoliborz">Zoliborz</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label class="search-label">Budzet do</label>
+                        <select class="search-select" id="search-budget">
+                            <option value="">Bez limitu</option>
+                            <option value="500000">500 000 zl</option>
+                            <option value="1000000">1 000 000 zl</option>
+                            <option value="2000000">2 000 000 zl</option>
+                            <option value="5000000">5 000 000+ zl</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary search-btn">Szukaj</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section class="section properties" id="properties">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Nasze oferty</span>
+                <h2>Wyrozniajace sie nieruchomosci</h2>
+                <p>Poznaj nasz starannie wyselekcjonowany wybor nieruchomosci w najlepszych lokalizacjach.</p>
+            </div>
+
+            <div class="properties-grid" id="properties-grid">
+                <div class="property-card fade-in" data-type="apartment" data-transaction="sale" data-location="mokotow" data-price="1250000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Apartament Mokotow">
+                        <span class="property-badge">Na sprzedaz</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">1 250 000 zl</div>
+                        <h4 class="property-title">Luksusowy apartament z tarasem</h4>
+                        <div class="property-location">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Mokotow, Warszawa
+                        </div>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                                85 m2
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M3 22v-8h4v8"/><path d="M7 22V10h5v12"/><path d="M12 22V6h5v16"/><path d="M17 22V2h4v20"/></svg>
+                                3 pokoje
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                Garaz
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card fade-in" data-type="house" data-transaction="sale" data-location="wilanow" data-price="3500000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Dom Wilanow">
+                        <span class="property-badge">Na sprzedaz</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">3 500 000 zl</div>
+                        <h4 class="property-title">Nowoczesny dom jednorodzinny</h4>
+                        <div class="property-location">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Wilanow, Warszawa
+                        </div>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                                220 m2
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M3 22v-8h4v8"/><path d="M7 22V10h5v12"/><path d="M12 22V6h5v16"/><path d="M17 22V2h4v20"/></svg>
+                                5 pokoi
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Ogrod
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card fade-in" data-type="apartment" data-transaction="rent" data-location="srodmiescie" data-price="5500">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Mieszkanie Centrum">
+                        <span class="property-badge rent">Wynajem</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">5 500 zl <span>/ miesiac</span></div>
+                        <h4 class="property-title">Eleganckie mieszkanie w centrum</h4>
+                        <div class="property-location">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Srodmiescie, Warszawa
+                        </div>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                                65 m2
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M3 22v-8h4v8"/><path d="M7 22V10h5v12"/><path d="M12 22V6h5v16"/><path d="M17 22V2h4v20"/></svg>
+                                2 pokoje
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                Od zaraz
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card fade-in" data-type="apartment" data-transaction="sale" data-location="zoliborz" data-price="890000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Mieszkanie Zoliborz">
+                        <span class="property-badge">Na sprzedaz</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">890 000 zl</div>
+                        <h4 class="property-title">Przytulne mieszkanie na Zoliborzu</h4>
+                        <div class="property-location">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Zoliborz, Warszawa
+                        </div>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                                55 m2
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M3 22v-8h4v8"/><path d="M7 22V10h5v12"/><path d="M12 22V6h5v16"/><path d="M17 22V2h4v20"/></svg>
+                                2 pokoje
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                                Balkon
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card fade-in" data-type="commercial" data-transaction="rent" data-location="srodmiescie" data-price="8000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Lokal uzytkowy">
+                        <span class="property-badge rent">Wynajem</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">8 000 zl <span>/ miesiac</span></div>
+                        <h4 class="property-title">Lokal uzytkowy w centrum</h4>
+                        <div class="property-location">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Srodmiescie, Warszawa
+                        </div>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                                120 m2
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M3 22v-8h4v8"/><path d="M7 22V10h5v12"/><path d="M12 22V6h5v16"/><path d="M17 22V2h4v20"/></svg>
+                                Open space
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                Parking
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="property-card fade-in" data-type="house" data-transaction="sale" data-location="mokotow" data-price="2100000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Dom Mokotow">
+                        <span class="property-badge">Na sprzedaz</span>
+                    </div>
+                    <div class="property-content">
+                        <div class="property-price">2 100 000 zl</div>
+                        <h4 class="property-title">Nowoczesna willa z basenem</h4>
+                        <div class="property-location">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Mokotow, Warszawa
+                        </div>
+                        <div class="property-features">
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                                180 m2
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M3 22v-8h4v8"/><path d="M7 22V10h5v12"/><path d="M12 22V6h5v16"/><path d="M17 22V2h4v20"/></svg>
+                                4 pokoje
+                            </div>
+                            <div class="property-feature">
+                                <svg viewBox="0 0 24 24"><path d="M2 12h6v8H2z"/><path d="M14 4h6v16h-6z"/><path d="M8 8h6v12H8z"/></svg>
+                                Basen
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#" class="btn btn-dark">Zobacz wszystkie oferty</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Co oferujemy</span>
+                <h2>Pelne wsparcie w obrocie nieruchomosciami</h2>
+                <p>Od poszukiwania wymarzonego domu po finalizacje transakcji - jestesmy z Toba na kazdym kroku.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>Sprzedaz nieruchomosci</h4>
+                    <p>Profesjonalna obsluga sprzedazy z kompleksowym marketingiem, sesjami zdjeciowymi i szeroka promocja.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h4>Wynajem</h4>
+                    <p>Pomagamy znalezc idealnych najemcow lub lokale do wynajecia. Weryfikacja i przygotowanie umow.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Doradztwo</h4>
+                    <p>Bezplatne konsultacje, wyceny nieruchomosci i doradztwo inwestycyjne od ekspertow rynku.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="section why-us" id="why-us">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Dlaczego my</span>
+                <h2>Zaufaj ekspertom z doswiadczeniem</h2>
+                <p>Od 15 lat pomagamy naszym klientom realizowac marzenia o idealnej nieruchomosci.</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-us-item fade-in">
+                    <div class="why-us-number">15</div>
+                    <h4>Lat na rynku</h4>
+                    <p>Doswiadczenie budowane przez lata</p>
+                </div>
+                <div class="why-us-item fade-in">
+                    <div class="why-us-number">500+</div>
+                    <h4>Transakcji</h4>
+                    <p>Pomyslnie sfinalizowanych</p>
+                </div>
+                <div class="why-us-item fade-in">
+                    <div class="why-us-number">98%</div>
+                    <h4>Zadowolenia</h4>
+                    <p>Klientow poleca nasze uslugi</p>
+                </div>
+                <div class="why-us-item fade-in">
+                    <div class="why-us-number">24h</div>
+                    <h4>Odpowiedz</h4>
+                    <p>Czas reakcji na zapytania</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Opinie klientow</span>
+                <h2>Co mowia o nas klienci</h2>
+                <p>Poznaj opinie osob, ktorym pomoglismy znalezc wymarzone nieruchomosci.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>Profesjonalna obsluga od poczatku do konca. Pan Marek pomogl nam znalezc idealne mieszkanie na Mokotowie w zaledwie dwa tygodnie. Polecam kazdemu!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Klient" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Tomasz Nowicki</h4>
+                            <span>Kupil mieszkanie na Mokotowie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>Sprzedaz domu w Wilanowie przebiegla sprawnie i bez stresu. DomExpert zajal sie wszystkim - od wyceny po finalizacje u notariusza. Rewelacyjna wspolpraca!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Klient" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Anna Kowalczyk</h4>
+                            <span>Sprzedala dom w Wilanowie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>Jako inwestor korzystam z uslug DomExpert od lat. Zawsze trafne analizy rynku i swietne okazje inwestycyjne. Polecam dla kazdego, kto szuka solidnego partnera.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Klient" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Piotr Wisniewski</h4>
+                            <span>Inwestor nieruchomosciowy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Skontaktuj sie z nami</h3>
+                    <p>Masz pytania? Chcesz sprzedac lub kupic nieruchomosc? Jestesmy do Twojej dyspozycji!</p>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Adres biura</h4>
+                            <p>ul. Marszalkowska 100<br>00-001 Warszawa</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Telefon</h4>
+                            <p>+48 22 123 45 67</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Email</h4>
+                            <p><a href="mailto:kontakt@domexpert.pl" style="color: inherit;">kontakt@domexpert.pl</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h4>Godziny otwarcia</h4>
+                            <p>Pon - Pt: 9:00 - 18:00<br>Sob: 10:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper fade-in">
+                    <h3>Wyslij zapytanie</h3>
+                    <p>Wypelnij formularz, a skontaktujemy sie z Toba w ciagu 24 godzin.</p>
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Imie i nazwisko</label>
+                                <input type="text" class="form-input" placeholder="Jan Kowalski" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Telefon</label>
+                                <input type="tel" class="form-input" placeholder="+48 123 456 789" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="jan@email.pl" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Czym jestes zainteresowany?</label>
+                            <select class="form-select">
+                                <option value="">Wybierz</option>
+                                <option value="buy">Chce kupic nieruchomosc</option>
+                                <option value="sell">Chce sprzedac nieruchomosc</option>
+                                <option value="rent">Szukam wynajmu</option>
+                                <option value="invest">Doradztwo inwestycyjne</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Wiadomosc</label>
+                            <textarea class="form-textarea" placeholder="Opisz swoje potrzeby..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit">Wyslij zapytanie</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Dom<span>Expert</span></a>
+                    <p>Twoja zaufana agencja nieruchomosci w Warszawie. Pomagamy realizowac marzenia o idealnym domu od 2010 roku.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Nawigacja</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Oferty</a></li>
+                        <li><a href="#services">Uslugi</a></li>
+                        <li><a href="#testimonials">Opinie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Uslugi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sprzedaz</a></li>
+                        <li><a href="#">Wynajem</a></li>
+                        <li><a href="#">Wyceny</a></li>
+                        <li><a href="#">Doradztwo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li>ul. Marszalkowska 100</li>
+                        <li>00-001 Warszawa</li>
+                        <li><a href="tel:+48221234567">+48 22 123 45 67</a></li>
+                        <li><a href="mailto:kontakt@domexpert.pl">kontakt@domexpert.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DomExpert. Wszystkie prawa zastrzezone.</p>
+                <p>Strona stworzona przez <a href="../Dekada72H/index.html">Dekada72H</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle with animation
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -100px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Search/Filter functionality
+        const searchForm = document.getElementById('search-form');
+        const propertiesGrid = document.getElementById('properties-grid');
+        const propertyCards = document.querySelectorAll('.property-card');
+
+        function filterProperties() {
+            const transaction = document.getElementById('search-transaction').value;
+            const type = document.getElementById('search-type').value;
+            const location = document.getElementById('search-location').value;
+            const budget = document.getElementById('search-budget').value;
+
+            let visibleCount = 0;
+
+            propertyCards.forEach(card => {
+                const cardTransaction = card.dataset.transaction;
+                const cardType = card.dataset.type;
+                const cardLocation = card.dataset.location;
+                const cardPrice = parseInt(card.dataset.price);
+
+                let show = true;
+
+                if (transaction && cardTransaction !== transaction) show = false;
+                if (type && cardType !== type) show = false;
+                if (location && cardLocation !== location) show = false;
+                if (budget && cardPrice > parseInt(budget)) show = false;
+
+                if (show) {
+                    card.classList.remove('hidden');
+                    card.classList.add('visible');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Handle no results message
+            const existingNoResults = propertiesGrid.querySelector('.no-results');
+            if (existingNoResults) {
+                existingNoResults.remove();
+            }
+
+            if (visibleCount === 0) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results fade-in visible';
+                noResults.innerHTML = `
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <h4>Brak wynikow</h4>
+                    <p>Nie znalezlismy nieruchomosci spelniajacej Twoje kryteria.</p>
+                    <button type="button" class="btn btn-dark" onclick="resetFilters()">Wyczysc filtry</button>
+                `;
+                propertiesGrid.appendChild(noResults);
+            }
+
+            // Scroll to properties section
+            const propertiesSection = document.getElementById('properties');
+            const offset = 80;
+            const targetPosition = propertiesSection.offsetTop - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        function resetFilters() {
+            document.getElementById('search-transaction').value = '';
+            document.getElementById('search-type').value = '';
+            document.getElementById('search-location').value = '';
+            document.getElementById('search-budget').value = '';
+
+            propertyCards.forEach(card => {
+                card.classList.remove('hidden');
+                card.classList.add('visible');
+            });
+
+            const existingNoResults = propertiesGrid.querySelector('.no-results');
+            if (existingNoResults) {
+                existingNoResults.remove();
+            }
+        }
+
+        searchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            filterProperties();
+        });
+
+        // Contact form submission with validation
+        const contactForm = document.querySelector('.contact-form-wrapper form');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = this.querySelector('input[type="text"]');
+            const phone = this.querySelector('input[type="tel"]');
+            const email = this.querySelector('input[type="email"]');
+            const interest = this.querySelector('select');
+            const message = this.querySelector('textarea');
+
+            let isValid = true;
+
+            // Clear previous errors
+            this.querySelectorAll('.form-error').forEach(err => err.remove());
+            this.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
+                input.style.borderColor = '';
+            });
+
+            // Validate name
+            if (!name.value.trim() || name.value.trim().length < 3) {
+                showError(name, 'Prosze podac imie i nazwisko (min. 3 znaki)');
+                isValid = false;
+            }
+
+            // Validate phone
+            const phoneRegex = /^[\d\s\+\-]{9,}$/;
+            if (!phoneRegex.test(phone.value.trim())) {
+                showError(phone, 'Prosze podac prawidlowy numer telefonu');
+                isValid = false;
+            }
+
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                showError(email, 'Prosze podac prawidlowy adres email');
+                isValid = false;
+            }
+
+            // Validate interest selection
+            if (!interest.value) {
+                showError(interest, 'Prosze wybrac temat zapytania');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Show success message
+                const btn = this.querySelector('.form-submit');
+                const originalText = btn.textContent;
+                btn.textContent = 'Wysylanie...';
+                btn.disabled = true;
+
+                setTimeout(() => {
+                    showSuccessMessage();
+                    this.reset();
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                }, 1000);
+            }
+        });
+
+        function showError(input, message) {
+            input.style.borderColor = '#dc3545';
+            const error = document.createElement('span');
+            error.className = 'form-error';
+            error.style.cssText = 'color: #dc3545; font-size: 0.8rem; display: block; margin-top: 5px;';
+            error.textContent = message;
+            input.parentNode.appendChild(error);
+        }
+
+        function showSuccessMessage() {
+            const wrapper = document.querySelector('.contact-form-wrapper');
+            const existingSuccess = wrapper.querySelector('.success-message');
+            if (existingSuccess) existingSuccess.remove();
+
+            const success = document.createElement('div');
+            success.className = 'success-message';
+            success.style.cssText = 'background: #d4edda; color: #155724; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;';
+            success.innerHTML = `
+                <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span>Dziekujemy za wiadomosc! Skontaktujemy sie wkrotce.</span>
+            `;
+            wrapper.insertBefore(success, wrapper.querySelector('form'));
+
+            setTimeout(() => {
+                success.style.transition = 'opacity 0.5s';
+                success.style.opacity = '0';
+                setTimeout(() => success.remove(), 500);
+            }, 5000);
+        }
+
+        // Dynamic copyright year
+        document.querySelector('.footer-bottom p').innerHTML =
+            document.querySelector('.footer-bottom p').innerHTML.replace('2024', new Date().getFullYear());
+    </script>
+</body>
+</html>
