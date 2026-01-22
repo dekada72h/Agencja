@@ -1,0 +1,1985 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PetZone - Sklep zoologiczny dla Twojego pupila. Karma, akcesoria, zabawki i wszystko czego potrzebuje Twoj zwierzak.">
+    <meta name="keywords" content="sklep zoologiczny, karma dla psa, karma dla kota, akcesoria dla zwierzat, zabawki dla psa">
+
+    <title>PetZone | Sklep Zoologiczny dla Twojego Pupila</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23f97316' rx='20' width='100' height='100'/><text x='50' y='70' font-size='60' text-anchor='middle'>&#128054;</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           PETZONE - FRIENDLY PET SHOP
+           Warm, Playful, Trustworthy Style
+           ============================================ */
+
+        :root {
+            /* Colors - Warm Pet-Friendly Palette */
+            --orange: #f97316;
+            --orange-dark: #ea580c;
+            --orange-light: #fb923c;
+            --green: #22c55e;
+            --green-dark: #16a34a;
+            --green-light: #4ade80;
+            --brown: #92400e;
+            --brown-light: #b45309;
+            --cream: #fef3c7;
+            --beige: #fdf4e7;
+            --navy: #1e293b;
+            --slate: #475569;
+            --gray: #94a3b8;
+            --light: #fefce8;
+            --lighter: #fffbeb;
+            --white: #ffffff;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
+            --gradient-warm: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+
+            /* Typography */
+            --font-heading: 'Fredoka', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+
+            /* Spacing */
+            --section-padding: 100px;
+            --container-max: 1200px;
+
+            /* Effects */
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px -10px rgba(249, 115, 22, 0.2);
+            --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+
+            /* Border Radius */
+            --radius-sm: 12px;
+            --radius: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --radius-full: 100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--slate);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--navy);
+        }
+
+        h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+        h3 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--cream);
+            color: var(--orange);
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--slate);
+            font-size: 1.125rem;
+        }
+
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: var(--radius-full);
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+            transition: transform var(--transition);
+        }
+
+        .btn:hover svg {
+            transform: translateX(4px);
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--orange);
+            border: 3px solid var(--orange);
+        }
+
+        .btn-secondary:hover {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 10px 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.625rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--navy);
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .logo span {
+            color: var(--orange-light);
+        }
+
+        .navbar.scrolled .logo span {
+            color: var(--orange);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--slate);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: var(--orange);
+            border-radius: 3px;
+            transition: width var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--orange-light);
+        }
+
+        .navbar.scrolled .nav-link:hover {
+            color: var(--orange);
+        }
+
+        .nav-cart {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled .nav-cart {
+            background: var(--cream);
+        }
+
+        .nav-cart:hover {
+            background: var(--orange);
+        }
+
+        .nav-cart:hover svg {
+            stroke: var(--white);
+        }
+
+        .nav-cart svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .navbar.scrolled .nav-cart svg {
+            stroke: var(--orange);
+        }
+
+        .nav-cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            width: 22px;
+            height: 22px;
+            background: var(--green);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-toggle span {
+            width: 26px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 3px;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled .menu-toggle span {
+            background: var(--navy);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(249, 115, 22, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 40%);
+        }
+
+        .hero-paws {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ctext x='30' y='35' font-size='30' text-anchor='middle' fill='white'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E");
+            background-size: 100px 100px;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(249, 115, 22, 0.2);
+            border: 1px solid rgba(249, 115, 22, 0.3);
+            padding: 10px 24px;
+            border-radius: var(--radius-full);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 36px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 40px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .hero-feature-icon {
+            width: 52px;
+            height: 52px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .hero-feature span {
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image-container {
+            position: relative;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            opacity: 0.2;
+            filter: blur(60px);
+        }
+
+        .hero-image-container img {
+            position: relative;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-float {
+            position: absolute;
+            background: var(--white);
+            padding: 16px 24px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hero-float.float-1 {
+            top: 10%;
+            left: -20px;
+            animation: floatUp 4s ease-in-out infinite;
+        }
+
+        .hero-float.float-2 {
+            bottom: 20%;
+            right: -20px;
+            animation: floatUp 4s ease-in-out infinite 1.5s;
+        }
+
+        @keyframes floatUp {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .float-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .float-icon.orange { background: rgba(249, 115, 22, 0.15); }
+        .float-icon.green { background: rgba(34, 197, 94, 0.15); }
+
+        .float-text h4 {
+            font-size: 0.9375rem;
+            margin-bottom: 2px;
+        }
+
+        .float-text p {
+            font-size: 0.8125rem;
+            color: var(--slate);
+        }
+
+        /* Categories Section */
+        .categories {
+            background: var(--lighter);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 32px 20px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition);
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .category-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 16px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            transition: transform var(--transition);
+        }
+
+        .category-card:hover .category-icon {
+            transform: scale(1.1);
+        }
+
+        .category-icon.dogs { background: rgba(249, 115, 22, 0.15); }
+        .category-icon.cats { background: rgba(168, 85, 247, 0.15); }
+        .category-icon.birds { background: rgba(59, 130, 246, 0.15); }
+        .category-icon.fish { background: rgba(6, 182, 212, 0.15); }
+        .category-icon.small { background: rgba(34, 197, 94, 0.15); }
+
+        .category-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 6px;
+        }
+
+        .category-card p {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition);
+            border: 2px solid var(--light);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--orange-light);
+        }
+
+        .product-image {
+            position: relative;
+            background: var(--lighter);
+            padding: 20px;
+            aspect-ratio: 1;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius);
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 6px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .product-badge.new { background: var(--green); }
+        .product-badge.sale { background: var(--orange); }
+        .product-badge.popular { background: #a855f7; }
+
+        .product-actions {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all var(--transition);
+        }
+
+        .product-card:hover .product-actions {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .product-action {
+            width: 40px;
+            height: 40px;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .product-action:hover {
+            background: var(--orange);
+        }
+
+        .product-action:hover svg {
+            stroke: var(--white);
+        }
+
+        .product-action svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--slate);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .product-info {
+            padding: 24px;
+        }
+
+        .product-category {
+            font-size: 0.8125rem;
+            color: var(--orange);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .product-name {
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+
+        .product-rating-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .product-rating svg {
+            width: 16px;
+            height: 16px;
+            fill: #fbbf24;
+        }
+
+        .product-rating span {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .product-price-current {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--orange);
+        }
+
+        .product-price-old {
+            font-size: 1rem;
+            color: var(--gray);
+            text-decoration: line-through;
+        }
+
+        .product-add-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            transition: all var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .product-add-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.35);
+        }
+
+        .product-add-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--gradient-primary);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ctext x='30' y='35' font-size='25' text-anchor='middle' fill='white'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E");
+            background-size: 80px 80px;
+        }
+
+        .features .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .features .section-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        .features .section-header h2,
+        .features .section-header p {
+            color: var(--white);
+        }
+
+        .features .section-header p {
+            opacity: 0.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 36px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition);
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2.5rem;
+        }
+
+        .feature-card h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9375rem;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-images {
+            position: relative;
+        }
+
+        .about-image-main {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-main img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+        }
+
+        .about-image-float {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            width: 180px;
+            height: 180px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image-float-number {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .about-image-float-text {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .about-text h2 {
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            color: var(--slate);
+            margin-bottom: 16px;
+        }
+
+        .about-list {
+            margin: 32px 0;
+        }
+
+        .about-list li {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .about-list-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .about-list-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 3;
+        }
+
+        .about-list span {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: var(--lighter);
+        }
+
+        .newsletter-card {
+            background: linear-gradient(135deg, var(--navy) 0%, #334155 100%);
+            border-radius: var(--radius-xl);
+            padding: 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ctext x='30' y='35' font-size='25' text-anchor='middle' fill='white'%3E%F0%9F%90%BE%3C/text%3E%3C/svg%3E");
+            background-size: 80px 80px;
+        }
+
+        .newsletter-content {
+            position: relative;
+            z-index: 1;
+            color: var(--white);
+        }
+
+        .newsletter-content h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .newsletter-content p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.125rem;
+        }
+
+        .newsletter-form {
+            position: relative;
+            z-index: 1;
+        }
+
+        .newsletter-input-group {
+            display: flex;
+            gap: 12px;
+            background: var(--white);
+            padding: 8px;
+            border-radius: var(--radius-full);
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 16px 24px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--navy);
+        }
+
+        .newsletter-input::placeholder {
+            color: var(--gray);
+        }
+
+        .newsletter-input:focus {
+            outline: none;
+        }
+
+        .newsletter-submit {
+            padding: 16px 32px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-full);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .newsletter-submit:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .contact-card {
+            background: var(--lighter);
+            padding: 32px 24px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .contact-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .contact-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+
+        .contact-card a {
+            color: var(--orange);
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 60px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--orange);
+            transform: translateY(-4px);
+        }
+
+        .footer-social svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--white);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            font-size: 0.9375rem;
+            transition: all var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--orange-light);
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom a {
+            color: var(--orange-light);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            :root {
+                --section-padding: 80px;
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin: 0 auto 36px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-features {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .about-images {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .newsletter-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 60px 40px;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+                transition: right var(--transition);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu .nav-link {
+                color: var(--slate);
+            }
+
+            .menu-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 60px;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .about-image-float {
+                width: 140px;
+                height: 140px;
+                right: -15px;
+                bottom: -15px;
+            }
+
+            .about-image-float-number {
+                font-size: 2.5rem;
+            }
+
+            .newsletter-card {
+                padding: 40px 24px;
+            }
+
+            .newsletter-input-group {
+                flex-direction: column;
+            }
+
+            .newsletter-submit {
+                width: 100%;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">&#128054;</div>
+                Pet<span>Zone</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#categories" class="nav-link">Kategorie</a></li>
+                <li><a href="#products" class="nav-link">Produkty</a></li>
+                <li><a href="#about" class="nav-link">O nas</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+
+            <a href="#" class="nav-cart">
+                <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                <span class="nav-cart-badge">3</span>
+            </a>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-paws"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    &#128062; Darmowa dostawa od 99 zl!
+                </div>
+
+                <h1>Wszystko dla <span class="text-gradient">Twojego pupila</span> w jednym miejscu</h1>
+
+                <p class="hero-description">
+                    Najlepsza karma, akcesoria, zabawki i wszystko czego potrzebuje Twoj ukochany zwierzak.
+                    Produkty premium w przystepnych cenach!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        Zobacz produkty
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#categories" class="btn btn-secondary">Przegladaj kategorie</a>
+                </div>
+
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">&#128666;</div>
+                        <span>Szybka dostawa</span>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">&#128257;</div>
+                        <span>14 dni na zwrot</span>
+                    </div>
+                    <div class="hero-feature">
+                        <div class="hero-feature-icon">&#127775;</div>
+                        <span>Produkty premium</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <div class="hero-image-bg"></div>
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="Szczesliwy pies">
+                </div>
+
+                <div class="hero-float float-1">
+                    <div class="float-icon orange">&#128054;</div>
+                    <div class="float-text">
+                        <h4>Karma premium</h4>
+                        <p>Dla zdrowego pupila</p>
+                    </div>
+                </div>
+
+                <div class="hero-float float-2">
+                    <div class="float-icon green">&#11088;</div>
+                    <div class="float-text">
+                        <h4>5000+ opinii</h4>
+                        <p>Zadowolonych klientow</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories" id="categories">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">&#128062; Kategorie</div>
+                <h2>Wybierz kategorie dla swojego pupila</h2>
+                <p>Znajdz produkty dopasowane do potrzeb Twojego zwierzaka</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card fade-in">
+                    <div class="category-icon dogs">&#128054;</div>
+                    <h3>Dla psa</h3>
+                    <p>1200+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon cats">&#128049;</div>
+                    <h3>Dla kota</h3>
+                    <p>980+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon birds">&#128038;</div>
+                    <h3>Dla ptakow</h3>
+                    <p>350+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon fish">&#128031;</div>
+                    <h3>Akwarystyka</h3>
+                    <p>420+ produktow</p>
+                </div>
+
+                <div class="category-card fade-in">
+                    <div class="category-icon small">&#128048;</div>
+                    <h3>Male zwierzeta</h3>
+                    <p>280+ produktow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">&#11088; Bestsellery</div>
+                <h2>Najpopularniejsze produkty</h2>
+                <p>Sprawdz, co wybieraja inni wlasciciele zwierzat</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <span class="product-badge popular">Hit!</span>
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400&q=80" alt="Karma dla psa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Karma dla psa</span>
+                        <h3 class="product-name">Royal Canin Adult 15kg</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(247 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">269 zl</span>
+                            <span class="product-price-old">299 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <span class="product-badge new">Nowosc!</span>
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1545249390-6bdfa286032f?w=400&q=80" alt="Legowisko dla kota">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Akcesoria dla kota</span>
+                        <h3 class="product-name">Legowisko pluszowe Premium</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(89 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">129 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <span class="product-badge sale">-30%</span>
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&q=80" alt="Zabawki dla psa">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Zabawki dla psa</span>
+                        <h3 class="product-name">Zestaw zabawek interaktywnych</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(156 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">49 zl</span>
+                            <span class="product-price-old">69 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-actions">
+                        <div class="product-action">
+                            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1522276498395-f4f68f7f8571?w=400&q=80" alt="Akwarium">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Akwarystyka</span>
+                        <h3 class="product-name">Akwarium LED 60L komplet</h3>
+                        <div class="product-rating">
+                            <div class="product-rating-stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <span>(73 opinii)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="product-price-current">399 zl</span>
+                        </div>
+                        <button class="product-add-btn">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                            Dodaj do koszyka
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="features-pattern"></div>
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">&#128062; Dlaczego my</div>
+                <h2>Dlaczego wlasciciele wybieraja PetZone?</h2>
+                <p>Dbamy o Twojego pupila tak jak Ty - z miloscia i troska</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#127775;</div>
+                    <h3>Produkty premium</h3>
+                    <p>Tylko sprawdzone marki i produkty najwyzszej jakosci dla Twojego pupila.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128666;</div>
+                    <h3>Szybka dostawa</h3>
+                    <p>Wysylka w 24h. Darmowa dostawa przy zamowieniach powyzej 99 zl.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128172;</div>
+                    <h3>Porady ekspertow</h3>
+                    <p>Nasz zespol pomoze Ci wybrac najlepsze produkty dla Twojego zwierzaka.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">&#128257;</div>
+                    <h3>Latwe zwroty</h3>
+                    <p>14 dni na zwrot bez pytania. Twoja satysfakcja jest dla nas najwazniejsza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-images fade-in">
+                    <div class="about-image-main">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80" alt="Szczeslwe psy na spacerze">
+                    </div>
+                    <div class="about-image-float">
+                        <div class="about-image-float-number">8+</div>
+                        <div class="about-image-float-text">lat na rynku</div>
+                    </div>
+                </div>
+
+                <div class="about-text fade-in">
+                    <div class="section-badge">&#128150; O nas</div>
+                    <h2>Kochamy zwierzeta tak jak Ty</h2>
+                    <p>
+                        PetZone to wiecej niz sklep zoologiczny - to miejsce tworzone przez milosnikow zwierzat dla milosnikow zwierzat.
+                        Od ponad 8 lat pomagamy wlascicielom pupili w wyborze najlepszych produktow.
+                    </p>
+                    <p>
+                        Nasz zespol sklada sie z doswiadczonych opiekunow zwierzat, weterynarzy i behawiorystow,
+                        ktorzy chetnie podzieli sie swoją wiedza i doswiadczeniem.
+                    </p>
+
+                    <ul class="about-list">
+                        <li>
+                            <div class="about-list-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <span>Ponad 50 000 zadowolonych klientow</span>
+                        </li>
+                        <li>
+                            <div class="about-list-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <span>Tylko sprawdzone marki premium</span>
+                        </li>
+                        <li>
+                            <div class="about-list-icon">
+                                <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <span>Eksperci dostepni 7 dni w tygodniu</span>
+                        </li>
+                    </ul>
+
+                    <a href="#contact" class="btn btn-primary">Skontaktuj sie z nami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <div class="newsletter-pattern"></div>
+
+                <div class="newsletter-content fade-in">
+                    <h2>Dolacz do naszego klubu!</h2>
+                    <p>Zapisz sie do newslettera i otrzymaj 15% rabatu na pierwsze zakupy oraz dostep do ekskluzywnych promocji.</p>
+                </div>
+
+                <div class="newsletter-form fade-in">
+                    <div class="newsletter-input-group">
+                        <input type="email" class="newsletter-input" placeholder="Twoj adres email...">
+                        <button class="newsletter-submit">Zapisz sie</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">&#128222; Kontakt</div>
+                <h2>Masz pytania? Napisz do nas!</h2>
+                <p>Nasz zespol chetnie pomoze Ci wybrac idealne produkty dla Twojego pupila</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h4>Adres</h4>
+                    <p>ul. Zwierzeca 28<br>00-234 Warszawa</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg>
+                    </div>
+                    <h4>Telefon</h4>
+                    <p><a href="tel:+48221234567">+48 22 123 45 67</a><br>Codziennie: 8:00-20:00</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:sklep@petzone.pl">sklep@petzone.pl</a></p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h4>Godziny pracy</h4>
+                    <p>Pon-Sob: 8:00-20:00<br>Niedz: 10:00-18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">&#128054;</div>
+                        Pet<span>Zone</span>
+                    </a>
+                    <p>Twoj ulubiony sklep zoologiczny online. Karma, akcesoria i wszystko dla Twojego pupila w jednym miejscu.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Kategorie</h4>
+                    <ul class="footer-links">
+                        <li><a href="#categories">Dla psa</a></li>
+                        <li><a href="#categories">Dla kota</a></li>
+                        <li><a href="#categories">Akwarystyka</a></li>
+                        <li><a href="#categories">Male zwierzeta</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Informacje</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">O nas</a></li>
+                        <li><a href="#">Dostawa</a></li>
+                        <li><a href="#">Zwroty</a></li>
+                        <li><a href="#">Regulamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li>ul. Zwierzeca 28</li>
+                        <li>00-234 Warszawa</li>
+                        <li><a href="tel:+48221234567">+48 22 123 45 67</a></li>
+                        <li><a href="mailto:sklep@petzone.pl">sklep@petzone.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 PetZone. Wszystkie prawa zastrzezone. | Strona stworzona przez <a href="../../index.html">Dekada72H</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add to cart buttons
+        document.querySelectorAll('.product-add-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;"><polyline points="20 6 9 17 4 12"/></svg> Dodano!';
+                btn.style.background = '#22c55e';
+                setTimeout(() => {
+                    btn.innerHTML = '<svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> Dodaj do koszyka';
+                    btn.style.background = '';
+                }, 2000);
+            });
+        });
+
+        // Newsletter form
+        document.querySelector('.newsletter-submit').addEventListener('click', function() {
+            const input = document.querySelector('.newsletter-input');
+            if (input.value) {
+                alert('Dziekujemy za zapisanie sie! Twoj kod rabatowy: PETZONE15');
+                input.value = '';
+            }
+        });
+    </script>
+</body>
+</html>

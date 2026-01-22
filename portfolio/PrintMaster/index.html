@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PrintMaster - Profesjonalna drukarnia. Wizytowki, ulotki, plakaty, kalendarze, banery i materialy reklamowe najwyzszej jakosci.">
+    <meta name="keywords" content="drukarnia, wizytowki, ulotki, plakaty, kalendarze, druk cyfrowy, druk offsetowy, materialy reklamowe">
+
+    <title>PrintMaster | Profesjonalna Drukarnia</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230891b2' rx='15' width='100' height='100'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white'>P</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           PRINTMASTER - PROFESSIONAL PRINTING COMPANY
+           Clean, Modern, Professional Style
+           ============================================ */
+
+        :root {
+            /* Colors - Professional Teal/Cyan Palette */
+            --cyan: #0891b2;
+            --cyan-dark: #0e7490;
+            --cyan-light: #22d3ee;
+            --teal: #14b8a6;
+            --navy: #0f172a;
+            --navy-light: #1e293b;
+            --slate: #475569;
+            --gray: #94a3b8;
+            --light: #f1f5f9;
+            --lighter: #f8fafc;
+            --white: #ffffff;
+            --orange: #f97316;
+            --yellow: #eab308;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, var(--cyan) 0%, var(--teal) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+
+            /* Typography */
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            /* Spacing */
+            --section-padding: 100px;
+            --container-max: 1200px;
+
+            /* Effects */
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px -10px rgba(8, 145, 178, 0.2);
+            --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--slate);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: var(--section-padding) 0;
+            position: relative;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--navy);
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); }
+        h3 { font-size: clamp(1.125rem, 2.5vw, 1.375rem); }
+
+        .section-header {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 60px;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(8, 145, 178, 0.1);
+            color: var(--cyan);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-header h2 {
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--slate);
+            font-size: 1.125rem;
+        }
+
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border-radius: var(--radius);
+            transition: all var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            transition: transform var(--transition);
+        }
+
+        .btn:hover svg {
+            transform: translateX(4px);
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: 0 8px 20px rgba(8, 145, 178, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(8, 145, 178, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--cyan);
+            border: 2px solid var(--cyan);
+        }
+
+        .btn-secondary:hover {
+            background: var(--cyan);
+            color: var(--white);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 12px 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .navbar.scrolled .logo {
+            color: var(--navy);
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--white);
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--cyan-light);
+        }
+
+        .navbar.scrolled .logo span {
+            color: var(--cyan);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9375rem;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .navbar.scrolled .nav-link {
+            color: var(--slate);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--cyan);
+            transition: width var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--cyan-light);
+        }
+
+        .navbar.scrolled .nav-link:hover {
+            color: var(--cyan);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all var(--transition);
+        }
+
+        .navbar.scrolled .menu-toggle span {
+            background: var(--navy);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--gradient-dark);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(8, 145, 178, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(20, 184, 166, 0.1) 0%, transparent 40%);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            color: var(--white);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(8, 145, 178, 0.2);
+            border: 1px solid rgba(8, 145, 178, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 36px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--cyan-light);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 4px;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: all var(--transition);
+        }
+
+        .hero-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .hero-card:first-child {
+            grid-column: span 2;
+        }
+
+        .hero-card-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+
+        .hero-card h3 {
+            color: var(--white);
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-card p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--lighter);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 32px 24px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--cyan);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: rgba(8, 145, 178, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: all var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gradient-primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 0.9375rem;
+            color: var(--gray);
+        }
+
+        .service-price {
+            margin-top: 16px;
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--cyan);
+        }
+
+        .service-price span {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--white);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: var(--shadow-card);
+            transition: all var(--transition);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-image {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--orange);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .product-content {
+            padding: 24px;
+        }
+
+        .product-category {
+            font-size: 0.8125rem;
+            color: var(--cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .product-card p {
+            color: var(--gray);
+            font-size: 0.9375rem;
+            margin-bottom: 16px;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-feature {
+            background: var(--light);
+            padding: 6px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--slate);
+        }
+
+        .product-cta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .product-price {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .product-price span {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+
+        .product-btn {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: all var(--transition);
+        }
+
+        .product-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .product-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Features Section */
+        .features {
+            background: var(--gradient-dark);
+            color: var(--white);
+        }
+
+        .features .section-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--cyan-light);
+        }
+
+        .features .section-header h2,
+        .features .section-header p {
+            color: var(--white);
+        }
+
+        .features .section-header p {
+            opacity: 0.7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            transition: all var(--transition);
+        }
+
+        .feature-item:hover .feature-icon {
+            background: var(--gradient-primary);
+            transform: scale(1.1);
+        }
+
+        .feature-item h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .feature-item p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9375rem;
+        }
+
+        /* Process Section */
+        .process {
+            background: var(--lighter);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 12.5%;
+            width: 75%;
+            height: 2px;
+            background: var(--cyan);
+            opacity: 0.3;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 100px;
+            height: 100px;
+            background: var(--white);
+            border: 3px solid var(--cyan);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--cyan);
+            position: relative;
+            z-index: 1;
+            transition: all var(--transition);
+        }
+
+        .process-step:hover .process-number {
+            background: var(--gradient-primary);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .process-step h3 {
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta .btn-primary {
+            background: var(--white);
+            color: var(--cyan);
+        }
+
+        .cta .btn-primary:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .contact-card {
+            background: var(--lighter);
+            padding: 32px 24px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .contact-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        .contact-card h4 {
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+
+        .contact-card a {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 60px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand p {
+            color: var(--gray);
+            margin: 16px 0 24px;
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--cyan);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--white);
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            font-size: 0.9375rem;
+            transition: all var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--cyan-light);
+            padding-left: 6px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: var(--gray);
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom a {
+            color: var(--cyan-light);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            :root {
+                --section-padding: 80px;
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin: 0 auto 36px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: center;
+                gap: 24px;
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+                transition: right var(--transition);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-menu .nav-link {
+                color: var(--slate);
+            }
+
+            .menu-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 60px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .services-grid,
+            .features-grid,
+            .process-steps,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">P</div>
+                Print<span>Master</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Uslugi</a></li>
+                <li><a href="#products" class="nav-link">Produkty</a></li>
+                <li><a href="#process" class="nav-link">Proces</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+            </ul>
+
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-pattern"></div>
+        <div class="hero-grid"></div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    Profesjonalna drukarnia od 2010 roku
+                </div>
+
+                <h1>Drukujemy <span class="text-gradient">Twoje pomysly</span> w najwyzszej jakosci</h1>
+
+                <p class="hero-description">
+                    Wizytowki, ulotki, plakaty, kalendarze, banery i wiele wiecej.
+                    Oferujemy druk cyfrowy i offsetowy najwyzszej jakosci w konkurencyjnych cenach.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">
+                        Zobacz oferte
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Wycena projektu</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">15+</div>
+                        <div class="hero-stat-label">lat doswiadczenia</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">50k+</div>
+                        <div class="hero-stat-label">zrealizowanych zamowien</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">2000+</div>
+                        <div class="hero-stat-label">zadowolonych klientow</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-cards">
+                    <div class="hero-card">
+                        <div class="hero-card-icon">&#128196;</div>
+                        <h3>Druk Premium</h3>
+                        <p>Najwyzsza jakosc druku na profesjonalnych maszynach Heidelberg i HP Indigo</p>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-icon">&#128197;</div>
+                        <h3>Kalendarze</h3>
+                        <p>Scienne, biurkowe, ksiazkowe</p>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-icon">&#128203;</div>
+                        <h3>Wizytowki</h3>
+                        <p>Klasyczne, foliowane, lakierowane</p>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-icon">&#128240;</div>
+                        <h3>Ulotki</h3>
+                        <p>A4, A5, A6, DL i inne formaty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Nasze uslugi</div>
+                <h2>Kompleksowe uslugi poligraficzne</h2>
+                <p>Oferujemy szeroki zakres uslug druku dla firm i klientow indywidualnych</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128203;</div>
+                    <h3>Wizytowki</h3>
+                    <p>Klasyczne, foliowane, lakierowane UV, z zaokraglonymi rogami, na papierze ekologicznym</p>
+                    <div class="service-price">od 49 zl <span>/ 100 szt.</span></div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128240;</div>
+                    <h3>Ulotki i foldery</h3>
+                    <p>Ulotki A4, A5, A6, DL, foldery skladane, broszury informacyjne</p>
+                    <div class="service-price">od 89 zl <span>/ 500 szt.</span></div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#127912;</div>
+                    <h3>Plakaty i banery</h3>
+                    <p>Plakaty wielkoformatowe, banery winylowe, roll-upy, potykacze reklamowe</p>
+                    <div class="service-price">od 29 zl <span>/ szt.</span></div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128197;</div>
+                    <h3>Kalendarze</h3>
+                    <p>Kalendarze scienne, biurkowe, ksiazkowe, trojdzielne, jednodzielne</p>
+                    <div class="service-price">od 8 zl <span>/ szt.</span></div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128218;</div>
+                    <h3>Katalogi i broszury</h3>
+                    <p>Katalogi produktowe, broszury firmowe, zeszyty reklamowe</p>
+                    <div class="service-price">od 5 zl <span>/ szt.</span></div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#127873;</div>
+                    <h3>Opakowania</h3>
+                    <p>Pudelka kartonowe, torebki papierowe, etykiety produktowe</p>
+                    <div class="service-price">od 2 zl <span>/ szt.</span></div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#128196;</div>
+                    <h3>Papier firmowy</h3>
+                    <p>Listowniki, koperty firmowe, teczki ofertowe, notesy</p>
+                    <div class="service-price">od 149 zl <span>/ 500 szt.</span></div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">&#129534;</div>
+                    <h3>Gadgety reklamowe</h3>
+                    <p>Kubki, dlugopisy, smycze, torby, koszulki z nadrukiem</p>
+                    <div class="service-price">od 5 zl <span>/ szt.</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Bestsellery</div>
+                <h2>Najpopularniejsze produkty</h2>
+                <p>Sprawdz nasze najczesciej zamawiane produkty w atrakcyjnych cenach</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Wizytowki premium">
+                        <span class="product-badge">Bestseller</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Wizytowki</span>
+                        <h3>Wizytowki Premium</h3>
+                        <p>Eleganckie wizytowki na papierze kredowym 350g z folia matowa</p>
+                        <div class="product-features">
+                            <span class="product-feature">350g papier</span>
+                            <span class="product-feature">Folia matowa</span>
+                            <span class="product-feature">CMYK</span>
+                        </div>
+                        <div class="product-cta">
+                            <div class="product-price">79 zl <span>/ 250 szt.</span></div>
+                            <a href="#contact" class="product-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&q=80" alt="Ulotki A5">
+                        <span class="product-badge">Promocja</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Ulotki</span>
+                        <h3>Ulotki A5 dwustronne</h3>
+                        <p>Ulotki reklamowe na papierze kredowym 170g z pelnym kolorem</p>
+                        <div class="product-features">
+                            <span class="product-feature">170g papier</span>
+                            <span class="product-feature">Dwustronne</span>
+                            <span class="product-feature">A5</span>
+                        </div>
+                        <div class="product-cta">
+                            <div class="product-price">149 zl <span>/ 1000 szt.</span></div>
+                            <a href="#contact" class="product-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&q=80" alt="Kalendarz scienny">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Kalendarze</span>
+                        <h3>Kalendarz scienny trojdzielny</h3>
+                        <p>Klasyczny kalendarz trojdzielny z Twoim logo i grafikami</p>
+                        <div class="product-features">
+                            <span class="product-feature">Format A3</span>
+                            <span class="product-feature">Spirala</span>
+                            <span class="product-feature">12 miesiecy</span>
+                        </div>
+                        <div class="product-cta">
+                            <div class="product-price">15 zl <span>/ szt.</span></div>
+                            <a href="#contact" class="product-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1588497859490-85d1c17db96d?w=600&q=80" alt="Roll-up">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Banery</span>
+                        <h3>Roll-up 85x200 cm</h3>
+                        <p>Profesjonalny roll-up z aluminiowa kaseta i torba transportowa</p>
+                        <div class="product-features">
+                            <span class="product-feature">85x200 cm</span>
+                            <span class="product-feature">Aluminium</span>
+                            <span class="product-feature">Torba</span>
+                        </div>
+                        <div class="product-cta">
+                            <div class="product-price">189 zl <span>/ szt.</span></div>
+                            <a href="#contact" class="product-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&q=80" alt="Katalog firmowy">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Katalogi</span>
+                        <h3>Katalog firmowy A4</h3>
+                        <p>Katalog szywany na 16 stron z okladka na papierze kredowym</p>
+                        <div class="product-features">
+                            <span class="product-feature">16 stron</span>
+                            <span class="product-feature">Szyty</span>
+                            <span class="product-feature">A4</span>
+                        </div>
+                        <div class="product-cta">
+                            <div class="product-price">8 zl <span>/ szt.</span></div>
+                            <a href="#contact" class="product-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1589384267710-7a170981ca78?w=600&q=80" alt="Torba papierowa">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Opakowania</span>
+                        <h3>Torby papierowe z nadrukiem</h3>
+                        <p>Eleganckie torby papierowe z uchwytami i pelnokolorowym nadrukiem</p>
+                        <div class="product-features">
+                            <span class="product-feature">Rozne rozmiary</span>
+                            <span class="product-feature">Uchwyty</span>
+                            <span class="product-feature">Eco</span>
+                        </div>
+                        <div class="product-cta">
+                            <div class="product-price">3 zl <span>/ szt.</span></div>
+                            <a href="#contact" class="product-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Dlaczego my</div>
+                <h2>Co nas wyroznia?</h2>
+                <p>Sprawdz, dlaczego tysiace klientow wybiera PrintMaster</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">&#128640;</div>
+                    <h3>Ekspresowa realizacja</h3>
+                    <p>Wieksczosc zamowien realizujemy w 24-48h. Opcja druku ekspresowego w tym samym dniu.</p>
+                </div>
+
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">&#127942;</div>
+                    <h3>Najwyzsza jakosc</h3>
+                    <p>Drukujemy na profesjonalnych maszynach Heidelberg i HP Indigo z certyfikatem ISO.</p>
+                </div>
+
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">&#128176;</div>
+                    <h3>Konkurencyjne ceny</h3>
+                    <p>Oferujemy najlepszy stosunek jakosci do ceny. Rabaty dla stalych klientow do 30%.</p>
+                </div>
+
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">&#128666;</div>
+                    <h3>Darmowa dostawa</h3>
+                    <p>Bezplatna dostawa kurierem przy zamowieniach powyzej 200 zl na terenie calej Polski.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section process" id="process">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Jak dzialamy</div>
+                <h2>Prosty proces zamawiania</h2>
+                <p>Zamawianie druku u nas jest szybkie i wygodne</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step fade-in">
+                    <div class="process-number">1</div>
+                    <h3>Wyslij projekt</h3>
+                    <p>Przeslij nam gotowy projekt lub zamow projekt graficzny u naszych specjalistow</p>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">2</div>
+                    <h3>Akceptacja</h3>
+                    <p>Sprawdzamy pliki i wysylamy proof do akceptacji. Konsultujemy wszelkie watpliwosci</p>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">3</div>
+                    <h3>Drukujemy</h3>
+                    <p>Po akceptacji drukujemy Twoje materialy na profesjonalnych maszynach</p>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">4</div>
+                    <h3>Dostarczamy</h3>
+                    <p>Wyslemy zamowienie kurierem lub mozesz je odebrac osobiscie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Potrzebujesz wyceny?</h2>
+            <p>Skontaktuj sie z nami i otrzymaj bezplatna wycene w ciagu 30 minut. Oferujemy indywidualne rabaty dla wiekszych zamowien.</p>
+            <a href="#contact" class="btn btn-primary">
+                Zamow bezplatna wycene
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-badge">Kontakt</div>
+                <h2>Skontaktuj sie z nami</h2>
+                <p>Chetnie odpowiemy na wszystkie pytania i przygotujemy indywidualna oferte</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h4>Adres</h4>
+                    <p>ul. Drukarska 42<br>00-189 Warszawa</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72"/></svg>
+                    </div>
+                    <h4>Telefon</h4>
+                    <p><a href="tel:+48221234890">+48 22 123 48 90</a><br>Pn-Pt: 8:00-18:00</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h4>Email</h4>
+                    <p><a href="mailto:zamowienia@printmaster.pl">zamowienia@printmaster.pl</a></p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h4>Godziny pracy</h4>
+                    <p>Pon-Pt: 8:00-18:00<br>Sob: 9:00-14:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">P</div>
+                        Print<span>Master</span>
+                    </a>
+                    <p>Profesjonalna drukarnia z wieloletnim doswiadczeniem. Drukujemy wizytowki, ulotki, plakaty, kalendarze i materialy reklamowe najwyzszej jakosci.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Uslugi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Wizytowki</a></li>
+                        <li><a href="#services">Ulotki</a></li>
+                        <li><a href="#services">Plakaty</a></li>
+                        <li><a href="#services">Kalendarze</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Informacje</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Cennik</a></li>
+                        <li><a href="#">Dostawa</a></li>
+                        <li><a href="#">Specyfikacja</a></li>
+                        <li><a href="#">Regulamin</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li>ul. Drukarska 42</li>
+                        <li>00-189 Warszawa</li>
+                        <li><a href="tel:+48221234890">+48 22 123 48 90</a></li>
+                        <li><a href="mailto:zamowienia@printmaster.pl">zamowienia@printmaster.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 PrintMaster. Wszystkie prawa zastrzezone. | Strona stworzona przez <a href="../../index.html">Dekada72H</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
