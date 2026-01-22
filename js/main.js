@@ -176,6 +176,10 @@ const ScrollTop = {
 /* ============================================
    CONTACT FORM
    ============================================ */
+
+// DEVELOPER WARNING: This is a frontend-only simulation.
+// For a functional form, a secure backend is required to handle submissions.
+// Do not transmit form data from the client-side without a backend.
 const ContactForm = {
     form: null,
 
