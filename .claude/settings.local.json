@@ -6,7 +6,17 @@
       "Bash(tree:*)",
       "Bash(xdg-open:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(gh auth:*)",
+      "Bash(sudo apt install:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(gh repo sync:*)",
+      "Bash(gh api:*)"
     ]
   }
 }
