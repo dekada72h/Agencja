@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Usługi Dekada72H - Strony WWW, Landing Pages, SEO, UX/UI Design. Kompleksowe rozwiązania marketingowe dla Twojego biznesu.">
+    <meta name="description" data-i18n-content="services.meta.desc" content="Usługi Dekada72H - Strony WWW, Landing Pages, SEO, UX/UI Design. Kompleksowe rozwiązania marketingowe dla Twojego biznesu.">
     <meta name="keywords" content="strony www, landing page, SEO, UX/UI, web design, marketing cyfrowy, tworzenie stron">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
 
-    <title>Usługi | Dekada72H - Strony WWW, SEO, UX/UI</title>
+    <title data-i18n="services.title">Usługi | Dekada72H - Strony WWW, SEO, UX/UI</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='65' font-size='30' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>D72</text></svg>">
@@ -408,13 +408,23 @@
             </a>
 
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">O nas</a></li>
-                <li><a href="services.html" class="nav-link active">Usługi</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-                <li><a href="contact.html" class="btn btn-primary nav-cta">Darmowa wycena</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav.about">O nas</a></li>
+                <li><a href="services.html" class="nav-link active" data-i18n="nav.services">Usługi</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
+                <li><a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Darmowa wycena</a></li>
             </ul>
+
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="pl" title="Polski" aria-label="Polski">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 6 4"><rect width="6" height="4" fill="#dc143c"/><rect width="6" height="2" fill="#fff"/></svg>
+                </button>
+                <button class="lang-btn" data-lang="en" title="English" aria-label="English">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 19 10"><rect width="19" height="10" fill="#B22234"/><rect y="1" width="19" height="1" fill="#fff"/><rect y="3" width="19" height="1" fill="#fff"/><rect y="5" width="19" height="1" fill="#fff"/><rect y="7" width="19" height="1" fill="#fff"/><rect y="9" width="19" height="1" fill="#fff"/><rect width="8" height="6" fill="#3C3B6E"/></svg>
+                </button>
+            </div>
 
             <div class="menu-toggle">
                 <span></span>
@@ -430,10 +440,10 @@
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span>/</span>
-                <span class="breadcrumb-current">Usługi</span>
+                <span class="breadcrumb-current" data-i18n="services.breadcrumb">Usługi</span>
             </div>
-            <h1>Nasze usługi</h1>
-            <p>Kompleksowe rozwiązania marketingowe, które pomogą Twojemu biznesowi wyróżnić się w sieci.</p>
+            <h1 data-i18n="services.header.title">Nasze usługi</h1>
+            <p data-i18n="services.header.desc">Kompleksowe rozwiązania marketingowe, które pomogą Twojemu biznesowi wyróżnić się w sieci.</p>
         </div>
     </header>
 
@@ -448,10 +458,10 @@
                             <path d="M8 21h8M12 17v4"/>
                         </svg>
                     </div>
-                    <h3>Strony WWW</h3>
-                    <p>Projektujemy i tworzymy responsywne strony internetowe, które wyglądają świetnie na każdym urządzeniu.</p>
+                    <h3 data-i18n="services.overview.www.title">Strony WWW</h3>
+                    <p data-i18n="services.overview.www.desc">Projektujemy i tworzymy responsywne strony internetowe, które wyglądają świetnie na każdym urządzeniu.</p>
                     <a href="#www" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="services.overview.www.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -465,10 +475,10 @@
                             <line x1="16" y1="17" x2="8" y2="17"/>
                         </svg>
                     </div>
-                    <h3>Landing Pages</h3>
-                    <p>Tworzymy strony docelowe zoptymalizowane pod konwersję, które zamieniają odwiedzających w klientów.</p>
+                    <h3 data-i18n="services.overview.landing.title">Landing Pages</h3>
+                    <p data-i18n="services.overview.landing.desc">Tworzymy strony docelowe zoptymalizowane pod konwersję, które zamieniają odwiedzających w klientów.</p>
                     <a href="#landing" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="services.overview.landing.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -481,10 +491,10 @@
                             <path d="M11 8v6M8 11h6"/>
                         </svg>
                     </div>
-                    <h3>SEO</h3>
-                    <p>Optymalizujemy strony pod wyszukiwarki, aby Twój biznes był widoczny dla potencjalnych klientów.</p>
+                    <h3 data-i18n="services.overview.seo.title">SEO</h3>
+                    <p data-i18n="services.overview.seo.desc">Optymalizujemy strony pod wyszukiwarki, aby Twój biznes był widoczny dla potencjalnych klientów.</p>
                     <a href="#seo" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="services.overview.seo.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -496,10 +506,10 @@
                             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                         </svg>
                     </div>
-                    <h3>Automatyzacja</h3>
-                    <p>Automatyzujemy procesy na Twojej stronie, abyś mógł skupić się na prowadzeniu biznesu.</p>
+                    <h3 data-i18n="services.overview.auto.title">Automatyzacja</h3>
+                    <p data-i18n="services.overview.auto.desc">Automatyzujemy procesy na Twojej stronie, abyś mógł skupić się na prowadzeniu biznesu.</p>
                     <a href="#automatyzacja" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="services.overview.auto.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -515,42 +525,42 @@
                     <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80" alt="Tworzenie stron WWW">
                     <div class="service-detail-badge">
                         <div class="service-detail-badge-number">100%</div>
-                        <div class="service-detail-badge-text">Od zera</div>
+                        <div class="service-detail-badge-text" data-i18n="services.www.badge">Od zera</div>
                     </div>
                 </div>
                 <div class="service-detail-content fade-in-right">
                     <span class="section-label">01</span>
-                    <h3>Strony WWW</h3>
-                    <p class="lead">
+                    <h3 data-i18n="services.www.title">Strony WWW</h3>
+                    <p class="lead" data-i18n="services.www.lead">
                         Tworzymy strony internetowe, które nie tylko świetnie wyglądają, ale przede wszystkim realizują cele biznesowe.
                     </p>
-                    <p>
+                    <p data-i18n="services.www.desc">
                         Każdy projekt zaczynamy od zrozumienia Twojego biznesu, grupy docelowej i celów.
                         Dzięki temu tworzymy strony, które przyciągają właściwych klientów i przekonują ich do działania.
                     </p>
                     <ul class="service-features-list">
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Responsywny design (mobile-first)</span>
+                            <span data-i18n="services.www.f1">Responsywny design (mobile-first)</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Szybkie ładowanie strony (< 3s)</span>
+                            <span data-i18n="services.www.f2">Szybkie ładowanie strony (< 3s)</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Optymalizacja pod SEO</span>
+                            <span data-i18n="services.www.f3">Optymalizacja pod SEO</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Panel administracyjny CMS</span>
+                            <span data-i18n="services.www.f4">Panel administracyjny CMS</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Certyfikat SSL i bezpieczeństwo</span>
+                            <span data-i18n="services.www.f5">Certyfikat SSL i bezpieczeństwo</span>
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Zamów wycenę</a>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="services.www.cta">Zamów wycenę</a>
                 </div>
             </div>
         </div>
@@ -563,42 +573,42 @@
                     <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Landing Pages">
                     <div class="service-detail-badge">
                         <div class="service-detail-badge-number">+35%</div>
-                        <div class="service-detail-badge-text">Konwersji</div>
+                        <div class="service-detail-badge-text" data-i18n="services.landing.badge">Konwersji</div>
                     </div>
                 </div>
                 <div class="service-detail-content fade-in-right">
                     <span class="section-label">02</span>
-                    <h3>Landing Pages</h3>
-                    <p class="lead">
+                    <h3 data-i18n="services.landing.title">Landing Pages</h3>
+                    <p class="lead" data-i18n="services.landing.lead">
                         Strony docelowe zaprojektowane z myślą o jednym celu - konwersji odwiedzających w klientów.
                     </p>
-                    <p>
+                    <p data-i18n="services.landing.desc">
                         Landing page to nie zwykła strona. To precyzyjnie skonstruowane narzędzie sprzedażowe,
                         które prowadzi użytkownika przez ścieżkę decyzyjną i zachęca do podjęcia działania.
                     </p>
                     <ul class="service-features-list">
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Copywriting sprzedażowy</span>
+                            <span data-i18n="services.landing.f1">Copywriting sprzedażowy</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>A/B testing i optymalizacja</span>
+                            <span data-i18n="services.landing.f2">A/B testing i optymalizacja</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Integracja z CRM i analityką</span>
+                            <span data-i18n="services.landing.f3">Integracja z CRM i analityką</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Formularze i pop-upy</span>
+                            <span data-i18n="services.landing.f4">Formularze i pop-upy</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Śledzenie konwersji</span>
+                            <span data-i18n="services.landing.f5">Śledzenie konwersji</span>
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Zamów wycenę</a>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="services.landing.cta">Zamów wycenę</a>
                 </div>
             </div>
         </div>
@@ -616,37 +626,37 @@
                 </div>
                 <div class="service-detail-content fade-in-right">
                     <span class="section-label">03</span>
-                    <h3>SEO</h3>
-                    <p class="lead">
+                    <h3 data-i18n="services.seo.title">SEO</h3>
+                    <p class="lead" data-i18n="services.seo.lead">
                         Pozycjonowanie, które przynosi realne rezultaty - więcej ruchu organicznego i więcej klientów.
                     </p>
-                    <p>
+                    <p data-i18n="services.seo.desc">
                         SEO to maraton, nie sprint. Stosujemy sprawdzone, białe techniki, które budują trwałą
                         widoczność Twojej strony w wyszukiwarkach i przyciągają wartościowy ruch.
                     </p>
                     <ul class="service-features-list">
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Audyt SEO i analiza konkurencji</span>
+                            <span data-i18n="services.seo.f1">Audyt SEO i analiza konkurencji</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Optymalizacja on-page i off-page</span>
+                            <span data-i18n="services.seo.f2">Optymalizacja on-page i off-page</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Content marketing i link building</span>
+                            <span data-i18n="services.seo.f3">Content marketing i link building</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Lokalne SEO (Google Moja Firma)</span>
+                            <span data-i18n="services.seo.f4">Lokalne SEO (Google Moja Firma)</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Miesięczne raporty i analityka</span>
+                            <span data-i18n="services.seo.f5">Miesięczne raporty i analityka</span>
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Zamów wycenę</a>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="services.seo.cta">Zamów wycenę</a>
                 </div>
             </div>
         </div>
@@ -659,42 +669,42 @@
                     <img src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&q=80" alt="Automatyzacja">
                     <div class="service-detail-badge">
                         <div class="service-detail-badge-number">24/7</div>
-                        <div class="service-detail-badge-text">Działa</div>
+                        <div class="service-detail-badge-text" data-i18n="services.auto.badge">Działa</div>
                     </div>
                 </div>
                 <div class="service-detail-content fade-in-right">
                     <span class="section-label">04</span>
-                    <h3>Automatyzacja</h3>
-                    <p class="lead">
+                    <h3 data-i18n="services.auto.title">Automatyzacja</h3>
+                    <p class="lead" data-i18n="services.auto.lead">
                         Twoja strona pracuje za Ciebie - automatyzujemy procesy, abyś mógł skupić się na tym, co najważniejsze.
                     </p>
-                    <p>
+                    <p data-i18n="services.auto.desc">
                         Wdrażamy inteligentne rozwiązania, które automatyzują powtarzalne zadania na Twojej stronie.
                         Dzięki temu Twój biznes działa sprawniej, a Ty zyskujesz więcej czasu na rozwój firmy.
                     </p>
                     <ul class="service-features-list">
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Automatyczne powiadomienia i odpowiedzi</span>
+                            <span data-i18n="services.auto.f1">Automatyczne powiadomienia i odpowiedzi</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Integracja z systemami CRM i kalendarzem</span>
+                            <span data-i18n="services.auto.f2">Integracja z systemami CRM i kalendarzem</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Automatyczne rezerwacje i potwierdzenia</span>
+                            <span data-i18n="services.auto.f3">Automatyczne rezerwacje i potwierdzenia</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Chatboty i formularze inteligentne</span>
+                            <span data-i18n="services.auto.f4">Chatboty i formularze inteligentne</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Raporty i analityka w czasie rzeczywistym</span>
+                            <span data-i18n="services.auto.f5">Raporty i analityka w czasie rzeczywistym</span>
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Zamów wycenę</a>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="services.auto.cta">Zamów wycenę</a>
                 </div>
             </div>
         </div>
@@ -704,34 +714,34 @@
     <section class="section section-gray process-section">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">Jak pracujemy</span>
-                <h2>Nasz proces</h2>
-                <p>Przejrzysty proces, który gwarantuje sukces projektu i Twoje spokojne sny.</p>
+                <span class="section-label" data-i18n="services.process.label">Jak pracujemy</span>
+                <h2 data-i18n="services.process.title">Nasz proces</h2>
+                <p data-i18n="services.process.desc">Przejrzysty proces, który gwarantuje sukces projektu i Twoje spokojne sny.</p>
             </div>
 
             <div class="process-grid">
                 <div class="process-card fade-in stagger-1">
                     <div class="process-number">01</div>
-                    <h4>Odkrywanie</h4>
-                    <p>Poznajemy Twój biznes, cele i grupę docelową. Analizujemy konkurencję i rynek.</p>
+                    <h4 data-i18n="services.process.s1.title">Odkrywanie</h4>
+                    <p data-i18n="services.process.s1.desc">Poznajemy Twój biznes, cele i grupę docelową. Analizujemy konkurencję i rynek.</p>
                 </div>
 
                 <div class="process-card fade-in stagger-2">
                     <div class="process-number">02</div>
-                    <h4>Planowanie</h4>
-                    <p>Tworzymy strategię i harmonogram. Ustalamy kamienie milowe i KPI.</p>
+                    <h4 data-i18n="services.process.s2.title">Planowanie</h4>
+                    <p data-i18n="services.process.s2.desc">Tworzymy strategię i harmonogram. Ustalamy kamienie milowe i KPI.</p>
                 </div>
 
                 <div class="process-card fade-in stagger-3">
                     <div class="process-number">03</div>
-                    <h4>Realizacja</h4>
-                    <p>Projektujemy i kodujemy. Regularnie konsultujemy postępy i zbieramy feedback.</p>
+                    <h4 data-i18n="services.process.s3.title">Realizacja</h4>
+                    <p data-i18n="services.process.s3.desc">Projektujemy i kodujemy. Regularnie konsultujemy postępy i zbieramy feedback.</p>
                 </div>
 
                 <div class="process-card fade-in stagger-4">
                     <div class="process-number">04</div>
-                    <h4>Wdrożenie</h4>
-                    <p>Testujemy, optymalizujemy i uruchamiamy. Zapewniamy wsparcie po starcie.</p>
+                    <h4 data-i18n="services.process.s4.title">Wdrożenie</h4>
+                    <p data-i18n="services.process.s4.desc">Testujemy, optymalizujemy i uruchamiamy. Zapewniamy wsparcie po starcie.</p>
                 </div>
             </div>
         </div>
@@ -741,121 +751,121 @@
     <section class="section">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">Cennik</span>
-                <h2>Przejrzyste ceny</h2>
-                <p>Wybierz pakiet dopasowany do Twoich potrzeb. W każdym pakiecie: pierwszy rok domeny i hostingu gratis!</p>
-                <p style="margin-top: 12px; font-size: 0.875rem; color: var(--gray-500);">Wszystkie ceny są cenami netto. Do podanych kwot należy doliczyć podatek VAT (23%).</p>
+                <span class="section-label" data-i18n="services.pricing.label">Cennik</span>
+                <h2 data-i18n="services.pricing.title">Przejrzyste ceny</h2>
+                <p data-i18n="services.pricing.desc">Wybierz pakiet dopasowany do Twoich potrzeb. W każdym pakiecie: pierwszy rok domeny i hostingu gratis!</p>
+                <p style="margin-top: 12px; font-size: 0.875rem; color: var(--gray-500);" data-i18n="services.pricing.vat">Wszystkie ceny są cenami netto. Do podanych kwot należy doliczyć podatek VAT (23%).</p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card fade-in stagger-1">
-                    <div class="pricing-name">Minimum</div>
-                    <div class="pricing-description">Dla małych firm i startupów</div>
+                    <div class="pricing-name" data-i18n="services.pricing.min.name">Minimum</div>
+                    <div class="pricing-description" data-i18n="services.pricing.min.desc">Dla małych firm i startupów</div>
                     <div class="pricing-price">1 500 <span>zł</span></div>
-                    <div class="pricing-period">jednorazowo</div>
+                    <div class="pricing-period" data-i18n="services.pricing.min.period">jednorazowo</div>
                     <ul class="pricing-features">
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Strona do 5 podstron</span>
+                            <span data-i18n="services.pricing.min.f1">Strona do 5 podstron</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Responsywny design</span>
+                            <span data-i18n="services.pricing.min.f2">Responsywny design</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Formularz kontaktowy</span>
+                            <span data-i18n="services.pricing.min.f3">Formularz kontaktowy</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Podstawowe SEO</span>
+                            <span data-i18n="services.pricing.min.f4">Podstawowe SEO</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Wsparcie techniczne</span>
+                            <span data-i18n="services.pricing.min.f5">Wsparcie techniczne</span>
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline">Wybierz pakiet</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="services.pricing.min.cta">Wybierz pakiet</a>
                 </div>
 
                 <div class="pricing-card featured fade-in stagger-2">
-                    <div class="pricing-name">Kombo</div>
-                    <div class="pricing-description">Strona + automatyzacja dla Twojego biznesu</div>
+                    <div class="pricing-name" data-i18n="services.pricing.combo.name">Kombo</div>
+                    <div class="pricing-description" data-i18n="services.pricing.combo.desc">Strona + automatyzacja dla Twojego biznesu</div>
                     <div class="pricing-price">3 500 <span>zł</span></div>
-                    <div class="pricing-period">jednorazowo</div>
+                    <div class="pricing-period" data-i18n="services.pricing.combo.period">jednorazowo</div>
                     <ul class="pricing-features">
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Strona do 10 podstron</span>
+                            <span data-i18n="services.pricing.combo.f1">Strona do 10 podstron</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Zaawansowany design</span>
+                            <span data-i18n="services.pricing.combo.f2">Zaawansowany design</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Automatyzacja procesów</span>
+                            <span data-i18n="services.pricing.combo.f3">Automatyzacja procesów</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Strona pracuje za Ciebie 24/7</span>
+                            <span data-i18n="services.pricing.combo.f4">Strona pracuje za Ciebie 24/7</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Skup się na biznesie, nie na stronie</span>
+                            <span data-i18n="services.pricing.combo.f5">Skup się na biznesie, nie na stronie</span>
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary">Wybierz pakiet</a>
+                    <a href="contact.html" class="btn btn-primary" data-i18n="services.pricing.combo.cta">Wybierz pakiet</a>
                 </div>
 
                 <div class="pricing-card fade-in stagger-3">
-                    <div class="pricing-name">Premium</div>
-                    <div class="pricing-description">Dla wymagających projektów</div>
+                    <div class="pricing-name" data-i18n="services.pricing.premium.name">Premium</div>
+                    <div class="pricing-description" data-i18n="services.pricing.premium.desc">Dla wymagających projektów</div>
                     <div class="pricing-price">od 15 000 <span>zł</span></div>
-                    <div class="pricing-period">wycena indywidualna</div>
+                    <div class="pricing-period" data-i18n="services.pricing.premium.period">wycena indywidualna</div>
                     <ul class="pricing-features">
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Nieograniczona liczba stron</span>
+                            <span data-i18n="services.pricing.premium.f1">Nieograniczona liczba stron</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Dedykowane funkcjonalności</span>
+                            <span data-i18n="services.pricing.premium.f2">Dedykowane funkcjonalności</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Integracje z systemami</span>
+                            <span data-i18n="services.pricing.premium.f3">Integracje z systemami</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Animacje i efekty</span>
+                            <span data-i18n="services.pricing.premium.f4">Animacje i efekty</span>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Priorytetowe wsparcie</span>
+                            <span data-i18n="services.pricing.premium.f5">Priorytetowe wsparcie</span>
                         </li>
                     </ul>
-                    <a href="contact.html" class="btn btn-outline">Skontaktuj się</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="services.pricing.premium.cta">Skontaktuj się</a>
                 </div>
             </div>
 
             <div class="text-center fade-in" style="margin-top: 50px; padding: 30px; background: var(--gray-100); border-radius: var(--radius-xl);">
-                <h4 style="margin-bottom: 16px;">W każdym pakiecie otrzymujesz:</h4>
+                <h4 style="margin-bottom: 16px;" data-i18n="services.pricing.included.title">W każdym pakiecie otrzymujesz:</h4>
                 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; color: var(--gray-700);">
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; stroke: var(--primary); fill: none; stroke-width: 2;"><polyline points="20 6 9 17 4 12"/></svg>
-                        <span>Pierwszy rok domeny i hostingu gratis</span>
+                        <span data-i18n="services.pricing.included.f1">Pierwszy rok domeny i hostingu gratis</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; stroke: var(--primary); fill: none; stroke-width: 2;"><polyline points="20 6 9 17 4 12"/></svg>
-                        <span>Wsparcie techniczne</span>
+                        <span data-i18n="services.pricing.included.f2">Wsparcie techniczne</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px;">
                         <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; stroke: var(--primary); fill: none; stroke-width: 2;"><polyline points="20 6 9 17 4 12"/></svg>
-                        <span>Hosting na naszych serwerach</span>
+                        <span data-i18n="services.pricing.included.f3">Hosting na naszych serwerach</span>
                     </div>
                 </div>
-                <p style="margin-top: 16px; font-size: 0.875rem; color: var(--gray-500);">
+                <p style="margin-top: 16px; font-size: 0.875rem; color: var(--gray-500);" data-i18n="services.pricing.included.note">
                     Strona będzie hostowana na naszym hostingu - zapewniamy pełną obsługę techniczną.
                 </p>
             </div>
@@ -866,19 +876,19 @@
     <section class="section section-gray">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">FAQ</span>
-                <h2>Często zadawane pytania</h2>
-                <p>Odpowiedzi na najczęściej zadawane pytania przez naszych klientów.</p>
+                <span class="section-label" data-i18n="services.faq.label">FAQ</span>
+                <h2 data-i18n="services.faq.title">Często zadawane pytania</h2>
+                <p data-i18n="services.faq.desc">Odpowiedzi na najczęściej zadawane pytania przez naszych klientów.</p>
             </div>
 
             <div class="faq-section fade-in">
                 <div class="faq-item">
                     <button class="faq-question">
-                        Ile trwa realizacja strony internetowej?
+                        <span data-i18n="services.faq.q1">Ile trwa realizacja strony internetowej?</span>
                         <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
+                        <div class="faq-answer-content" data-i18n="services.faq.a1">
                             W przypadku prostych stron wizytówkowych, pierwszą wersję projektu (mockup) przygotowujemy w ciągu 72 godzin.
                             Po akceptacji wyglądu przez klienta, gotową stronę dostarczamy również w 72 godziny.
                             Bardziej skomplikowane projekty (sklepy internetowe, rozbudowane portale, dedykowane funkcjonalności)
@@ -889,11 +899,11 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Czy mogę samodzielnie edytować treści na stronie?
+                        <span data-i18n="services.faq.q2">Czy mogę samodzielnie edytować treści na stronie?</span>
                         <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
+                        <div class="faq-answer-content" data-i18n="services.faq.a2">
                             Tak! W pakietach Business i Enterprise instalujemy system CMS (np. WordPress),
                             który pozwala na łatwą edycję treści bez znajomości programowania.
                             Przeprowadzamy również szkolenie z obsługi panelu.
@@ -903,11 +913,11 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Co jest potrzebne do rozpoczęcia projektu?
+                        <span data-i18n="services.faq.q3">Co jest potrzebne do rozpoczęcia projektu?</span>
                         <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
+                        <div class="faq-answer-content" data-i18n="services.faq.a3">
                             Potrzebujemy od Ciebie: logo firmy, treści (lub zlecenie ich napisania nam),
                             zdjęcia (lub wykorzystamy stock), oraz brief z informacjami o firmie i celach strony.
                             Przeprowadzimy Cię przez cały proces.
@@ -917,11 +927,11 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Czy oferujecie hosting i domenę?
+                        <span data-i18n="services.faq.q4">Czy oferujecie hosting i domenę?</span>
                         <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
+                        <div class="faq-answer-content" data-i18n="services.faq.a4">
                             Tak, możemy pomóc w zakupie domeny i hostingu, a także zająć się ich konfiguracją.
                             Współpracujemy z sprawdzonymi dostawcami usług hostingowych w Polsce.
                         </div>
@@ -930,11 +940,11 @@
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Jak wyglądają płatności?
+                        <span data-i18n="services.faq.q5">Jak wyglądają płatności?</span>
                         <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <div class="faq-answer-content">
+                        <div class="faq-answer-content" data-i18n="services.faq.a5">
                             Standardowo pracujemy w modelu: 50% zaliczki przed rozpoczęciem prac,
                             50% po akceptacji projektu. Dla większych projektów możemy ustalić płatności etapowe.
                             Wystawiamy fakturę VAT.
@@ -949,13 +959,13 @@
     <section class="section cta-section">
         <div class="container">
             <div class="cta-content fade-in">
-                <h2>Gotowy na nową stronę?</h2>
-                <p>
+                <h2 data-i18n="services.cta.title">Gotowy na nową stronę?</h2>
+                <p data-i18n="services.cta.desc">
                     Skontaktuj się z nami i otrzymaj darmową wycenę projektu w ciągu 24 godzin.
                 </p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="btn btn-secondary btn-lg">
-                        Zamów darmową wycenę
+                        <span data-i18n="services.cta.btn">Zamów darmową wycenę</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -978,34 +988,34 @@
                         </div>
                         Dekada72H
                     </a>
-                    <p>
+                    <p data-i18n="footer.brand.desc">
                         Nowoczesna agencja marketingowa specjalizująca się w tworzeniu stron WWW,
                         landing pages, SEO i automatyzację.
                     </p>
                     </div>
 
                 <div class="footer-column">
-                    <h4>Usługi</h4>
+                    <h4 data-i18n="footer.services.title">Usługi</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html#www">Strony WWW</a></li>
-                        <li><a href="services.html#landing">Landing Pages</a></li>
-                        <li><a href="services.html#seo">SEO</a></li>
-                        <li><a href="services.html#automatyzacja">Automatyzacja</a></li>
+                        <li><a href="services.html#www" data-i18n="footer.services.www">Strony WWW</a></li>
+                        <li><a href="services.html#landing" data-i18n="footer.services.landing">Landing Pages</a></li>
+                        <li><a href="services.html#seo" data-i18n="footer.services.seo">SEO</a></li>
+                        <li><a href="services.html#automatyzacja" data-i18n="footer.services.automation">Automatyzacja</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Firma</h4>
+                    <h4 data-i18n="footer.company.title">Firma</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">O nas</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="about.html" data-i18n="footer.company.about">O nas</a></li>
+                        <li><a href="portfolio.html" data-i18n="footer.company.portfolio">Portfolio</a></li>
+                        <li><a href="contact.html" data-i18n="footer.company.contact">Kontakt</a></li>
+                        <li><a href="#" data-i18n="footer.company.blog">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Kontakt</h4>
+                    <h4 data-i18n="footer.contact.title">Kontakt</h4>
                     <div class="footer-contact-item">
                         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         <span>ul. Powstańców Śląskich 25<br>50-001 Wrocław</span>
@@ -1018,10 +1028,10 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2016-2026 Dekada72H Digital. Wszystkie prawa zastrzeżone.</p>
+                <p data-i18n="footer.copyright" data-i18n-html>&copy; 2016-2026 Dekada72H Digital. Wszystkie prawa zastrzeżone.</p>
                 <div class="footer-bottom-links">
-                    <a href="privacy.html">Polityka prywatności</a>
-                    <a href="terms.html">Regulamin</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Polityka prywatności</a>
+                    <a href="terms.html" data-i18n="footer.terms">Regulamin</a>
                 </div>
             </div>
         </div>
@@ -1035,6 +1045,8 @@
     </div>
 
     <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/lang-switcher.js"></script>
     <script src="js/main.js"></script>
     <script>
         // FAQ Accordion

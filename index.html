@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dekada72H - Nowoczesna agencja marketingowa. Tworzymy strony WWW, landing pages, SEO i UX/UI design, które przekształcają odwiedzających w klientów.">
+    <meta name="description" data-i18n-content="index.meta.desc" content="Dekada72H - Nowoczesna agencja marketingowa. Tworzymy strony WWW, landing pages, SEO i UX/UI design, które przekształcają odwiedzających w klientów.">
     <meta name="keywords" content="agencja marketingowa, strony www, landing page, SEO, UX/UI, web design, marketing cyfrowy">
     <meta name="author" content="Dekada72H">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
 
-    <title>Dekada72H | Agencja Marketingowa - Strony WWW, SEO, UX/UI</title>
+    <title data-i18n="index.title">Dekada72H | Agencja Marketingowa - Strony WWW, SEO, UX/UI</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%236366f1' rx='20' width='100' height='100'/><text x='50' y='65' font-size='30' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>D72</text></svg>">
@@ -40,13 +40,23 @@
             </a>
 
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">O nas</a></li>
-                <li><a href="services.html" class="nav-link">Usługi</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="contact.html" class="nav-link">Kontakt</a></li>
-                <li><a href="contact.html" class="btn btn-primary nav-cta">Darmowa wycena</a></li>
+                <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                <li><a href="about.html" class="nav-link" data-i18n="nav.about">O nas</a></li>
+                <li><a href="services.html" class="nav-link" data-i18n="nav.services">Usługi</a></li>
+                <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
+                <li><a href="contact.html" class="btn btn-primary nav-cta" data-i18n="nav.cta">Darmowa wycena</a></li>
             </ul>
+
+            <!-- Language Switcher -->
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="pl" title="Polski" aria-label="Polski">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 6 4"><rect width="6" height="4" fill="#dc143c"/><rect width="6" height="2" fill="#fff"/></svg>
+                </button>
+                <button class="lang-btn" data-lang="en" title="English" aria-label="English">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 19 10"><rect width="19" height="10" fill="#B22234"/><rect y="1" width="19" height="1" fill="#fff"/><rect y="3" width="19" height="1" fill="#fff"/><rect y="5" width="19" height="1" fill="#fff"/><rect y="7" width="19" height="1" fill="#fff"/><rect y="9" width="19" height="1" fill="#fff"/><rect width="8" height="6" fill="#3C3B6E"/></svg>
+                </button>
+            </div>
 
             <div class="menu-toggle">
                 <span></span>
@@ -67,23 +77,23 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">
+                    <h1 class="hero-title" data-i18n="index.hero.title" data-i18n-html>
                         Tworzymy <span>cyfrowe doświadczenia</span> które sprzedają
                     </h1>
 
-                    <p class="hero-description">
+                    <p class="hero-description" data-i18n="index.hero.desc">
                         Jesteśmy agencją marketingową specjalizującą się w tworzeniu stron WWW,
                         landing pages i strategiach SEO, które przekształcają odwiedzających w lojalnych klientów.
                     </p>
 
                     <div class="hero-buttons">
                         <a href="contact.html" class="btn btn-primary btn-lg">
-                            Rozpocznij projekt
+                            <span data-i18n="index.hero.btn.start">Rozpocznij projekt</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
                         </a>
-                        <a href="portfolio.html" class="btn btn-secondary btn-lg">
+                        <a href="portfolio.html" class="btn btn-secondary btn-lg" data-i18n="index.hero.btn.portfolio">
                             Zobacz realizacje
                         </a>
                     </div>
@@ -91,15 +101,15 @@
                     <div class="hero-stats">
                         <div class="stat-item">
                             <div class="stat-number">98%</div>
-                            <div class="stat-label">Zadowolonych klientów</div>
+                            <div class="stat-label" data-i18n="index.hero.stat.clients">Zadowolonych klientów</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">10</div>
-                            <div class="stat-label">Lat doświadczenia</div>
+                            <div class="stat-label" data-i18n="index.hero.stat.experience">Lat doświadczenia</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">100%</div>
-                            <div class="stat-label">Projektów od zera</div>
+                            <div class="stat-label" data-i18n="index.hero.stat.scratch">Projektów od zera</div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +126,7 @@
                                 <path d="M17 6h6v6"/>
                             </svg>
                         </div>
-                        <div class="float-card-title">Wzrost konwersji</div>
+                        <div class="float-card-title" data-i18n="index.hero.float.conversion">Wzrost konwersji</div>
                         <div class="float-card-value">+247%</div>
                     </div>
 
@@ -127,8 +137,8 @@
                                 <path d="M12 6v6l4 2"/>
                             </svg>
                         </div>
-                        <div class="float-card-title">Czas realizacji</div>
-                        <div class="float-card-value">14 dni</div>
+                        <div class="float-card-title" data-i18n="index.hero.float.time">Czas realizacji</div>
+                        <div class="float-card-value" data-i18n="index.hero.float.time.val">14 dni</div>
                     </div>
                 </div>
             </div>
@@ -139,9 +149,9 @@
     <section class="section section-gray" id="services">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">Nasze usługi</span>
-                <h2>Kompleksowe rozwiązania dla Twojego biznesu</h2>
-                <p>Oferujemy pełen zakres usług marketingowych, które pomogą Ci zbudować silną obecność online i przyciągnąć więcej klientów.</p>
+                <span class="section-label" data-i18n="index.services.label">Nasze usługi</span>
+                <h2 data-i18n="index.services.title">Kompleksowe rozwiązania dla Twojego biznesu</h2>
+                <p data-i18n="index.services.desc">Oferujemy pełen zakres usług marketingowych, które pomogą Ci zbudować silną obecność online i przyciągnąć więcej klientów.</p>
             </div>
 
             <div class="services-grid">
@@ -152,10 +162,10 @@
                             <path d="M8 21h8M12 17v4"/>
                         </svg>
                     </div>
-                    <h3>Strony WWW</h3>
-                    <p>Projektujemy i tworzymy responsywne strony internetowe, które wyglądają świetnie na każdym urządzeniu.</p>
+                    <h3 data-i18n="index.services.www.title">Strony WWW</h3>
+                    <p data-i18n="index.services.www.desc">Projektujemy i tworzymy responsywne strony internetowe, które wyglądają świetnie na każdym urządzeniu.</p>
                     <a href="services.html" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="index.services.www.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -170,10 +180,10 @@
                             <polyline points="10 9 9 9 8 9"/>
                         </svg>
                     </div>
-                    <h3>Landing Pages</h3>
-                    <p>Tworzymy strony docelowe zoptymalizowane pod konwersję, które zamieniają odwiedzających w klientów.</p>
+                    <h3 data-i18n="index.services.landing.title">Landing Pages</h3>
+                    <p data-i18n="index.services.landing.desc">Tworzymy strony docelowe zoptymalizowane pod konwersję, które zamieniają odwiedzających w klientów.</p>
                     <a href="services.html" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="index.services.landing.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -186,10 +196,10 @@
                             <path d="M11 8v6M8 11h6"/>
                         </svg>
                     </div>
-                    <h3>SEO</h3>
-                    <p>Optymalizujemy strony pod wyszukiwarki, aby Twój biznes był widoczny dla potencjalnych klientów.</p>
+                    <h3 data-i18n="index.services.seo.title">SEO</h3>
+                    <p data-i18n="index.services.seo.desc">Optymalizujemy strony pod wyszukiwarki, aby Twój biznes był widoczny dla potencjalnych klientów.</p>
                     <a href="services.html" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="index.services.seo.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -201,10 +211,10 @@
                             <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
                         </svg>
                     </div>
-                    <h3>Automatyzacja</h3>
-                    <p>Automatyzujemy procesy na Twojej stronie, abyś mógł skupić się na prowadzeniu biznesu.</p>
+                    <h3 data-i18n="index.services.auto.title">Automatyzacja</h3>
+                    <p data-i18n="index.services.auto.desc">Automatyzujemy procesy na Twojej stronie, abyś mógł skupić się na prowadzeniu biznesu.</p>
                     <a href="services.html#automatyzacja" class="service-link">
-                        Dowiedz się więcej
+                        <span data-i18n="index.services.auto.link">Dowiedz się więcej</span>
                         <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -225,18 +235,18 @@
                     </div>
                     <div class="about-experience">
                         <div class="about-experience-number">10+</div>
-                        <div class="about-experience-text">Lat doświadczenia</div>
+                        <div class="about-experience-text" data-i18n="index.about.exp">Lat doświadczenia</div>
                     </div>
                 </div>
 
                 <div class="about-text fade-in-right">
-                    <span class="section-label">O nas</span>
-                    <h2>Pomagamy firmom rosnąć w świecie cyfrowym</h2>
-                    <p class="lead">
+                    <span class="section-label" data-i18n="index.about.label">O nas</span>
+                    <h2 data-i18n="index.about.title">Pomagamy firmom rosnąć w świecie cyfrowym</h2>
+                    <p class="lead" data-i18n="index.about.lead">
                         Jesteśmy zespołem pasjonatów, którzy wierzą, że dobry design i strategia marketingowa
                         mogą zmienić każdy biznes.
                     </p>
-                    <p>
+                    <p data-i18n="index.about.text">
                         Od 2016 roku pomagamy firmom z różnych branż budować silną obecność online.
                         Łączymy kreatywność z danymi, tworząc rozwiązania, które nie tylko wyglądają
                         świetnie, ale przede wszystkim przynoszą wymierne rezultaty.
@@ -247,30 +257,30 @@
                             <div class="about-feature-icon">
                                 <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                             </div>
-                            <span>Indywidualne podejście</span>
+                            <span data-i18n="index.about.feature1">Indywidualne podejście</span>
                         </div>
                         <div class="about-feature">
                             <div class="about-feature-icon">
                                 <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                             </div>
-                            <span>Terminowa realizacja</span>
+                            <span data-i18n="index.about.feature2">Terminowa realizacja</span>
                         </div>
                         <div class="about-feature">
                             <div class="about-feature-icon">
                                 <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                             </div>
-                            <span>Wsparcie techniczne</span>
+                            <span data-i18n="index.about.feature3">Wsparcie techniczne</span>
                         </div>
                         <div class="about-feature">
                             <div class="about-feature-icon">
                                 <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                             </div>
-                            <span>Przejrzyste ceny</span>
+                            <span data-i18n="index.about.feature4">Przejrzyste ceny</span>
                         </div>
                     </div>
 
                     <a href="about.html" class="btn btn-primary">
-                        Poznaj nas lepiej
+                        <span data-i18n="index.about.btn">Poznaj nas lepiej</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -284,19 +294,19 @@
     <section class="section section-dark" id="portfolio">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label" style="color: var(--primary-light);">Portfolio</span>
-                <h2 style="color: var(--white);">Nasze najnowsze realizacje</h2>
-                <p style="color: rgba(255,255,255,0.7);">Zobacz projekty, które pomogły naszym klientom osiągnąć sukces w internecie.</p>
+                <span class="section-label" style="color: var(--primary-light);" data-i18n="index.portfolio.label">Portfolio</span>
+                <h2 style="color: var(--white);" data-i18n="index.portfolio.title">Nasze najnowsze realizacje</h2>
+                <p style="color: rgba(255,255,255,0.7);" data-i18n="index.portfolio.desc">Zobacz projekty, które pomogły naszym klientom osiągnąć sukces w internecie.</p>
             </div>
 
             <div class="portfolio-grid">
                 <a href="portfolio/BellaVista/index.html" class="portfolio-item fade-in">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="Restauracja Bella Vista">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Gastronomia</span>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.gastro">Gastronomia</span>
                         <h3 class="portfolio-title">Restauracja Bella Vista</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -305,10 +315,10 @@
                 <a href="portfolio/BudMaster/index.html" class="portfolio-item fade-in stagger-1">
                     <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="BudMaster">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Budownictwo</span>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.construction">Budownictwo</span>
                         <h3 class="portfolio-title">BudMaster</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -317,10 +327,10 @@
                 <a href="portfolio/FitPro/index.html" class="portfolio-item fade-in stagger-2">
                     <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="FitPro Studio">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Fitness</span>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.fitness">Fitness</span>
                         <h3 class="portfolio-title">FitPro Studio</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -329,10 +339,10 @@
                 <a href="portfolio/Kowalski&Partners/index.html" class="portfolio-item fade-in stagger-3">
                     <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80" alt="Kancelaria Prawna Kowalski">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Prawo</span>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.law">Prawo</span>
                         <h3 class="portfolio-title">Kancelaria Kowalski & Partners</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -341,10 +351,10 @@
                 <a href="portfolio/Glamour-Beauty/index.html" class="portfolio-item fade-in stagger-4">
                     <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" alt="Glamour Beauty">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Beauty</span>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.beauty">Beauty</span>
                         <h3 class="portfolio-title">Glamour Beauty Studio</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -353,10 +363,10 @@
                 <a href="portfolio/MediCare-Plus/index.html" class="portfolio-item fade-in stagger-5">
                     <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80" alt="MediCare Plus">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Medycyna</span>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.medicine">Medycyna</span>
                         <h3 class="portfolio-title">MediCare Plus</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -365,10 +375,10 @@
                 <a href="portfolio/ToyLand/index.html" class="portfolio-item fade-in stagger-6">
                     <img src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=600&q=80" alt="ToyLand">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">E-commerce</span>
-                        <h3 class="portfolio-title">ToyLand - Sklep z Zabawkami</h3>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.ecommerce">E-commerce</span>
+                        <h3 class="portfolio-title" data-i18n="index.portfolio.toyland">ToyLand - Sklep z Zabawkami</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -377,10 +387,10 @@
                 <a href="portfolio/PrintMaster/index.html" class="portfolio-item fade-in stagger-7">
                     <img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="PrintMaster">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Poligrafia</span>
-                        <h3 class="portfolio-title">PrintMaster - Drukarnia</h3>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.print">Poligrafia</span>
+                        <h3 class="portfolio-title" data-i18n="index.portfolio.printmaster">PrintMaster - Drukarnia</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -389,10 +399,10 @@
                 <a href="portfolio/PetZone/index.html" class="portfolio-item fade-in stagger-8">
                     <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80" alt="PetZone">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Sklep zoologiczny</span>
-                        <h3 class="portfolio-title">PetZone - Sklep dla Zwierzat</h3>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.petshop">Sklep zoologiczny</span>
+                        <h3 class="portfolio-title" data-i18n="index.portfolio.petzone">PetZone - Sklep dla Zwierzat</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -401,10 +411,10 @@
                 <a href="portfolio/DomExpert/index.html" class="portfolio-item fade-in stagger-9">
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="DomExpert">
                     <div class="portfolio-overlay">
-                        <span class="portfolio-category">Nieruchomości</span>
-                        <h3 class="portfolio-title">DomExpert - Agencja Nieruchomości</h3>
+                        <span class="portfolio-category" data-i18n="index.portfolio.cat.realestate">Nieruchomości</span>
+                        <h3 class="portfolio-title" data-i18n="index.portfolio.domexpert">DomExpert - Agencja Nieruchomości</h3>
                         <span class="portfolio-link">
-                            Zobacz projekt
+                            <span data-i18n="index.portfolio.view">Zobacz projekt</span>
                             <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </span>
                     </div>
@@ -413,7 +423,7 @@
 
             <div class="text-center" style="margin-top: 50px;">
                 <a href="portfolio.html" class="btn btn-secondary">
-                    Zobacz wszystkie projekty
+                    <span data-i18n="index.portfolio.viewall">Zobacz wszystkie projekty</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
@@ -426,9 +436,9 @@
     <section class="section" id="custom-work">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">Dlaczego my?</span>
-                <h2>Każdy projekt tworzony od podstaw</h2>
-                <p>Nie używamy gotowych szablonów. Każda strona jest projektowana i kodowana indywidualnie pod Twój biznes.</p>
+                <span class="section-label" data-i18n="index.custom.label">Dlaczego my?</span>
+                <h2 data-i18n="index.custom.title">Każdy projekt tworzony od podstaw</h2>
+                <p data-i18n="index.custom.desc">Nie używamy gotowych szablonów. Każda strona jest projektowana i kodowana indywidualnie pod Twój biznes.</p>
             </div>
 
             <div class="services-grid">
@@ -439,8 +449,8 @@
                             <polyline points="8 6 2 12 8 18"/>
                         </svg>
                     </div>
-                    <h3>Kod pisany ręcznie</h3>
-                    <p>Każda linia kodu jest pisana przez nas. Zero generatorów, zero gotowych rozwiązań - tylko czysty, zoptymalizowany kod.</p>
+                    <h3 data-i18n="index.custom.code.title">Kod pisany ręcznie</h3>
+                    <p data-i18n="index.custom.code.desc">Każda linia kodu jest pisana przez nas. Zero generatorów, zero gotowych rozwiązań - tylko czysty, zoptymalizowany kod.</p>
                 </div>
 
                 <div class="service-card fade-in stagger-2">
@@ -449,8 +459,8 @@
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3>Unikalny design</h3>
-                    <p>Twoja strona nie będzie wyglądać jak tysiące innych. Projektujemy wizualnie od zera, dopasowując do charakteru Twojej marki.</p>
+                    <h3 data-i18n="index.custom.design.title">Unikalny design</h3>
+                    <p data-i18n="index.custom.design.desc">Twoja strona nie będzie wyglądać jak tysiące innych. Projektujemy wizualnie od zera, dopasowując do charakteru Twojej marki.</p>
                 </div>
 
                 <div class="service-card fade-in stagger-3">
@@ -459,8 +469,8 @@
                             <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                         </svg>
                     </div>
-                    <h3>Maksymalna wydajność</h3>
-                    <p>Brak zbędnego kodu oznacza błyskawiczne ładowanie strony. Twoi klienci nie będą czekać na załadowanie się szablonu.</p>
+                    <h3 data-i18n="index.custom.perf.title">Maksymalna wydajność</h3>
+                    <p data-i18n="index.custom.perf.desc">Brak zbędnego kodu oznacza błyskawiczne ładowanie strony. Twoi klienci nie będą czekać na załadowanie się szablonu.</p>
                 </div>
 
                 <div class="service-card fade-in stagger-4">
@@ -469,8 +479,8 @@
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
-                    <h3>Pełna kontrola</h3>
-                    <p>Bez ograniczeń szablonów. Możemy zrealizować każdy pomysł dokładnie tak, jak sobie wyobrażasz.</p>
+                    <h3 data-i18n="index.custom.control.title">Pełna kontrola</h3>
+                    <p data-i18n="index.custom.control.desc">Bez ograniczeń szablonów. Możemy zrealizować każdy pomysł dokładnie tak, jak sobie wyobrażasz.</p>
                 </div>
             </div>
         </div>
@@ -480,14 +490,14 @@
     <section class="section cta-section">
         <div class="container">
             <div class="cta-content fade-in">
-                <h2>Gotowy, aby rozwinąć swój biznes online?</h2>
-                <p>
+                <h2 data-i18n="index.cta.title">Gotowy, aby rozwinąć swój biznes online?</h2>
+                <p data-i18n="index.cta.desc">
                     Skontaktuj się z nami już dziś i otrzymaj darmową wycenę projektu.
                     Pomożemy Ci osiągnąć cele biznesowe w internecie.
                 </p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="btn btn-secondary btn-lg">
-                        Darmowa wycena
+                        <span data-i18n="index.cta.btn">Darmowa wycena</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
@@ -516,34 +526,34 @@
                         </div>
                         Dekada72H
                     </a>
-                    <p>
+                    <p data-i18n="footer.brand.desc">
                         Nowoczesna agencja marketingowa specjalizująca się w tworzeniu stron WWW,
                         landing pages, SEO i automatyzację.
                     </p>
                     </div>
 
                 <div class="footer-column">
-                    <h4>Usługi</h4>
+                    <h4 data-i18n="footer.services.title">Usługi</h4>
                     <ul class="footer-links">
-                        <li><a href="services.html">Strony WWW</a></li>
-                        <li><a href="services.html">Landing Pages</a></li>
-                        <li><a href="services.html">SEO</a></li>
-                        <li><a href="services.html#automatyzacja">Automatyzacja</a></li>
+                        <li><a href="services.html" data-i18n="footer.services.www">Strony WWW</a></li>
+                        <li><a href="services.html" data-i18n="footer.services.landing">Landing Pages</a></li>
+                        <li><a href="services.html" data-i18n="footer.services.seo">SEO</a></li>
+                        <li><a href="services.html#automatyzacja" data-i18n="footer.services.automation">Automatyzacja</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Firma</h4>
+                    <h4 data-i18n="footer.company.title">Firma</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html">O nas</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Kontakt</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="about.html" data-i18n="footer.company.about">O nas</a></li>
+                        <li><a href="portfolio.html" data-i18n="footer.company.portfolio">Portfolio</a></li>
+                        <li><a href="contact.html" data-i18n="footer.company.contact">Kontakt</a></li>
+                        <li><a href="#" data-i18n="footer.company.blog">Blog</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-column">
-                    <h4>Kontakt</h4>
+                    <h4 data-i18n="footer.contact.title">Kontakt</h4>
                     <div class="footer-contact-item">
                         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         <span>ul. Jedności Narodowej<br>50-260 Wrocław</span>
@@ -556,10 +566,10 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2016-2026 Dekada72H Digital. Wszystkie prawa zastrzeżone.</p>
+                <p data-i18n="footer.copyright" data-i18n-html>&copy; 2016-2026 Dekada72H Digital. Wszystkie prawa zastrzeżone.</p>
                 <div class="footer-bottom-links">
-                    <a href="privacy.html">Polityka prywatności</a>
-                    <a href="terms.html">Regulamin</a>
+                    <a href="privacy.html" data-i18n="footer.privacy">Polityka prywatności</a>
+                    <a href="terms.html" data-i18n="footer.terms">Regulamin</a>
                 </div>
             </div>
         </div>
@@ -573,6 +583,8 @@
     </div>
 
     <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/lang-switcher.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -220,7 +220,7 @@ const ContactForm = {
         const submitBtn = this.form.querySelector('.form-submit');
         const originalText = submitBtn.textContent;
 
-        submitBtn.textContent = 'Wysyłanie...';
+        submitBtn.textContent = (typeof LangSwitcher !== 'undefined') ? LangSwitcher.t('form.sending') || 'Wysyłanie...' : 'Wysyłanie...';
         submitBtn.disabled = true;
 
         // Simulate API call
@@ -241,7 +241,7 @@ const ContactForm = {
         // Required check
         if (field.hasAttribute('required') && !value) {
             isValid = false;
-            errorMessage = 'To pole jest wymagane';
+            errorMessage = (typeof LangSwitcher !== 'undefined') ? LangSwitcher.t('form.required') || 'To pole jest wymagane' : 'To pole jest wymagane';
         }
 
         // Email validation
@@ -249,7 +249,7 @@ const ContactForm = {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(value)) {
                 isValid = false;
-                errorMessage = 'Podaj prawidłowy adres email';
+                errorMessage = (typeof LangSwitcher !== 'undefined') ? LangSwitcher.t('form.invalid.email') || 'Podaj prawidłowy adres email' : 'Podaj prawidłowy adres email';
             }
         }
 
@@ -258,7 +258,7 @@ const ContactForm = {
             const phoneRegex = /^[\d\s\-\+\(\)]{9,}$/;
             if (!phoneRegex.test(value)) {
                 isValid = false;
-                errorMessage = 'Podaj prawidłowy numer telefonu';
+                errorMessage = (typeof LangSwitcher !== 'undefined') ? LangSwitcher.t('form.invalid.phone') || 'Podaj prawidłowy numer telefonu' : 'Podaj prawidłowy numer telefonu';
             }
         }
 
@@ -302,8 +302,8 @@ const ContactForm = {
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
-                <h4 style="margin-bottom: 8px; font-size: 1.25rem;">Wiadomość wysłana!</h4>
-                <p style="margin: 0; opacity: 0.9;">Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe.</p>
+                <h4 style="margin-bottom: 8px; font-size: 1.25rem;">${(typeof LangSwitcher !== 'undefined') ? LangSwitcher.t('form.success.title') || 'Wiadomość wysłana!' : 'Wiadomość wysłana!'}</h4>
+                <p style="margin: 0; opacity: 0.9;">${(typeof LangSwitcher !== 'undefined') ? LangSwitcher.t('form.success.desc') || 'Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe.' : 'Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe.'}</p>
             </div>
         `;
 
