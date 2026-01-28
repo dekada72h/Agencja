@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Skontaktuj się z Dekada72H - agencją marketingową. Darmowa wycena projektu, konsultacje i współpraca." data-i18n-content="contact.meta.desc">
     <meta name="keywords" content="kontakt, agencja marketingowa, wycena, konsultacja, współpraca">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.google.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://www.google.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self' https://formspree.io;">
 
     <title data-i18n="contact.title">Kontakt | Dekada72H - Darmowa Wycena</title>
 
@@ -353,6 +353,176 @@
                 padding: 30px;
             }
         }
+
+        /* Contact Form Styles */
+        .contact-form-section {
+            margin-top: 60px;
+        }
+
+        .contact-form-card {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: 50px;
+            box-shadow: var(--shadow-xl);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .contact-form-card > p {
+            color: var(--gray-600);
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: var(--gray-700);
+            font-size: 0.9375rem;
+        }
+
+        .form-group label .required {
+            color: #ef4444;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all var(--transition-fast);
+            background: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--gray-400);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+            padding-right: 44px;
+        }
+
+        .form-checkbox-group {
+            margin-top: 8px;
+        }
+
+        .form-checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+        }
+
+        .form-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+            margin-top: 2px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            accent-color: var(--primary);
+        }
+
+        .form-checkbox:checked {
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .form-checkbox-text {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+
+        .form-checkbox-text a {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .form-submit-btn {
+            margin-top: 16px;
+            padding: 16px 32px;
+            font-size: 1.0625rem;
+            width: 100%;
+        }
+
+        .form-status {
+            text-align: center;
+            padding: 16px;
+            border-radius: var(--radius-lg);
+            margin-top: 16px;
+            display: none;
+        }
+
+        .form-status.success {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+
+        .form-status.error {
+            background: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-card {
+                padding: 30px 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -469,6 +639,81 @@
                 </div>
             </div>
 
+            <!-- Contact Form -->
+            <div class="contact-form-section fade-in">
+                <div class="contact-form-card">
+                    <h3 data-i18n="contact.form.title">Wyślij wiadomość</h3>
+                    <p data-i18n="contact.form.desc">Wypełnij formularz, a odezwiemy się najszybciej jak to możliwe.</p>
+
+                    <form class="contact-form" action="https://formspree.io/f/xlgneypa" method="POST" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.form.name">Imię i nazwisko <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Jan Kowalski" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contact.form.email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="jan@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone" data-i18n="contact.form.phone">Telefon <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service" data-i18n="contact.form.service">Rodzaj usługi</label>
+                                <select id="service" name="service">
+                                    <option value="" data-i18n="contact.form.service.placeholder">Wybierz usługę...</option>
+                                    <option value="strona-www" data-i18n="contact.form.service.www">Strona WWW</option>
+                                    <option value="landing-page" data-i18n="contact.form.service.landing">Landing Page</option>
+                                    <option value="seo" data-i18n="contact.form.service.seo">SEO / Pozycjonowanie</option>
+                                    <option value="automatyzacja" data-i18n="contact.form.service.auto">Automatyzacja</option>
+                                    <option value="inne" data-i18n="contact.form.service.other">Inne</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="referral" data-i18n="contact.form.referral">Jak się o nas dowiedziałeś/aś?</label>
+                            <select id="referral" name="referral">
+                                <option value="" data-i18n="contact.form.referral.placeholder">Wybierz opcję...</option>
+                                <option value="damian" data-i18n="contact.form.referral.damian">Damian - Doradca Klienta</option>
+                                <option value="kuba" data-i18n="contact.form.referral.kuba">Kuba - Doradca Klienta</option>
+                                <option value="internet" data-i18n="contact.form.referral.internet">Z internetu</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Wiadomość <span class="required">*</span></label>
+                            <textarea id="message" name="message" placeholder="Opisz swój projekt lub zadaj pytanie..." required></textarea>
+                        </div>
+
+                        <div class="form-checkbox-group">
+                            <label class="form-checkbox-label">
+                                <input type="checkbox" class="form-checkbox" name="consent" required>
+                                <span class="form-checkbox-text" data-i18n="contact.form.consent">
+                                    Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie.
+                                    Zapoznałem/am się z <a href="privacy.html">polityką prywatności</a>.
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary form-submit-btn" data-i18n="contact.form.submit">
+                            Wyślij wiadomość
+                        </button>
+
+                        <div class="form-status success" id="formSuccess" data-i18n="contact.form.success">
+                            Dziękujemy! Twoja wiadomość została wysłana. Odezwiemy się wkrótce.
+                        </div>
+                        <div class="form-status error" id="formError" data-i18n="contact.form.error">
+                            Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub skontaktuj się telefonicznie.
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <!-- Quick Contact Cards -->
             <div class="quick-contact-cards" style="justify-content: center;">
                 <div class="quick-contact-card fade-in stagger-1">
@@ -578,5 +823,6 @@
     <script src="js/translations.js"></script>
     <script src="js/lang-switcher.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
 </body>
 </html>
