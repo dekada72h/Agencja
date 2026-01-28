@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" data-i18n-content="services.meta.desc" content="Usługi Dekada72H - Strony WWW, Landing Pages, SEO, UX/UI Design. Kompleksowe rozwiązania marketingowe dla Twojego biznesu.">
     <meta name="keywords" content="strony www, landing page, SEO, UX/UI, web design, marketing cyfrowy, tworzenie stron">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
 
     <title data-i18n="services.title">Usługi | Dekada72H - Strony WWW, SEO, UX/UI</title>
 
@@ -1048,24 +1048,6 @@
     <script src="js/translations.js"></script>
     <script src="js/lang-switcher.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                const isActive = item.classList.contains('active');
-
-                // Close all items
-                document.querySelectorAll('.faq-item').forEach(faq => {
-                    faq.classList.remove('active');
-                });
-
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="js/services.js"></script>
 </body>
 </html>
