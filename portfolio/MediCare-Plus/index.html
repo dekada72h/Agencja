@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MediCare Plus - Nowoczesna klinika medyczna w Warszawie. Profesjonalna opieka zdrowotna, najnowsze technologie diagnostyczne i doświadczeni lekarze.">
     <meta name="keywords" content="klinika, lekarz, medycyna, zdrowie, diagnostyka, Warszawa, prywatna opieka zdrowotna">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
 
     <title>MediCare Plus | Nowoczesna Klinika Medyczna - Twoje Zdrowie w Dobrych Rękach</title>
 
@@ -2165,78 +2165,6 @@
         </div>
     </footer>
 
-    <script>
-        // Navbar scroll effect
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-        const menuToggle = document.querySelector('.menu-toggle');
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-        const navMenu = document.querySelector('.nav-menu');
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Smooth scroll
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Form submission
-// DEVELOPER WARNING: This is a frontend-only simulation.
-// For a functional form, a secure backend is required to handle submissions.
-        document.querySelector('.appointment-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Dziekujemy za zapisanie sie! Skontaktujemy sie wkrotce, aby potwierdzic termin wizyty.');
-            this.reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
