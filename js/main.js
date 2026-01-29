@@ -489,6 +489,7 @@ LazyLoad.init();
    ============================================ */
 const Parallax = {
     elements: null,
+    ticking: false,
 
     init() {
         this.elements = document.querySelectorAll('[data-parallax]');
@@ -498,6 +499,16 @@ const Parallax = {
     },
 
     handleScroll() {
+        if (!this.ticking) {
+            window.requestAnimationFrame(() => {
+                this.update();
+                this.ticking = false;
+            });
+            this.ticking = true;
+        }
+    },
+
+    update() {
         const scrollY = window.scrollY;
 
         this.elements.forEach(element => {
