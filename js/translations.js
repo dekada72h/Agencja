@@ -13,6 +13,8 @@ const TRANSLATIONS = {
     "nav.contact": { pl: "Kontakt", en: "Contact", de: "Kontakt" },
     "nav.blog": { pl: "Blog", en: "Blog", de: "Blog" },
     "nav.tools": { pl: "Narzędzia", en: "Tools", de: "Tools" },
+    "nav.company": { pl: "Firma", en: "Company", de: "Unternehmen" },
+    "nav.resources": { pl: "Zasoby", en: "Resources", de: "Ressourcen" },
     "nav.cta": { pl: "Darmowa wycena", en: "Free Quote", de: "Kostenloses Angebot" },
 
     // ===========================
@@ -1828,9 +1830,9 @@ const TRANSLATIONS = {
     // Real examples
     "blog.article4.h2.examples": { pl: "Jak to wygląda w praktyce? Realne przykłady", en: "What Does It Look Like in Practice? Real Examples", de: "Wie sieht das in der Praxis aus? Reale Beispiele" },
     "blog.article4.examples.intro": {
-        pl: "Żeby lepiej zrozumieć siłę automatyzacji, spójrzmy na trzy typowe scenariusze, które wdrażamy u naszych klientów:",
-        en: "To better understand the power of automation, let's look at three typical scenarios we implement for our clients:",
-        de: "Um die Kraft der Automatisierung besser zu verstehen, schauen wir uns drei typische Szenarien an, die wir für unsere Kunden umsetzen:"
+        pl: "Żeby lepiej zrozumieć siłę automatyzacji, spójrzmy na cztery typowe scenariusze, które wdrażamy u naszych klientów:",
+        en: "To better understand the power of automation, let's look at four typical scenarios we implement for our clients:",
+        de: "Um die Kraft der Automatisierung besser zu verstehen, schauen wir uns vier typische Szenarien an, die wir für unsere Kunden umsetzen:"
     },
     "blog.article4.h3.example1": { pl: "Salon kosmetyczny - koniec z telefonami o rezerwację", en: "Beauty Salon - No More Phone Calls About Bookings", de: "Kosmetiksalon - Schluss mit Anrufen wegen Buchungen" },
     "blog.article4.example1.p1": {
@@ -1864,6 +1866,17 @@ const TRANSLATIONS = {
         pl: "Po automatyzacji: każdy lead natychmiast trafia do systemu, dostaje automatyczną odpowiedź, jest przypisywany do odpowiedniego prawnika i śledzony aż do zamknięcia sprawy. Jeśli klient nie odpowie - system sam wysyła follow-up. Efekt: 50% więcej konwersji z zapytań na klientów.",
         en: "After automation: every lead immediately enters the system, receives an automatic response, is assigned to the appropriate lawyer, and tracked until case closure. If the client doesn't respond - the system sends a follow-up automatically. Result: 50% more conversions from inquiries to clients.",
         de: "Nach der Automatisierung: Jeder Lead gelangt sofort ins System, erhält eine automatische Antwort, wird dem entsprechenden Anwalt zugewiesen und bis zum Abschluss des Falls verfolgt. Wenn der Kunde nicht antwortet - sendet das System automatisch ein Follow-up. Ergebnis: 50% mehr Konversionen von Anfragen zu Kunden."
+    },
+    "blog.article4.h3.example4": { pl: "Sklep z zabawkami - automatyczna obsługa zamówień i powiadomienia dla rodziców", en: "Toy Store - Automated Order Processing and Parent Notifications", de: "Spielzeugladen - Automatische Auftragsabwicklung und Benachrichtigungen für Eltern" },
+    "blog.article4.example4.p1": {
+        pl: "Przed automatyzacją: właściciel ręcznie potwierdzał każde zamówienie mailem, sprawdzał dostępność produktów w magazynie i wysyłał klientom informacje o statusie przesyłki. W sezonie świątecznym obsługa zamówień zajmowała cały dzień - nie było czasu na doradztwo klientom ani zamawianie nowych produktów.",
+        en: "Before automation: the owner manually confirmed every order by email, checked product availability in the warehouse, and sent customers shipment status updates. During the holiday season, order processing took the entire day - there was no time for customer consulting or ordering new products.",
+        de: "Vor der Automatisierung: Der Inhaber bestätigte jede Bestellung manuell per E-Mail, prüfte die Produktverfügbarkeit im Lager und informierte die Kunden über den Versandstatus. In der Weihnachtszeit nahm die Auftragsbearbeitung den ganzen Tag in Anspruch - es blieb keine Zeit für Kundenberatung oder neue Bestellungen."
+    },
+    "blog.article4.example4.p2": {
+        pl: "Po automatyzacji: system automatycznie potwierdza zamówienia, aktualizuje stany magazynowe i wysyła rodzicom powiadomienia na każdym etapie - od potwierdzenia przez pakowanie aż po dostawę. Gdy popularny produkt się kończy, system sam generuje zamówienie u dostawcy. W okresie świątecznym właściciel obsługiwał 3 razy więcej zamówień bez dodatkowego pracownika. Efekt: 40% więcej sprzedaży w grudniu przy tej samej liczbie osób.",
+        en: "After automation: the system automatically confirms orders, updates inventory levels, and sends parents notifications at every stage - from confirmation through packaging to delivery. When a popular product runs low, the system automatically generates a supplier order. During the holiday season, the owner handled 3 times more orders without additional staff. Result: 40% more sales in December with the same number of people.",
+        de: "Nach der Automatisierung: Das System bestätigt automatisch Bestellungen, aktualisiert Lagerbestände und sendet Eltern Benachrichtigungen in jeder Phase - von der Bestätigung über die Verpackung bis zur Lieferung. Wenn ein beliebtes Produkt knapp wird, generiert das System automatisch eine Lieferantenbestellung. In der Weihnachtszeit bearbeitete der Inhaber dreimal so viele Bestellungen ohne zusätzliches Personal. Ergebnis: 40% mehr Umsatz im Dezember bei gleicher Mitarbeiterzahl."
     },
     "blog.article4.examples.highlight": {
         pl: "Wspólny mianownik tych historii? Żadna z tych firm nie zatrudniła nowego pracownika. Nie kupiła drogiego oprogramowania. Nie zmieniła sposobu pracy. Po prostu pozwoliła, żeby technologia przejęła zadania, które dotąd zjadały ich czas.",

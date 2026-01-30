@@ -437,6 +437,84 @@ p {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Dropdown Navigation */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.nav-dropdown-trigger::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid currentColor;
+    transition: transform var(--transition-fast);
+    margin-left: 2px;
+}
+
+.nav-dropdown:hover .nav-dropdown-trigger::after,
+.nav-dropdown.open .nav-dropdown-trigger::after {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 180px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    padding: 8px 0;
+    z-index: 1000;
+    list-style: none;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-menu li {
+    list-style: none;
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--gray-700);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu a:hover {
+    background: var(--gray-100);
+    color: var(--primary);
+}
+
+.nav-dropdown-menu a::after {
+    display: none;
+}
+
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -1595,6 +1673,54 @@ p {
     .menu-toggle {
         display: flex;
         z-index: 1001;
+    }
+
+    .nav-dropdown-trigger::after {
+        border-top-color: var(--white);
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: none;
+        border-radius: var(--radius-md);
+        opacity: 1;
+        visibility: visible;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-normal), padding var(--transition-normal);
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        max-height: 200px;
+        padding: 8px 0;
+        margin-top: 8px;
+    }
+
+    .nav-dropdown-menu a {
+        color: rgba(255, 255, 255, 0.8);
+        padding: 8px 20px;
+        font-size: 1.1rem;
+    }
+
+    .nav-dropdown-menu a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--white);
+    }
+
+    .nav-dropdown:hover .nav-dropdown-menu {
+        max-height: 0;
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        max-height: 200px;
+        padding: 8px 0;
+        margin-top: 8px;
     }
 }
 

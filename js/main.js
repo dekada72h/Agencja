@@ -61,24 +61,60 @@ const Navigation = {
             this.menuToggle.addEventListener('click', () => this.toggleMenu());
         }
 
-        // Close menu on link click
+        // Close menu on link click (exclude dropdown triggers)
         this.navLinks.forEach(link => {
+            if (!link.classList.contains('nav-dropdown-trigger')) {
+                link.addEventListener('click', () => this.closeMenu());
+            }
+        });
+
+        // Dropdown toggle (for mobile and click support)
+        document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                var dropdown = trigger.closest('.nav-dropdown');
+                var isOpen = dropdown.classList.contains('open');
+
+                // Close all other dropdowns
+                document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+
+                dropdown.classList.toggle('open', !isOpen);
+            });
+        });
+
+        // Close dropdowns on link click inside dropdown menu
+        document.querySelectorAll('.nav-dropdown-menu a').forEach(link => {
             link.addEventListener('click', () => this.closeMenu());
         });
 
         // Close menu on outside click
         document.addEventListener('click', (e) => {
+            // Close mobile menu
             if (this.navMenu && this.navMenu.classList.contains('active')) {
                 if (!this.navMenu.contains(e.target) && !this.menuToggle.contains(e.target)) {
                     this.closeMenu();
                 }
             }
+
+            // Close dropdowns when clicking outside
+            if (!e.target.closest('.nav-dropdown')) {
+                document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+                    d.classList.remove('open');
+                });
+            }
         });
 
         // Handle escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && this.navMenu.classList.contains('active')) {
-                this.closeMenu();
+            if (e.key === 'Escape') {
+                if (this.navMenu.classList.contains('active')) {
+                    this.closeMenu();
+                }
+                document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+                    d.classList.remove('open');
+                });
             }
         });
     },
@@ -101,6 +137,9 @@ const Navigation = {
         this.menuToggle.classList.remove('active');
         this.navMenu.classList.remove('active');
         document.body.style.overflow = '';
+        document.querySelectorAll('.nav-dropdown.open').forEach(d => {
+            d.classList.remove('open');
+        });
     }
 };
 
