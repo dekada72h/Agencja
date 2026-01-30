@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.bindEvents();
             this.applySettings();
             this.updateUI();
+            this.watchLanguageChanges();
+
+            // Re-apply translations to newly injected widget elements
+            if (typeof LangSwitcher !== 'undefined' && LangSwitcher.applyTranslations) {
+                LangSwitcher.applyTranslations();
+            }
         },
 
         t(key) {
@@ -98,13 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         buildPanelHTML() {
             return '<div class="a11y-panel-header">' +
-                '<h3 class="a11y-panel-title">' + this.t('a11y.panel.title') + '</h3>' +
+                '<h3 class="a11y-panel-title" data-i18n="a11y.panel.title">' + this.t('a11y.panel.title') + '</h3>' +
                 '<button class="a11y-panel-close" aria-label="Close" data-a11y-close>&times;</button>' +
                 '</div>' +
                 '<div class="a11y-panel-body">' +
 
                 '<div class="a11y-section">' +
-                '<span class="a11y-section-label">' + this.t('a11y.fontSize') + '</span>' +
+                '<span class="a11y-section-label" data-i18n="a11y.fontSize">' + this.t('a11y.fontSize') + '</span>' +
                 '<div class="a11y-font-controls">' +
                 '<button class="a11y-font-btn" data-a11y-fontsize="0">A</button>' +
                 '<button class="a11y-font-btn" data-a11y-fontsize="1">A+</button>' +
@@ -114,51 +120,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 '<div class="a11y-section">' +
                 '<button class="a11y-toggle" data-a11y-toggle="dyslexia" aria-pressed="false">' +
-                '<span class="a11y-toggle-label">' + this.t('a11y.dyslexia') + '</span>' +
+                '<span class="a11y-toggle-label" data-i18n="a11y.dyslexia">' + this.t('a11y.dyslexia') + '</span>' +
                 '<span class="a11y-toggle-switch"></span>' +
                 '</button>' +
-                '<span class="a11y-section-desc">' + this.t('a11y.dyslexia.desc') + '</span>' +
+                '<span class="a11y-section-desc" data-i18n="a11y.dyslexia.desc">' + this.t('a11y.dyslexia.desc') + '</span>' +
                 '</div>' +
 
                 '<div class="a11y-section">' +
                 '<button class="a11y-toggle" data-a11y-toggle="contrast" aria-pressed="false">' +
-                '<span class="a11y-toggle-label">' + this.t('a11y.contrast') + '</span>' +
+                '<span class="a11y-toggle-label" data-i18n="a11y.contrast">' + this.t('a11y.contrast') + '</span>' +
                 '<span class="a11y-toggle-switch"></span>' +
                 '</button>' +
-                '<span class="a11y-section-desc">' + this.t('a11y.contrast.desc') + '</span>' +
+                '<span class="a11y-section-desc" data-i18n="a11y.contrast.desc">' + this.t('a11y.contrast.desc') + '</span>' +
                 '</div>' +
 
                 '<div class="a11y-section">' +
                 '<button class="a11y-toggle" data-a11y-toggle="colorBlind" aria-pressed="false">' +
-                '<span class="a11y-toggle-label">' + this.t('a11y.colorblind') + '</span>' +
+                '<span class="a11y-toggle-label" data-i18n="a11y.colorblind">' + this.t('a11y.colorblind') + '</span>' +
                 '<span class="a11y-toggle-switch"></span>' +
                 '</button>' +
-                '<span class="a11y-section-desc">' + this.t('a11y.colorblind.desc') + '</span>' +
+                '<span class="a11y-section-desc" data-i18n="a11y.colorblind.desc">' + this.t('a11y.colorblind.desc') + '</span>' +
                 '<div class="a11y-cb-options" data-a11y-cb-options>' +
                 '<button class="a11y-cb-option" data-a11y-cb="protanopia">' +
                 '<span class="a11y-cb-dot a11y-cb-dot--protanopia"></span>' +
-                '<span>' + this.t('a11y.cb.protanopia') + '</span>' +
+                '<span data-i18n="a11y.cb.protanopia">' + this.t('a11y.cb.protanopia') + '</span>' +
                 '</button>' +
                 '<button class="a11y-cb-option" data-a11y-cb="deuteranopia">' +
                 '<span class="a11y-cb-dot a11y-cb-dot--deuteranopia"></span>' +
-                '<span>' + this.t('a11y.cb.deuteranopia') + '</span>' +
+                '<span data-i18n="a11y.cb.deuteranopia">' + this.t('a11y.cb.deuteranopia') + '</span>' +
                 '</button>' +
                 '<button class="a11y-cb-option" data-a11y-cb="tritanopia">' +
                 '<span class="a11y-cb-dot a11y-cb-dot--tritanopia"></span>' +
-                '<span>' + this.t('a11y.cb.tritanopia') + '</span>' +
+                '<span data-i18n="a11y.cb.tritanopia">' + this.t('a11y.cb.tritanopia') + '</span>' +
                 '</button>' +
                 '</div>' +
                 '</div>' +
 
                 '<div class="a11y-section">' +
                 '<button class="a11y-toggle" data-a11y-toggle="readingGuide" aria-pressed="false">' +
-                '<span class="a11y-toggle-label">' + this.t('a11y.readingGuide') + '</span>' +
+                '<span class="a11y-toggle-label" data-i18n="a11y.readingGuide">' + this.t('a11y.readingGuide') + '</span>' +
                 '<span class="a11y-toggle-switch"></span>' +
                 '</button>' +
-                '<span class="a11y-section-desc">' + this.t('a11y.readingGuide.desc') + '</span>' +
+                '<span class="a11y-section-desc" data-i18n="a11y.readingGuide.desc">' + this.t('a11y.readingGuide.desc') + '</span>' +
                 '</div>' +
 
-                '<button class="a11y-reset" data-a11y-reset>' + this.t('a11y.resetAll') + '</button>' +
+                '<button class="a11y-reset" data-a11y-reset data-i18n="a11y.resetAll">' + this.t('a11y.resetAll') + '</button>' +
 
                 '</div>';
         },
@@ -252,13 +258,15 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         applySettings() {
+            var root = document.documentElement;
             var body = document.body;
 
-            body.classList.remove('a11y-font-lg', 'a11y-font-xl');
+            // Font size on <html> so rem-based sizes scale across the entire page
+            root.classList.remove('a11y-font-lg', 'a11y-font-xl');
             if (this.settings.fontSize === 1) {
-                body.classList.add('a11y-font-lg');
+                root.classList.add('a11y-font-lg');
             } else if (this.settings.fontSize === 2) {
-                body.classList.add('a11y-font-xl');
+                root.classList.add('a11y-font-xl');
             }
 
             body.classList.toggle('a11y-dyslexia', this.settings.dyslexia);
@@ -311,6 +319,21 @@ document.addEventListener('DOMContentLoaded', function() {
             this.applySettings();
             this.updateUI();
             this.saveSettings();
+        },
+
+        watchLanguageChanges() {
+            var self = this;
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+                        // Update trigger button aria-label and title
+                        self.trigger.setAttribute('aria-label', self.t('a11y.trigger.label'));
+                        self.trigger.setAttribute('title', self.t('a11y.trigger.label'));
+                        self.panel.setAttribute('aria-label', self.t('a11y.panel.title'));
+                    }
+                });
+            });
+            observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
         },
 
         loadSettings() {
