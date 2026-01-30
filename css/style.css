@@ -363,7 +363,7 @@ p {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 32px;
 }
 
 .nav-link {
@@ -525,6 +525,7 @@ p {
     position: relative;
     background: var(--gradient-dark);
     overflow: hidden;
+    padding-top: 80px;
 }
 
 .hero::before {
