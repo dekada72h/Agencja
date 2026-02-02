@@ -2031,6 +2031,36 @@ const TRANSLATIONS = {
     "blog.article4.cta.btn1": { pl: "Darmowa konsultacja", en: "Free Consultation", de: "Kostenlose Beratung" },
 
     // ===========================
+    // BLOG ARTICLE 5 - ILE KOSZTUJE STRONA
+    // ===========================
+    "blog.article5.category": { pl: "Strony WWW", en: "Websites", de: "Webseiten" },
+    "blog.article5.card.title": {
+        pl: "Ile Kosztuje Strona Internetowa w 2026? Cennik i Ukryte Koszty",
+        en: "How Much Does a Website Cost in 2026? Pricing & Hidden Costs",
+        de: "Was kostet eine Webseite 2026? Preise & versteckte Kosten"
+    },
+    "blog.article5.card.excerpt": {
+        pl: "Szczegółowy przewodnik po cenach stron internetowych. Porównanie kosztów HTML vs WordPress, ukryte opłaty i jak wybrać wykonawcę, który nie przepali Twojego budżetu.",
+        en: "A detailed guide to website pricing. HTML vs WordPress cost comparison, hidden fees, and how to choose a developer who won't burn through your budget.",
+        de: "Ein detaillierter Leitfaden zu Webseiten-Preisen. HTML vs WordPress Kostenvergleich, versteckte Gebühren und wie Sie einen Entwickler wählen, der Ihr Budget nicht sprengt."
+    },
+
+    // ===========================
+    // BLOG ARTICLE 6 - STRONA DLA FIRMY
+    // ===========================
+    "blog.article6.category": { pl: "Strony WWW", en: "Websites", de: "Webseiten" },
+    "blog.article6.card.title": {
+        pl: "Strona Internetowa dla Firmy - Dlaczego w 2026 to Konieczność",
+        en: "Business Website - Why It's a Necessity in 2026",
+        de: "Firmenwebseite - Warum sie 2026 ein Muss ist"
+    },
+    "blog.article6.card.excerpt": {
+        pl: "97% klientów szuka firm w internecie. Dowiedz się, dlaczego profesjonalna strona WWW to najlepsza inwestycja dla Twojego biznesu i jak zacząć.",
+        en: "97% of customers search for businesses online. Learn why a professional website is the best investment for your business and how to get started.",
+        de: "97% der Kunden suchen Unternehmen im Internet. Erfahren Sie, warum eine professionelle Webseite die beste Investition für Ihr Unternehmen ist und wie Sie starten."
+    },
+
+    // ===========================
     // ACCESSIBILITY WIDGET
     // ===========================
     "a11y.trigger.label": {
