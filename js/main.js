@@ -3,6 +3,12 @@
    Modern Marketing Agency
    ============================================ */
 
+/* Clickjacking protection (frame-busting) for GitHub Pages
+   where HTTP headers cannot be configured */
+if (window.self !== window.top) {
+    window.top.location = window.self.location;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all modules
     Preloader.init();
