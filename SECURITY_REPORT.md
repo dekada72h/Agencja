@@ -10,10 +10,12 @@ A comprehensive security assessment of the codebase was conducted to identify po
 ## Findings
 
 ### 1. Clickjacking (Missing X-Frame-Options / CSP frame-ancestors)
-*   **Severity:** Medium
+*   **Severity:** Low (Mitigated)
 *   **Description:** The website does not set the `X-Frame-Options` HTTP header or the `frame-ancestors` directive in its Content Security Policy (CSP). This makes the site vulnerable to Clickjacking attacks, where an attacker could embed the site in an iframe on a malicious page and trick users into clicking invisible buttons.
-*   **Context:** Since this is a static site, HTTP headers cannot be controlled via application code. The `frame-ancestors` directive is ignored when used in `<meta>` tags.
-*   **Recommendation:** Configure the web server (e.g., Apache, Nginx, Netlify, Vercel) to send the `X-Frame-Options: DENY` or `X-Frame-Options: SAMEORIGIN` header. Alternatively, configure the `Content-Security-Policy` header with `frame-ancestors 'self'`.
+*   **Mitigation Implemented:**
+    1.  **Server Configuration (.htaccess):** A `.htaccess` file has been added to the root directory. If the site is hosted on an Apache server (very common), this file will automatically set `X-Frame-Options: SAMEORIGIN` and `Content-Security-Policy: frame-ancestors 'self'`, providing robust protection.
+    2.  **Client-Side Framebuster (`js/security.js`):** A JavaScript "framebuster" script has been injected into all HTML pages. This script detects if the page is loaded within an iframe and redirects the top window to the site's URL, breaking out of the frame. This serves as a fallback for hosting environments that do not support `.htaccess` (e.g., simple GitHub Pages, S3).
+*   **Note:** If hosting on platforms like Netlify or Vercel, consider adding a `_headers` or `vercel.json` file for native header support, though the JS fallback provides reasonable protection.
 
 ### 2. Content Security Policy (CSP) Weakness
 *   **Severity:** Low

@@ -1,0 +1,12 @@
+<IfModule mod_headers.c>
+    # Security Headers
+    # Protect against Clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Content-Security-Policy "frame-ancestors 'self';"
+
+    # Protect against MIME sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # XSS Protection (for older browsers)
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
