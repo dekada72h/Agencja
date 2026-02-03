@@ -2020,6 +2020,16 @@ const TRANSLATIONS = {
     // ===========================
     // BLOG ARTICLE 5 - ILE KOSZTUJE STRONA
     // ===========================
+    "blog.article5.title": {
+        pl: "Ile kosztuje strona internetowa w 2026? Przewodnik po cenach | Dekada72H Blog",
+        en: "How Much Does a Website Cost in 2026? Pricing Guide | Dekada72H Blog",
+        de: "Was kostet eine Webseite 2026? Preisleitfaden | Dekada72H Blog"
+    },
+    "blog.article5.meta.desc": {
+        pl: "Ile kosztuje strona internetowa w 2026 roku? Szczegolowy przewodnik po cenach stron WWW, landing page, sklepow internetowych i dodatkowych uslug.",
+        en: "How much does a website cost in 2026? A detailed guide to website pricing, landing pages, online stores, and additional services.",
+        de: "Was kostet eine Webseite 2026? Ein detaillierter Leitfaden zu Preisen für Webseiten, Landing Pages, Online-Shops und zusätzliche Leistungen."
+    },
     "blog.article5.category": { pl: "Strony WWW", en: "Websites", de: "Webseiten" },
     "blog.article5.card.title": {
         pl: "Ile Kosztuje Strona Internetowa w 2026? Cennik i Ukryte Koszty",
@@ -2035,6 +2045,16 @@ const TRANSLATIONS = {
     // ===========================
     // BLOG ARTICLE 6 - STRONA DLA FIRMY
     // ===========================
+    "blog.article6.title": {
+        pl: "Strona Internetowa dla Firmy - Dlaczego w 2026 to Koniecznosc | Dekada72H Blog",
+        en: "Business Website - Why It's a Necessity in 2026 | Dekada72H Blog",
+        de: "Firmenwebseite - Warum sie 2026 ein Muss ist | Dekada72H Blog"
+    },
+    "blog.article6.meta.desc": {
+        pl: "Dlaczego Twoja firma potrzebuje profesjonalnej strony internetowej w 2026? 8 konkretnych powodow, porownanie z mediami spolecznosciowymi i praktyczny przewodnik.",
+        en: "Why does your business need a professional website in 2026? 8 concrete reasons, comparison with social media, and a practical step-by-step guide.",
+        de: "Warum braucht Ihr Unternehmen 2026 eine professionelle Webseite? 8 konkrete Gründe, Vergleich mit Social Media und ein praktischer Leitfaden."
+    },
     "blog.article6.category": { pl: "Strony WWW", en: "Websites", de: "Webseiten" },
     "blog.article6.card.title": {
         pl: "Strona Internetowa dla Firmy - Dlaczego w 2026 to Konieczność",
@@ -2045,6 +2065,30 @@ const TRANSLATIONS = {
         pl: "97% klientów szuka firm w internecie. Dowiedz się, dlaczego profesjonalna strona WWW to najlepsza inwestycja dla Twojego biznesu i jak zacząć.",
         en: "97% of customers search for businesses online. Learn why a professional website is the best investment for your business and how to get started.",
         de: "97% der Kunden suchen Unternehmen im Internet. Erfahren Sie, warum eine professionelle Webseite die beste Investition für Ihr Unternehmen ist und wie Sie starten."
+    },
+
+    // ===========================
+    // PRIVACY & TERMS PAGES
+    // ===========================
+    "privacy.title": {
+        pl: "Polityka Prywatności | Dekada72H",
+        en: "Privacy Policy | Dekada72H",
+        de: "Datenschutzerklärung | Dekada72H"
+    },
+    "privacy.meta.desc": {
+        pl: "Polityka Prywatności Dekada72H - Informacje o przetwarzaniu danych osobowych.",
+        en: "Dekada72H Privacy Policy - Information about personal data processing.",
+        de: "Dekada72H Datenschutzerklärung - Informationen zur Verarbeitung personenbezogener Daten."
+    },
+    "terms.title": {
+        pl: "Regulamin | Dekada72H",
+        en: "Terms of Service | Dekada72H",
+        de: "Nutzungsbedingungen | Dekada72H"
+    },
+    "terms.meta.desc": {
+        pl: "Regulamin świadczenia usług Dekada72H - Warunki współpracy i zasady korzystania z usług.",
+        en: "Dekada72H Terms of Service - Cooperation conditions and rules of use.",
+        de: "Dekada72H Nutzungsbedingungen - Kooperationsbedingungen und Nutzungsregeln."
     },
 
     // ===========================
