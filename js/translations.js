@@ -25,17 +25,11 @@ const TRANSLATIONS = {
         en: "A modern marketing agency specializing in creating websites, landing pages, SEO, and automation.",
         de: "Eine moderne Marketingagentur, spezialisiert auf Webseiten, Landing Pages, SEO und Automatisierung."
     },
-    "footer.brand.desc.alt": {
-        pl: "Nowoczesna agencja marketingowa specjalizująca się w tworzeniu stron WWW, landing pages, SEO i UX/UI design.",
-        en: "A modern marketing agency specializing in creating websites, landing pages, SEO, and UX/UI design.",
-        de: "Eine moderne Marketingagentur, spezialisiert auf Webseiten, Landing Pages, SEO und UX/UI Design."
-    },
     "footer.services.title": { pl: "Usługi", en: "Services", de: "Leistungen" },
     "footer.services.www": { pl: "Strony WWW", en: "Websites", de: "Webseiten" },
     "footer.services.landing": { pl: "Landing Pages", en: "Landing Pages", de: "Landing Pages" },
     "footer.services.seo": { pl: "SEO", en: "SEO", de: "SEO" },
     "footer.services.automation": { pl: "Automatyzacja", en: "Automation", de: "Automatisierung" },
-    "footer.services.uxui": { pl: "UX/UI Design", en: "UX/UI Design", de: "UX/UI Design" },
     "footer.company.title": { pl: "Firma", en: "Company", de: "Unternehmen" },
     "footer.company.about": { pl: "O nas", en: "About Us", de: "Über uns" },
     "footer.company.portfolio": { pl: "Portfolio", en: "Portfolio", de: "Portfolio" },
@@ -488,7 +482,6 @@ const TRANSLATIONS = {
     "portfolio.bud.badge": { pl: "Budownictwo", en: "Construction", de: "Bauwesen" },
     "portfolio.bud.cat": { pl: "Strona WWW", en: "Website", de: "Webseite" },
     "portfolio.bud.desc": { pl: "Profesjonalna strona dla firmy budowlanej z portfolio realizacji, kalkulatorem wycen i formularzem zapytań.", en: "A professional website for a construction company with a project portfolio, quote calculator, and inquiry form.", de: "Eine professionelle Webseite für ein Bauunternehmen mit Projektportfolio, Angebotsrechner und Anfrageformular." },
-    "portfolio.bud.tag1": { pl: "Custom Code", en: "Custom Code", de: "Custom Code" },
     "portfolio.bud.tag2": { pl: "Kalkulator", en: "Calculator", de: "Rechner" },
 
     "portfolio.fit.badge": { pl: "Fitness", en: "Fitness", de: "Fitness" },
@@ -500,7 +493,6 @@ const TRANSLATIONS = {
     "portfolio.kowalski.badge": { pl: "Prawo", en: "Law", de: "Recht" },
     "portfolio.kowalski.cat": { pl: "Redesign", en: "Redesign", de: "Redesign" },
     "portfolio.kowalski.desc": { pl: "Prestiżowa strona dla kancelarii prawnej z systemem konsultacji online, blogiem prawnym i strefą klienta.", en: "A prestigious website for a law firm with an online consultation system, legal blog, and client portal.", de: "Eine prestigeträchtige Webseite für eine Anwaltskanzlei mit Online-Beratungssystem, Rechtsblog und Kundenportal." },
-    "portfolio.kowalski.tag2": { pl: "Blog", en: "Blog", de: "Blog" },
     "portfolio.kowalski.tag3": { pl: "Strefa klienta", en: "Client Portal", de: "Kundenportal" },
 
     "portfolio.glamour.badge": { pl: "Beauty", en: "Beauty", de: "Beauty" },
@@ -1036,8 +1028,6 @@ const TRANSLATIONS = {
     "tools.calc.time.express.desc": { pl: "36 godzin", en: "36 hours", de: "36 Stunden" },
     "tools.calc.time.urgent": { pl: "Pilny", en: "Urgent", de: "Dringend" },
     "tools.calc.time.urgent.desc": { pl: "18 godzin", en: "18 hours", de: "18 Stunden" },
-    "tools.calc.time.flexible": { pl: "Elastyczny", en: "Flexible", de: "Flexibel" },
-    "tools.calc.time.flexible.desc": { pl: "Powyżej miesiąca", en: "Over a month", de: "Über einen Monat" },
 
     // Step 5 - Summary
     "tools.calc.step5.title": { pl: "Twoja wycena jest gotowa!", en: "Your Quote is Ready!", de: "Ihr Angebot ist fertig!" },
@@ -1070,13 +1060,10 @@ const TRANSLATIONS = {
     // Other tools
     "tools.other.label": { pl: "Więcej narzędzi", en: "More Tools", de: "Mehr Tools" },
     "tools.other.title": { pl: "Inne przydatne narzędzia", en: "Other Useful Tools", de: "Andere nützliche Tools" },
-    "tools.other.calculator": { pl: "Kalkulator wyceny", en: "Price Calculator", de: "Preisrechner" },
-    "tools.other.calculator.desc": { pl: "Sprawdź orientacyjny koszt swojej strony internetowej.", en: "Check the estimated cost of your website.", de: "Prüfen Sie die geschätzten Kosten Ihrer Webseite." },
     "tools.other.quiz": { pl: "Quiz wyboru strony", en: "Website Choice Quiz", de: "Webseiten-Auswahl-Quiz" },
     "tools.other.quiz.desc": { pl: "Dowiedz się, jaki typ strony jest najlepszy dla Twojego biznesu.", en: "Find out what type of website is best for your business.", de: "Finden Sie heraus, welcher Webseiten-Typ für Ihr Unternehmen am besten ist." },
     "tools.other.audit": { pl: "Audyt strony", en: "Website Audit", de: "Webseiten-Audit" },
     "tools.other.audit.desc": { pl: "Sprawdź szybkość i wydajność swojej obecnej strony.", en: "Check the speed and performance of your current website.", de: "Prüfen Sie die Geschwindigkeit und Leistung Ihrer aktuellen Webseite." },
-    "tools.other.badge.active": { pl: "Dostępne", en: "Available", de: "Verfügbar" },
     "tools.other.badge.soon": { pl: "Wkrótce", en: "Coming Soon", de: "Demnächst" },
 
     // CTA
