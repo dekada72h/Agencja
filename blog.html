@@ -6,6 +6,8 @@
     <meta name="description" data-i18n-content="blog.meta.desc" content="Blog Dekada72H - Porady, artykuły i wiedza o tworzeniu stron internetowych, SEO, marketingu cyfrowym i technologiach webowych.">
     <meta name="keywords" content="blog, strony internetowe, SEO, marketing cyfrowy, HTML, WordPress, web design, agencja marketingowa">
     <meta name="author" content="Dekada72H">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dekada72h.com/blog.html">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
 
     <title data-i18n="blog.title">Blog | Dekada72H - Wiedza o stronach WWW i marketingu</title>
@@ -18,8 +20,95 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog | Dekada72H - Wiedza o stronach WWW i marketingu">
+    <meta property="og:description" content="Blog Dekada72H - Porady, artykuly i wiedza o tworzeniu stron internetowych, SEO, marketingu cyfrowym i technologiach webowych.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dekada72h.com/blog.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Dekada72H">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Dekada72H - Wiedza o stronach WWW i marketingu">
+    <meta name="twitter:description" content="Porady, artykuly i wiedza o tworzeniu stron internetowych, SEO i marketingu cyfrowym.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80">
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Blog Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Dekada72H Blog",
+        "description": "Blog Dekada72H - Porady, artykuly i wiedza o tworzeniu stron internetowych, SEO, marketingu cyfrowym i technologiach webowych.",
+        "url": "https://dekada72h.com/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Dekada72H",
+            "url": "https://dekada72h.com"
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Tworzenie Stron Internetowych we Wroclawiu - Lokalny Przewodnik 2026",
+                "url": "https://dekada72h.com/blog/tworzenie-stron-internetowych-wroclaw.html",
+                "datePublished": "2026-02-08"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Strona Internetowa dla Firmy - Dlaczego w 2026 to Koniecznosc",
+                "url": "https://dekada72h.com/blog/strona-internetowa-dla-firmy.html",
+                "datePublished": "2026-02-02"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Ile Kosztuje Strona Internetowa w 2026? Cennik i Ukryte Koszty",
+                "url": "https://dekada72h.com/blog/ile-kosztuje-strona-internetowa.html",
+                "datePublished": "2026-02-01"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Automatyzacja Procesow Biznesowych - Twoja Firma na Autopilocie",
+                "url": "https://dekada72h.com/blog/automatyzacja-procesow-biznesowych.html",
+                "datePublished": "2026-01-31"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "SEO i Pozycjonowanie Stron - Jak Wyprzedzic Konkurencje w Google",
+                "url": "https://dekada72h.com/blog/seo-pozycjonowanie-stron.html",
+                "datePublished": "2026-01-30"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Landing Page - Czym jest i dlaczego Twoja firma go potrzebuje",
+                "url": "https://dekada72h.com/blog/landing-page-co-to-jest.html",
+                "datePublished": "2026-01-29"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Strona HTML vs WordPress - Co Wybrac dla Swojej Firmy",
+                "url": "https://dekada72h.com/blog/html-vs-wordpress.html",
+                "datePublished": "2026-01-28"
+            }
+        ]
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dekada72h.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog" }
+        ]
+    }
+    </script>
 
     <style>
         /* Blog Listing Styles */
@@ -224,6 +313,27 @@
     <section class="section">
         <div class="container">
             <div class="blog-grid">
+
+                <!-- Blog Post 7 (Newest) -->
+                <article class="blog-card fade-in">
+                    <a href="blog/tworzenie-stron-internetowych-wroclaw.html" class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=600&q=80" alt="Tworzenie stron internetowych Wroclaw" loading="lazy">
+                    </a>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category" data-i18n="blog.article7.category">Lokalne SEO</span>
+                            <span class="blog-card-date">08.02.2026</span>
+                        </div>
+                        <h3><a href="blog/tworzenie-stron-internetowych-wroclaw.html" data-i18n="blog.article7.card.title">Tworzenie Stron Internetowych we Wrocławiu - Lokalny Przewodnik 2026</a></h3>
+                        <p class="blog-card-excerpt" data-i18n="blog.article7.card.excerpt">
+                            Szukasz firmy do stworzenia strony we Wrocławiu? Poznaj korzyści współpracy z lokalną agencją, aktualne ceny i sprawdzone porady SEO dla wrocławskich firm.
+                        </p>
+                        <a href="blog/tworzenie-stron-internetowych-wroclaw.html" class="blog-card-link">
+                            <span data-i18n="blog.readmore">Czytaj więcej</span>
+                            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </article>
 
                 <!-- Blog Post 1 -->
                 <article class="blog-card fade-in">

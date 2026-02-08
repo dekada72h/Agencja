@@ -2068,6 +2068,47 @@ const TRANSLATIONS = {
     },
 
     // ===========================
+    // BLOG ARTICLE 7: Tworzenie Stron Internetowych we Wrocławiu
+    // ===========================
+    "blog.article7.title": {
+        pl: "Tworzenie Stron Internetowych we Wrocławiu - Lokalny Przewodnik 2026 | Dekada72H Blog",
+        en: "Web Design in Wrocław - Local Guide 2026 | Dekada72H Blog",
+        de: "Webdesign in Breslau - Lokaler Leitfaden 2026 | Dekada72H Blog"
+    },
+    "blog.article7.meta.desc": {
+        pl: "Tworzenie stron internetowych we Wrocławiu - dlaczego lokalna agencja to lepszy wybór? Poznaj korzyści, ceny i sprawdź, jak profesjonalna strona WWW pomoże Twojej firmie zdobyć klientów z Wrocławia.",
+        en: "Web design in Wrocław - why is a local agency a better choice? Learn about the benefits, prices, and how a professional website can help your business attract customers in Wrocław.",
+        de: "Webdesign in Breslau - warum ist eine lokale Agentur die bessere Wahl? Erfahren Sie mehr über Vorteile, Preise und wie eine professionelle Webseite Ihrem Unternehmen hilft, Kunden in Breslau zu gewinnen."
+    },
+    "blog.article7.category": { pl: "Lokalne SEO", en: "Local SEO", de: "Lokales SEO" },
+    "blog.article7.card.title": {
+        pl: "Tworzenie Stron Internetowych we Wrocławiu - Lokalny Przewodnik 2026",
+        en: "Web Design in Wrocław - Local Guide 2026",
+        de: "Webdesign in Breslau - Lokaler Leitfaden 2026"
+    },
+    "blog.article7.card.excerpt": {
+        pl: "Szukasz firmy do stworzenia strony we Wrocławiu? Poznaj korzyści współpracy z lokalną agencją, aktualne ceny i sprawdzone porady SEO dla wrocławskich firm.",
+        en: "Looking for a web design company in Wrocław? Learn about the benefits of working with a local agency, current prices, and proven SEO tips for Wrocław businesses.",
+        de: "Sie suchen eine Webdesign-Firma in Breslau? Erfahren Sie mehr über die Vorteile einer lokalen Agentur, aktuelle Preise und bewährte SEO-Tipps für Breslauer Unternehmen."
+    },
+    "blog.article7.breadcrumb": {
+        pl: "Strony internetowe Wrocław",
+        en: "Web Design Wrocław",
+        de: "Webdesign Breslau"
+    },
+    "blog.article7.heading": {
+        pl: "Tworzenie Stron Internetowych we Wrocławiu - Lokalny Przewodnik 2026",
+        en: "Web Design in Wrocław - Local Guide 2026",
+        de: "Webdesign in Breslau - Lokaler Leitfaden 2026"
+    },
+    "blog.article7.subheading": {
+        pl: "Dlaczego wrocławskie firmy wybierają lokalne agencje i jak profesjonalna strona WWW pomaga zdobywać klientów w stolicy Dolnego Śląska?",
+        en: "Why do Wrocław businesses choose local agencies and how does a professional website help attract customers in the capital of Lower Silesia?",
+        de: "Warum wählen Breslauer Unternehmen lokale Agenturen und wie hilft eine professionelle Webseite, Kunden in der Hauptstadt Niederschlesiens zu gewinnen?"
+    },
+    "blog.article7.readtime": { pl: "18 min czytania", en: "18 min read", de: "18 Min. Lesezeit" },
+
+    // ===========================
     // PRIVACY & TERMS PAGES
     // ===========================
     "privacy.title": {

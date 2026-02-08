@@ -20,6 +20,89 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dekada72H",
+        "alternateName": "Dekada72H Digital",
+        "url": "https://dekada72h.com",
+        "logo": "https://dekada72h.com/img/logo.svg",
+        "description": "Nowoczesna agencja marketingowa specjalizujaca sie w tworzeniu stron WWW, landing pages, SEO i UX/UI design.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Jednosci Narodowej",
+            "addressLocality": "Wroclaw",
+            "postalCode": "50-260",
+            "addressCountry": "PL"
+        },
+        "telephone": "+48662529962",
+        "foundingDate": "2016",
+        "areaServed": {
+            "@type": "City",
+            "name": "Wroclaw"
+        }
+    }
+    </script>
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Dekada72H",
+        "image": "https://dekada72h.com/img/logo.svg",
+        "url": "https://dekada72h.com",
+        "telephone": "+48662529962",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ul. Jednosci Narodowej",
+            "addressLocality": "Wroclaw",
+            "postalCode": "50-260",
+            "addressCountry": "PL"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 51.1079,
+            "longitude": 17.0385
+        },
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Uslugi marketingowe",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tworzenie stron WWW" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO i pozycjonowanie" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automatyzacja procesow" } }
+            ]
+        }
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Dekada72H",
+        "url": "https://dekada72h.com",
+        "description": "Nowoczesna agencja marketingowa - Strony WWW, Landing Pages, SEO, UX/UI",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Dekada72H"
+        },
+        "inLanguage": ["pl", "en", "de"]
+    }
+    </script>
 </head>
 <body>
     <!-- Preloader -->

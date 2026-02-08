@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /privacy.html
+Disallow: /terms.html
+Disallow: /portfolio/
+
+Sitemap: https://dekada72h.com/sitemap.xml
