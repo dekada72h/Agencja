@@ -468,6 +468,56 @@
             color: var(--dark);
         }
 
+
+        .related-articles {
+            margin: 48px 0;
+        }
+
+        .related-articles h2 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            margin-bottom: 24px;
+        }
+
+        .related-articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .related-article-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            text-decoration: none;
+            display: block;
+            border-top: 3px solid var(--primary);
+        }
+
+        .related-article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            text-decoration: none;
+        }
+
+        .related-article-card .related-category {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .related-article-card h3 {
+            font-size: 0.9375rem;
+            margin: 0;
+            line-height: 1.4;
+            color: var(--dark);
+        }
+
         @media (max-width: 768px) {
             .blog-article {
                 padding: 40px 20px 60px;
@@ -1167,6 +1217,26 @@
             kontroli. To jak porownanie wizytowki wydrukowanej w domu na drukarce z profesjonalna wizytowka z drukarni.
             Obie "dzialaja", ale wraszenie robia calkiem inne.
         </p>
+        <!-- Related Articles -->
+        <div class="related-articles">
+            <h2>Przeczytaj rowniez</h2>
+            <div class="related-articles-grid">
+                <a href="ile-kosztuje-strona-internetowa.html" class="related-article-card">
+                    <span class="related-category">Strony WWW</span>
+                    <h3>Ile Kosztuje Strona Internetowa w 2026? Cennik i Ukryte Koszty</h3>
+                </a>
+                <a href="html-vs-wordpress.html" class="related-article-card">
+                    <span class="related-category">Technologia</span>
+                    <h3>Strona HTML vs WordPress - Co Wybrac dla Swojej Firmy</h3>
+                </a>
+                <a href="tworzenie-stron-internetowych-wroclaw.html" class="related-article-card">
+                    <span class="related-category">Strony WWW</span>
+                    <h3>Tworzenie Stron Internetowych Wroclaw - Profesjonalne Strony WWW</h3>
+                </a>
+            </div>
+        </div>
+
+
 
         <!-- CTA -->
         <div class="article-cta">

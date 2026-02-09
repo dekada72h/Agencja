@@ -449,6 +449,56 @@
             color: var(--dark);
         }
 
+
+        .related-articles {
+            margin: 48px 0;
+        }
+
+        .related-articles h2 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            margin-bottom: 24px;
+        }
+
+        .related-articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .related-article-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            text-decoration: none;
+            display: block;
+            border-top: 3px solid var(--primary);
+        }
+
+        .related-article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            text-decoration: none;
+        }
+
+        .related-article-card .related-category {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .related-article-card h3 {
+            font-size: 0.9375rem;
+            margin: 0;
+            line-height: 1.4;
+            color: var(--dark);
+        }
+
         @media (max-width: 768px) {
             .blog-article {
                 padding: 40px 20px 60px;
@@ -783,6 +833,26 @@
         <p data-i18n="blog.article7.summary.p2">
             Jesli prowadzisz firme we Wroclawiu i szukasz sprawdzonej agencji, ktora stworzy Ci strone od podstaw - bez szablonow, bez WordPressa, z pelna optymalizacja SEO - jestesmy do Twojej dyspozycji. Dzialamy we Wroclawiu, znamy ten rynek i pomagamy lokalnym firmom zdobywac klientow z Google.
         </p>
+        <!-- Related Articles -->
+        <div class="related-articles">
+            <h2>Przeczytaj rowniez</h2>
+            <div class="related-articles-grid">
+                <a href="strona-internetowa-dla-firmy.html" class="related-article-card">
+                    <span class="related-category">Strony WWW</span>
+                    <h3>Strona Internetowa dla Firmy - Dlaczego w 2026 to Koniecznosc</h3>
+                </a>
+                <a href="html-vs-wordpress.html" class="related-article-card">
+                    <span class="related-category">Technologia</span>
+                    <h3>Strona HTML vs WordPress - Co Wybrac dla Swojej Firmy</h3>
+                </a>
+                <a href="ile-kosztuje-strona-internetowa.html" class="related-article-card">
+                    <span class="related-category">Strony WWW</span>
+                    <h3>Ile Kosztuje Strona Internetowa w 2026? Cennik i Ukryte Koszty</h3>
+                </a>
+            </div>
+        </div>
+
+
 
         <!-- CTA Box -->
         <div class="article-cta">

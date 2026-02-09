@@ -449,6 +449,56 @@
             color: var(--dark);
         }
 
+
+        .related-articles {
+            margin: 48px 0;
+        }
+
+        .related-articles h2 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            margin-bottom: 24px;
+        }
+
+        .related-articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .related-article-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            text-decoration: none;
+            display: block;
+            border-top: 3px solid var(--primary);
+        }
+
+        .related-article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            text-decoration: none;
+        }
+
+        .related-article-card .related-category {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .related-article-card h3 {
+            font-size: 0.9375rem;
+            margin: 0;
+            line-height: 1.4;
+            color: var(--dark);
+        }
+
         @media (max-width: 768px) {
             .blog-article {
                 padding: 40px 20px 60px;
@@ -846,6 +896,26 @@
         <p data-i18n="blog.article8.summary.p4">
             Jesli prowadzisz firme we Wroclawiu i szukasz sprawdzonego partnera do marketingu internetowego, ktory zna specyfike lokalnego rynku - zapraszamy do kontaktu. W Dekada72H pomagamy wroclawskim firmom budowac skuteczna obecnosc online: od profesjonalnych stron internetowych, przez pozycjonowanie, po kompleksowe strategie marketingowe. Dzialamy lokalnie, myślimy globalnie.
         </p>
+        <!-- Related Articles -->
+        <div class="related-articles">
+            <h2>Przeczytaj rowniez</h2>
+            <div class="related-articles-grid">
+                <a href="pozycjonowanie-lokalne-wroclaw.html" class="related-article-card">
+                    <span class="related-category">SEO</span>
+                    <h3>Pozycjonowanie Lokalne we Wroclawiu - Jak Zdobyc Klientow z Google Maps</h3>
+                </a>
+                <a href="seo-pozycjonowanie-stron.html" class="related-article-card">
+                    <span class="related-category">SEO</span>
+                    <h3>SEO i Pozycjonowanie Stron - Jak Wyprzedzic Konkurencje w Google</h3>
+                </a>
+                <a href="automatyzacja-procesow-biznesowych.html" class="related-article-card">
+                    <span class="related-category">Automatyzacja</span>
+                    <h3>Automatyzacja Procesow Biznesowych - Twoja Firma na Autopilocie</h3>
+                </a>
+            </div>
+        </div>
+
+
 
         <!-- CTA Box -->
         <div class="article-cta">
