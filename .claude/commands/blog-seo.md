@@ -75,6 +75,7 @@ Check all blog posts and pages for: missing meta descriptions, weak title tags, 
 | tworzenie-stron-internetowych-wroclaw.html | Web development in Wroclaw | Strony WWW |
 | marketing-internetowy-wroclaw.html | Internet marketing in Wroclaw | Marketing |
 | pozycjonowanie-lokalne-wroclaw.html | Local SEO in Wroclaw | SEO |
+| google-moja-firma-wizytowka-google.html | Google Business Profile guide | Lokalne SEO |
 
 ## Efficiency Rules
 
