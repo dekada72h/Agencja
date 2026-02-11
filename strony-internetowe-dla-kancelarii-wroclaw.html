@@ -268,7 +268,7 @@
         }
 
         .lp-section-gray {
-            background: var(--gray-50);
+            background: var(--gray-100);
         }
 
         .lp-section-title {
@@ -1378,21 +1378,7 @@
     <script src="js/main.js"></script>
     <script src="js/accessibility.js"></script>
 
-    <!-- FAQ Toggle Script -->
-    <script>
-        document.querySelectorAll('.lp-faq-item h3').forEach(function(question) {
-            question.addEventListener('click', function() {
-                var item = this.parentElement;
-                var isActive = item.classList.contains('active');
-                document.querySelectorAll('.lp-faq-item').forEach(function(el) {
-                    el.classList.remove('active');
-                });
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="js/landing-faq.js"></script>
 </body>
 
 </html>
