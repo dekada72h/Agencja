@@ -271,6 +271,36 @@
             background: var(--gray-100);
         }
 
+        .lp-section-dark {
+            background: var(--gradient-dark);
+            color: var(--white);
+        }
+
+        .lp-section-dark .lp-section-title {
+            color: var(--white);
+        }
+
+        .lp-section-dark .lp-section-lead {
+            color: var(--gray-400);
+        }
+
+        .lp-section-dark .lp-text-content p {
+            color: var(--gray-300);
+        }
+
+        .lp-section-dark .lp-text-content a {
+            color: var(--primary-light);
+            text-decoration-color: rgba(129, 140, 248, 0.4);
+        }
+
+        .lp-section-dark .lp-text-content a:hover {
+            text-decoration-color: var(--primary-light);
+        }
+
+        .lp-section-dark .section-label {
+            color: var(--primary-light);
+        }
+
         .lp-section-title {
             font-family: var(--font-heading);
             font-size: 2rem;
@@ -443,6 +473,25 @@
             color: #7f1d1d;
         }
 
+        /* Dark section process overrides */
+        .lp-section-dark .lp-process-num {
+            background: var(--dark-lighter);
+            border-color: var(--primary-light);
+            color: var(--primary-light);
+        }
+
+        .lp-section-dark .lp-process-step h4 {
+            color: var(--white);
+        }
+
+        .lp-section-dark .lp-process-step p {
+            color: var(--gray-400);
+        }
+
+        .lp-section-dark .lp-process-step p a {
+            color: var(--gray-400);
+        }
+
         /* Process Steps */
         .lp-process {
             display: grid;
@@ -558,6 +607,30 @@
             font-size: 0.9375rem;
             color: #92400e;
             line-height: 1.6;
+        }
+
+        /* Dark section pricing overrides */
+        .lp-section-dark .lp-pricing-box {
+            background: var(--dark-lighter);
+            border-color: var(--gray-800);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .lp-section-dark .lp-pricing-row {
+            border-bottom-color: var(--gray-700);
+        }
+
+        .lp-section-dark .lp-pricing-label {
+            color: var(--white);
+        }
+
+        .lp-section-dark .lp-pricing-label small {
+            color: var(--gray-400);
+        }
+
+        .lp-section-dark .lp-pricing-note {
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--primary-light);
         }
 
         /* CTA Section */
@@ -930,6 +1003,7 @@
     <!-- Section 1: Why law firms need a website -->
     <section class="lp-section">
         <div class="container">
+            <span class="section-label">Dlaczego warto</span>
             <h2 class="lp-section-title">Dlaczego Twoja kancelaria potrzebuje porządnej strony internetowej</h2>
             <div class="lp-text-content">
                 <p>Wyobraź sobie sytuację. Ktoś we Wrocławiu potrzebuje adwokata od spraw rozwodowych. Co robi? Pyta znajomych, jasne. Ale zaraz potem otwiera telefon i wpisuje w Google "adwokat rozwód Wrocław". Przegląda wyniki. Klika w pierwsze trzy linki.</p>
@@ -952,6 +1026,7 @@
     <!-- Section 2: What a law firm website should include -->
     <section class="lp-section lp-section-gray">
         <div class="container">
+            <span class="section-label">Elementy strony</span>
             <h2 class="lp-section-title">Co powinna zawierać strona kancelarii prawnej</h2>
             <p class="lp-section-lead">Strona kancelarii to nie wizytówka z adresem i numerem telefonu. To narzędzie, które ma przekonać niepewnego klienta, że trafił we właściwe miejsce. Oto co działa najlepiej.</p>
 
@@ -1033,8 +1108,9 @@
     </section>
 
     <!-- Section 3: HTML vs WordPress for law firms -->
-    <section class="lp-section">
+    <section class="lp-section lp-section-dark">
         <div class="container">
+            <span class="section-label">Technologia</span>
             <h2 class="lp-section-title">Dlaczego kancelarie powinny unikać WordPressa</h2>
             <div class="lp-text-content">
                 <p>Większość agencji proponuje kancelariom strony na WordPressie. To szybkie, tanie i... problematyczne. Dla zwykłej firmy WordPress może być OK. Ale kancelaria prawna to nie zwykła firma.</p>
@@ -1132,6 +1208,7 @@
     <!-- Section 4: Our approach -->
     <section class="lp-section lp-section-gray">
         <div class="container">
+            <span class="section-label">Proces</span>
             <h2 class="lp-section-title">Jak pracujemy - od rozmowy do uruchomienia</h2>
             <div class="lp-text-content">
                 <p>Nie wrzucamy Cię na taśmę produkcyjną. Każda kancelaria jest inna - inna specjalizacja, inny styl komunikacji, inna grupa klientów. Mecenas od spraw karnych potrzebuje zupełnie innej strony niż radca prawny obsługujący spółki handlowe.</p>
@@ -1158,7 +1235,7 @@
                 <div class="lp-process-step">
                     <div class="lp-process-num">04</div>
                     <h4>Start i SEO</h4>
-                    <p>Uruchamiamy stronę, konfigurujemy <a href="blog/pozycjonowanie-lokalne-wroclaw.html" style="color: var(--gray-600);">pozycjonowanie lokalne</a> i Google Moja Firma.</p>
+                    <p>Uruchamiamy stronę, konfigurujemy <a href="blog/pozycjonowanie-lokalne-wroclaw.html" style="color: var(--primary-light);">pozycjonowanie lokalne</a> i Google Moja Firma.</p>
                 </div>
             </div>
 
@@ -1169,8 +1246,9 @@
     </section>
 
     <!-- Section 5: Pricing -->
-    <section class="lp-section">
+    <section class="lp-section lp-section-dark">
         <div class="container">
+            <span class="section-label">Cennik</span>
             <h2 class="lp-section-title">Ile kosztuje strona dla kancelarii prawnej?</h2>
             <div class="lp-text-content">
                 <p>Nie lubimy "cen od". Ale rozumiemy, że chcesz wiedzieć, o jakich kwotach mówimy, zanim się z nami skontaktujesz. To fair. Więc oto orientacyjne widełki.</p>
