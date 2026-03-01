@@ -45,6 +45,7 @@ const Navigation = {
     menuToggle: null,
     navMenu: null,
     navLinks: null,
+    ticking: false,
 
     init() {
         this.navbar = document.querySelector('.navbar');
@@ -126,6 +127,16 @@ const Navigation = {
     },
 
     handleScroll() {
+        if (!this.ticking) {
+            window.requestAnimationFrame(() => {
+                this.updateScroll();
+                this.ticking = false;
+            });
+            this.ticking = true;
+        }
+    },
+
+    updateScroll() {
         if (window.scrollY > 50) {
             this.navbar.classList.add('scrolled');
         } else {
@@ -188,6 +199,7 @@ const ScrollAnimations = {
    ============================================ */
 const ScrollTop = {
     button: null,
+    ticking: false,
 
     init() {
         this.button = document.querySelector('.scroll-top');
@@ -203,6 +215,16 @@ const ScrollTop = {
     },
 
     handleScroll() {
+        if (!this.ticking) {
+            window.requestAnimationFrame(() => {
+                this.updateScroll();
+                this.ticking = false;
+            });
+            this.ticking = true;
+        }
+    },
+
+    updateScroll() {
         if (window.scrollY > 500) {
             this.button.classList.add('visible');
         } else {
