@@ -592,11 +592,16 @@ const TypingEffect = {
 
         if (this.isDeleting) {
             this.currentCharIndex--;
-            this.element.textContent = currentWord.substring(0, this.currentCharIndex);
         } else {
             this.currentCharIndex++;
-            this.element.textContent = currentWord.substring(0, this.currentCharIndex);
         }
+
+        const textToSet = currentWord.substring(0, this.currentCharIndex);
+        window.requestAnimationFrame(() => {
+            if (this.element) {
+                this.element.textContent = textToSet;
+            }
+        });
 
         let timeout = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
 
