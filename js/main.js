@@ -428,6 +428,8 @@ const Testimonials = {
 const CounterAnimation = {
     counters: null,
     animated: new Set(),
+    activeAnimations: new Map(),
+    animationFrameId: null,
 
     init() {
         this.counters = document.querySelectorAll('.stat-number');
@@ -460,19 +462,46 @@ const CounterAnimation = {
         const suffix = text.replace(match[1], '').trim();
         const prefix = text.substring(0, text.indexOf(match[1]));
         const duration = 2000;
-        const steps = 60;
-        const increment = target / steps;
-        let current = 0;
-        const stepDuration = duration / steps;
 
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
+        this.activeAnimations.set(element, {
+            startTime: null,
+            target: target,
+            prefix: prefix,
+            suffix: suffix,
+            duration: duration
+        });
+
+        if (!this.animationFrameId) {
+            this.animationFrameId = requestAnimationFrame((timestamp) => this.tick(timestamp));
+        }
+    },
+
+    tick(timestamp) {
+        if (this.activeAnimations.size === 0) {
+            this.animationFrameId = null;
+            return;
+        }
+
+        for (const [element, data] of this.activeAnimations.entries()) {
+            if (!data.startTime) data.startTime = timestamp;
+
+            const elapsed = timestamp - data.startTime;
+            let progress = elapsed / data.duration;
+
+            if (progress >= 1) {
+                element.textContent = data.prefix + data.target + data.suffix;
+                this.activeAnimations.delete(element);
+            } else {
+                const current = Math.floor(data.target * progress);
+                element.textContent = data.prefix + current + data.suffix;
             }
-            element.textContent = prefix + Math.floor(current) + suffix;
-        }, stepDuration);
+        }
+
+        if (this.activeAnimations.size > 0) {
+            this.animationFrameId = requestAnimationFrame((timestamp) => this.tick(timestamp));
+        } else {
+            this.animationFrameId = null;
+        }
     }
 };
 
