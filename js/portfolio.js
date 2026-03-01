@@ -12,21 +12,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const filter = btn.dataset.filter;
 
+                const itemsToShow = [];
+                const itemsToHide = [];
+
                 portfolioItems.forEach(item => {
                     if (filter === 'all' || item.dataset.category === filter) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'translateY(0)';
-                        }, 10);
+                        itemsToShow.push(item);
                     } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
+                        itemsToHide.push(item);
                     }
                 });
+
+                // Batch DOM updates: Hide phase 1 (start transition)
+                itemsToHide.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                });
+
+                // Batch DOM updates: Show phase 1 (make block)
+                itemsToShow.forEach(item => {
+                    item.style.display = 'block';
+                });
+
+                // Batch DOM updates: Show phase 2 (start transition after display applied)
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        itemsToShow.forEach(item => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        });
+                    });
+                });
+
+                // Batch DOM updates: Hide phase 2 (display none after transition completes)
+                setTimeout(() => {
+                    itemsToHide.forEach(item => {
+                        // Only set to none if it hasn't been shown again quickly
+                        if (item.style.opacity === '0') {
+                            item.style.display = 'none';
+                        }
+                    });
+                }, 300);
             });
         });
     }
