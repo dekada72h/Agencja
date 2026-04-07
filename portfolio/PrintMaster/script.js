@@ -51,4 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            const wasActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!wasActive) item.classList.add('active');
+        });
+    });
+
+    // Contact form (fake)
+    const contactForm = document.querySelector('.contact-form form, .contact form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Dziekujemy! Przygotujemy wycene i odezwiemy sie w ciagu 24h.');
+            this.reset();
+        });
+    }
 });
