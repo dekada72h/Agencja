@@ -45,7 +45,15 @@
       "WebFetch(domain:unsplash.com)",
       "WebFetch(domain:inspireambitions.com)",
       "Bash(curl:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(find:*)",
+      "Bash(wc:*)",
+      "Bash(echo:*)",
+      "Bash(wroclaw\" and related long-tail keywords. Includes Service/FAQ/Breadcrumb\nschemas, conversion-focused design, and 7+ internal links to blog posts.\nAdded cross-links from 3 blog posts back to the landing page.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Skill(blog-seo)",
+      "Bash(git status:*)",
+      "Bash(for f in *.html)",
+      "Bash(do)"
     ]
   }
 }
