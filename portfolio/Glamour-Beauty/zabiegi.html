@@ -4,9 +4,9 @@
     <script src="../../js/cookie-consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Glamour Beauty — luksusowy salon kosmetyczny w Warszawie. Pielęgnacja twarzy, makijaż, manicure i autorskie rytuały beauty.">
+    <meta name="description" content="Pełna oferta zabiegów Glamour Beauty: pielęgnacja twarzy, makijaż, manicure, depilacja i masaże.">
     <meta name="keywords" content="salon kosmetyczny, beauty, kosmetyka, makijaż, manicure, depilacja, Warszawa">
-    <title>Glamour Beauty | Salon Kosmetyczny — Warszawa</title>
+    <title>Zabiegi — Glamour Beauty</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23c4a47c' rx='15' width='100' height='100'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Georgia' font-style='italic'>G</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +18,9 @@
         <div class="container">
             <a href="index.html" class="logo">Glamour <span>Beauty</span></a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="o-nas.html" class="nav-link">O nas</a></li>
-                <li><a href="zabiegi.html" class="nav-link">Zabiegi</a></li>
+                <li><a href="zabiegi.html" class="nav-link active">Zabiegi</a></li>
                 <li><a href="cennik.html" class="nav-link">Cennik</a></li>
                 <li><a href="galeria.html" class="nav-link">Galeria</a></li>
                 <li><a href="zespol.html" class="nav-link">Zespół</a></li>
@@ -31,29 +31,13 @@
             <div class="menu-toggle"><span></span><span></span><span></span></div>
         </div>
     </nav>
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <span class="hero-subtitle">Profesjonalny Salon Kosmetyczny</span>
-            <h1>Odkryj swoje naturalne piekno</h1>
-            <p class="hero-description">
-                Zapraszamy do swiata relaksu i pielegnacji. Nasi eksperci zadbaja
-                o Twoja skore, wlosy i samopoczucie w luksusowej atmosferze.
-            </p>
-            <div class="hero-buttons">
-                <a href="#booking" class="btn btn-primary">Umow wizyte</a>
-                <a href="#services" class="btn btn-outline">Nasze zabiegi</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Przewin</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M19 12l-7 7-7-7"/>
-            </svg>
+    <section class="page-banner">
+        <div class="container">
+            <span class="section-label">Zabiegi</span>
+            <h1>Nasze <em>usługi</em></h1>
+            <p>Profesjonalne zabiegi dopasowane do Twoich potrzeb i typu skóry.</p>
         </div>
     </section>
-
-    <!-- About Section -->
     <section class="section services" id="services">
         <div class="container">
             <div class="section-header fade-in">
@@ -135,87 +119,55 @@
     </section>
 
     <!-- Gallery Section -->
-    <section class="section testimonials">
+    <section class="section gallery" id="gallery">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">Opinie klientek</span>
-                <h2">Co mowia o nas</h2>
+                <span class="section-label">Galeria</span>
+                <h2>Nasze metamorfozy</h2>
+                <p>Zobacz efekty naszej pracy i zainspiruj sie do wlasnej przemiany.</p>
             </div>
 
-            <div class="testimonials-slider fade-in">
-                <div class="testimonial-item">
-                    <div class="testimonial-stars">
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80" alt="Salon kosmetyczny">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
                     </div>
-                    <p class="testimonial-quote">
-                        "Glamour Beauty to moje ulubione miejsce! Atmosfera, profesjonalizm i efekty zawsze sa niesamowite.
-                        Polecam kazdej kobiecie, ktora chce sie poczuc wyjatkowo."
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" alt="Magdalena Kowalczyk" class="testimonial-avatar">
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Magdalena Kowalczyk</div>
-                            <div class="testimonial-role">Stala klientka od 5 lat</div>
-                        </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" alt="Makijaz">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80" alt="Paznokcie">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&q=80" alt="Zabieg spa">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=80" alt="Pielegnacja">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="instagram">
-        <div class="instagram-header">
-            <h3>
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                @glamourbeauty.warsaw
-            </h3>
-        </div>
-        <div class="instagram-grid">
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=300&q=80" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300&q=80" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=300&q=80" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=300&q=80" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=300&q=80" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-            </div>
-            <div class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=300&q=80" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Team Section -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

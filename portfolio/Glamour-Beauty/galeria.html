@@ -4,9 +4,9 @@
     <script src="../../js/cookie-consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Glamour Beauty — luksusowy salon kosmetyczny w Warszawie. Pielęgnacja twarzy, makijaż, manicure i autorskie rytuały beauty.">
+    <meta name="description" content="Galeria realizacji Glamour Beauty — efekty zabiegów, klimat salonu i metamorfozy.">
     <meta name="keywords" content="salon kosmetyczny, beauty, kosmetyka, makijaż, manicure, depilacja, Warszawa">
-    <title>Glamour Beauty | Salon Kosmetyczny — Warszawa</title>
+    <title>Galeria — Glamour Beauty</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23c4a47c' rx='15' width='100' height='100'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Georgia' font-style='italic'>G</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
         <div class="container">
             <a href="index.html" class="logo">Glamour <span>Beauty</span></a>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="o-nas.html" class="nav-link">O nas</a></li>
                 <li><a href="zabiegi.html" class="nav-link">Zabiegi</a></li>
                 <li><a href="cennik.html" class="nav-link">Cennik</a></li>
-                <li><a href="galeria.html" class="nav-link">Galeria</a></li>
+                <li><a href="galeria.html" class="nav-link active">Galeria</a></li>
                 <li><a href="zespol.html" class="nav-link">Zespół</a></li>
                 <li><a href="faq.html" class="nav-link">FAQ</a></li>
                 <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
@@ -31,143 +31,62 @@
             <div class="menu-toggle"><span></span><span></span><span></span></div>
         </div>
     </nav>
-    <section class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <span class="hero-subtitle">Profesjonalny Salon Kosmetyczny</span>
-            <h1>Odkryj swoje naturalne piekno</h1>
-            <p class="hero-description">
-                Zapraszamy do swiata relaksu i pielegnacji. Nasi eksperci zadbaja
-                o Twoja skore, wlosy i samopoczucie w luksusowej atmosferze.
-            </p>
-            <div class="hero-buttons">
-                <a href="#booking" class="btn btn-primary">Umow wizyte</a>
-                <a href="#services" class="btn btn-outline">Nasze zabiegi</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Przewin</span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M19 12l-7 7-7-7"/>
-            </svg>
+    <section class="page-banner">
+        <div class="container">
+            <span class="section-label">Galeria</span>
+            <h1>Nasze <em>realizacje</em></h1>
+            <p>Zajrzyj do wnętrza salonu i zobacz efekty naszych zabiegów.</p>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section class="section services" id="services">
+    <section class="section gallery" id="gallery">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-label">Nasze zabiegi</span>
-                <h2>Kompleksowa oferta uslug</h2>
-                <p>Oferujemy szeroka game profesjonalnych zabiegow kosmetycznych i pielegnacyjnych.</p>
+                <span class="section-label">Galeria</span>
+                <h2>Nasze metamorfozy</h2>
+                <p>Zobacz efekty naszej pracy i zainspiruj sie do wlasnej przemiany.</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="12" cy="8" r="5"/>
-                            <path d="M3 21v-2a7 7 0 0 1 7-7h4a7 7 0 0 1 7 7v2"/>
-                        </svg>
+            <div class="gallery-grid fade-in">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=800&q=80" alt="Salon kosmetyczny">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
                     </div>
-                    <h4>Pielegnacja twarzy</h4>
-                    <p>Oczyszczanie, nawilzanie, lifting - kompleksowe zabiegi na kazdy typ skory.</p>
-                    <div class="service-price">od 150 zl <span>/ zabieg</span></div>
                 </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                        </svg>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" alt="Makijaz">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
                     </div>
-                    <h4>Makijaz</h4>
-                    <p>Makijaz dzienny, wieczorowy, slubny - podkresl swoje naturalne piekno.</p>
-                    <div class="service-price">od 180 zl <span>/ sesja</span></div>
                 </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                        </svg>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=400&q=80" alt="Paznokcie">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
                     </div>
-                    <h4>Stylizacja paznokci</h4>
-                    <p>Manicure, pedicure, zelowe, hybrydowe - piekne dlonie i stopy.</p>
-                    <div class="service-price">od 80 zl <span>/ zabieg</span></div>
                 </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/>
-                            <circle cx="12" cy="12" r="3"/>
-                        </svg>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&q=80" alt="Zabieg spa">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
                     </div>
-                    <h4>Stylizacja brwi i rzes</h4>
-                    <p>Regulacja, henna, laminacja, przedluzanie rzes metoda 1:1.</p>
-                    <div class="service-price">od 60 zl <span>/ zabieg</span></div>
                 </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h4>Depilacja</h4>
-                    <p>Depilacja woskowa i laserowa - gladka skora na dlugo.</p>
-                    <div class="service-price">od 50 zl <span>/ zabieg</span></div>
-                </div>
-
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                        </svg>
-                    </div>
-                    <h4>Masaze i SPA</h4>
-                    <p>Relaksujace masaze i rytualy spa dla ciala i duszy.</p>
-                    <div class="service-price">od 200 zl <span>/ sesja</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="section testimonials">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-label">Opinie klientek</span>
-                <h2">Co mowia o nas</h2>
-            </div>
-
-            <div class="testimonials-slider fade-in">
-                <div class="testimonial-item">
-                    <div class="testimonial-stars">
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <p class="testimonial-quote">
-                        "Glamour Beauty to moje ulubione miejsce! Atmosfera, profesjonalizm i efekty zawsze sa niesamowite.
-                        Polecam kazdej kobiecie, ktora chce sie poczuc wyjatkowo."
-                    </p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80" alt="Magdalena Kowalczyk" class="testimonial-avatar">
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Magdalena Kowalczyk</div>
-                            <div class="testimonial-role">Stala klientka od 5 lat</div>
-                        </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&q=80" alt="Pielegnacja">
+                    <div class="gallery-overlay">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                        <span>Zobacz wiecej</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
+    <!-- Team Section -->
     <section class="instagram">
         <div class="instagram-header">
             <h3>

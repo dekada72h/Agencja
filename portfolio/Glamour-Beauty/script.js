@@ -63,7 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form submission
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            const wasActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!wasActive) item.classList.add('active');
+        });
+    });
+
+    // Form submission (fake — no backend)
     const bookingForm = document.querySelector('.booking-form');
     if (bookingForm) {
         bookingForm.addEventListener('submit', function(e) {
