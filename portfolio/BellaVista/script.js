@@ -63,20 +63,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Menu category buttons
+    // Menu category buttons - tab switching
     document.querySelectorAll('.menu-category-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.menu-category-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            const tab = btn.getAttribute('data-tab');
+            document.querySelectorAll('.menu-tab').forEach(t => {
+                t.classList.toggle('active', t.getAttribute('data-tab-content') === tab);
+            });
         });
     });
 
-    // Form submission
-    const reservationForm = document.querySelector('.reservation-form');
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            const wasActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            if (!wasActive) item.classList.add('active');
+        });
+    });
+
+    // Reservation form (fake — no backend)
+    const reservationForm = document.querySelector('.reservation-form:not(#contactForm)');
     if (reservationForm) {
         reservationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             alert('Dziękujemy za rezerwację! Potwierdzimy ją telefonicznie lub mailowo.');
+            this.reset();
+        });
+    }
+
+    // Contact form (fake — does not send anywhere)
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const success = document.getElementById('contactSuccess');
+            if (success) {
+                success.classList.add('visible');
+                setTimeout(() => success.classList.remove('visible'), 6000);
+            }
             this.reset();
         });
     }
