@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <script src="../../js/cookie-consent.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pełna karta dań Bella Vista: antipasti, pasta, pizza, secondi i dolci.">
+    <meta name="keywords" content="restauracja włoska, Warszawa, pizza, pasta, kuchnia włoska, rezerwacje">
+    <title>Menu — Bella Vista</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23b8860b' rx='15' width='100' height='100'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Georgia'>B</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">Bella <span>Vista</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="o-nas.html" class="nav-link">O nas</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="galeria.html" class="nav-link">Galeria</a></li>
+                <li><a href="eventy.html" class="nav-link">Eventy</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                <li><a href="rezerwacja.html" class="btn btn-primary nav-cta">Rezerwacja</a></li>
+            </ul>
+            <div class="menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+    <section class="page-banner">
+        <div class="container">
+            <span class="section-label">Nasze menu</span>
+            <h1>Karta dań</h1>
+            <p>Odkryj smaki Italii w pięciu kategoriach.</p>
+        </div>
+    </section>
+    <section class="section menu" id="menu">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Nasze Menu</span>
+                <h2>Odkryj smaki Italii</h2>
+                <p>Każde danie to podróż do słonecznych Włoch, przygotowana z najświeższych składników.</p>
+            </div>
+
+            <div class="menu-categories fade-in">
+                <button class="menu-category-btn active" data-tab="antipasti">Antipasti</button>
+                <button class="menu-category-btn" data-tab="pasta">Pasta</button>
+                <button class="menu-category-btn" data-tab="pizza">Pizza</button>
+                <button class="menu-category-btn" data-tab="secondi">Secondi</button>
+                <button class="menu-category-btn" data-tab="dolci">Dolci</button>
+            </div>
+
+            <!-- ANTIPASTI -->
+            <div class="menu-grid menu-tab active" data-tab-content="antipasti">
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=200&q=80" alt="Bruschetta"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Bruschetta Classica</h4><span class="menu-item-price">28 zł</span></div>
+                        <p class="menu-item-description">Chrupiące grzanki z dojrzałymi pomidorami, świeżą bazylią, czosnkiem i oliwą extra vergine.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=200&q=80" alt="Carpaccio"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Carpaccio di Manzo</h4><span class="menu-item-price">48 zł</span></div>
+                        <p class="menu-item-description">Cienkie plastry polędwicy wołowej z rukolą, parmezanem i truflowym aioli.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=200&q=80" alt="Caprese"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Insalata Caprese</h4><span class="menu-item-price">36 zł</span></div>
+                        <p class="menu-item-description">Mozzarella di bufala, pomidory malinowe, świeża bazylia i oliwa z Toskanii.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1572441713132-c542fc4fe282?w=200&q=80" alt="Antipasto Misto"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Antipasto Misto</h4><span class="menu-item-price">58 zł</span></div>
+                        <p class="menu-item-description">Deska włoskich wędlin, serów dojrzewających, oliwek i marynowanych warzyw.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASTA -->
+            <div class="menu-grid menu-tab" data-tab-content="pasta">
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=200&q=80" alt="Tagliatelle"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Tagliatelle al Tartufo</h4><span class="menu-item-price">72 zł</span></div>
+                        <p class="menu-item-description">Domowy makaron z kremowym sosem truflowym i wiórkami czarnej trufli.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=200&q=80" alt="Carbonara"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Spaghetti alla Carbonara</h4><span class="menu-item-price">48 zł</span></div>
+                        <p class="menu-item-description">Klasyczna rzymska carbonara z guanciale, żółtkiem, pecorino i świeżym pieprzem.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1595295333158-4742f28fbd85?w=200&q=80" alt="Risotto"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Risotto ai Funghi Porcini</h4><span class="menu-item-price">64 zł</span></div>
+                        <p class="menu-item-description">Kremowe risotto z borowikami, parmezanem i świeżym tymiankiem.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1556761223-4c4282c73f77?w=200&q=80" alt="Lasagne"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Lasagne della Nonna</h4><span class="menu-item-price">52 zł</span></div>
+                        <p class="menu-item-description">Tradycyjna lasagne z ragu bolognese, beszamelem i parmezanem dojrzewającym 24 mies.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIZZA -->
+            <div class="menu-grid menu-tab" data-tab-content="pizza">
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200&q=80" alt="Margherita"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Pizza Margherita DOC</h4><span class="menu-item-price">42 zł</span></div>
+                        <p class="menu-item-description">Klasyczna neapolitańska z mozzarellą di bufala, San Marzano i świeżą bazylią.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&q=80" alt="Diavola"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Pizza Diavola</h4><span class="menu-item-price">48 zł</span></div>
+                        <p class="menu-item-description">Pikantna salami 'nduja, mozzarella, oliwki kalamata i świeże papryczki.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200&q=80" alt="Quattro Formaggi"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Quattro Formaggi</h4><span class="menu-item-price">52 zł</span></div>
+                        <p class="menu-item-description">Mozzarella, gorgonzola, pecorino i parmezan na cieście z 48-godzinnej fermentacji.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=200&q=80" alt="Tartufo"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Pizza al Tartufo</h4><span class="menu-item-price">68 zł</span></div>
+                        <p class="menu-item-description">Mozzarella, świeże pieczarki, krem truflowy i wiórki czarnej trufli.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECONDI -->
+            <div class="menu-grid menu-tab" data-tab-content="secondi">
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=200&q=80" alt="Ossobuco"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Ossobuco alla Milanese</h4><span class="menu-item-price">89 zł</span></div>
+                        <p class="menu-item-description">Duszona golonka cielęca z gremolata, podawana z risotto alla milanese.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=200&q=80" alt="Bistecca"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Bistecca alla Fiorentina</h4><span class="menu-item-price">145 zł</span></div>
+                        <p class="menu-item-description">T-bone z wołowiny Chianina (ok. 800g) z grilla, rozmaryn i oliwa toskańska.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1535399831218-d4db9a18a87a?w=200&q=80" alt="Branzino"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Branzino al Forno</h4><span class="menu-item-price">95 zł</span></div>
+                        <p class="menu-item-description">Cały labraks pieczony z cytryną, kaparami i ziołami śródziemnomorskimi.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=200&q=80" alt="Pollo"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Pollo alla Cacciatora</h4><span class="menu-item-price">68 zł</span></div>
+                        <p class="menu-item-description">Kurczak duszony z pomidorami, oliwkami, kaparami i białym winem.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOLCI -->
+            <div class="menu-grid menu-tab" data-tab-content="dolci">
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=200&q=80" alt="Tiramisu"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Tiramisù della Casa</h4><span class="menu-item-price">28 zł</span></div>
+                        <p class="menu-item-description">Klasyczny włoski deser z mascarpone, espresso i odrobiną Marsali.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&q=80" alt="Panna Cotta"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Panna Cotta ai Frutti</h4><span class="menu-item-price">26 zł</span></div>
+                        <p class="menu-item-description">Aksamitny deser śmietankowy z konfiturą z owoców leśnych.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=200&q=80" alt="Cannoli"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Cannoli Siciliani</h4><span class="menu-item-price">32 zł</span></div>
+                        <p class="menu-item-description">Sycylijskie rurki z chrupiącego ciasta wypełnione kremem ricotta i pistacjami.</p>
+                    </div>
+                </div>
+                <div class="menu-item fade-in">
+                    <div class="menu-item-image"><img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=200&q=80" alt="Affogato"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header"><h4 class="menu-item-name">Affogato al Caffè</h4><span class="menu-item-price">22 zł</span></div>
+                        <p class="menu-item-description">Gałka lodów waniliowych zalana gorącym espresso i likierem amaretto.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-cta fade-in">
+                <a href="#" class="btn btn-outline">Pobierz pełne menu (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Bella <span>Vista</span></a>
+                    <p>Autentyczna kuchnia włoska w sercu Warszawy. Tradycja, smak i pasja od 1999 roku.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                        <a href="#" aria-label="TripAdvisor"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Nawigacja</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="o-nas.html">O nas</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Usługi</h4>
+                    <ul class="footer-links">
+                        <li><a href="rezerwacja.html">Rezerwacje</a></li>
+                        <li><a href="eventy.html">Eventy</a></li>
+                        <li><a href="kontakt.html">Catering</a></li>
+                        <li><a href="kontakt.html">Vouchery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links">
+                        <li>ul. Włoska 15</li>
+                        <li>00-001 Warszawa</li>
+                        <li><a href="tel:+48221234567">+48 22 123 45 67</a></li>
+                        <li><a href="mailto:rezerwacje@bellavista.pl">rezerwacje@bellavista.pl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bella Vista. Wszystkie prawa zastrzeżone.</p>
+                <p>Strona stworzona przez <a href="../../index.html" rel="noopener noreferrer">Dekada72H</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
