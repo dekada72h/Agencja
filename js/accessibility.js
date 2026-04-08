@@ -216,9 +216,18 @@ document.addEventListener('DOMContentLoaded', function() {
             this.panel.querySelector('[data-a11y-reset]')
                 .addEventListener('click', function() { self.resetAll(); });
 
+            var ticking = false;
+            var lastKnownY = 0;
             document.addEventListener('mousemove', function(e) {
                 if (self.settings.readingGuide && self.readingGuideLine) {
-                    self.readingGuideLine.style.top = e.clientY + 'px';
+                    lastKnownY = e.clientY;
+                    if (!ticking) {
+                        window.requestAnimationFrame(function() {
+                            self.readingGuideLine.style.top = lastKnownY + 'px';
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
                 }
             });
 
