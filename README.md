@@ -1,8 +1,47 @@
-# Infrastructure Status — Dekada72H VPS
+# Dekada72H — Agencja Marketingowa
 
-**Snapshot:** 2026-04-25
-**Host:** `vps-dae43f65` · `51.83.161.122` (OVH)
-**SSH alias:** `dekada-vps` (key-only, ed25519, `kali@dekada72h`)
+Statyczna strona internetowa agencji marketingowej **Dekada72H** z Wrocławia.
+
+- **Domena produkcyjna:** [dekada72h.com](https://dekada72h.com)
+- **Hosting:** własny VPS (OVH, Ubuntu 24.04, Traefik + Docker)
+- **Stack:** HTML5 / CSS3 / vanilla JS, GA4 z banerem zgody RODO
+- **Repo:** [github.com/dekada72h/Agencja](https://github.com/dekada72h/Agencja)
+
+## Struktura projektu
+
+| Ścieżka | Opis |
+|---|---|
+| `index.html`, `about.html`, `services.html`, `portfolio.html`, `contact.html` | Główne strony |
+| `blog.html` + `blog/*.html` | Blog (11 wpisów, schema Article + FAQ + Breadcrumb) |
+| `tools.html` | Strona z darmowymi narzędziami |
+| `strony-internetowe-dla-kancelarii-wroclaw.html` | Niche landing page (kancelarie prawne) |
+| `portfolio/<Nazwa>/` | Realizacje portfolio (każda jako osobny multi-page mini-site) |
+| `js/` | `cookie-consent.js`, `lang-switcher.js`, `contact-form.js`, `translations.js`, etc. |
+| `css/style.css` | Główny arkusz |
+| `404.html` | Custom error page |
+| `sitemap.xml`, `robots.txt`, `_headers`, `CNAME` | SEO i konfiguracja deploymentu |
+| `SECURITY-AUDIT.md` | Pełen raport audytu bezpieczeństwa (2026-04-25) |
+
+## Cechy
+
+- 🌍 Bilingual (PL/EN) z `data-i18n` i runtime language switcherem
+- 🍪 GDPR cookie consent banner gating Google Analytics (`G-DX7YV492B7`)
+- 📄 11 wpisów blogowych z Article/FAQ/Breadcrumb schemas, OG tags, Related Articles
+- 🎨 9 portfolio realizacji (BellaVista, BudMaster, FitPro, Glamour-Beauty, MediCare-Plus, PetZone, PrintMaster, ToyLand, Katarzyna-Schwenk)
+- 🔍 SEO-ready: complete sitemap, descriptive alt texts, schema markup (LocalBusiness, Service, FAQ)
+- 🔒 Cloudflare/Netlify-style `_headers` (security headers wdrożone serwerowo na produkcji przez Traefik middleware)
+
+## Custom skill
+
+`/blog-seo` — `.claude/commands/blog-seo.md`. Akcje: `new` · `related` · `alts` · `links` · `audit`.
+
+---
+
+# 🖥️ Stan VPS — Dekada72H Infrastructure
+
+> **Snapshot:** **2026-04-25**
+> **Host:** `vps-dae43f65` · `51.83.161.122` (OVH)
+> **SSH alias:** `dekada-vps` (key-only, ed25519, `kali@dekada72h`)
 
 ## Host
 
@@ -110,3 +149,7 @@ All audit findings resolved — see [`SECURITY-AUDIT.md`](./SECURITY-AUDIT.md). 
 - TLS auto-renew: monitor `/srv/traefik/logs/traefik.log` for `letsencrypt` errors; rate limit is 5 failed validations/hour/identifier.
 - Backups: daily site backups → `/var/backups/sites/{daily,weekly,monthly}` via `/srv/scripts/backup-sites.sh` cron.
 - Pre-audit-fix configs preserved in `/srv/_backups/pre-audit-fix-2026-04-25/`.
+
+---
+
+*Stan VPS to snapshot z dnia podanego wyżej. Aktualizacja po zmianach infrastrukturalnych lub na żądanie.*
