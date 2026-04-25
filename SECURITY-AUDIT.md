@@ -5,6 +5,18 @@
 - **Methodology:** static code review, secret-grep, container introspection, filesystem scan on host, external nmap/sslscan/nikto from Kali, HTTP surface tests.
 - **Overall posture:** 🟢 **Strong.** No credential leaks, only ports 22/80/443 reachable, modern TLS, kernel/SSH hardened. Two **medium-severity** findings (information disclosure via `.claude/` directories) and a few **low-severity** hardening gaps.
 
+## Remediation status (applied 2026-04-25)
+All findings 1–6 below were fixed the same day. Verified externally with `curl -sI` and `sslscan`:
+- ✅ `.claude/` removed from `domexpert.online` and `kowalskipartners.space` webroots
+- ✅ Global nginx dotfile-deny via shared `/srv/sites/_shared/default.conf` mounted into every container
+- ✅ Traefik file provider added (`/srv/traefik/dynamic.yml`) with `security-headers` middleware applied globally on the `websecure` entrypoint — HSTS / X-Frame-Options DENY / X-Content-Type-Options nosniff / Referrer-Policy / Permissions-Policy now sent on every site, `Server` header stripped
+- ✅ `tls.options.default` restricts TLS 1.2 to GCM + CHACHA20 only, dropping CBC suites (TLS 1.3 unchanged)
+- ✅ All site containers + Traefik run with `read_only: true` + tmpfs for `/var/cache/nginx`, `/var/run`, `/tmp`
+- ✅ `server_tokens off;` in shared nginx config and skytech `nginx.conf`
+- ✅ APT upgraded (5 → 0 pending)
+- ⚠️ Side effect: `apt upgrade` bumped Docker 28.5.2 → 29.4.1, which broke Traefik's docker provider (known incompatibility documented in VPS notes). Downgraded back to 28.5.2 and `apt-mark hold docker-ce docker-ce-cli` to prevent recurrence.
+- 🔧 Pre-change config snapshot saved at `/srv/_backups/pre-audit-fix-2026-04-25/`.
+
 ---
 
 ## 1. Findings (prioritized)
