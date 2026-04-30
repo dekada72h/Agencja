@@ -1,0 +1,14 @@
+[
+  {
+    "email": "damian@dekada72h.com",
+    "password_hash": "$2b$10$HaCTR7hIejlz5ANFqP6hSOQRJV7v0qFJVN7TT44s7FT0TQSrjvKVe",
+    "name": "Damian Zieliński",
+    "role": "owner"
+  },
+  {
+    "email": "kuba@dekada72h.com",
+    "password_hash": "$2b$10$HaCTR7hIejlz5ANFqP6hSOQRJV7v0qFJVN7TT44s7FT0TQSrjvKVe",
+    "name": "Kuba",
+    "role": "partner"
+  }
+]

@@ -5,6 +5,10 @@
 #
 # Build context is /srv/sites/dekada72h.com/web (rsynced from /home/kali/Desktop/Agencja/web).
 # Image is built on the VPS via `docker compose -f docker-compose.next.yml build`.
+#
+# Sensitive configuration (AUTH_SECRET, partners.json) is provided via
+# `.env.next` (gitignored on VPS) and a read-only host bind, so partner
+# credentials live OUTSIDE the image and can rotate without rebuild.
 
 services:
   web:
@@ -20,6 +24,15 @@ services:
     tmpfs:
       - /tmp
       - /app/.next/cache
+    volumes:
+      # Partners list (bcrypt hashes). Host: ./data/partners.json
+      - ./data/partners.json:/app/data/partners.json:ro
+    environment:
+      - NODE_ENV=production
+      - AUTH_SECRET=${AUTH_SECRET}
+      - AUTH_TRUST_HOST=true
+      - AUTH_URL=https://dekada72h.com
+      - DEKADA_PARTNERS_PATH=/app/data/partners.json
     networks:
       - web
     labels:
