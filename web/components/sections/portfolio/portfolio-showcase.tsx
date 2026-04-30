@@ -30,7 +30,7 @@ export function PortfolioShowcase() {
 
   const items: ShowcaseItem[] = [
     {
-      href: "/portfolio/Katarzyna-Schwenk/",
+      href: "/portfolio/Katarzyna-Schwenk",
       category: "art",
       custom: "schwenk",
       badge: "Sztuka",
@@ -41,7 +41,7 @@ export function PortfolioShowcase() {
       tags: ["Multi-page", "Galeria", "Sztuka", "Bez własnej domeny"],
     },
     {
-      href: "/portfolio/BellaVista/",
+      href: "/portfolio/BellaVista/index.html",
       category: "www",
       img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80",
       alt: "Restauracja Bella Vista - strona WWW dla restauracji włoskiej we Wrocławiu",
@@ -52,7 +52,7 @@ export function PortfolioShowcase() {
       tags: ["WordPress", t("bella.tag2"), "SEO"],
     },
     {
-      href: "/portfolio/BudMaster/",
+      href: "/portfolio/BudMaster/index.html",
       category: "www",
       img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
       alt: "BudMaster - profesjonalna strona firmy budowlanej z portfolio realizacji i kalkulatorem wycen",
@@ -63,7 +63,7 @@ export function PortfolioShowcase() {
       tags: ["Custom Code", t("bud.tag2"), "Portfolio"],
     },
     {
-      href: "/portfolio/FitPro/",
+      href: "/portfolio/FitPro/index.html",
       category: "landing",
       img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80",
       alt: "FitPro Studio - dynamiczna strona studia fitness z grafikiem zajęć i zapisami online",
@@ -74,7 +74,7 @@ export function PortfolioShowcase() {
       tags: ["React", t("fit.tag2"), t("fit.tag3")],
     },
     {
-      href: "/portfolio/Glamour-Beauty/",
+      href: "/portfolio/Glamour-Beauty/index.html",
       category: "landing",
       img: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80",
       alt: "Glamour Beauty Studio - strona salonu kosmetycznego z systemem rezerwacji i galerią metamorfoz",
@@ -85,7 +85,7 @@ export function PortfolioShowcase() {
       tags: ["Booksy", t("glamour.tag2"), "E-commerce"],
     },
     {
-      href: "/portfolio/MediCare-Plus/",
+      href: "/portfolio/MediCare-Plus/index.html",
       category: "www",
       img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80",
       alt: "MediCare Plus - nowoczesna strona kliniki medycznej z systemem rezerwacji wizyt online",
@@ -96,7 +96,7 @@ export function PortfolioShowcase() {
       tags: ["Custom Code", t("medicare.tag2"), t("medicare.tag3")],
     },
     {
-      href: "/portfolio/ToyLand/",
+      href: "/portfolio/ToyLand/index.html",
       category: "www",
       img: "https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=900&q=80",
       alt: "ToyLand - kolorowy sklep internetowy z zabawkami dla dzieci z katalogiem produktów",
@@ -107,7 +107,7 @@ export function PortfolioShowcase() {
       tags: ["E-commerce", t("toyland.tag2"), t("toyland.tag3")],
     },
     {
-      href: "/portfolio/PrintMaster/",
+      href: "/portfolio/PrintMaster/index.html",
       category: "www",
       img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&q=80",
       alt: "PrintMaster - strona drukarni z katalogiem usług poligraficznych i formularzem wyceny",
@@ -118,7 +118,7 @@ export function PortfolioShowcase() {
       tags: [t("print.tag1"), t("print.tag2"), t("print.tag3")],
     },
     {
-      href: "/portfolio/PetZone/",
+      href: "/portfolio/PetZone/index.html",
       category: "www",
       img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&q=80",
       alt: "PetZone - sklep zoologiczny online z karmą, akcesoriami i zabawkami dla zwierząt",
@@ -191,7 +191,7 @@ export function PortfolioShowcase() {
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                   className="group rounded-2xl bg-white overflow-hidden shadow-soft hover:shadow-glow border border-transparent hover:border-primary/20 transition-shadow"
                 >
-                  <Link href={item.href as never} className="block">
+                  <a href={item.href} className="block">
                     <div className="relative aspect-[16/10] overflow-hidden">
                       {item.custom === "schwenk" ? (
                         <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#8d5e4f]">
@@ -255,7 +255,7 @@ export function PortfolioShowcase() {
                         <Arrow className="w-4 h-4" />
                       </span>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
             </AnimatePresence>

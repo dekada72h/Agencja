@@ -61,13 +61,13 @@ export function FeaturedProject() {
               <FeaturedStat value="TOP 3" label={t("featured.stat3")} />
             </div>
 
-            <Link
-              href={"/portfolio/BellaVista/" as never}
+            <a
+              href="/portfolio/BellaVista/index.html"
               className="group mt-8 inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-primary text-white font-medium shadow-soft hover:shadow-glow transition-shadow"
             >
               {t("featured.btn")}
               <Arrow className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </a>
           </Reveal>
         </div>
       </div>

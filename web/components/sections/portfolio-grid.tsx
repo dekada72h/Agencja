@@ -17,42 +17,42 @@ type Item = {
 
 const items: Item[] = [
   {
-    href: "/portfolio/BellaVista/",
+    href: "/portfolio/BellaVista/index.html",
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80",
     alt: "Strona internetowa dla restauracji Bella Vista - realizacja Dekada72H",
     title: "Restauracja Bella Vista",
     categoryKey: "gastro",
   },
   {
-    href: "/portfolio/BudMaster/",
+    href: "/portfolio/BudMaster/index.html",
     img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
     alt: "BudMaster",
     title: "BudMaster",
     categoryKey: "construction",
   },
   {
-    href: "/portfolio/FitPro/",
+    href: "/portfolio/FitPro/index.html",
     img: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80",
     alt: "FitPro Studio",
     title: "FitPro Studio",
     categoryKey: "fitness",
   },
   {
-    href: "/portfolio/Glamour-Beauty/",
+    href: "/portfolio/Glamour-Beauty/index.html",
     img: "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80",
     alt: "Glamour Beauty",
     title: "Glamour Beauty Studio",
     categoryKey: "beauty",
   },
   {
-    href: "/portfolio/MediCare-Plus/",
+    href: "/portfolio/MediCare-Plus/index.html",
     img: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80",
     alt: "MediCare Plus",
     title: "MediCare Plus",
     categoryKey: "medicine",
   },
   {
-    href: "/portfolio/ToyLand/",
+    href: "/portfolio/ToyLand/index.html",
     img: "https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=900&q=80",
     alt: "ToyLand",
     title: "ToyLand",
@@ -60,7 +60,7 @@ const items: Item[] = [
     titleKey: "toyland",
   } as Item & { titleKey: string },
   {
-    href: "/portfolio/PrintMaster/",
+    href: "/portfolio/PrintMaster/index.html",
     img: "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&q=80",
     alt: "PrintMaster",
     title: "PrintMaster",
@@ -68,7 +68,7 @@ const items: Item[] = [
     titleKey: "printmaster",
   } as Item & { titleKey: string },
   {
-    href: "/portfolio/PetZone/",
+    href: "/portfolio/PetZone/index.html",
     img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&q=80",
     alt: "PetZone",
     title: "PetZone",
@@ -76,7 +76,8 @@ const items: Item[] = [
     titleKey: "petzone",
   } as Item & { titleKey: string },
   {
-    href: "/portfolio/Katarzyna-Schwenk/",
+    // Schwenk is a Next.js route (premium portfolio); others are static.
+    href: "/portfolio/Katarzyna-Schwenk",
     img: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=900&q=80",
     alt: "Katarzyna Schwenk Art",
     title: "Katarzyna Schwenk",
@@ -107,7 +108,7 @@ export function PortfolioGrid() {
             const titleKey = (item as Item & { titleKey?: string }).titleKey;
             return (
               <StaggerItem key={item.href}>
-                <Link href={item.href as never} className="block group">
+                <a href={item.href} className="block group">
                   <motion.div
                     whileHover={{ y: -4 }}
                     transition={{ type: "spring", stiffness: 320, damping: 20 }}
@@ -135,7 +136,7 @@ export function PortfolioGrid() {
                       </span>
                     </div>
                   </motion.div>
-                </Link>
+                </a>
               </StaggerItem>
             );
           })}
