@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block legal pages only (no SEO value)
+Disallow: /privacy
+Disallow: /terms
+
+Sitemap: https://dekada72h.com/sitemap.xml

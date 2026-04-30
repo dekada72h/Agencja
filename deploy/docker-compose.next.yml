@@ -1,0 +1,38 @@
+# Next.js production container for dekada72h.com.
+# This file co-exists alongside the legacy nginx docker-compose.yml.
+# Only one of the two services should hold Traefik labels at a time
+# (cutover = stop legacy, start this; rollback = the reverse).
+#
+# Build context is /srv/sites/dekada72h.com/web (rsynced from /home/kali/Desktop/Agencja/web).
+# Image is built on the VPS via `docker compose -f docker-compose.next.yml build`.
+
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    image: dekada72h-next:latest
+    container_name: dekada72h
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /app/.next/cache
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.dekada72h.rule=Host(`dekada72h.com`) || Host(`www.dekada72h.com`)"
+      - "traefik.http.routers.dekada72h.entrypoints=websecure"
+      - "traefik.http.routers.dekada72h.tls.certresolver=letsencrypt"
+      - "traefik.http.services.dekada72h.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.dekada72h-www.redirectregex.regex=^https?://www\\.dekada72h\\.com/(.*)"
+      - "traefik.http.middlewares.dekada72h-www.redirectregex.replacement=https://dekada72h.com/$${1}"
+      - "traefik.http.middlewares.dekada72h-www.redirectregex.permanent=true"
+      - "traefik.http.routers.dekada72h.middlewares=dekada72h-www"
+networks:
+  web:
+    external: true
