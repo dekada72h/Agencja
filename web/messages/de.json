@@ -63,7 +63,8 @@
       "float": {
         "conversion": "Konversionswachstum",
         "time": {
-          "val": "14 Tage"
+          "val": "14 Tage",
+          "_self": "Lieferzeit"
         }
       }
     },
@@ -607,13 +608,15 @@
         "landing": "Landing Page",
         "seo": "SEO / Positionierung",
         "auto": "Automatisierung",
-        "other": "Andere"
+        "other": "Andere",
+        "_self": "Art der Dienstleistung"
       },
       "referral": {
         "placeholder": "Option auswählen...",
         "damian": "Damian - Kundenberater",
         "kuba": "Kuba - Kundenberater",
-        "internet": "Aus dem Internet"
+        "internet": "Aus dem Internet",
+        "_self": "Wie haben Sie von uns erfahren?"
       },
       "message": "Nachricht",
       "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten zur Beantwortung meiner Anfrage zu. Ich habe die <a href=\"privacy.html\">Datenschutzerklärung</a> gelesen.",
@@ -729,23 +732,28 @@
         "aspect": "Aspekt",
         "hosting": {
           "html": "Günstig (statische Dateien)",
-          "wp": "Teurer (PHP + Datenbank)"
+          "wp": "Teurer (PHP + Datenbank)",
+          "_self": "Hosting"
         },
         "updates": {
           "html": "Nicht erforderlich",
-          "wp": "Regelmäßig (Kern + Plugins)"
+          "wp": "Regelmäßig (Kern + Plugins)",
+          "_self": "Updates"
         },
         "security2": {
           "html": "Minimales Risiko",
-          "wp": "Erfordert Überwachung"
+          "wp": "Erfordert Überwachung",
+          "_self": "Sicherheit"
         },
         "plugins": {
           "html": "Nicht zutreffend",
-          "wp": "15-125€/Jahr pro Stück"
+          "wp": "15-125€/Jahr pro Stück",
+          "_self": "Premium-Plugins"
         },
         "maintenance": {
           "html": "Niedrig",
-          "wp": "Laufend (25-125€/Monat)"
+          "wp": "Laufend (25-125€/Monat)",
+          "_self": "Wartung"
         }
       },
       "design": {
@@ -1192,7 +1200,8 @@
       "title": "Prüfen Sie, was Ihre Webseite kostet",
       "desc": "Beantworten Sie einige Fragen und wir erstellen Ihnen ein Angebot. Es dauert nur 2 Minuten!",
       "header": {
-        "desc": "Erhalten Sie ein Angebot in 4 einfachen Schritten"
+        "desc": "Erhalten Sie ein Angebot in 4 einfachen Schritten",
+        "_self": "Webseiten-Preisrechner"
       }
     },
     "calc": {
@@ -1202,16 +1211,20 @@
       },
       "type": {
         "wizytowka": {
-          "desc": "Professionelle Firmenpräsentation"
+          "desc": "Professionelle Firmenpräsentation",
+          "_self": "Visitenkarten-Webseite"
         },
         "landing": {
-          "desc": "Hochkonvertierende Verkaufsseite"
+          "desc": "Hochkonvertierende Verkaufsseite",
+          "_self": "Landing Page"
         },
         "sklep": {
-          "desc": "E-Commerce mit Online-Zahlungen"
+          "desc": "E-Commerce mit Online-Zahlungen",
+          "_self": "Online-Shop"
         },
         "rozbudowana": {
-          "desc": "Portal mit vielen Funktionen"
+          "desc": "Portal mit vielen Funktionen",
+          "_self": "Komplexe Webseite"
         }
       },
       "step2": {
@@ -1231,28 +1244,36 @@
       },
       "feature": {
         "form": {
-          "desc": "Sammeln von Kundenanfragen"
+          "desc": "Sammeln von Kundenanfragen",
+          "_self": "Kontaktformular"
         },
         "gallery": {
-          "desc": "Präsentation von Arbeiten/Produkten"
+          "desc": "Präsentation von Arbeiten/Produkten",
+          "_self": "Fotogalerie"
         },
         "blog": {
-          "desc": "Artikel veröffentlichen"
+          "desc": "Artikel veröffentlichen",
+          "_self": "Blog / News"
         },
         "booking": {
-          "desc": "Online-Reservierungen"
+          "desc": "Online-Reservierungen",
+          "_self": "Buchungssystem"
         },
         "animations": {
-          "desc": "Moderne Übergänge"
+          "desc": "Moderne Übergänge",
+          "_self": "Animationen & Effekte"
         },
         "multilang": {
-          "desc": "Zusätzliche Sprachversion"
+          "desc": "Zusätzliche Sprachversion",
+          "_self": "Mehrsprachig"
         },
         "automation": {
-          "desc": "Integrationen und automatische Prozesse"
+          "desc": "Integrationen und automatische Prozesse",
+          "_self": "Automatisierung"
         },
         "social": {
-          "desc": "Profil-Integration"
+          "desc": "Profil-Integration",
+          "_self": "Social Media"
         }
       },
       "free": "Kostenlos",
@@ -1263,20 +1284,32 @@
       "time": {
         "standard": {
           "desc": "72 Stunden",
-          "price": "Grundpreis"
+          "price": "Grundpreis",
+          "_self": "Standard"
         },
         "express": {
-          "desc": "36 Stunden"
+          "desc": "36 Stunden",
+          "_self": "Express"
         },
         "urgent": {
-          "desc": "18 Stunden"
+          "desc": "18 Stunden",
+          "_self": "Dringend"
         }
       },
       "step5": {
         "title": "Ihr Angebot ist fertig!",
         "desc": "Hier ist eine Zusammenfassung Ihres Projekts und der geschätzte Preis."
       },
-      "summary": "Angebot ansehen",
+      "summary": {
+        "_self": "Angebot ansehen",
+        "title": "Projektzusammenfassung",
+        "type": "Webseiten-Typ:",
+        "pages": "Anzahl der Seiten:",
+        "features": "Zusätzliche Funktionen:",
+        "timeline": "Zeitrahmen:",
+        "total": "Geschätzter Preis:",
+        "note": "* Nettopreis. Das endgültige Angebot kann je nach Projektdetails variieren."
+      },
       "next": "Weiter",
       "back": "Zurück",
       "restart": "Neu starten",
@@ -1296,10 +1329,12 @@
       "label": "Mehr Tools",
       "title": "Andere nützliche Tools",
       "quiz": {
-        "desc": "Finden Sie heraus, welcher Webseiten-Typ für Ihr Unternehmen am besten ist."
+        "desc": "Finden Sie heraus, welcher Webseiten-Typ für Ihr Unternehmen am besten ist.",
+        "_self": "Webseiten-Auswahl-Quiz"
       },
       "audit": {
-        "desc": "Prüfen Sie die Geschwindigkeit und Leistung Ihrer aktuellen Webseite."
+        "desc": "Prüfen Sie die Geschwindigkeit und Leistung Ihrer aktuellen Webseite.",
+        "_self": "Webseiten-Audit"
       },
       "badge": {
         "soon": "Demnächst"
@@ -1332,13 +1367,16 @@
     },
     "fontSize": "Schriftgröße",
     "dyslexia": {
-      "desc": "Schrift und Abstände optimiert für Legasthenie"
+      "desc": "Schrift und Abstände optimiert für Legasthenie",
+      "_self": "Legasthenie-Modus"
     },
     "contrast": {
-      "desc": "Dunkler Hintergrund, heller Text, starke Kanten"
+      "desc": "Dunkler Hintergrund, heller Text, starke Kanten",
+      "_self": "Hoher Kontrast"
     },
     "colorblind": {
-      "desc": "Farbfilter und verstärkte visuelle Hinweise"
+      "desc": "Farbfilter und verstärkte visuelle Hinweise",
+      "_self": "Farbenblindheit"
     },
     "cb": {
       "protanopia": "Protanopie (rot)",
@@ -1346,7 +1384,8 @@
       "tritanopia": "Tritanopie (blau)"
     },
     "readingGuide": {
-      "desc": "Horizontale Linie folgt dem Cursor"
+      "desc": "Horizontale Linie folgt dem Cursor",
+      "_self": "Lesehilfe"
     },
     "resetAll": "Alles zurücksetzen"
   }

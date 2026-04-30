@@ -78,18 +78,34 @@ def via_regex() -> dict[str, dict[str, str]]:
     return result
 
 
+SELF_KEY = "_self"  # conflict-resolution: when "a.b" and "a.b.c" both exist
+
+
 def nest_keys(flat: dict[str, str]) -> dict:
-    """Convert flat dot-keys into nested object — next-intl supports both,
-    but nested is more idiomatic."""
+    """Convert flat dot-keys into nested object. When a key X is both a leaf
+    string AND a parent of further keys (e.g. "form.service" + "form.service.www"),
+    the leaf value moves into "form.service._self" so both can coexist."""
     root: dict = {}
-    for k, v in flat.items():
+    # First pass: place every key, collision-aware
+    # Sort by depth ascending so shorter keys are placed first; longer paths
+    # then promote conflicts to nested {_self: ...}
+    for k, v in sorted(flat.items(), key=lambda kv: kv[0].count(".")):
         parts = k.split(".")
         node = root
         for p in parts[:-1]:
-            if not isinstance(node.get(p), dict):
+            existing = node.get(p)
+            if isinstance(existing, str):
+                # promote existing leaf into {_self: existing}
+                node[p] = {SELF_KEY: existing}
+            elif existing is None:
                 node[p] = {}
             node = node[p]
-        node[parts[-1]] = v
+        leaf = parts[-1]
+        existing = node.get(leaf)
+        if isinstance(existing, dict):
+            existing[SELF_KEY] = v
+        else:
+            node[leaf] = v
     return root
 
 

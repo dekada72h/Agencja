@@ -63,7 +63,8 @@
       "float": {
         "conversion": "Conversion Growth",
         "time": {
-          "val": "14 days"
+          "val": "14 days",
+          "_self": "Delivery Time"
         }
       }
     },
@@ -607,13 +608,15 @@
         "landing": "Landing Page",
         "seo": "SEO / Positioning",
         "auto": "Automation",
-        "other": "Other"
+        "other": "Other",
+        "_self": "Service Type"
       },
       "referral": {
         "placeholder": "Select an option...",
         "damian": "Damian - Client Advisor",
         "kuba": "Kuba - Client Advisor",
-        "internet": "From the internet"
+        "internet": "From the internet",
+        "_self": "How did you hear about us?"
       },
       "message": "Message",
       "consent": "I consent to the processing of my personal data to respond to my inquiry. I have read the <a href=\"privacy.html\">privacy policy</a>.",
@@ -729,23 +732,28 @@
         "aspect": "Aspect",
         "hosting": {
           "html": "Cheap (static files)",
-          "wp": "More expensive (PHP + database)"
+          "wp": "More expensive (PHP + database)",
+          "_self": "Hosting"
         },
         "updates": {
           "html": "Not needed",
-          "wp": "Regular (core + plugins)"
+          "wp": "Regular (core + plugins)",
+          "_self": "Updates"
         },
         "security2": {
           "html": "Minimal risk",
-          "wp": "Requires monitoring"
+          "wp": "Requires monitoring",
+          "_self": "Security"
         },
         "plugins": {
           "html": "Not applicable",
-          "wp": "€15-125/year each"
+          "wp": "€15-125/year each",
+          "_self": "Premium plugins"
         },
         "maintenance": {
           "html": "Low",
-          "wp": "Ongoing (€25-125/month)"
+          "wp": "Ongoing (€25-125/month)",
+          "_self": "Maintenance"
         }
       },
       "design": {
@@ -1192,7 +1200,8 @@
       "title": "Check How Much Your Website Costs",
       "desc": "Answer a few questions and we'll prepare an estimate for you. It only takes 2 minutes!",
       "header": {
-        "desc": "Get an estimate in 4 simple steps"
+        "desc": "Get an estimate in 4 simple steps",
+        "_self": "Website Price Calculator"
       }
     },
     "calc": {
@@ -1202,16 +1211,20 @@
       },
       "type": {
         "wizytowka": {
-          "desc": "Professional company presentation"
+          "desc": "Professional company presentation",
+          "_self": "Business Card Website"
         },
         "landing": {
-          "desc": "High-converting sales page"
+          "desc": "High-converting sales page",
+          "_self": "Landing Page"
         },
         "sklep": {
-          "desc": "E-commerce with online payments"
+          "desc": "E-commerce with online payments",
+          "_self": "Online Store"
         },
         "rozbudowana": {
-          "desc": "Portal with many features"
+          "desc": "Portal with many features",
+          "_self": "Complex Website"
         }
       },
       "step2": {
@@ -1231,28 +1244,36 @@
       },
       "feature": {
         "form": {
-          "desc": "Collecting inquiries from customers"
+          "desc": "Collecting inquiries from customers",
+          "_self": "Contact Form"
         },
         "gallery": {
-          "desc": "Showcase of work/products"
+          "desc": "Showcase of work/products",
+          "_self": "Photo Gallery"
         },
         "blog": {
-          "desc": "Publishing articles"
+          "desc": "Publishing articles",
+          "_self": "Blog / News"
         },
         "booking": {
-          "desc": "Online reservations"
+          "desc": "Online reservations",
+          "_self": "Booking System"
         },
         "animations": {
-          "desc": "Modern transitions"
+          "desc": "Modern transitions",
+          "_self": "Animations & Effects"
         },
         "multilang": {
-          "desc": "Additional language version"
+          "desc": "Additional language version",
+          "_self": "Multilingual"
         },
         "automation": {
-          "desc": "Integrations and automatic processes"
+          "desc": "Integrations and automatic processes",
+          "_self": "Automation"
         },
         "social": {
-          "desc": "Profile integration"
+          "desc": "Profile integration",
+          "_self": "Social Media"
         }
       },
       "free": "Free",
@@ -1263,20 +1284,32 @@
       "time": {
         "standard": {
           "desc": "72 hours",
-          "price": "Base price"
+          "price": "Base price",
+          "_self": "Standard"
         },
         "express": {
-          "desc": "36 hours"
+          "desc": "36 hours",
+          "_self": "Express"
         },
         "urgent": {
-          "desc": "18 hours"
+          "desc": "18 hours",
+          "_self": "Urgent"
         }
       },
       "step5": {
         "title": "Your Quote is Ready!",
         "desc": "Here's a summary of your project and estimated price."
       },
-      "summary": "See Quote",
+      "summary": {
+        "_self": "See Quote",
+        "title": "Project Summary",
+        "type": "Website type:",
+        "pages": "Number of pages:",
+        "features": "Additional features:",
+        "timeline": "Timeline:",
+        "total": "Estimated price:",
+        "note": "* Net price. Final quote may vary depending on project details."
+      },
       "next": "Next",
       "back": "Back",
       "restart": "Start Over",
@@ -1296,10 +1329,12 @@
       "label": "More Tools",
       "title": "Other Useful Tools",
       "quiz": {
-        "desc": "Find out what type of website is best for your business."
+        "desc": "Find out what type of website is best for your business.",
+        "_self": "Website Choice Quiz"
       },
       "audit": {
-        "desc": "Check the speed and performance of your current website."
+        "desc": "Check the speed and performance of your current website.",
+        "_self": "Website Audit"
       },
       "badge": {
         "soon": "Coming Soon"
@@ -1332,13 +1367,16 @@
     },
     "fontSize": "Font Size",
     "dyslexia": {
-      "desc": "Font and spacing optimized for dyslexia"
+      "desc": "Font and spacing optimized for dyslexia",
+      "_self": "Dyslexia-Friendly"
     },
     "contrast": {
-      "desc": "Dark background, light text, bold edges"
+      "desc": "Dark background, light text, bold edges",
+      "_self": "High Contrast"
     },
     "colorblind": {
-      "desc": "Color filters and enhanced visual cues"
+      "desc": "Color filters and enhanced visual cues",
+      "_self": "Color Blind Mode"
     },
     "cb": {
       "protanopia": "Protanopia (red)",
@@ -1346,7 +1384,8 @@
       "tritanopia": "Tritanopia (blue)"
     },
     "readingGuide": {
-      "desc": "Horizontal line following your cursor"
+      "desc": "Horizontal line following your cursor",
+      "_self": "Reading Guide"
     },
     "resetAll": "Reset All"
   }

@@ -63,7 +63,8 @@
       "float": {
         "conversion": "Wzrost konwersji",
         "time": {
-          "val": "14 dni"
+          "val": "14 dni",
+          "_self": "Czas realizacji"
         }
       }
     },
@@ -607,13 +608,15 @@
         "landing": "Landing Page",
         "seo": "SEO / Pozycjonowanie",
         "auto": "Automatyzacja",
-        "other": "Inne"
+        "other": "Inne",
+        "_self": "Rodzaj usługi"
       },
       "referral": {
         "placeholder": "Wybierz opcję...",
         "damian": "Damian - Doradca Klienta",
         "kuba": "Kuba - Doradca Klienta",
-        "internet": "Z internetu"
+        "internet": "Z internetu",
+        "_self": "Jak się o nas dowiedziałeś/aś?"
       },
       "message": "Wiadomość",
       "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie. Zapoznałem/am się z <a href=\"privacy.html\">polityką prywatności</a>.",
@@ -729,23 +732,28 @@
         "aspect": "Aspekt",
         "hosting": {
           "html": "Tani (statyczne pliki)",
-          "wp": "Droższy (PHP + baza danych)"
+          "wp": "Droższy (PHP + baza danych)",
+          "_self": "Hosting"
         },
         "updates": {
           "html": "Niepotrzebne",
-          "wp": "Regularne (rdzeń + wtyczki)"
+          "wp": "Regularne (rdzeń + wtyczki)",
+          "_self": "Aktualizacje"
         },
         "security2": {
           "html": "Minimalne ryzyko",
-          "wp": "Wymaga monitoringu"
+          "wp": "Wymaga monitoringu",
+          "_self": "Bezpieczeństwo"
         },
         "plugins": {
           "html": "Nie dotyczy",
-          "wp": "50-500 zł/rok każda"
+          "wp": "50-500 zł/rok każda",
+          "_self": "Wtyczki premium"
         },
         "maintenance": {
           "html": "Niska",
-          "wp": "Stała (100-500 zł/mies.)"
+          "wp": "Stała (100-500 zł/mies.)",
+          "_self": "Konserwacja"
         }
       },
       "design": {
@@ -1192,7 +1200,8 @@
       "title": "Sprawdź ile kosztuje Twoja strona",
       "desc": "Odpowiedz na kilka pytań, a my przygotujemy dla Ciebie orientacyjną wycenę. To zajmie tylko 2 minuty!",
       "header": {
-        "desc": "Otrzymaj orientacyjną wycenę w 4 prostych krokach"
+        "desc": "Otrzymaj orientacyjną wycenę w 4 prostych krokach",
+        "_self": "Kalkulator wyceny strony"
       }
     },
     "calc": {
@@ -1202,16 +1211,20 @@
       },
       "type": {
         "wizytowka": {
-          "desc": "Profesjonalna prezentacja firmy"
+          "desc": "Profesjonalna prezentacja firmy",
+          "_self": "Strona wizytówka"
         },
         "landing": {
-          "desc": "Strona sprzedażowa z wysoką konwersją"
+          "desc": "Strona sprzedażowa z wysoką konwersją",
+          "_self": "Landing Page"
         },
         "sklep": {
-          "desc": "E-commerce z płatnościami online"
+          "desc": "E-commerce z płatnościami online",
+          "_self": "Sklep internetowy"
         },
         "rozbudowana": {
-          "desc": "Portal z wieloma funkcjami"
+          "desc": "Portal z wieloma funkcjami",
+          "_self": "Rozbudowana strona"
         }
       },
       "step2": {
@@ -1231,28 +1244,36 @@
       },
       "feature": {
         "form": {
-          "desc": "Zbieranie zapytań od klientów"
+          "desc": "Zbieranie zapytań od klientów",
+          "_self": "Formularz kontaktowy"
         },
         "gallery": {
-          "desc": "Prezentacja prac/produktów"
+          "desc": "Prezentacja prac/produktów",
+          "_self": "Galeria zdjęć"
         },
         "blog": {
-          "desc": "Publikowanie artykułów"
+          "desc": "Publikowanie artykułów",
+          "_self": "Blog / Aktualności"
         },
         "booking": {
-          "desc": "Rezerwacje online"
+          "desc": "Rezerwacje online",
+          "_self": "System rezerwacji"
         },
         "animations": {
-          "desc": "Nowoczesne przejścia"
+          "desc": "Nowoczesne przejścia",
+          "_self": "Animacje i efekty"
         },
         "multilang": {
-          "desc": "Dodatkowa wersja językowa"
+          "desc": "Dodatkowa wersja językowa",
+          "_self": "Wielojęzyczność"
         },
         "automation": {
-          "desc": "Integracje i automatyczne procesy"
+          "desc": "Integracje i automatyczne procesy",
+          "_self": "Automatyzacja"
         },
         "social": {
-          "desc": "Integracja z profilami"
+          "desc": "Integracja z profilami",
+          "_self": "Social media"
         }
       },
       "free": "Gratis",
@@ -1263,20 +1284,32 @@
       "time": {
         "standard": {
           "desc": "72 godziny",
-          "price": "Cena bazowa"
+          "price": "Cena bazowa",
+          "_self": "Standardowy"
         },
         "express": {
-          "desc": "36 godzin"
+          "desc": "36 godzin",
+          "_self": "Ekspresowy"
         },
         "urgent": {
-          "desc": "18 godzin"
+          "desc": "18 godzin",
+          "_self": "Pilny"
         }
       },
       "step5": {
         "title": "Twoja wycena jest gotowa!",
         "desc": "Oto podsumowanie Twojego projektu i orientacyjna cena."
       },
-      "summary": "Zobacz wycenę",
+      "summary": {
+        "_self": "Zobacz wycenę",
+        "title": "Podsumowanie projektu",
+        "type": "Typ strony:",
+        "pages": "Liczba podstron:",
+        "features": "Dodatkowe funkcje:",
+        "timeline": "Termin realizacji:",
+        "total": "Orientacyjna cena:",
+        "note": "* Cena netto. Ostateczna wycena może się różnić w zależności od szczegółów projektu."
+      },
       "next": "Dalej",
       "back": "Wstecz",
       "restart": "Zacznij od nowa",
@@ -1296,10 +1329,12 @@
       "label": "Więcej narzędzi",
       "title": "Inne przydatne narzędzia",
       "quiz": {
-        "desc": "Dowiedz się, jaki typ strony jest najlepszy dla Twojego biznesu."
+        "desc": "Dowiedz się, jaki typ strony jest najlepszy dla Twojego biznesu.",
+        "_self": "Quiz wyboru strony"
       },
       "audit": {
-        "desc": "Sprawdź szybkość i wydajność swojej obecnej strony."
+        "desc": "Sprawdź szybkość i wydajność swojej obecnej strony.",
+        "_self": "Audyt strony"
       },
       "badge": {
         "soon": "Wkrótce"
@@ -1332,13 +1367,16 @@
     },
     "fontSize": "Rozmiar czcionki",
     "dyslexia": {
-      "desc": "Czcionka i odstępy przyjazne osobom z dysleksją"
+      "desc": "Czcionka i odstępy przyjazne osobom z dysleksją",
+      "_self": "Tryb dysleksji"
     },
     "contrast": {
-      "desc": "Ciemne tło, jasny tekst, wyraźne krawędzie"
+      "desc": "Ciemne tło, jasny tekst, wyraźne krawędzie",
+      "_self": "Wysoki kontrast"
     },
     "colorblind": {
-      "desc": "Filtry kolorów i wzmocnione wizualne wskazówki"
+      "desc": "Filtry kolorów i wzmocnione wizualne wskazówki",
+      "_self": "Daltonizm"
     },
     "cb": {
       "protanopia": "Protanopia (czerwony)",
@@ -1346,7 +1384,8 @@
       "tritanopia": "Tritanopia (niebieski)"
     },
     "readingGuide": {
-      "desc": "Pozioma linia podążająca za kursorem"
+      "desc": "Pozioma linia podążająca za kursorem",
+      "_self": "Linia czytania"
     },
     "resetAll": "Resetuj wszystko"
   }
