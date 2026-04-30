@@ -1,0 +1,18 @@
+# Build output
+.next/
+out/
+node_modules/
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Editor / OS
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Local-only
+.claude/scheduled_tasks.lock
