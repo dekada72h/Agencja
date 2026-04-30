@@ -7,15 +7,1347 @@
     "blog": "Blog",
     "tools": "Narzędzia",
     "contact": "Kontakt",
-    "cta": "Darmowa wycena"
+    "cta": "Darmowa wycena",
+    "company": "Firma",
+    "resources": "Zasoby"
   },
   "footer": {
     "brand_desc": "Nowoczesna agencja marketingowa specjalizująca się w tworzeniu stron WWW, landing pages, SEO i automatyzacji.",
     "rights": "Wszystkie prawa zastrzeżone",
-    "made_by": "Strona zrealizowana przez"
+    "made_by": "Strona zrealizowana przez",
+    "brand": {
+      "desc": "Nowoczesna agencja marketingowa specjalizująca się w tworzeniu stron WWW, landing pages, SEO i automatyzację."
+    },
+    "services": {
+      "title": "Usługi",
+      "www": "Strony WWW",
+      "landing": "Landing Pages",
+      "seo": "SEO",
+      "automation": "Automatyzacja"
+    },
+    "company": {
+      "title": "Firma",
+      "about": "O nas",
+      "portfolio": "Portfolio",
+      "contact": "Kontakt",
+      "blog": "Blog"
+    },
+    "contact": {
+      "title": "Kontakt"
+    },
+    "copyright": "© 2016-2026 Dekada72H Digital. Wszystkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "terms": "Regulamin"
   },
   "common": {
     "skip_to_content": "Przejdź do treści",
     "language": "Język"
+  },
+  "index": {
+    "title": "Dekada72H | Agencja Marketingowa - Strony WWW, SEO, UX/UI",
+    "meta": {
+      "desc": "Dekada72H - Nowoczesna agencja marketingowa. Tworzymy strony WWW, landing pages, SEO i UX/UI design, które przekształcają odwiedzających w klientów."
+    },
+    "hero": {
+      "title": "Tworzymy <span>cyfrowe doświadczenia</span> które sprzedają",
+      "desc": "Jesteśmy agencją marketingową specjalizującą się w tworzeniu stron WWW, landing pages i strategiach SEO, które przekształcają odwiedzających w lojalnych klientów.",
+      "btn": {
+        "start": "Rozpocznij projekt",
+        "portfolio": "Zobacz realizacje"
+      },
+      "stat": {
+        "clients": "Zadowolonych klientów",
+        "experience": "Lat doświadczenia",
+        "scratch": "Projektów od zera"
+      },
+      "float": {
+        "conversion": "Wzrost konwersji",
+        "time": {
+          "val": "14 dni"
+        }
+      }
+    },
+    "services": {
+      "label": "Nasze usługi",
+      "title": "Kompleksowe rozwiązania dla Twojego biznesu",
+      "desc": "Oferujemy pełen zakres usług marketingowych, które pomogą Ci zbudować silną obecność online i przyciągnąć więcej klientów.",
+      "www": {
+        "title": "Strony WWW",
+        "desc": "Projektujemy i tworzymy responsywne strony internetowe, które wyglądają świetnie na każdym urządzeniu.",
+        "link": "Dowiedz się więcej"
+      },
+      "landing": {
+        "title": "Landing Pages",
+        "desc": "Tworzymy strony docelowe zoptymalizowane pod konwersję, które zamieniają odwiedzających w klientów.",
+        "link": "Dowiedz się więcej"
+      },
+      "seo": {
+        "title": "SEO",
+        "desc": "Optymalizujemy strony pod wyszukiwarki, aby Twój biznes był widoczny dla potencjalnych klientów.",
+        "link": "Dowiedz się więcej"
+      },
+      "auto": {
+        "title": "Automatyzacja",
+        "desc": "Automatyzujemy procesy na Twojej stronie, abyś mógł skupić się na prowadzeniu biznesu.",
+        "link": "Dowiedz się więcej"
+      }
+    },
+    "about": {
+      "label": "O nas",
+      "title": "Pomagamy firmom rosnąć w świecie cyfrowym",
+      "lead": "Jesteśmy zespołem pasjonatów, którzy wierzą, że dobry design i strategia marketingowa mogą zmienić każdy biznes.",
+      "text": "Od 2016 roku pomagamy firmom z różnych branż budować silną obecność online. Łączymy kreatywność z danymi, tworząc rozwiązania, które nie tylko wyglądają świetnie, ale przede wszystkim przynoszą wymierne rezultaty.",
+      "feature1": "Indywidualne podejście",
+      "feature2": "Terminowa realizacja",
+      "feature3": "Wsparcie techniczne",
+      "feature4": "Przejrzyste ceny",
+      "btn": "Poznaj nas lepiej",
+      "exp": "Lat doświadczenia"
+    },
+    "portfolio": {
+      "label": "Portfolio",
+      "title": "Nasze najnowsze realizacje",
+      "desc": "Zobacz projekty, które pomogły naszym klientom osiągnąć sukces w internecie.",
+      "cat": {
+        "gastro": "Gastronomia",
+        "construction": "Budownictwo",
+        "fitness": "Fitness",
+        "law": "Prawo",
+        "beauty": "Beauty",
+        "medicine": "Medycyna",
+        "ecommerce": "E-commerce",
+        "print": "Poligrafia",
+        "pets": "Sklep zoologiczny",
+        "realestate": "Nieruchomości"
+      },
+      "view": "Zobacz projekt",
+      "viewall": "Zobacz wszystkie projekty",
+      "toyland": "ToyLand - Sklep z Zabawkami",
+      "printmaster": "PrintMaster - Drukarnia",
+      "petzone": "PetZone - Sklep dla Zwierzat",
+      "domexpert": "DomExpert - Agencja Nieruchomości"
+    },
+    "custom": {
+      "label": "Dlaczego my?",
+      "title": "Każdy projekt tworzony od podstaw",
+      "desc": "Nie używamy gotowych szablonów. Każda strona jest projektowana i kodowana indywidualnie pod Twój biznes.",
+      "code": {
+        "title": "Kod pisany ręcznie",
+        "desc": "Każda linia kodu jest pisana przez nas. Zero generatorów, zero gotowych rozwiązań - tylko czysty, zoptymalizowany kod."
+      },
+      "design": {
+        "title": "Unikalny design",
+        "desc": "Twoja strona nie będzie wyglądać jak tysiące innych. Projektujemy wizualnie od zera, dopasowując do charakteru Twojej marki."
+      },
+      "perf": {
+        "title": "Maksymalna wydajność",
+        "desc": "Brak zbędnego kodu oznacza błyskawiczne ładowanie strony. Twoi klienci nie będą czekać na załadowanie się szablonu."
+      },
+      "control": {
+        "title": "Pełna kontrola",
+        "desc": "Bez ograniczeń szablonów. Możemy zrealizować każdy pomysł dokładnie tak, jak sobie wyobrażasz."
+      }
+    },
+    "cta": {
+      "title": "Gotowy, aby rozwinąć swój biznes online?",
+      "desc": "Skontaktuj się z nami już dziś i otrzymaj darmową wycenę projektu. Pomożemy Ci osiągnąć cele biznesowe w internecie.",
+      "btn": "Darmowa wycena"
+    }
+  },
+  "about": {
+    "title": "O nas | Dekada72H - Agencja Marketingowa",
+    "meta": {
+      "desc": "Poznaj zespół Dekada72H - agencję marketingową z ponad 10-letnim doświadczeniem. Dowiedz się więcej o naszej misji i wartościach."
+    },
+    "breadcrumb": "O nas",
+    "header": {
+      "title": "O nas",
+      "desc": "Poznaj zespół pasjonatów, którzy tworzą cyfrowe doświadczenia przekształcające biznesy."
+    },
+    "exp": {
+      "text": "Lat na rynku"
+    },
+    "history": {
+      "label": "Nasza historia",
+      "title": "Od pasji do profesjonalizmu",
+      "lead": "Dekada72H to nie tylko agencja marketingowa - to zespół ludzi, którzy naprawdę wierzą w moc dobrego designu i skutecznej strategii.",
+      "p1": "Zaczęliśmy w 2016 roku jako mały zespół z wielkim marzeniem - pomagać firmom wyróżnić się w cyfrowym świecie. Dziś jesteśmy pełnoprawną agencją z zespołem ekspertów, która realizuje projekty dla klientów z różnych branż w Polsce i za granicą.",
+      "p2": "Naszą filozofią jest podejście partnerskie - nie jesteśmy tylko dostawcą usług, ale partnerem w rozwoju Twojego biznesu. Każdy projekt traktujemy jak własny, angażując się w pełni w jego sukces."
+    },
+    "feature1": "Każdy projekt pisany od zera",
+    "feature2": "98% zadowolonych klientów",
+    "feature3": "10 lat doświadczenia",
+    "feature4": "Wsparcie techniczne w cenie",
+    "stat": {
+      "scratch": "Projektów pisanych od zera",
+      "clients": "Zadowolonych klientów",
+      "experience": "Lat doświadczenia",
+      "team": "Osób w zespole"
+    },
+    "values": {
+      "label": "Nasze wartości",
+      "title": "Co nas wyróżnia",
+      "desc": "Kierujemy się wartościami, które pozwalają nam tworzyć projekty na najwyższym poziomie.",
+      "quality": {
+        "title": "Jakość",
+        "desc": "Nigdy nie idziemy na kompromisy. Każdy projekt realizujemy z najwyższą dbałością o szczegóły."
+      },
+      "partnership": {
+        "title": "Partnerstwo",
+        "desc": "Traktujemy każdego klienta jak partnera. Twój sukces jest naszym sukcesem."
+      },
+      "innovation": {
+        "title": "Innowacja",
+        "desc": "Ciągle się rozwijamy i śledzimy najnowsze trendy, aby oferować nowoczesne rozwiązania."
+      },
+      "punctuality": {
+        "title": "Terminowość",
+        "desc": "Dotrzymujemy terminów. Wiemy, że czas to pieniądz, dlatego działamy sprawnie."
+      },
+      "transparency": {
+        "title": "Transparentność",
+        "desc": "Jasne zasady współpracy, przejrzyste ceny i regularna komunikacja to nasza podstawa."
+      },
+      "support": {
+        "title": "Wsparcie",
+        "desc": "Nie zostawiamy klientów samych. Oferujemy wsparcie na każdym etapie współpracy."
+      }
+    },
+    "team": {
+      "label": "Nasz zespół",
+      "title": "Poznaj założycieli",
+      "desc": "Za każdym projektem stoją konkretni ludzie - poznaj zespół Dekada72H.",
+      "role": {
+        "coowner": "Współwłaściciel"
+      },
+      "damian1": {
+        "desc": "Odpowiada za stronę techniczną projektów. Przekształca wizje w działający kod, dbając o każdy detal i wydajność."
+      },
+      "kuba": {
+        "desc": "Kreuje wizualną stronę projektów. Projektuje interfejsy, które nie tylko wyglądają świetnie, ale też świetnie działają."
+      },
+      "damian2": {
+        "desc": "Dba o relacje z klientami od pierwszego kontaktu do finalizacji. Zawsze dostępny, zawsze pomocny."
+      }
+    },
+    "timeline": {
+      "label": "Nasza droga",
+      "title": "Historia Dekada72H",
+      "desc": "Od małego startupu do uznanej agencji - poznaj naszą drogę.",
+      "2016": {
+        "title": "Początek przygody",
+        "desc": "Damian Zieliński zakłada Dekada72H jako jednoosobową działalność. Pierwsze projekty realizowane dla klientów z Niemiec."
+      },
+      "2018": {
+        "title": "Rośniemy",
+        "desc": "Do zespołu dołącza Anna, która wspiera rozwój firmy i pomaga w codziennych wyzwaniach."
+      },
+      "2019": {
+        "title": "Nowe biuro",
+        "desc": "Przenosimy biuro do Warszawy, otwierając się na nowe możliwości i większy rynek."
+      },
+      "2022": {
+        "title": "Setny projekt",
+        "desc": "Świętujemy setny zrealizowany projekt - każdy pisany od zera, każdy dopasowany do klienta."
+      },
+      "2026": {
+        "title": "Dziś",
+        "desc": "Zespół liczy już 5 osób, a my kontynuujemy naszą misję - tworzymy strony, które naprawdę działają."
+      }
+    },
+    "cta": {
+      "title": "Chcesz dołączyć do grona naszych klientów?",
+      "desc": "Skontaktuj się z nami i dowiedz się, jak możemy pomóc w rozwoju Twojego biznesu online.",
+      "btn": "Skontaktuj się",
+      "btn2": "Zobacz nasze realizacje"
+    }
+  },
+  "services": {
+    "title": "Usługi | Dekada72H - Strony WWW, SEO, UX/UI",
+    "meta": {
+      "desc": "Usługi Dekada72H - Strony WWW, Landing Pages, SEO, UX/UI Design. Kompleksowe rozwiązania marketingowe dla Twojego biznesu."
+    },
+    "breadcrumb": "Usługi",
+    "header": {
+      "title": "Nasze usługi",
+      "desc": "Kompleksowe rozwiązania marketingowe, które pomogą Twojemu biznesowi wyróżnić się w sieci."
+    },
+    "overview": {
+      "www": {
+        "title": "Strony WWW",
+        "desc": "Projektujemy i tworzymy responsywne strony internetowe, które wyglądają świetnie na każdym urządzeniu.",
+        "link": "Dowiedz się więcej"
+      },
+      "landing": {
+        "title": "Landing Pages",
+        "desc": "Tworzymy strony docelowe zoptymalizowane pod konwersję, które zamieniają odwiedzających w klientów.",
+        "link": "Dowiedz się więcej"
+      },
+      "seo": {
+        "title": "SEO",
+        "desc": "Optymalizujemy strony pod wyszukiwarki, aby Twój biznes był widoczny dla potencjalnych klientów.",
+        "link": "Dowiedz się więcej"
+      },
+      "auto": {
+        "title": "Automatyzacja",
+        "desc": "Automatyzujemy procesy na Twojej stronie, abyś mógł skupić się na prowadzeniu biznesu.",
+        "link": "Dowiedz się więcej"
+      }
+    },
+    "www": {
+      "title": "Strony WWW",
+      "lead": "Tworzymy strony internetowe, które nie tylko świetnie wyglądają, ale przede wszystkim realizują cele biznesowe.",
+      "desc": "Każdy projekt zaczynamy od zrozumienia Twojego biznesu, grupy docelowej i celów. Dzięki temu tworzymy strony, które przyciągają właściwych klientów i przekonują ich do działania.",
+      "badge": "Od zera",
+      "f1": "Responsywny design (mobile-first)",
+      "f2": "Szybkie ładowanie strony (< 3s)",
+      "f3": "Optymalizacja pod SEO",
+      "f4": "Panel administracyjny CMS",
+      "f5": "Certyfikat SSL i bezpieczeństwo",
+      "cta": "Zamów wycenę"
+    },
+    "landing": {
+      "title": "Landing Pages",
+      "lead": "Strony docelowe zaprojektowane z myślą o jednym celu - konwersji odwiedzających w klientów.",
+      "desc": "Landing page to nie zwykła strona. To precyzyjnie skonstruowane narzędzie sprzedażowe, które prowadzi użytkownika przez ścieżkę decyzyjną i zachęca do podjęcia działania.",
+      "badge": "Konwersji",
+      "f1": "Copywriting sprzedażowy",
+      "f2": "A/B testing i optymalizacja",
+      "f3": "Integracja z CRM i analityką",
+      "f4": "Formularze i pop-upy",
+      "f5": "Śledzenie konwersji",
+      "cta": "Zamów wycenę"
+    },
+    "seo": {
+      "title": "SEO",
+      "lead": "Pozycjonowanie, które przynosi realne rezultaty - więcej ruchu organicznego i więcej klientów.",
+      "desc": "SEO to maraton, nie sprint. Stosujemy sprawdzone, białe techniki, które budują trwałą widoczność Twojej strony w wyszukiwarkach i przyciągają wartościowy ruch.",
+      "f1": "Audyt SEO i analiza konkurencji",
+      "f2": "Optymalizacja on-page i off-page",
+      "f3": "Content marketing i link building",
+      "f4": "Lokalne SEO (Google Moja Firma)",
+      "f5": "Miesięczne raporty i analityka",
+      "cta": "Zamów wycenę"
+    },
+    "auto": {
+      "title": "Automatyzacja",
+      "lead": "Twoja strona pracuje za Ciebie - automatyzujemy procesy, abyś mógł skupić się na tym, co najważniejsze.",
+      "desc": "Wdrażamy inteligentne rozwiązania, które automatyzują powtarzalne zadania na Twojej stronie. Dzięki temu Twój biznes działa sprawniej, a Ty zyskujesz więcej czasu na rozwój firmy.",
+      "badge": "Działa",
+      "f1": "Automatyczne powiadomienia i odpowiedzi",
+      "f2": "Integracja z systemami CRM i kalendarzem",
+      "f3": "Automatyczne rezerwacje i potwierdzenia",
+      "f4": "Chatboty i formularze inteligentne",
+      "f5": "Raporty i analityka w czasie rzeczywistym",
+      "cta": "Zamów wycenę"
+    },
+    "process": {
+      "label": "Jak pracujemy",
+      "title": "Nasz proces",
+      "desc": "Przejrzysty proces, który gwarantuje sukces projektu i Twoje spokojne sny.",
+      "s1": {
+        "title": "Odkrywanie",
+        "desc": "Poznajemy Twój biznes, cele i grupę docelową. Analizujemy konkurencję i rynek."
+      },
+      "s2": {
+        "title": "Planowanie",
+        "desc": "Tworzymy strategię i harmonogram. Ustalamy kamienie milowe i KPI."
+      },
+      "s3": {
+        "title": "Realizacja",
+        "desc": "Projektujemy i kodujemy. Regularnie konsultujemy postępy i zbieramy feedback."
+      },
+      "s4": {
+        "title": "Wdrożenie",
+        "desc": "Testujemy, optymalizujemy i uruchamiamy. Zapewniamy wsparcie po starcie."
+      }
+    },
+    "pricing": {
+      "label": "Cennik",
+      "title": "Przejrzyste ceny",
+      "desc": "Wybierz pakiet dopasowany do Twoich potrzeb. W każdym pakiecie: pierwszy rok domeny i hostingu gratis!",
+      "vat": "Wszystkie ceny są cenami netto. Do podanych kwot należy doliczyć podatek VAT (23%).",
+      "min": {
+        "name": "Minimum",
+        "desc": "Dla małych firm i startupów",
+        "period": "jednorazowo",
+        "f1": "Strona do 5 podstron",
+        "f2": "Responsywny design",
+        "f3": "Formularz kontaktowy",
+        "f4": "Podstawowe SEO",
+        "f5": "Wsparcie techniczne",
+        "cta": "Wybierz pakiet"
+      },
+      "combo": {
+        "name": "Kombo",
+        "desc": "Strona + automatyzacja dla Twojego biznesu",
+        "period": "jednorazowo",
+        "f1": "Strona do 10 podstron",
+        "f2": "Zaawansowany design",
+        "f3": "Automatyzacja procesów",
+        "f4": "Strona pracuje za Ciebie 24/7",
+        "f5": "Skup się na biznesie, nie na stronie",
+        "cta": "Wybierz pakiet"
+      },
+      "premium": {
+        "name": "Premium",
+        "desc": "Dla wymagających projektów",
+        "period": "wycena indywidualna",
+        "f1": "Nieograniczona liczba podstron",
+        "f2": "Indywidualny projekt graficzny",
+        "f3": "Profesjonalny copywriting w cenie",
+        "f4": "Zaawansowane SEO i analityka",
+        "f5": "Priorytetowe wsparcie 12 mies.",
+        "cta": "Skontaktuj się"
+      },
+      "included": {
+        "title": "W każdym pakiecie otrzymujesz:",
+        "f1": "Pierwszy rok domeny i hostingu gratis",
+        "f2": "Wsparcie techniczne",
+        "f3": "Hosting na naszych serwerach",
+        "note": "Strona będzie hostowana na naszym hostingu - zapewniamy pełną obsługę techniczną."
+      }
+    },
+    "faq": {
+      "label": "FAQ",
+      "title": "Często zadawane pytania",
+      "desc": "Odpowiedzi na najczęściej zadawane pytania przez naszych klientów.",
+      "q1": "Ile trwa realizacja strony internetowej?",
+      "a1": "W przypadku prostych stron wizytówkowych, pierwszą wersję projektu (mockup) przygotowujemy w ciągu 72 godzin. Po akceptacji wyglądu przez klienta, gotową stronę dostarczamy również w 72 godziny. Bardziej skomplikowane projekty (sklepy internetowe, rozbudowane portale, dedykowane funkcjonalności) realizujemy w czasie 3-6 tygodni, w zależności od zakresu prac.",
+      "q2": "Czy mogę samodzielnie edytować treści na stronie?",
+      "a2": "Tak! W pakietach Business i Enterprise instalujemy system CMS (np. WordPress), który pozwala na łatwą edycję treści bez znajomości programowania. Przeprowadzamy również szkolenie z obsługi panelu.",
+      "q3": "Co jest potrzebne do rozpoczęcia projektu?",
+      "a3": "Potrzebujemy od Ciebie: logo firmy, treści (lub zlecenie ich napisania nam), zdjęcia (lub wykorzystamy stock), oraz brief z informacjami o firmie i celach strony. Przeprowadzimy Cię przez cały proces.",
+      "q4": "Czy oferujecie hosting i domenę?",
+      "a4": "Tak, możemy pomóc w zakupie domeny i hostingu, a także zająć się ich konfiguracją. Współpracujemy z sprawdzonymi dostawcami usług hostingowych w Polsce.",
+      "q5": "Jak wyglądają płatności?",
+      "a5": "Standardowo pracujemy w modelu: 50% zaliczki przed rozpoczęciem prac, 50% po akceptacji projektu. Dla większych projektów możemy ustalić płatności etapowe. Wystawiamy fakturę VAT."
+    },
+    "cta": {
+      "title": "Gotowy na nową stronę?",
+      "desc": "Skontaktuj się z nami i otrzymaj darmową wycenę projektu w ciągu 24 godzin.",
+      "btn": "Zamów darmową wycenę"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio | Dekada72H - Nasze Realizacje",
+    "meta": {
+      "desc": "Portfolio Dekada72H - Zobacz nasze najlepsze realizacje stron internetowych, landing pages i projektów UX/UI."
+    },
+    "breadcrumb": "Portfolio",
+    "header": {
+      "title": "Nasze realizacje",
+      "desc": "Poznaj projekty, które pomogły naszym klientom osiągnąć sukces w cyfrowym świecie."
+    },
+    "featured": {
+      "badge": "Wyróżniony projekt",
+      "label": "Case Study",
+      "lead": "Kompleksowa strona internetowa dla ekskluzywnej restauracji włoskiej, która zwiększyła liczbę rezerwacji o 180%.",
+      "desc": "Zaprojektowaliśmy elegancką stronę z systemem rezerwacji online, galerią potraw i integracją z Google Maps. Strona wyróżnia się piękną typografią i animacjami, które odzwierciedlają charakter restauracji.",
+      "stat1": "Więcej rezerwacji",
+      "stat2": "Czas ładowania",
+      "stat3": "Pozycja w Google",
+      "btn": "Zobacz projekt"
+    },
+    "grid": {
+      "label": "Wszystkie projekty",
+      "title": "Nasze prace",
+      "desc": "Każdy projekt to unikalna historia sukcesu. Zobacz, jak pomagamy firmom rosnąć."
+    },
+    "filter": {
+      "all": "Wszystkie",
+      "www": "Strony WWW",
+      "landing": "Landing Pages",
+      "redesign": "Redesign"
+    },
+    "item": {
+      "view": "Zobacz projekt"
+    },
+    "bella": {
+      "badge": "Gastronomia",
+      "cat": "Strona WWW",
+      "desc": "Elegancka strona dla włoskiej restauracji z systemem rezerwacji online, galerią potraw i interaktywnym menu.",
+      "tag2": "Rezerwacje"
+    },
+    "bud": {
+      "badge": "Budownictwo",
+      "cat": "Strona WWW",
+      "desc": "Profesjonalna strona dla firmy budowlanej z portfolio realizacji, kalkulatorem wycen i formularzem zapytań.",
+      "tag2": "Kalkulator"
+    },
+    "fit": {
+      "badge": "Fitness",
+      "cat": "Landing Page",
+      "desc": "Dynamiczna strona dla studia fitness z grafikiem zajęć, zapisami online i strefą motywacyjną dla członków.",
+      "tag2": "Animacje",
+      "tag3": "Grafik"
+    },
+    "kowalski": {
+      "badge": "Prawo",
+      "cat": "Redesign",
+      "desc": "Prestiżowa strona dla kancelarii prawnej z systemem konsultacji online, blogiem prawnym i strefą klienta.",
+      "tag3": "Strefa klienta"
+    },
+    "glamour": {
+      "badge": "Beauty",
+      "cat": "Landing Page",
+      "desc": "Piękna strona dla salonu kosmetycznego z systemem rezerwacji, galerią metamorfoz i sklepem z produktami.",
+      "tag2": "Galeria"
+    },
+    "dom": {
+      "badge": "Nieruchomości",
+      "cat": "Strona WWW",
+      "desc": "Profesjonalna strona dla agencji nieruchomości z wyszukiwarką ofert, prezentacją nieruchomości i formularzem kontaktowym.",
+      "tag2": "Wyszukiwarka",
+      "tag3": "Responsywność"
+    },
+    "medicare": {
+      "badge": "Medycyna",
+      "cat": "Strona WWW",
+      "desc": "Nowoczesna strona dla kliniki medycznej z systemem rezerwacji wizyt online, prezentacją zespołu lekarzy i usług medycznych.",
+      "tag2": "Rezerwacje",
+      "tag3": "Futurystyczny design"
+    },
+    "toyland": {
+      "badge": "E-commerce",
+      "cat": "Sklep internetowy",
+      "title": "ToyLand - Sklep z Zabawkami",
+      "desc": "Kolorowy sklep internetowy z zabawkami dla dzieci z katalogiem produktów, koszykiem zakupowym i systemem płatności.",
+      "tag2": "Katalog produktów",
+      "tag3": "Responsywność"
+    },
+    "print": {
+      "badge": "Poligrafia",
+      "cat": "Strona firmowa",
+      "title": "PrintMaster - Drukarnia",
+      "desc": "Profesjonalna strona dla drukarni oferujacej wizytowki, ulotki, plakaty, kalendarze i materialy reklamowe. Nowoczesny design z katalogiem uslug.",
+      "tag1": "Poligrafia",
+      "tag2": "Katalog uslug",
+      "tag3": "Formularz wyceny"
+    },
+    "pet": {
+      "badge": "E-commerce",
+      "cat": "Sklep internetowy",
+      "title": "PetZone - Sklep Zoologiczny",
+      "desc": "Ciepla i przyjazna strona sklepu zoologicznego z karma, akcesoriami i zabawkami dla zwierzat. Pelny katalog produktow z koszykiem zakupowym.",
+      "tag1": "Sklep zoologiczny",
+      "tag3": "Katalog produktow"
+    },
+    "process": {
+      "label": "Nasz proces",
+      "title": "Jak pracujemy",
+      "desc": "Każdy projekt realizujemy według sprawdzonego procesu, który gwarantuje najwyższą jakość.",
+      "s1": {
+        "title": "1. Konsultacja",
+        "desc": "Poznajemy Twoje potrzeby, cele biznesowe i wizję. Wspólnie ustalamy zakres projektu i plan działania."
+      },
+      "s2": {
+        "title": "2. Projektowanie",
+        "desc": "Tworzymy unikalny projekt graficzny dopasowany do Twojej marki. Każdy element jest przemyślany."
+      },
+      "s3": {
+        "title": "3. Kodowanie",
+        "desc": "Piszemy czysty kod od podstaw - bez szablonów, bez ograniczeń. Każda strona jest optymalizowana."
+      },
+      "s4": {
+        "title": "4. Publikacja",
+        "desc": "Po Twojej akceptacji publikujemy stronę i zapewniamy pełne wsparcie techniczne."
+      }
+    },
+    "cta": {
+      "title": "Chcesz dołączyć do grona naszych klientów?",
+      "desc": "Skontaktuj się z nami i opowiedz o swoim projekcie. Chętnie pomożemy Ci osiągnąć sukces online.",
+      "btn": "Rozpocznij projekt"
+    }
+  },
+  "contact": {
+    "title": "Kontakt | Dekada72H - Darmowa Wycena",
+    "meta": {
+      "desc": "Skontaktuj się z Dekada72H - agencją marketingową. Darmowa wycena projektu, konsultacje i współpraca."
+    },
+    "breadcrumb": "Kontakt",
+    "header": {
+      "title": "Skontaktuj się z nami",
+      "desc": "Masz pytanie lub chcesz omówić projekt? Jesteśmy tu, aby pomóc."
+    },
+    "info": {
+      "title": "Porozmawiajmy o Twoim projekcie",
+      "desc": "Niezależnie od tego, czy potrzebujesz nowej strony, redesignu czy konsultacji - chętnie wysłuchamy Twoich potrzeb i zaproponujemy najlepsze rozwiązanie.",
+      "address": {
+        "label": "Adres biura"
+      },
+      "phone": {
+        "label": "Telefon"
+      },
+      "hours": {
+        "title": "Godziny pracy",
+        "days": "Codziennie"
+      }
+    },
+    "quick": {
+      "call": {
+        "title": "Zadzwoń do nas",
+        "desc": "Porozmawiaj bezpośrednio z naszym zespołem"
+      }
+    },
+    "map": {
+      "label": "Lokalizacja",
+      "title": "Znajdź nas",
+      "desc": "Odwiedź nasze biuro w centrum Wrocławia"
+    },
+    "form": {
+      "title": "Wyślij wiadomość",
+      "desc": "Wypełnij formularz, a odezwiemy się najszybciej jak to możliwe.",
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Telefon",
+      "service": {
+        "placeholder": "Wybierz usługę...",
+        "www": "Strona WWW",
+        "landing": "Landing Page",
+        "seo": "SEO / Pozycjonowanie",
+        "auto": "Automatyzacja",
+        "other": "Inne"
+      },
+      "referral": {
+        "placeholder": "Wybierz opcję...",
+        "damian": "Damian - Doradca Klienta",
+        "kuba": "Kuba - Doradca Klienta",
+        "internet": "Z internetu"
+      },
+      "message": "Wiadomość",
+      "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie. Zapoznałem/am się z <a href=\"privacy.html\">polityką prywatności</a>.",
+      "submit": "Wyślij wiadomość",
+      "success": "Dziękujemy! Twoja wiadomość została wysłana. Odezwiemy się wkrótce.",
+      "error": "Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub skontaktuj się telefonicznie."
+    }
+  },
+  "form": {
+    "sending": "Wysyłanie...",
+    "required": "To pole jest wymagane",
+    "invalid": {
+      "email": "Podaj prawidłowy adres email",
+      "phone": "Podaj prawidłowy numer telefonu"
+    },
+    "success": {
+      "title": "Wiadomość wysłana!",
+      "desc": "Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe."
+    }
+  },
+  "blog": {
+    "title": "Blog | Dekada72H - Wiedza o stronach WWW i marketingu",
+    "meta": {
+      "desc": "Blog Dekada72H - Porady, artykuły i wiedza o tworzeniu stron internetowych, SEO, marketingu cyfrowym i technologiach webowych."
+    },
+    "breadcrumb": "Blog",
+    "header": {
+      "title": "Blog",
+      "desc": "Porady, artykuły i wiedza o tworzeniu stron internetowych i marketingu cyfrowym."
+    },
+    "readmore": "Czytaj więcej",
+    "cta": {
+      "title": "Masz pytania o tworzenie stron?",
+      "desc": "Skontaktuj się z nami - chętnie doradzimy najlepsze rozwiązanie dla Twojego biznesu.",
+      "btn": "Skontaktuj się"
+    },
+    "article1": {
+      "title": "Strona HTML vs WordPress - Co wybrać? | Dekada72H Blog",
+      "meta": {
+        "desc": "Strona HTML czy WordPress? Poznaj zalety i wady obu rozwiazań. Dowiedz się, które lepiej sprawdzi się dla Twojej firmy pod względem szybkości, bezpieczeństwa i SEO."
+      },
+      "breadcrumb": "HTML vs WordPress",
+      "heading": "Strona HTML vs WordPress - Co wybrać dla swojej firmy?",
+      "subheading": "Szczegółowe porównanie obu rozwiązań, które pomoże Ci podjąć najlepszą decyzję.",
+      "category": "Strony WWW",
+      "readtime": "12 min czytania",
+      "card": {
+        "title": "Strona HTML vs WordPress - Co wybrać dla swojej firmy?",
+        "excerpt": "Szczegółowe porównanie stron HTML i WordPress pod względem szybkości, bezpieczeństwa, SEO i kosztów. Dowiedz się, które rozwiązanie lepiej sprawdzi się dla Twojego biznesu."
+      },
+      "intro1": "Stoisz przed decyzją o stworzeniu strony internetowej dla swojej firmy i zastanawiasz się, jaką technologię wybrać? To jedno z najważniejszych pytań, które warto sobie zadać zanim zainwestujesz pieniądze w swoją wizytówkę w sieci. Dwa najpopularniejsze podejścia to strona pisana w czystym HTML/CSS lub strona zbudowana na WordPressie. Każde ma swoje zalety i wady - i w tym artykule szczerze je omówimy.",
+      "intro2": "Jako <a href=\"../about.html\">agencja z ponad 10-letnim doświadczeniem</a>, stworzyliśmy wiele stron w obu technologiach. Widzimy na co dzień, jak wybór platformy wpływa na sukces biznesowy naszych klientów. Dlatego chcemy podzielić się z Tobą naszą wiedzą, abyś mógł podjąć świadomą decyzję.",
+      "h2": {
+        "whathtml": "Czym jest strona HTML?",
+        "whatwp": "Czym jest WordPress?",
+        "speed": "Szybkość działania - kto wygrywa?",
+        "security": "Bezpieczeństwo - gdzie Twoje dane są bezpieczniejsze?",
+        "seo": "SEO - która strona lepiej pozycjonuje się w Google?",
+        "costs": "Koszty - co jest tańsze w utrzymaniu?",
+        "design": "Unikalny design - kto daje więcej możliwości?",
+        "proscons": "Podsumowanie zalet i wad",
+        "whentochoose": "Kiedy wybrać HTML, a kiedy WordPress?",
+        "conclusion": "Nasze zdanie - dlaczego stawiamy na HTML"
+      },
+      "whathtml": {
+        "p1": "Strona HTML (często nazywana stroną statyczną) to witryna napisana ręcznie w kodzie HTML, CSS i ewentualnie JavaScript. Każdy element strony jest zaprojektowany i zakodowany od zera przez programistę. Nie ma tu żadnego systemu zarządzania treścią, żadnych wtyczek, żadnej bazy danych - tylko czysty, zoptymalizowany kod.",
+        "p2": "Wyobraź sobie to tak: strona HTML jest jak garnitur szyty na miarę. Każdy element jest dopasowany dokładnie do Twoich potrzeb. Nic nie jest za dużo, nic nie jest niepotrzebne."
+      },
+      "whatwp": {
+        "p1": "WordPress to system zarządzania treścią (CMS), który napędza ponad 40% wszystkich stron internetowych na świecie. Działa na serwerze za pomocą języka PHP i bazy danych MySQL. Użytkownicy mogą zarządzać treściami przez panel administracyjny, instalować motywy (szablony wyglądu) i wtyczki (dodatkowe funkcjonalności) bez znajomości programowania.",
+        "p2": "Kontynuując analogię - WordPress jest jak garnitur kupiony w sklepie. Możesz wybrać rozmiar i kolor, ale nie jest szyty specjalnie dla Ciebie. Jest uniwersalny i wygodny, ale może nie pasować idealnie do każdej sytuacji."
+      },
+      "caption": {
+        "code": "Czysty kod HTML - przejrzysty, szybki i w pełni pod kontrolą programisty.",
+        "security": "Bezpieczeństwo strony internetowej to kluczowy aspekt, który wpływa na zaufanie klientów.",
+        "seo": "Dobra optymalizacja SEO to klucz do widoczności w wyszukiwarkach.",
+        "design": "Unikalny design wyróżnia Twoją firmę na tle konkurencji."
+      },
+      "speed": {
+        "p1": "Tu nie ma dyskusji - strony HTML są zdecydowanie szybsze. Dlaczego? Bo gdy ktoś wchodzi na Twoją stronę, serwer po prostu wysyła gotowy plik HTML do przeglądarki. Nie ma żadnego przetwarzania, żadnych zapytań do bazy danych, żadnego generowania strony w locie.",
+        "p2": "WordPress natomiast musi za każdym razem uruchomić skrypt PHP, połączyć się z bazą danych, pobrać treści, przetworzyć je przez motyw i wszystkie aktywne wtyczki, a dopiero potem wysłać gotową stronę do użytkownika. To wszystko zajmuje czas.",
+        "highlight": "Badania Google pokazują, że 53% użytkowników mobilnych opuszcza stronę, jeśli ładuje się dłużej niż 3 sekundy. Każda sekunda opóźnienia zmniejsza konwersję o około 7%. Szybkość to nie luksus - to konieczność.",
+        "p3": "Oczywiście, WordPress można przyspieszyć za pomocą wtyczek cache'ujących, CDN i zoptymalizowanego hostingu. Ale dlaczego płacić więcej za rozwiązania problemu, który w przypadku strony HTML po prostu nie istnieje?"
+      },
+      "stat": {
+        "html": "Typowy czas ładowania HTML",
+        "wp": "Typowy czas ładowania WordPress",
+        "bounce": "Odrzuceń przy > 3s ładowania"
+      },
+      "security": {
+        "p1": "To jest obszar, w którym strony HTML mają ogromną przewagę. Strona statyczna nie ma bazy danych, nie ma panelu logowania, nie ma wtyczek z potencjalnymi lukami. Powierzchnia ataku jest minimalna - bo nie ma praktycznie czego atakować.",
+        "p2": "WordPress to zupełnie inna historia. Jako najpopularniejszy CMS na świecie, jest jednocześnie najczęstszym celem ataków hakerów. Statystyki są niepokojące:",
+        "li1": "Szacuje się, że codziennie hakowanych jest około 13 000 stron WordPress - to 9 ataków na minutę",
+        "li2": "WordPress odpowiada za 90% wszystkich zhakowanych stron opartych na CMS",
+        "li3": "99,4% luk bezpieczeństwa w ekosystemie WordPress pochodzi z motywów i wtyczek",
+        "li4": "52% wszystkich luk jest spowodowanych nieaktualnymi wtyczkami",
+        "p3": "To nie znaczy, że WordPress jest z natury niebezpieczny - sam rdzeń systemu jest dobrze zabezpieczony. Problem leży w dodatkach: motywach, wtyczkach i zaniedbaniu aktualizacji. Jeśli zdecydujesz się na WordPress, musisz regularnie aktualizować system, monitorować bezpieczeństwo i inwestować w <a href=\"../services.html\">profesjonalną opiekę techniczną</a>."
+      },
+      "seo": {
+        "p1": "WordPress ma reputację platformy przyjaznej SEO, głównie dzięki wtyczkom takim jak Yoast SEO czy Rank Math, które ułatwiają optymalizację treści. I faktycznie - dla osób bez wiedzy technicznej to ogromne ułatwienie.",
+        "p2": "Ale prawda jest taka, że strona HTML może osiągnąć dokładnie takie same (a często lepsze) wyniki w SEO. Dlaczego? Bo:",
+        "li1": "Szybkość ładowania jest jednym z kluczowych czynników rankingowych Google - a strony HTML ładują się błyskawicznie",
+        "li2": "Czysty kod bez zbędnych skryptów i stylów jest łatwiejszy do zindeksowania przez roboty wyszukiwarek",
+        "li3": "Pełna kontrola nad meta tagami, strukturą nagłówków, schema markup i wszystkimi elementami technicznymi SEO",
+        "li4": "Brak zbędnego kodu - WordPress generuje dużo nadmiarowego kodu z motywów i wtyczek, co spowalnia indeksowanie",
+        "p3": "W naszej agencji dbamy o <a href=\"../services.html\">kompleksowe SEO</a> każdego projektu - niezależnie od technologii. Ale musimy przyznać, że strony HTML dają nam znacznie więcej swobody w optymalizacji technicznej."
+      },
+      "costs": {
+        "p1": "Na pierwszy rzut oka WordPress może wydawać się tańszy - w końcu sam system jest darmowy, a w internecie roi się od tanich szablonów. Ale to tylko część obrazu. Prawdziwe koszty ujawniają się z czasem:",
+        "p2": "W perspektywie 3-5 lat strona HTML jest zwykle tańsza w utrzymaniu. Nie ma ryzyka, że aktualizacja wtyczki zepsuje Ci stronę w piątek wieczorem, nie musisz płacić za premium wtyczki bezpieczeństwa i nie potrzebujesz drogiego hostingu z obsługą PHP. Sprawdź nasz <a href=\"../services.html\">cennik usług</a>, aby zobaczyć, jakie pakiety oferujemy."
+      },
+      "table": {
+        "aspect": "Aspekt",
+        "hosting": {
+          "html": "Tani (statyczne pliki)",
+          "wp": "Droższy (PHP + baza danych)"
+        },
+        "updates": {
+          "html": "Niepotrzebne",
+          "wp": "Regularne (rdzeń + wtyczki)"
+        },
+        "security2": {
+          "html": "Minimalne ryzyko",
+          "wp": "Wymaga monitoringu"
+        },
+        "plugins": {
+          "html": "Nie dotyczy",
+          "wp": "50-500 zł/rok każda"
+        },
+        "maintenance": {
+          "html": "Niska",
+          "wp": "Stała (100-500 zł/mies.)"
+        }
+      },
+      "design": {
+        "p1": "Jeśli zależy Ci na tym, aby Twoja strona wyglądała wyjątkowo i nie przypominała tysięcy innych witryn w internecie, strona HTML daje Ci nieograniczone możliwości. Każdy piksel, każda animacja, każdy element jest zaprojektowany specjalnie dla Ciebie.",
+        "p2": "WordPress opiera się na motywach (szablonach), które z definicji są uniwersalne. Nawet jeśli dostosujesz kolory i treści, podstawowa struktura i układ pozostają takie same jak u tysięcy innych firm korzystających z tego samego motywu. Page buildery (Elementor, Divi) dają więcej elastyczności, ale jednocześnie generują ogromne ilości zbędnego kodu, co spowalnia stronę.",
+        "p3": "Zobacz nasze <a href=\"../portfolio.html\">portfolio</a> - każdy projekt jest inny, bo każdy był tworzony od zera, dopasowany do charakteru marki klienta. To jest wartość, której nie da się osiągnąć żadnym gotowym szablonem."
+      },
+      "h3": {
+        "htmlproscons": "Strona HTML - zalety i wady",
+        "wpproscons": "WordPress - zalety i wady"
+      },
+      "pros": {
+        "html": {
+          "title": "Zalety",
+          "1": "Błyskawiczne ładowanie strony",
+          "2": "Maksymalne bezpieczeństwo",
+          "3": "Niskie koszty utrzymania",
+          "4": "Pełna kontrola nad kodem",
+          "5": "Unikalne, niepowtarzalne projekty",
+          "6": "Lepsze wyniki w Google"
+        },
+        "wp": {
+          "title": "Zalety",
+          "1": "Łatwe zarządzanie treścią",
+          "2": "Bogaty ekosystem wtyczek",
+          "3": "Niższy koszt początkowy (szablony)",
+          "4": "Dobre dla stron z dużą ilością treści"
+        }
+      },
+      "cons": {
+        "html": {
+          "title": "Wady",
+          "1": "Wymaga programisty do zmian",
+          "2": "Trudniej dodawać treści samodzielnie",
+          "3": "Wyższy koszt początkowy",
+          "4": "Mniej odpowiednia dla dużych blogów"
+        },
+        "wp": {
+          "title": "Wady",
+          "1": "Wolniejsze ładowanie",
+          "2": "Częsty cel ataków hakerskich",
+          "3": "Wymaga regularnych aktualizacji",
+          "4": "Wyższe koszty utrzymania",
+          "5": "Szablonowy, powtarzalny wygląd",
+          "6": "Problem z nadmiarem wtyczek"
+        }
+      },
+      "choose": {
+        "p1": "Wybierz stronę HTML, jeśli:",
+        "html1": "Prowadzisz firmę i potrzebujesz profesjonalnej wizytówki w sieci",
+        "html2": "Zależy Ci na szybkości, bezpieczeństwie i unikalnym wyglądzie",
+        "html3": "Nie planujesz codziennie dodawać nowych treści",
+        "html4": "Chcesz mieć stronę, która \"po prostu działa\" bez ciągłej konserwacji",
+        "html5": "Chcesz wyróżnić się na tle konkurencji",
+        "p2": "Wybierz WordPress, jeśli:",
+        "wp1": "Prowadzisz bloga lub serwis informacyjny z częstymi publikacjami",
+        "wp2": "Potrzebujesz sklepu internetowego (WooCommerce)",
+        "wp3": "Chcesz samodzielnie zarządzać treściami bez pomocy programisty",
+        "wp4": "Masz ograniczony budżet początkowy i akceptujesz wyższe koszty utrzymania"
+      },
+      "conclusion": {
+        "p1": "Jako agencja specjalizująca się w <a href=\"../services.html\">tworzeniu stron od zera</a>, mamy jasne stanowisko: dla większości firm strona HTML jest lepszym wyborem. Nie dlatego, że WordPress jest zły - to solidna platforma z wieloma zastosowaniami. Ale dla typowej firmy, która potrzebuje profesjonalnej wizytówki w internecie, korzyści strony HTML są nie do podważenia:",
+        "highlight": "Szybsza strona = lepsze pozycje w Google = więcej klientów. Bezpieczniejsza strona = spokojny sen. Unikalna strona = wyróżnienie na tle konkurencji. To prosta matematyka.",
+        "p2": "Każdy nasz projekt jest tworzony od podstaw, z myślą o konkretnym biznesie i jego celach. Nie używamy szablonów, nie instalujemy zbędnych wtyczek, nie idziemy na kompromisy. Efekt? Strony, które ładują się w ułamku sekundy, wyglądają wyjątkowo i przyciągają klientów. Zobacz sam w naszym <a href=\"../portfolio.html\">portfolio</a>."
+      },
+      "cta": {
+        "title": "Chcesz mieć stronę, która naprawdę działa?",
+        "desc": "Porozmawiaj z nami o swoim projekcie. Doradzimy najlepsze rozwiązanie dopasowane do Twoich potrzeb i budżetu. Wycena jest zawsze darmowa.",
+        "btn1": "Darmowa wycena"
+      }
+    },
+    "article2": {
+      "title": "Landing Page - Czym jest i dlaczego go potrzebujesz? | Dekada72H Blog",
+      "meta": {
+        "desc": "Czym jest landing page i dlaczego Twoja firma go potrzebuje? Dowiedz się, jak skuteczna strona docelowa może zwiększyć sprzedaż i pozyskać nowych klientów."
+      },
+      "breadcrumb": "Landing Page",
+      "heading": "Landing Page - Czym jest i dlaczego Twoja firma go potrzebuje?",
+      "subheading": "Kompletny przewodnik po stronach docelowych, które zamieniają odwiedzających w klientów.",
+      "category": "Marketing",
+      "readtime": "10 min czytania",
+      "card": {
+        "title": "Landing Page - Czym jest i dlaczego Twoja firma go potrzebuje?",
+        "excerpt": "Kompletny przewodnik po landing page. Dowiedz się, jak skuteczna strona docelowa może zwiększyć sprzedaż i pozyskać nowych klientów z reklam."
+      },
+      "intro1": "Wydajesz pieniądze na reklamy w Google lub na Facebooku, ale nie widzisz efektów? Twoja strona internetowa wygląda dobrze, ale nie generuje zapytań od klientów? Problem może leżeć nie w reklamie, a w tym, dokąd kierujesz ruch. Większość firm popełnia ten sam błąd - wysyła potencjalnych klientów na stronę główną zamiast na dedykowany landing page.",
+      "intro2": "W tym artykule wyjaśnimy, czym dokładnie jest landing page, dlaczego jest tak skuteczny i jak może pomóc Twojej firmie pozyskać więcej klientów. Jako <a href=\"../about.html\">agencja z ponad 10-letnim doświadczeniem</a> w tworzeniu stron od zera, widzimy na co dzień różnice między firmami, które korzystają z landing page, a tymi, które tego nie robią.",
+      "h2": {
+        "what": "Czym jest landing page?",
+        "why": "Dlaczego landing page działa lepiej niż zwykła strona?",
+        "elements": "Co musi zawierać skuteczny landing page?",
+        "vs": "Landing page vs strona firmowa - kiedy co wybrać?",
+        "mistakes": "Najczęstsze błędy na landing page",
+        "html": "Dlaczego tworzymy landing page w czystym HTML?",
+        "process": "Jak tworzymy landing page w Dekada72H?",
+        "conclusion": "Podsumowanie"
+      },
+      "what": {
+        "p1": "Landing page (strona docelowa) to samodzielna strona internetowa stworzona w jednym konkretnym celu - skonwertować odwiedzającego w klienta. W przeciwieństwie do zwykłej strony firmowej, która prezentuje całą ofertę i historię firmy, landing page skupia się na jednej usłudze, jednym produkcie lub jednej akcji, którą chcesz, żeby użytkownik wykonał.",
+        "p2": "Pomyśl o tym w ten sposób: Twoja strona główna to jak centrum handlowe - jest dużo sklepów, dużo wejść, dużo rozpraszaczy. Landing page to jak sklep z jednym produktem na wystawie i jasną ścieżką do kasy. Wiesz dokładnie, po co tu przyszedł klient, i prowadzisz go prosto do celu."
+      },
+      "caption": {
+        "analytics": "Skuteczny landing page to taki, który można mierzyć i optymalizować pod konwersje.",
+        "design": "Każdy element landing page jest zaprojektowany tak, aby prowadzić użytkownika do konwersji.",
+        "code": "Czysty, zoptymalizowany kod to podstawa szybkiego landing page."
+      },
+      "why": {
+        "p1": "Statystyki mówią same za siebie. Firmy, które korzystają z dedykowanych landing page, osiągają znacznie lepsze wyniki niż te, które kierują ruch na stronę główną.",
+        "p2": "Dlaczego tak jest? Bo landing page eliminuje rozpraszacze. Na zwykłej stronie użytkownik może kliknąć w menu, przejść do bloga, sprawdzić portfolio, przeczytać regulamin - i ostatecznie zapomni, po co w ogóle przyszedł. Landing page daje mu jedną opcję: wypełnić formularz, zadzwonić lub kupić. I właśnie dlatego konwertuje lepiej.",
+        "highlight": "Złota zasada landing page: jedna strona = jeden cel = jedno wezwanie do działania. Im mniej opcji dajesz użytkownikowi, tym więcej konwersji uzyskasz."
+      },
+      "stat": {
+        "conversion": "Wyższa konwersja niż strona główna",
+        "b2b": "Firm B2B używa landing page",
+        "roi": "Większy zwrot z reklam"
+      },
+      "elements": {
+        "intro": "Każdy skuteczny landing page składa się z kilku kluczowych elementów. Oto co musi się znaleźć na Twojej stronie docelowej, żeby przynosiła rezultaty:",
+        "li1": "<strong>Przyciągający nagłówek</strong> - Masz 3 sekundy, żeby przekonać odwiedzającego do zostania. Nagłówek musi jasno komunikować korzyść, np. \"Zwiększ sprzedaż o 200% z profesjonalną stroną internetową\".",
+        "li2": "<strong>Opis korzyści, nie cech</strong> - Klient nie kupuje \"responsywnej strony z SEO\". Kupuje \"więcej klientów z internetu\". Pisz o tym, co klient zyska, a nie o tym, co robisz.",
+        "li3": "<strong>Dowody społeczne</strong> - Opinie klientów, loga firm, case studies, liczby. Ludzie ufają innym ludziom bardziej niż reklamom.",
+        "li4": "<strong>Wyraźne wezwanie do działania (CTA)</strong> - Przycisk \"Zamów darmową wycenę\" musi być widoczny, kontrastowy i powtórzony kilka razy na stronie.",
+        "li5": "<strong>Formularz kontaktowy</strong> - Im krótszy, tym lepiej. Imię, email, telefon - to wystarczy. Każde dodatkowe pole zmniejsza konwersję o 10-25%.",
+        "li6": "<strong>Brak menu nawigacyjnego</strong> - To kluczowa różnica między landing page a zwykłą stroną. Usuwamy menu, żeby użytkownik nie miał dokąd uciec."
+      },
+      "vs": {
+        "p1": "Landing page i strona firmowa to dwa różne narzędzia do dwóch różnych celów. Nie zastępują się nawzajem - uzupełniają się.",
+        "p2": "Strona firmowa buduje wizerunek, prezentuje całą ofertę i działa jak wizytówka w internecie. Klient może ją odwiedzić, żeby poznać Twoją firmę, sprawdzić portfolio, przeczytać o zespole.",
+        "p3": "Landing page służy do jednego: do konwersji. Używasz go wtedy, gdy uruchamiasz kampanię reklamową, promujesz konkretną usługę lub chcesz zebrać kontakty do potencjalnych klientów.",
+        "p4": "Użyj landing page, jeśli:",
+        "li1": "Prowadzisz kampanię reklamową (Google Ads, Facebook Ads)",
+        "li2": "Chcesz promować jedną konkretną usługę lub produkt",
+        "li3": "Zbierasz kontakty do potencjalnych klientów (lead generation)",
+        "li4": "Oferujesz darmową wycenę, konsultację lub e-book",
+        "li5": "Organizujesz wydarzenie lub webinar"
+      },
+      "mistakes": {
+        "intro": "Widzieliśmy setki landing page - zarówno naszych klientów, jak i ich konkurencji. Oto błędy, które najczęściej zabijają konwersję:",
+        "li1": "Za dużo tekstu - landing page to nie artykuł. Krótkie, konkretne zdania działają lepiej niż ściany tekstu",
+        "li2": "Brak jasnego CTA - jeśli użytkownik nie wie, co ma zrobić, nic nie zrobi. Przycisk musi być widoczny i jednoznaczny",
+        "li3": "Wolne ładowanie - każda sekunda opóźnienia to utrata 7% konwersji. Dlatego tworzymy landing page w czystym HTML, bez zbędnego kodu",
+        "li4": "Niespójność z reklamą - jeśli reklama obiecuje \"darmową wycenę w 24h\", to landing page musi to powtarzać. Spójność buduje zaufanie",
+        "li5": "Brak wersji mobilnej - ponad 60% ruchu pochodzi z telefonów. Landing page musi wyglądać idealnie na każdym urządzeniu",
+        "li6": "Za długi formularz - każde dodatkowe pole to bariera. Wymagaj tylko tego, co naprawdę potrzebujesz"
+      },
+      "html": {
+        "p1": "Tak jak pisaliśmy w naszym <a href=\"html-vs-wordpress.html\">artykule o HTML vs WordPress</a>, strony pisane od zera mają ogromne zalety. W przypadku landing page te zalety są jeszcze ważniejsze, bo każda milisekunda ładowania i każdy piksel designu wpływają bezpośrednio na konwersję.",
+        "p2": "Landing page w czystym HTML ładuje się poniżej 1 sekundy - czyli 3-5x szybciej niż typowy landing page zbudowany w WordPress z Elementorem. Przy budżetach reklamowych rzędu tysięcy złotych miesięcznie, ta różnica w szybkości przekłada się na realne pieniądze.",
+        "highlight": "Wyobraź sobie: wydajesz 5000 zł miesięcznie na reklamy. Szybszy landing page zwiększa konwersję o 20%. To dodatkowe zapytania od klientów za te same pieniądze. Inwestycja w dobry landing page zwraca się już w pierwszym miesiącu.",
+        "p3": "Dodatkowo, landing page pisany od zera daje nam pełną kontrolę nad każdym elementem. Możemy testować różne warianty nagłówków, kolorów przycisków, układu elementów - i mierzyć, który wariant przynosi lepsze wyniki. To coś, czego nie da się tak łatwo osiągnąć z gotowymi szablonami. Zobacz nasze <a href=\"../portfolio.html\">portfolio</a>, żeby zobaczyć przykłady naszych realizacji."
+      },
+      "process": {
+        "intro": "Nasz proces tworzenia landing page jest prosty, ale skuteczny:",
+        "li1": "<strong>Analiza celu</strong> - Rozmawiamy o Twoim biznesie, grupie docelowej i celu kampanii. Zrozumienie \"dla kogo\" i \"po co\" to podstawa skutecznego landing page.",
+        "li2": "<strong>Projekt graficzny</strong> - Tworzymy unikalny design dopasowany do Twojej marki. Każdy element jest zaprojektowany z myślą o konwersji.",
+        "li3": "<strong>Kodowanie od zera</strong> - Piszemy czysty HTML/CSS/JS - bez szablonów, bez WordPressa, bez zbędnego kodu. Efekt: błyskawiczne ładowanie.",
+        "li4": "<strong>Publikacja i monitoring</strong> - Uruchamiamy stronę, konfigurujemy analitykę i śledzenie konwersji. Monitorujemy wyniki i optymalizujemy."
+      },
+      "conclusion": {
+        "p1": "Landing page to jedno z najskuteczniejszych narzędzi marketingowych, jakie może mieć Twoja firma. Jeśli prowadzisz kampanie reklamowe lub chcesz pozyskiwać klientów z internetu, dedykowany landing page może być różnicą między kampanią, która przepala budżet, a kampanią, która przynosi realne zapytania i sprzedaż.",
+        "p2": "Klucz to podejście strategiczne - nie wystarczy \"ładna strona\". Potrzebujesz strony zaprojektowanej z myślą o konwersji, napisanej w czystym kodzie dla maksymalnej szybkości i zoptymalizowanej pod konkretny cel biznesowy. Dokładnie to robimy w <a href=\"../services.html\">Dekada72H</a>.",
+        "highlight": "Dobry landing page to nie koszt - to inwestycja. Inwestycja, która zwraca się z każdym nowym klientem, który wypełni formularz lub podniesie słuchawkę."
+      },
+      "cta": {
+        "title": "Potrzebujesz landing page, który sprzedaje?",
+        "desc": "Porozmawiaj z nami o swoim projekcie. Stworzymy dla Ciebie landing page, który zamieni odwiedzających w klientów. Wycena jest zawsze darmowa.",
+        "btn1": "Darmowa wycena"
+      }
+    },
+    "article3": {
+      "title": "SEO i Pozycjonowanie Stron - Jak Wyprzedzic Konkurencje w Google? | Dekada72H Blog",
+      "meta": {
+        "desc": "Czym jest SEO i jak pozycjonowanie stron może pomóc Twojej firmie? Kompletny przewodnik po optymalizacji dla wyszukiwarek - od podstaw po zaawansowane strategie."
+      },
+      "breadcrumb": "SEO",
+      "heading": "SEO i Pozycjonowanie Stron - Jak Wyprzedzić Konkurencję w Google?",
+      "subheading": "Kompletny przewodnik po SEO - od podstaw po zaawansowane strategie, które wyniosą Twoją stronę na szczyt wyników wyszukiwania.",
+      "category": "SEO",
+      "readtime": "14 min czytania",
+      "card": {
+        "title": "SEO i Pozycjonowanie Stron - Jak Wyprzedzić Konkurencję w Google?",
+        "excerpt": "Kompletny przewodnik po SEO. Dowiedz się, jak pozycjonowanie stron może zwiększyć widoczność Twojej firmy w Google i przyciągnąć więcej klientów."
+      },
+      "intro1": "Masz stronę internetową, ale klienci Cię nie znajdują w Google? Twoja konkurencja jest wysoko w wynikach wyszukiwania, a Ty zastanawiasz się, dlaczego Twoja firma jest niewidoczna? Odpowiedź jest prosta: SEO, czyli pozycjonowanie stron internetowych. To proces, który decyduje o tym, czy klienci znajdą Twoją firmę, gdy szukają usług lub produktów, które oferujesz.",
+      "intro2": "W tym artykule wyjaśnimy, czym jest SEO, jak działa i dlaczego jest absolutnie kluczowe dla każdej firmy, która chce pozyskiwać klientów z internetu. Jako <a href=\"../about.html\">agencja z ponad 10-letnim doświadczeniem</a> w tworzeniu stron od zera, łączymy umiejętność budowy szybkich, czystych stron z wiedzą o pozycjonowaniu - bo jedno bez drugiego nie działa.",
+      "h2": {
+        "what": "Czym jest SEO i dlaczego jest tak ważne?",
+        "onpage": "SEO on-page - optymalizacja Twojej strony",
+        "technical": "SEO techniczne - fundament, o którym wielu zapomina",
+        "offpage": "SEO off-page - budowanie autorytetu w sieci",
+        "local": "Lokalne SEO - klucz dla firm usługowych",
+        "mistakes": "Najczęstsze błędy w SEO, które zabijają Twoją widoczność",
+        "why": "Dlaczego warto zainwestować w profesjonalne SEO?",
+        "process": "Jak robimy SEO w Dekada72H?",
+        "conclusion": "Podsumowanie"
+      },
+      "what": {
+        "p1": "SEO (Search Engine Optimization), po polsku pozycjonowanie stron, to zestaw działań mających na celu poprawienie widoczności Twojej strony w organicznych (bezpłatnych) wynikach wyszukiwania Google. Gdy ktoś wpisuje w Google \"agencja marketingowa Wrocław\" lub \"tworzenie stron internetowych\", SEO decyduje o tym, które strony pojawią się na pierwszej stronie wyników.",
+        "p2": "Dlaczego to takie ważne? Bo 93% doświadczeń online zaczyna się od wyszukiwarki. Jeśli Twojej firmy nie ma na pierwszej stronie Google, praktycznie nie istniejesz dla większości potencjalnych klientów. Nikt nie przegląda drugiej strony wyników - to jak mieć sklep na ulicy, na której nikt nie chodzi.",
+        "highlight": "SEO to nie jednorazowe działanie, a ciągły proces. Ale w przeciwieństwie do reklam, efekty SEO utrzymują się długo po zakończeniu pracy. To jak budowanie nieruchomości w internecie - raz zbudowana pozycja pracuje na Ciebie przez lata."
+      },
+      "stat": {
+        "online": "Doświadczeń online zaczyna się od Google",
+        "firstpage": "Użytkowników nie scrolluje dalej niż 1. strona",
+        "close": "Konwersja leadów z SEO vs 1.7% z reklam",
+        "local": "Wyszukiwań Google ma charakter lokalny",
+        "visit": "Szukających lokalnie odwiedza firmę w 24h",
+        "purchase": "Lokalnych wyszukiwań kończy się zakupem"
+      },
+      "onpage": {
+        "intro": "SEO on-page to wszystko, co możesz zrobić bezpośrednio na swojej stronie, żeby poprawić jej pozycję w Google. To fundament każdej strategii SEO i pierwsze, od czego zaczynamy pracę z klientem.",
+        "li1": "<strong>Tytuły stron (Title Tags)</strong> - Każda podstrona musi mieć unikalny, opisowy tytuł zawierający słowa kluczowe. To pierwszy element, który widzi Google i użytkownik w wynikach wyszukiwania.",
+        "li2": "<strong>Meta opisy (Meta Descriptions)</strong> - Krótki opis strony widoczny w wynikach Google. Dobrze napisany meta opis zwiększa wskaźnik klikalności (CTR) nawet o 30%.",
+        "li3": "<strong>Nagłówki (H1, H2, H3)</strong> - Struktura nagłówków pomaga Google zrozumieć hierarchię treści na stronie. Każda strona powinna mieć dokładnie jeden H1 i logicznie zagnieżdżone H2 i H3.",
+        "li4": "<strong>Treść wysokiej jakości</strong> - Google nagradza strony z wartościową, unikalną treścią, która odpowiada na pytania użytkowników. Długość, jakość i aktualność treści mają ogromne znaczenie.",
+        "li5": "<strong>Linkowanie wewnętrzne</strong> - Łączenie podstron między sobą pomaga Google zrozumieć strukturę strony i rozkładać \"moc SEO\" pomiędzy podstrony."
+      },
+      "caption": {
+        "analytics": "Analiza danych SEO pozwala mierzyć skuteczność pozycjonowania i optymalizować strategię.",
+        "strategy": "Skuteczne SEO to połączenie strategii on-page, technicznej i off-page."
+      },
+      "technical": {
+        "intro": "Nawet najlepsza treść nie pomoże, jeśli Twoja strona jest wolna, nieresponsywna lub źle zbudowana technicznie. SEO techniczne to zestaw działań, które zapewniają, że Google może poprawnie odczytać i zindeksować Twoją stronę.",
+        "li1": "Szybkość ładowania strony - Google oficjalnie potwierdził, że czas ładowania jest czynnikiem rankingowym. Każda sekunda opóźnienia to utrata pozycji i klientów",
+        "li2": "Responsywność (Mobile-First) - Od 2019 roku Google ocenia strony przede wszystkim na podstawie wersji mobilnej. Strona, która źle wygląda na telefonie, traci pozycje",
+        "li3": "Certyfikat SSL (HTTPS) - Bezpieczne połączenie to wymóg Google. Strony bez SSL są oznaczane jako \"niebezpieczne\" i tracą pozycje",
+        "li4": "Dane strukturalne (Schema Markup) - Specjalny kod, który pomaga Google zrozumieć zawartość strony i wyświetlać rozszerzone wyniki wyszukiwania",
+        "li5": "Mapa strony (Sitemap XML) - Plik, który informuje Google o wszystkich podstronach Twojej witryny i ułatwia indeksowanie",
+        "li6": "Optymalizacja obrazów - Kompresja, odpowiednie formaty (WebP) i atrybuty alt - to wszystko wpływa na szybkość i widoczność w Google Images",
+        "highlight": "Dlatego <a href=\"html-vs-wordpress.html\">tworzymy strony w czystym HTML</a> zamiast w WordPressie. Strona pisana od zera ładuje się poniżej 1 sekundy, ma idealny kod i spełnia wszystkie wymagania techniczne Google bez potrzeby instalowania wtyczek."
+      },
+      "offpage": {
+        "p1": "SEO off-page to działania poza Twoją stroną, które budują jej autorytet w oczach Google. Najważniejszym elementem są linki zwrotne (backlinks) - czyli odniesienia do Twojej strony z innych witryn.",
+        "p2": "Pomyśl o tym jak o rekomendacjach. Jeśli wiele wiarygodnych stron linkuje do Twojej witryny, Google traktuje to jako sygnał, że Twoja strona jest wartościowa i godna zaufania. Ale uwaga - jakość linków jest ważniejsza niż ilość. Jeden link z wiarygodnej branżowej strony jest wart więcej niż 100 linków z przypadkowych katalogów.",
+        "li1": "Link building - pozyskiwanie wartościowych linków z branżowych portali, katalogów firm i mediów",
+        "li2": "Google Business Profile - kluczowe dla lokalnego SEO. Profil firmowy w Google to podstawa widoczności w mapkach i wynikach lokalnych",
+        "li3": "Cytowania NAP - spójne dane firmy (Name, Address, Phone) w różnych źródłach internetowych budują wiarygodność",
+        "li4": "Opinie klientów - pozytywne recenzje w Google nie tylko budują zaufanie, ale też wpływają na pozycje w wynikach lokalnych"
+      },
+      "local": {
+        "p1": "Jeśli prowadzisz firmę usługową - restaurację, salon fryzjerski, kancelarię prawną, warsztat samochodowy czy agencję marketingową - lokalne SEO jest dla Ciebie absolutnie kluczowe. 46% wszystkich wyszukiwań w Google ma charakter lokalny, a \"w pobliżu\" to jedno z najczęściej dodawanych słów w zapytaniach.",
+        "p2": "Lokalne SEO to optymalizacja, która sprawia, że Twoja firma pojawia się w wynikach wyszukiwania dla zapytań z konkretnej lokalizacji. Gdy ktoś szuka \"agencja marketingowa Wrocław\", chcesz być w pierwszej trójce wyników na mapie Google - to tzw. \"Local Pack\", który przyciąga najwięcej kliknięć."
+      },
+      "mistakes": {
+        "intro": "Widzieliśmy setki stron, które popełniają te same błędy SEO. Oto najczęstsze problemy, które uniemożliwiają osiągnięcie dobrych pozycji w Google:",
+        "li1": "Brak strategii słów kluczowych - pozycjonowanie bez analizy słów kluczowych to jak strzelanie na oślep. Musisz wiedzieć, czego szukają Twoi klienci",
+        "li2": "Wolna strona internetowa - strony na WordPressie z dziesiątkami wtyczek często ładują się 4-6 sekund. Google karze wolne strony niższymi pozycjami",
+        "li3": "Brak wersji mobilnej lub słaba responsywność - ponad 60% ruchu pochodzi z urządzeń mobilnych. Strona, która nie działa dobrze na telefonie, traci większość ruchu",
+        "li4": "Duplikacja treści - powielanie treści na różnych podstronach dezorientuje Google i może prowadzić do kar",
+        "li5": "Ignorowanie SEO lokalnego - firmy usługowe, które nie mają zoptymalizowanego profilu Google Business, tracą klientów na rzecz konkurencji",
+        "li6": "Kupowanie tanich linków - linki z farm linków i spamerskich katalogów mogą doprowadzić do kary od Google zamiast poprawy pozycji",
+        "highlight": "Najważniejsza zasada SEO: nie próbuj oszukać Google. Algorytmy są coraz mądrzejsze i skutecznie wykrywają manipulacje. Skup się na tworzeniu wartościowej treści i dobrej stronie technicznie - to strategia, która zawsze się sprawdza."
+      },
+      "why": {
+        "p1": "Często słyszymy pytanie: \"Czy nie mogę zrobić SEO sam?\". Teoretycznie tak - ale w praktyce SEO to złożony, ciągle zmieniający się obszar. Google aktualizuje swój algorytm setki razy rocznie, a to, co działało rok temu, może dziś nie przynosić efektów lub nawet szkodzić.",
+        "p2": "Profesjonalne SEO to inwestycja, która się zwraca. Porównaj: kampania Google Ads kosztuje Cię tyle, ile w nią włożysz - wyłączasz reklamy i ruch znika. SEO buduje organiczną widoczność, która utrzymuje się przez miesiące i lata. Po osiągnięciu dobrych pozycji, ruch z Google jest praktycznie darmowy.",
+        "highlight": "Przykład: firma usługowa inwestuje 2000 zł miesięcznie w SEO. Po 6 miesiącach zaczyna pojawiać się w TOP 3 dla kluczowych fraz. Generuje 50 zapytań miesięcznie z Google - każde warte średnio 500 zł. To 25 000 zł potencjalnego przychodu miesięcznie z inwestycji 2000 zł."
+      },
+      "process": {
+        "intro": "Nasze podejście do SEO opiera się na trzech filarach: techniczna doskonałość strony, wartościowa treść i strategiczne budowanie autorytetu.",
+        "li1": "<strong>Audyt SEO</strong> - Zaczynamy od dokładnej analizy Twojej strony, konkurencji i branży. Identyfikujemy problemy techniczne, luki w treści i możliwości rozwoju.",
+        "li2": "<strong>Strategia słów kluczowych</strong> - Badamy, czego szukają Twoi potencjalni klienci. Dobieramy słowa kluczowe o wysokim potencjale konwersji i realistycznej konkurencyjności.",
+        "li3": "<strong>Optymalizacja techniczna</strong> - Naprawiamy błędy techniczne, przyspieszamy stronę, poprawiamy strukturę i wdrażamy dane strukturalne. Nasze strony w czystym HTML mają przewagę technologiczną od startu.",
+        "li4": "<strong>Tworzenie treści</strong> - Piszemy wartościowe artykuły blogowe, optymalizujemy istniejące treści i budujemy autorytet tematyczny Twojej strony.",
+        "li5": "<strong>Monitoring i raportowanie</strong> - Co miesiąc dostajesz raport z pozycjami, ruchem i konwersjami. Śledzisz postępy i widzisz realne efekty naszej pracy."
+      },
+      "conclusion": {
+        "p1": "SEO to nie luksus - to konieczność dla każdej firmy, która chce być widoczna w internecie. W świecie, gdzie 93% doświadczeń online zaczyna się od wyszukiwarki, brak obecności w Google oznacza utratę klientów na rzecz konkurencji, która już inwestuje w pozycjonowanie.",
+        "p2": "Klucz do skutecznego SEO to połączenie technicznej doskonałości strony z wartościową treścią i strategicznym budowaniem autorytetu. Dokładnie to robimy w <a href=\"../services.html#seo\">Dekada72H</a> - tworzymy strony, które nie tylko wyglądają profesjonalnie, ale przede wszystkim są widoczne tam, gdzie szukają Twoi klienci.",
+        "highlight": "Najlepszy czas na rozpoczęcie SEO był rok temu. Drugi najlepszy czas jest teraz. Im wcześniej zaczniesz, tym szybciej Twoja firma zacznie zbierać owoce organicznego ruchu z Google."
+      },
+      "cta": {
+        "title": "Chcesz być widoczny w Google?",
+        "desc": "Porozmawiaj z nami o pozycjonowaniu Twojej strony. Przygotujemy darmowy audyt SEO i pokażemy, jak możemy poprawić Twoją widoczność w wyszukiwarce.",
+        "btn1": "Darmowy audyt SEO"
+      }
+    },
+    "article4": {
+      "title": "Automatyzacja Procesów Biznesowych - Twoja Firma na Autopilocie | Dekada72H Blog",
+      "meta": {
+        "desc": "Automatyzacja procesów biznesowych - jak zaoszczędzić czas, zmniejszyć koszty i skalować firmę bez zatrudniania nowych pracowników. Przewodnik dla firm."
+      },
+      "breadcrumb": "Automatyzacja",
+      "heading": "Automatyzacja Procesów Biznesowych - Twoja Firma na Autopilocie",
+      "subheading": "Jak przestać tracić czas na powtarzalne zadania i pozwolić, żeby technologia pracowała za Ciebie 24 godziny na dobę.",
+      "category": "Automatyzacja",
+      "readtime": "11 min czytania",
+      "card": {
+        "title": "Automatyzacja Procesów Biznesowych - Twoja Firma na Autopilocie",
+        "excerpt": "Jak zaoszczędzić dziesiątki godzin miesięcznie i zwiększyć przychody bez zatrudniania nowych pracowników? Przewodnik po automatyzacji dla firm."
+      },
+      "intro1": "Codziennie tracisz godziny na odpowiadanie na te same pytania klientów, ręczne wysyłanie potwierdzeń, przepisywanie danych z formularzy do arkuszy i sprawdzanie kalendarza. Te zadania są konieczne, ale czy naprawdę musisz je wykonywać osobiście? Odpowiedź brzmi: nie. Każde z tych zadań może wykonywać za Ciebie automatyzacja - 24 godziny na dobę, 7 dni w tygodniu, bez urlopów, bez błędów, bez opóźnień.",
+      "intro2": "W tym artykule pokażemy Ci, ile czasu i pieniędzy traci przeciętna firma na zadania, które powinny być zautomatyzowane. Pokażemy realne przykłady automatyzacji i wyjaśnimy, dlaczego firmy, które wdrażają automatyzację, rosną szybciej niż ich konkurencja. Jako <a href=\"../about.html\">agencja z ponad 10-letnim doświadczeniem</a>, widzimy to na co dzień u naszych klientów.",
+      "h2": {
+        "problem": "Ile czasu traci Twoja firma na ręczną pracę?",
+        "what": "Co można zautomatyzować w Twojej firmie?",
+        "examples": "Jak to wygląda w praktyce? Realne przykłady",
+        "why": "Dlaczego firmy nie automatyzują - i dlaczego to błąd",
+        "advantage": "Automatyzacja jako przewaga konkurencyjna",
+        "process": "Jak wdrażamy automatyzację w Dekada72H?",
+        "roi": "Ile możesz zaoszczędzić?",
+        "conclusion": "Podsumowanie"
+      },
+      "problem": {
+        "p1": "Zatrzymaj się na chwilę i policz. Ile razy dziennie Ty lub Twoi pracownicy robicie coś, co można by zautomatyzować? Odpowiadanie na zapytania z formularza kontaktowego, wysyłanie potwierdzeń umówionych wizyt, ręczne tworzenie ofert, kopiowanie danych między systemami, przypominanie klientom o płatności. To nie są zadania, które wymagają Twojego talentu i doświadczenia - to czysta mechaniczna praca.",
+        "p2": "Badania pokazują, że przeciętny pracownik spędza 23 godziny tygodniowo na zadaniach, które można zautomatyzować. To prawie 3 pełne dni robocze! Wyobraź sobie, co Twoja firma mogłaby osiągnąć, gdyby te 3 dni tygodniowo można było przeznaczyć na rozwój biznesu, budowanie relacji z klientami czy tworzenie nowych usług.",
+        "highlight": "Jeśli zatrudniasz 5 osób i każda z nich traci 3 godziny dziennie na powtarzalne zadania, to 15 godzin dziennie - czyli prawie 2 dodatkowe etaty - które możesz odzyskać dzięki automatyzacji. Bez zatrudniania nowych pracowników."
+      },
+      "stat": {
+        "hours": "Godzin tygodniowo na powtarzalne zadania",
+        "tasks": "Zadań można zautomatyzować",
+        "growth": "Szybszy wzrost zautomatyzowanych firm",
+        "first": "Klientów wybiera firmę, która odpowie pierwsza",
+        "response": "Czas odpowiedzi z automatyzacją",
+        "availability": "Dostępność bez dodatkowych kosztów"
+      },
+      "what": {
+        "intro": "Wiele firm myśli, że automatyzacja to coś dla dużych korporacji z działami IT. Nic bardziej mylnego. Nawet jednoosobowa działalność może zautomatyzować kluczowe procesy i działać jak firma z 10 pracownikami. Oto obszary, które automatyzujemy najczęściej:",
+        "li1": "<strong>Obsługa zapytań od klientów</strong> - Klient wypełnia formularz na Twojej stronie o 23:00? Automatycznie dostaje potwierdzenie, spersonalizowaną odpowiedź i proponowane terminy spotkania. Ty widzisz to rano - wszystko jest już zorganizowane. Żadnego \"zapomniałem odpisać\".",
+        "li2": "<strong>Rezerwacje i umawianie wizyt</strong> - Klient sam wybiera termin z Twojego dostępnego kalendarza, dostaje automatyczne potwierdzenie, przypomnienie na 24h przed wizytą i SMS w dniu spotkania. Zero telefonów, zero potwierdzania ręcznego.",
+        "li3": "<strong>Odpowiedzi na najczęściej zadawane pytania</strong> - Inteligentny chatbot na Twojej stronie odpowiada na 80% pytań klientów natychmiast - o cenach, dostępności, lokalizacji, godzinach pracy. Twój zespół zajmuje się tylko złożonymi zapytaniami.",
+        "li4": "<strong>Zbieranie i organizowanie danych</strong> - Każde zapytanie z formularza, każdy telefon, każdy email automatycznie trafia do jednego systemu. Koniec z szukaniem informacji w skrzynce mailowej, notesie i karteczkach na biurku.",
+        "li5": "<strong>Raporty i powiadomienia</strong> - Codziennie rano dostajesz automatyczne podsumowanie: ile zapytań przyszło, ile wizyt zarezerwowano, jakie zadania czekają. Bez logowania się do 5 różnych systemów.",
+        "li6": "<strong>Follow-up z klientami</strong> - Klient dostał wycenę, ale nie odpowiedział? Po 3 dniach automatycznie dostaje grzeczne przypomnienie. Po tygodniu - drugą wiadomość z pytaniem, czy może pomóc. To nie jest spam - to profesjonalna obsługa klienta."
+      },
+      "caption": {
+        "team": "Automatyzacja uwalnia Twój zespół od powtarzalnych zadań i pozwala skupić się na tym, co naprawdę ważne.",
+        "dashboard": "Automatyzacja daje Ci pełny obraz tego, co dzieje się w Twojej firmie - w czasie rzeczywistym.",
+        "planning": "Każda automatyzacja zaczyna się od zrozumienia Twojego biznesu i procesów, które można usprawnić."
+      },
+      "examples": {
+        "intro": "Żeby lepiej zrozumieć siłę automatyzacji, spójrzmy na cztery typowe scenariusze, które wdrażamy u naszych klientów:",
+        "highlight": "Wspólny mianownik tych historii? Żadna z tych firm nie zatrudniła nowego pracownika. Nie kupiła drogiego oprogramowania. Nie zmieniła sposobu pracy. Po prostu pozwoliła, żeby technologia przejęła zadania, które dotąd zjadały ich czas."
+      },
+      "h3": {
+        "example1": "Salon kosmetyczny - koniec z telefonami o rezerwację",
+        "example2": "Firma remontowa - profesjonalna obsługa bez sekretarki",
+        "example3": "Kancelaria prawna - żadnego zapomnianego klienta",
+        "example4": "Sklep z zabawkami - automatyczna obsługa zamówień i powiadomienia dla rodziców"
+      },
+      "example1": {
+        "p1": "Przed automatyzacją: właścicielka spędzała 2 godziny dziennie na odbieraniu telefonów, zapisywaniu wizyt w zeszycie i potwierdzaniu terminów SMS-em. Klienci dzwonili w trakcie zabiegów, więc część zapytań była ignorowana - a to oznaczało utraconych klientów.",
+        "p2": "Po automatyzacji: klienci rezerwują wizyty online 24/7, dostają automatyczne potwierdzenia i przypomnienia. Właścicielka odzyskała 2 godziny dziennie i przestała tracić klientów, którzy nie mogli się dodzwonić. Efekt: 35% więcej rezerwacji w pierwszym miesiącu."
+      },
+      "example2": {
+        "p1": "Przed automatyzacją: zapytania z formularza leżały w skrzynce mailowej godzinami, bo właściciel był na budowie. Połowa klientów szła do konkurencji, która odpowiadała szybciej.",
+        "p2": "Po automatyzacji: każde zapytanie natychmiast generuje spersonalizowaną odpowiedź z orientacyjnym terminem i prośbą o zdjęcia. Dane trafiają do systemu, a właściciel wieczorem widzi posortowaną listę nowych klientów z kompletem informacji. Efekt: czas odpowiedzi spadł z 6 godzin do 30 sekund."
+      },
+      "example3": {
+        "p1": "Przed automatyzacją: potencjalni klienci wypełniali formularz kontaktowy, ale follow-up zależał od pamięci sekretarki. Część leadów \"ginęła\" - nikt nie oddzwaniał, nikt nie wysyłał przypomnienia.",
+        "p2": "Po automatyzacji: każdy lead natychmiast trafia do systemu, dostaje automatyczną odpowiedź, jest przypisywany do odpowiedniego prawnika i śledzony aż do zamknięcia sprawy. Jeśli klient nie odpowie - system sam wysyła follow-up. Efekt: 50% więcej konwersji z zapytań na klientów."
+      },
+      "example4": {
+        "p1": "Przed automatyzacją: właściciel ręcznie potwierdzał każde zamówienie mailem, sprawdzał dostępność produktów w magazynie i wysyłał klientom informacje o statusie przesyłki. W sezonie świątecznym obsługa zamówień zajmowała cały dzień - nie było czasu na doradztwo klientom ani zamawianie nowych produktów.",
+        "p2": "Po automatyzacji: system automatycznie potwierdza zamówienia, aktualizuje stany magazynowe i wysyła rodzicom powiadomienia na każdym etapie - od potwierdzenia przez pakowanie aż po dostawę. Gdy popularny produkt się kończy, system sam generuje zamówienie u dostawcy. W okresie świątecznym właściciel obsługiwał 3 razy więcej zamówień bez dodatkowego pracownika. Efekt: 40% więcej sprzedaży w grudniu przy tej samej liczbie osób."
+      },
+      "why": {
+        "intro": "Słyszymy te same obiekcje od lat. Oto najczęstsze wymówki - i dlaczego każda z nich jest błędem:",
+        "li1": "\"To pewnie bardzo drogie\" - Automatyzacja kosztuje ułamek tego, co miesięczna pensja pracownika, który wykonuje te same zadania ręcznie. Zwraca się już w pierwszym miesiącu",
+        "li2": "\"Moja firma jest za mała na automatyzację\" - Właśnie małe firmy zyskują najwięcej, bo każda zaoszczędzona godzina ma ogromne znaczenie, gdy robisz wszystko sam",
+        "li3": "\"Klienci wolą kontakt z człowiekiem\" - Klienci wolą szybką odpowiedź. Automatyzacja nie zastępuje kontaktu - zapewnia, że klient dostanie natychmiastową reakcję, a Ty możesz poświęcić mu czas na rozmowę, kiedy to naprawdę potrzebne",
+        "li4": "\"Nie znam się na technologii\" - Dlatego właśnie istniejemy. Wszystko konfigurujemy za Ciebie. Ty używasz gotowego rozwiązania - tak prostego jak sprawdzanie maila",
+        "li5": "\"Jakość się pogorszy\" - Przeciwnie. Automatyzacja eliminuje błędy ludzkie, zapominalstwo i opóźnienia. Każdy klient dostaje tę samą, profesjonalną obsługę - niezależnie od tego, czy to poniedziałek rano czy sobota wieczorem"
+      },
+      "advantage": {
+        "p1": "Pomyśl o tym z perspektywy klienta. Szuka usługi w internecie, wypełnia formularz kontaktowy na dwóch stronach - Twojej i konkurencji. Twoja konkurencja odpowiada następnego dnia rano. Ty - dzięki automatyzacji - odpowiadasz w 30 sekund z profesjonalną wiadomością, proponujesz terminy spotkania i wysyłasz portfolio. Kto wygra tego klienta?",
+        "p2": "Szybkość reakcji to dziś jeden z najważniejszych czynników decydujących o wyborze firmy. Badania pokazują, że firma, która odpowie jako pierwsza, wygrywa klienta w 78% przypadków. Automatyzacja sprawia, że zawsze odpowiadasz pierwszy - nawet o 3 w nocy, nawet w święta, nawet kiedy jesteś na urlopie.",
+        "highlight": "Automatyzacja to nie kwestia \"czy\", a \"kiedy\". Twoja konkurencja już to robi lub właśnie zaczyna. Każdy dzień bez automatyzacji to dzień, w którym tracisz klientów na rzecz firm, które odpowiadają szybciej, działają sprawniej i obsługują profesjonalniej - nie dlatego, że mają więcej pracowników, ale dlatego, że mają lepsze systemy."
+      },
+      "process": {
+        "intro": "Nasz proces jest prosty i bezbolesny. Nie musisz nic wiedzieć o technologii - od tego jesteśmy my. Oto jak to wygląda:",
+        "li1": "<strong>Analiza procesów</strong> - Rozmawiamy o Twoim biznesie i identyfikujemy zadania, które pochłaniają najwięcej czasu. Mapujemy cały proces - od zapytania klienta do finalizacji usługi.",
+        "li2": "<strong>Projekt automatyzacji</strong> - Przygotowujemy plan: co automatyzujemy, w jakiej kolejności i jakich efektów się spodziewać. Wszystko w prostym języku, bez technicznego żargonu.",
+        "li3": "<strong>Wdrożenie i integracja</strong> - Konfigurujemy wszystko za Ciebie. Łączymy automatyzację z Twoją stroną internetową, kalendarzem, mailem i innymi systemami, z których korzystasz.",
+        "li4": "<strong>Testy i szkolenie</strong> - Testujemy każdy scenariusz, żeby upewnić się, że wszystko działa perfekcyjnie. Pokazujemy Ci, jak korzystać z nowych rozwiązań - to naprawdę proste.",
+        "li5": "<strong>Wsparcie i optymalizacja</strong> - Po wdrożeniu nie zostawiamy Cię samego. Monitorujemy działanie automatyzacji, analizujemy wyniki i wprowadzamy usprawnienia na bieżąco."
+      },
+      "roi": {
+        "p1": "Policzmy to na prostym przykładzie. Załóżmy, że prowadzisz firmę usługową i dziennie dostajesz 10 zapytań od klientów. Ręczna obsługa każdego zapytania - odpowiedź na maila, sprawdzenie kalendarza, wysłanie potwierdzenia - zajmuje średnio 15 minut. To 2.5 godziny dziennie, 12.5 godziny tygodniowo, ponad 50 godzin miesięcznie.",
+        "p2": "Jeśli Twoja godzina pracy jest warta 100 zł, to 50 godzin miesięcznie na ręczne zadania kosztuje Twoją firmę 5 000 zł. Automatyzacja tych procesów może kosztować ułamek tej kwoty - a efekty są natychmiastowe i trwałe. I to bez liczenia utraconych klientów, którzy nie doczekali się odpowiedzi.",
+        "highlight": "Automatyzacja to nie koszt - to inwestycja z najwyższym zwrotem, jaki możesz zrobić w swoim biznesie. Każda złotówka wydana na automatyzację wraca wielokrotnie w postaci zaoszczędzonego czasu, większej ilości klientów i profesjonalniejszej obsługi."
+      },
+      "conclusion": {
+        "p1": "Automatyzacja procesów biznesowych to nie przyszłość - to teraźniejszość. Firmy, które dziś wdrażają automatyzację, budują przewagę, która z czasem staje się nie do nadrobienia. Nie chodzi o zastępowanie ludzi maszynami - chodzi o uwolnienie ludzi od mechanicznej pracy, żeby mogli robić to, w czym są najlepsi: budować relacje, tworzyć rozwiązania i rozwijać biznes.",
+        "p2": "W <a href=\"../services.html#automatyzacja\">Dekada72H</a> nie sprzedajemy technologii - sprzedajemy czas. Twój czas, który odzyskujesz dzięki automatyzacji, żeby zainwestować go tam, gdzie przynosi największą wartość. I robimy to tak, żeby wdrożenie było dla Ciebie bezbolesne, zrozumiałe i przyniosło efekty od pierwszego dnia.",
+        "highlight": "Zadaj sobie jedno pytanie: gdybyś mógł odzyskać 50 godzin miesięcznie i jednocześnie poprawić jakość obsługi klienta - czy to by zmieniło Twój biznes? Jeśli odpowiedź brzmi \"tak\" - porozmawiajmy."
+      },
+      "cta": {
+        "title": "Ile czasu możesz zaoszczędzić?",
+        "desc": "Porozmawiaj z nami o automatyzacji w Twojej firmie. Pokażemy Ci, które procesy można zautomatyzować i ile czasu odzyskasz. Konsultacja jest darmowa.",
+        "btn1": "Darmowa konsultacja"
+      }
+    },
+    "article5": {
+      "title": "Ile kosztuje strona internetowa w 2026? Przewodnik po cenach | Dekada72H Blog",
+      "meta": {
+        "desc": "Ile kosztuje strona internetowa w 2026 roku? Szczegolowy przewodnik po cenach stron WWW, landing page, sklepow internetowych i dodatkowych uslug."
+      },
+      "category": "Strony WWW",
+      "card": {
+        "title": "Ile Kosztuje Strona Internetowa w 2026? Cennik i Ukryte Koszty",
+        "excerpt": "Szczegółowy przewodnik po cenach stron internetowych. Porównanie kosztów HTML vs WordPress, ukryte opłaty i jak wybrać wykonawcę, który nie przepali Twojego budżetu."
+      }
+    },
+    "article6": {
+      "title": "Strona Internetowa dla Firmy - Dlaczego w 2026 to Koniecznosc | Dekada72H Blog",
+      "meta": {
+        "desc": "Dlaczego Twoja firma potrzebuje profesjonalnej strony internetowej w 2026? 8 konkretnych powodow, porownanie z mediami spolecznosciowymi i praktyczny przewodnik."
+      },
+      "category": "Strony WWW",
+      "card": {
+        "title": "Strona Internetowa dla Firmy - Dlaczego w 2026 to Konieczność",
+        "excerpt": "97% klientów szuka firm w internecie. Dowiedz się, dlaczego profesjonalna strona WWW to najlepsza inwestycja dla Twojego biznesu i jak zacząć."
+      }
+    },
+    "article7": {
+      "title": "Tworzenie Stron Internetowych we Wrocławiu - Lokalny Przewodnik 2026 | Dekada72H Blog",
+      "meta": {
+        "desc": "Tworzenie stron internetowych we Wrocławiu - dlaczego lokalna agencja to lepszy wybór? Poznaj korzyści, ceny i sprawdź, jak profesjonalna strona WWW pomoże Twojej firmie zdobyć klientów z Wrocławia."
+      },
+      "category": "Lokalne SEO",
+      "card": {
+        "title": "Tworzenie Stron Internetowych we Wrocławiu - Lokalny Przewodnik 2026",
+        "excerpt": "Szukasz firmy do stworzenia strony we Wrocławiu? Poznaj korzyści współpracy z lokalną agencją, aktualne ceny i sprawdzone porady SEO dla wrocławskich firm."
+      },
+      "breadcrumb": "Strony internetowe Wrocław",
+      "heading": "Tworzenie Stron Internetowych we Wrocławiu - Lokalny Przewodnik 2026",
+      "subheading": "Dlaczego wrocławskie firmy wybierają lokalne agencje i jak profesjonalna strona WWW pomaga zdobywać klientów w stolicy Dolnego Śląska?",
+      "readtime": "18 min czytania"
+    }
+  },
+  "tools": {
+    "title": "Narzędzia | Dekada72H - Kalkulator Wyceny",
+    "meta": {
+      "desc": "Narzędzia online Dekada72H - Kalkulator wyceny strony internetowej. Sprawdź ile kosztuje profesjonalna strona WWW."
+    },
+    "breadcrumb": "Narzędzia",
+    "header": {
+      "title": "Narzędzia online",
+      "desc": "Pomocne narzędzia, które ułatwią Ci podjęcie decyzji o współpracy."
+    },
+    "calculator": {
+      "label": "Kalkulator wyceny",
+      "title": "Sprawdź ile kosztuje Twoja strona",
+      "desc": "Odpowiedz na kilka pytań, a my przygotujemy dla Ciebie orientacyjną wycenę. To zajmie tylko 2 minuty!",
+      "header": {
+        "desc": "Otrzymaj orientacyjną wycenę w 4 prostych krokach"
+      }
+    },
+    "calc": {
+      "step1": {
+        "title": "Jakiego typu strony potrzebujesz?",
+        "desc": "Wybierz opcję, która najlepiej opisuje Twój projekt."
+      },
+      "type": {
+        "wizytowka": {
+          "desc": "Profesjonalna prezentacja firmy"
+        },
+        "landing": {
+          "desc": "Strona sprzedażowa z wysoką konwersją"
+        },
+        "sklep": {
+          "desc": "E-commerce z płatnościami online"
+        },
+        "rozbudowana": {
+          "desc": "Portal z wieloma funkcjami"
+        }
+      },
+      "step2": {
+        "title": "Ile podstron potrzebujesz?",
+        "desc": "Np. Strona główna, O nas, Usługi, Kontakt to 4 podstrony."
+      },
+      "pages": {
+        "small": "Idealne dla małych firm",
+        "medium": "Rozszerzona prezentacja",
+        "large": "Duża strona firmowa",
+        "xlarge": "Rozbudowany portal",
+        "included": "W cenie bazowej"
+      },
+      "step3": {
+        "title": "Jakie funkcje ma mieć strona?",
+        "desc": "Zaznacz wszystkie funkcje, których potrzebujesz."
+      },
+      "feature": {
+        "form": {
+          "desc": "Zbieranie zapytań od klientów"
+        },
+        "gallery": {
+          "desc": "Prezentacja prac/produktów"
+        },
+        "blog": {
+          "desc": "Publikowanie artykułów"
+        },
+        "booking": {
+          "desc": "Rezerwacje online"
+        },
+        "animations": {
+          "desc": "Nowoczesne przejścia"
+        },
+        "multilang": {
+          "desc": "Dodatkowa wersja językowa"
+        },
+        "automation": {
+          "desc": "Integracje i automatyczne procesy"
+        },
+        "social": {
+          "desc": "Integracja z profilami"
+        }
+      },
+      "free": "Gratis",
+      "step4": {
+        "title": "Jaki jest Twój termin realizacji?",
+        "desc": "Wybierz preferowany czas realizacji projektu."
+      },
+      "time": {
+        "standard": {
+          "desc": "72 godziny",
+          "price": "Cena bazowa"
+        },
+        "express": {
+          "desc": "36 godzin"
+        },
+        "urgent": {
+          "desc": "18 godzin"
+        }
+      },
+      "step5": {
+        "title": "Twoja wycena jest gotowa!",
+        "desc": "Oto podsumowanie Twojego projektu i orientacyjna cena."
+      },
+      "summary": "Zobacz wycenę",
+      "next": "Dalej",
+      "back": "Wstecz",
+      "restart": "Zacznij od nowa",
+      "form": {
+        "title": "Otrzymaj szczegółową wycenę",
+        "desc": "Zostaw dane kontaktowe, a my przygotujemy dla Ciebie dokładną ofertę.",
+        "name": "Imię i nazwisko *",
+        "email": "Email *",
+        "phone": "Telefon *",
+        "company": "Nazwa firmy",
+        "message": "Dodatkowe informacje o projekcie",
+        "consent": "Wyrażam zgodę na przetwarzanie moich danych osobowych w celu przygotowania wyceny. Zapoznałem/am się z <a href=\"privacy.html\">polityką prywatności</a>.",
+        "submit": "Wyślij i otrzymaj wycenę"
+      }
+    },
+    "other": {
+      "label": "Więcej narzędzi",
+      "title": "Inne przydatne narzędzia",
+      "quiz": {
+        "desc": "Dowiedz się, jaki typ strony jest najlepszy dla Twojego biznesu."
+      },
+      "audit": {
+        "desc": "Sprawdź szybkość i wydajność swojej obecnej strony."
+      },
+      "badge": {
+        "soon": "Wkrótce"
+      }
+    },
+    "cta": {
+      "title": "Masz pytania o wycenę?",
+      "desc": "Skontaktuj się z nami bezpośrednio - chętnie odpowiemy na wszystkie Twoje pytania.",
+      "btn": "Skontaktuj się"
+    }
+  },
+  "privacy": {
+    "title": "Polityka Prywatności | Dekada72H",
+    "meta": {
+      "desc": "Polityka Prywatności Dekada72H - Informacje o przetwarzaniu danych osobowych."
+    }
+  },
+  "terms": {
+    "title": "Regulamin | Dekada72H",
+    "meta": {
+      "desc": "Regulamin świadczenia usług Dekada72H - Warunki współpracy i zasady korzystania z usług."
+    }
+  },
+  "a11y": {
+    "trigger": {
+      "label": "Dostępność"
+    },
+    "panel": {
+      "title": "Ustawienia dostępności"
+    },
+    "fontSize": "Rozmiar czcionki",
+    "dyslexia": {
+      "desc": "Czcionka i odstępy przyjazne osobom z dysleksją"
+    },
+    "contrast": {
+      "desc": "Ciemne tło, jasny tekst, wyraźne krawędzie"
+    },
+    "colorblind": {
+      "desc": "Filtry kolorów i wzmocnione wizualne wskazówki"
+    },
+    "cb": {
+      "protanopia": "Protanopia (czerwony)",
+      "deuteranopia": "Deuteranopia (zielony)",
+      "tritanopia": "Tritanopia (niebieski)"
+    },
+    "readingGuide": {
+      "desc": "Pozioma linia podążająca za kursorem"
+    },
+    "resetAll": "Resetuj wszystko"
   }
 }
