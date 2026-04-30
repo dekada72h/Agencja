@@ -20,6 +20,7 @@
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-poppins), var(--font-inter), sans-serif;
+  --font-cormorant: var(--font-cormorant), Georgia, "Times New Roman", serif;
 
   --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
   --shadow-glow: 0 20px 40px -10px rgb(99 102 241 / 0.35);
@@ -36,6 +37,11 @@
   background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   background-clip: text;
   color: transparent;
+}
+
+/* font utility for cormorant garamond */
+@utility font-cormorant {
+  font-family: var(--font-cormorant);
 }
 
 @layer base {
@@ -61,6 +67,62 @@
   }
 }
 
+/* ============================================
+   KATARZYNA SCHWENK — premium artist theme
+   Scoped to .schwenk-theme — does not leak to Dekada chrome.
+   ============================================ */
+.schwenk-theme {
+  --sk-ink: #0a0a0a;
+  --sk-charcoal: #1f1d1a;
+  --sk-paper: #f8f3ea;
+  --sk-paper-warm: #ede5d6;
+  --sk-paper-deep: #e7dcc8;
+  --sk-cream: #faf6ee;
+  --sk-rose: #b58a7a;
+  --sk-rose-deep: #8d5e4f;
+  --sk-sand: #d4c5a9;
+  --sk-line: #d8cdb8;
+  --sk-muted: #6b6258;
+  --sk-gold: #c9a86b;
+  --sk-burgundy: #5e1f1f;
+
+  background: var(--sk-cream);
+  color: var(--sk-charcoal);
+  font-family: var(--font-sans);
+  cursor: none;
+  position: relative;
+  isolation: isolate;
+}
+
+@media (pointer: coarse) {
+  .schwenk-theme { cursor: auto; }
+  .schwenk-theme a, .schwenk-theme button { cursor: pointer; }
+}
+
+.schwenk-theme h1,
+.schwenk-theme h2,
+.schwenk-theme h3,
+.schwenk-theme h4,
+.schwenk-theme h5,
+.schwenk-theme h6 {
+  font-family: var(--font-cormorant);
+  font-weight: 400;
+  color: var(--sk-ink);
+  letter-spacing: -0.005em;
+  line-height: 1.1;
+}
+
+.schwenk-theme p { color: var(--sk-muted); }
+
+.schwenk-theme ::selection {
+  background: var(--sk-rose-deep);
+  color: var(--sk-cream);
+}
+
+.schwenk-theme a, .schwenk-theme button {
+  cursor: none;
+}
+
 /* respect reduced-motion for the whole site */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -69,4 +131,6 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  .schwenk-theme { cursor: auto !important; }
+  .schwenk-theme a, .schwenk-theme button { cursor: pointer !important; }
 }
