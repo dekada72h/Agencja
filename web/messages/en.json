@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "tools": "Tools",
+    "contact": "Contact",
+    "cta": "Free Quote"
+  },
+  "footer": {
+    "brand_desc": "A modern marketing agency specializing in creating websites, landing pages, SEO, and automation.",
+    "rights": "All rights reserved",
+    "made_by": "Site by"
+  },
+  "common": {
+    "skip_to_content": "Skip to content",
+    "language": "Language"
+  }
+}

@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* ============================================
+   DEKADA72H — design tokens (ported from css/style.css)
+   Tailwind v4 CSS-first config via @theme
+   ============================================ */
+@theme {
+  --color-primary: #6366f1;
+  --color-primary-dark: #4f46e5;
+  --color-primary-light: #818cf8;
+
+  --color-secondary: #0ea5e9;
+  --color-secondary-dark: #0284c7;
+
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+
+  --color-ink: #0f172a;
+  --color-ink-soft: #1e293b;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), var(--font-inter), sans-serif;
+
+  --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-glow: 0 20px 40px -10px rgb(99 102 241 / 0.35);
+}
+
+/* gradient utilities used across the site */
+@utility bg-gradient-primary {
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+@utility bg-gradient-dark {
+  background-image: linear-gradient(135deg, var(--color-ink) 0%, var(--color-ink-soft) 100%);
+}
+@utility text-gradient-primary {
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: #374151;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  ::selection {
+    background: var(--color-primary);
+    color: #fff;
+  }
+}
+
+/* respect reduced-motion for the whole site */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "O nas",
+    "services": "Usługi",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "tools": "Narzędzia",
+    "contact": "Kontakt",
+    "cta": "Darmowa wycena"
+  },
+  "footer": {
+    "brand_desc": "Nowoczesna agencja marketingowa specjalizująca się w tworzeniu stron WWW, landing pages, SEO i automatyzacji.",
+    "rights": "Wszystkie prawa zastrzeżone",
+    "made_by": "Strona zrealizowana przez"
+  },
+  "common": {
+    "skip_to_content": "Przejdź do treści",
+    "language": "Język"
+  }
+}

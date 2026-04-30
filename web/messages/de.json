@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "tools": "Tools",
+    "contact": "Kontakt",
+    "cta": "Kostenloses Angebot"
+  },
+  "footer": {
+    "brand_desc": "Eine moderne Marketingagentur, spezialisiert auf Webseiten, Landing Pages, SEO und Automatisierung.",
+    "rights": "Alle Rechte vorbehalten",
+    "made_by": "Webseite erstellt von"
+  },
+  "common": {
+    "skip_to_content": "Zum Inhalt springen",
+    "language": "Sprache"
+  }
+}
