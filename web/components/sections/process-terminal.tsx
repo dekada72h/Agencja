@@ -7,6 +7,7 @@ import {
   AnimatedSpan,
 } from "@/components/ui/terminal";
 import { DotPattern } from "@/components/ui/dot-pattern";
+import { CodeEditorPreview } from "@/components/ui/code-editor-preview";
 
 export function ProcessTerminal() {
   return (
@@ -18,7 +19,7 @@ export function ProcessTerminal() {
         cr={1.4}
       />
 
-      <div className="relative mx-auto max-w-[1100px] px-6 lg:px-10">
+      <div className="relative mx-auto max-w-[1200px] px-6 lg:px-10">
         <Reveal className="max-w-2xl mx-auto text-center mb-14">
           <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary-light">
             Proces
@@ -33,7 +34,7 @@ export function ProcessTerminal() {
           </p>
         </Reveal>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto mb-20">
           <Terminal title="dekada72h ~ build">
             <TypingAnimation className="text-emerald-400">
               $ ./build-site --client=&quot;Twoja Firma&quot; --type=premium
@@ -67,6 +68,23 @@ export function ProcessTerminal() {
             </TypingAnimation>
           </Terminal>
         </div>
+
+        {/* Sub-heading: live coding visualization */}
+        <Reveal className="max-w-2xl mx-auto text-center mb-10">
+          <span className="inline-block text-xs font-semibold uppercase tracking-[0.25em] text-primary-light">
+            Live coding
+          </span>
+          <h3 className="mt-3 font-display font-bold text-2xl md:text-3xl lg:text-4xl text-white">
+            Linijka po linijce, live{" "}
+            <span className="text-gradient-primary">na Twoich oczach</span>
+          </h3>
+          <p className="mt-4 text-base text-white/65 leading-relaxed">
+            Piszemy własny, czysty kod &mdash; bez WordPressa, bez build-erów AI.
+            Zobacz fragment standardowego HTML + CSS w akcji.
+          </p>
+        </Reveal>
+
+        <CodeEditorPreview />
       </div>
     </section>
   );
