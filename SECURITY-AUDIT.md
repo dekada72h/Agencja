@@ -224,7 +224,7 @@
 
 ---
 
-**Data audytu:** 2026-05-01
+**Data audytu:** 2026-05-01 (kontynuacja: full container + system hardening pass dodany tego samego dnia)
 **Poprzedni audyt:** 2026-04-25 (zachowany w historii git)
 **Skanujący IP:** 185.72.186.36 (Kali Linux, IP whitelistowany w fail2ban na czas testów)
 **Zakres:** 5 produkcyjnych domen za Traefikiem, VPS `51.83.161.122` (OVH, Ubuntu 24.04), 4 lokalne repozytoria (`Agencja`, `skytech-solutions.de`, `Kowalski&Partners`, `DomExpert`).
@@ -410,6 +410,73 @@ Brak regresji, fail2ban nas nie zablokował (whitelist), Traefik bez błędów.
 - `Server: No banner retrieved` ✓ (header stripped)
 - `NEXT_LOCALE without Secure flag` – informational, niesensitive cookie
 - `Drupal Link header` – false positive (Next.js font preload)
+
+---
+
+## 5a. Pełne hartowanie kontenerów (drugie podejście, 2026-05-01)
+
+Po pierwszym audycie kontenery miały tylko `no-new-privileges:true` i częściowo `read_only`. Drugie podejście dodało: cap-drop, capability whitelist, resource limits, healthchecki, non-root user gdzie się dało.
+
+| Kontener | User | RO rootfs | CapDrop | CapAdd | Mem | Pids | Health |
+|---|---|---|---|---|---|---|---|
+| `traefik` | root* | ✅ | ALL | NET_BIND_SERVICE | 256M | 100 | none** |
+| `dekada72h` | nextjs (1001) | ✅ | ALL | — (zero caps) | 1G | 200 | ✅ healthy |
+| `skytech-solutions` | nextjs (1001) | ✅ (nowe) | ALL | — (zero caps) | 1G | 200 | ✅ healthy |
+| `skytech-db` | postgres (70:70, nowe) | ❌ (DB volume) | ALL | CHOWN, DAC_READ_SEARCH, FOWNER, SETGID, SETUID | 512M | 200 | ✅ healthy |
+| `domexpert-online` | root* | ✅ | ALL | CHOWN, DAC_OVERRIDE, NET_BIND_SERVICE, SETGID, SETUID | 128M | 50 | ✅ healthy |
+| `kowalskipartners-space` | root* | ✅ | ALL | CHOWN, DAC_OVERRIDE, NET_BIND_SERVICE, SETGID, SETUID | 128M | 50 | ✅ healthy |
+
+*\* "root" = master process, ale workery automatycznie schodzą do `nginx (101)` (nginx-alpine) lub Traefik nie eskaluje. Dla nginx próbowaliśmy `user: 101:101` ale tmpfs `/var/cache/nginx` nie pozwala na mkdir bez DAC; pozostawienie master jako root z **5 cap zamiast 14** to większy redukcja ataku niż dodawanie tmpfs uid options.*
+*\*\* Traefik healthcheck wymaga skonfigurowanego `--ping` w `traefik.yml`; pominięto na razie.*
+
+**Efekt netto:**
+- **2 kontenery (Next.js)** mają **CapEff = 0x0** (zero capabilities w trybie running) – nawet root w tych kontenerach nie może otworzyć surowego socketu, bind <1024, chown plik, etc.
+- **Postgres** – CapEff = 0x0 (postgres self-drops), CapBnd = 0xcd (5 zezwolone, ale niewykorzystane)
+- **2× nginx** – CapEff = 0x4c3 (5 caps potrzebne nginx master do mkdir cache + setuid worker), worker procs jako uid 101.
+- **Resource limits**: każdy kontener ma `mem_limit` (5–10× headroom względem zużycia), `pids_limit` blokuje fork bomb.
+- **Healthchecks** dla 4/6 kontenerów (web/DB), wszystkie `healthy`.
+
+Backupy compose pre-zmiany: `/srv/_backups/audit-2026-05-01/containers/{traefik,dekada72h,skytech,domexpert,kowalski}.yml.bak`. Rollback: `sudo install -m 0644 /srv/_backups/audit-2026-05-01/containers/<file>.bak /srv/<orig-path> && cd <site> && docker compose up -d`.
+
+---
+
+## 5b. VPS-level hardening (Lynis-driven, 2026-05-01)
+
+Po zaaplikowaniu suggestions z Lynis: **26 → 22** otwartych sugestii (-4 zaadresowane).
+
+| Hardening | Stan |
+|---|---|
+| `libpam-tmpdir` zainstalowane (per-user `$TMPDIR` w PAM sessions) | ✅ |
+| `debsums` zainstalowane (verify integrity zainstalowanych pakietów) | ✅ |
+| `apt-show-versions` zainstalowane (patch management) | ✅ |
+| Core dumps disabled (`/etc/security/limits.conf`: `* hard core 0` + `* soft core 0`) | ✅ |
+| `/etc/login.defs`: `UMASK 027`, `PASS_MAX_DAYS 365`, `PASS_MIN_DAYS 1`, `PASS_WARN_AGE 14`, `SHA_CRYPT_{MIN,MAX}_ROUNDS 500000` | ✅ |
+| Kernel module blacklist: `dccp`, `sctp`, `rds`, `tipc` (rzadkie, historycznie podatne) | ✅ |
+| Kernel module blacklist: `usb-storage` (defense-in-depth, VPS bez USB ale chroni przed `modprobe` exploit) | ✅ |
+| SSH `MaxSessions 5 → 2` | ✅ |
+| `sudoers.d/99-hardening`: `timestamp_timeout=15`, `passwd_timeout=2` | ✅ |
+| `apt-get autoremove --purge` (orphaned packages) | ✅ (0 do usunięcia po dwóch wcześniejszych przebiegach) |
+| `apt-listbugs` | ❌ niedostępne na noble (package not found) |
+| GRUB password (BOOT-5122) | ❌ skip – fizyczny dostęp do hosta OVH wymaga kompromisu po ich stronie; nie warto |
+| Separate `/tmp`, `/home`, `/var` partycje (FILE-6310) | ❌ skip – OVH single-disk standard |
+| SSH port change z 22 (SSH-7408) | ❌ skip – security through obscurity, fail2ban robi swoje |
+
+**Pozostałe SSH hardening (już istniejące, potwierdzone):**
+- `PermitRootLogin no`, `PasswordAuthentication no`, `AuthenticationMethods publickey`
+- `MaxAuthTries 3`, `LoginGraceTime 30`, `AllowUsers ubuntu`
+- `X11Forwarding/AllowTcpForwarding/AllowAgentForwarding/GatewayPorts no`
+- Modern ciphers only: `chacha20-poly1305, aes256-gcm, aes128-gcm`
+- Modern KEX: `curve25519, sntrup761x25519` (post-quantum)
+- Modern MACs: `hmac-sha2-{512,256}-etm`
+- HostKeyAlgorithms: tylko `ssh-ed25519` + `rsa-sha2-{256,512}`
+- `LogLevel VERBOSE`, banner `/etc/issue.net` (DoD-style)
+
+**sysctl hardening** (już aplikowane, runtime potwierdzone):
+- `net.ipv4.tcp_syncookies=1`, `tcp_rfc1337=1`, `rp_filter=1`
+- `accept_redirects=0`, `send_redirects=0`, `accept_source_route=0`
+- `kernel.kptr_restrict=2`, `dmesg_restrict=1`, `unprivileged_bpf_disabled=1`
+- `kexec_load_disabled=1`, `yama.ptrace_scope=2`, `sysrq=0`
+- `fs.protected_{hardlinks,symlinks,fifos,regular}=1/2`
 
 ---
 
