@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { HeroHome } from "@/components/sections/hero-home";
+import { TechStackMarquee } from "@/components/sections/tech-stack-marquee";
 import { ServicesGrid } from "@/components/sections/services-grid";
+import { ProcessTerminal } from "@/components/sections/process-terminal";
 import { AboutSection } from "@/components/sections/about-section";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { CustomWork } from "@/components/sections/custom-work";
@@ -163,7 +165,9 @@ export default async function HomePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
       <HeroHome />
+      <TechStackMarquee />
       <ServicesGrid />
+      <ProcessTerminal />
       <AboutSection />
       <PortfolioGrid />
       <CustomWork />

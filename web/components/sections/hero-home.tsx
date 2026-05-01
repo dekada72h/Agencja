@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Counter } from "@/components/counter";
 import { Arrow, TrendUp, Clock } from "@/components/icons";
+import { MagneticButton } from "@/components/ui/magnetic-button";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -63,13 +64,15 @@ export function HeroHome() {
             transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
             className="mt-8 flex flex-wrap gap-3"
           >
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-white font-medium shadow-soft hover:shadow-glow transition-shadow"
-            >
-              {t("btn.start")}
-              <Arrow className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            <MagneticButton strength={0.25}>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-gradient-primary text-white font-medium shadow-soft hover:shadow-glow transition-shadow"
+              >
+                {t("btn.start")}
+                <Arrow className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </MagneticButton>
             <Link
               href="/portfolio"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-gray-200 bg-white text-ink font-medium hover:border-ink/30 transition-colors"
