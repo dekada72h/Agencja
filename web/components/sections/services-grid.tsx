@@ -38,22 +38,37 @@ export function ServicesGrid() {
           {services.map(({ key, href, Icon }) => (
             <StaggerItem key={key}>
               <motion.div
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 320, damping: 20 }}
-                className="group h-full rounded-2xl bg-white border border-gray-100 p-7 hover:shadow-glow hover:border-primary/30 transition-shadow"
+                className="group relative h-full rounded-2xl bg-white border border-gray-100 p-7 overflow-hidden hover:shadow-glow hover:border-primary/30 transition-all"
               >
-                <span className="inline-flex w-12 h-12 rounded-xl bg-gradient-primary text-white items-center justify-center shadow-soft">
-                  <Icon className="w-6 h-6" />
+                {/* light beam sweep on hover */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-[1100ms] ease-out bg-gradient-to-r from-transparent via-primary/[0.07] to-transparent"
+                />
+                {/* subtle gradient halo on hover */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-15 blur-2xl transition-opacity duration-500"
+                />
+                <span className="relative inline-flex w-12 h-12 rounded-xl bg-gradient-primary text-white items-center justify-center shadow-soft transition-transform duration-500 group-hover:scale-110 group-hover:rotate-[-6deg]">
+                  {/* glow ring */}
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 rounded-xl bg-primary/40 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
+                  <Icon className="relative w-6 h-6" />
                 </span>
-                <h3 className="mt-5 font-display font-semibold text-xl text-ink">
+                <h3 className="relative mt-5 font-display font-semibold text-xl text-ink">
                   {t(`${key}.title`)}
                 </h3>
-                <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                <p className="relative mt-3 text-sm text-gray-600 leading-relaxed">
                   {t(`${key}.desc`)}
                 </p>
                 <Link
                   href={href}
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary group-hover:gap-2.5 transition-all"
+                  className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-primary group-hover:gap-2.5 transition-all"
                 >
                   {t(`${key}.link`)}
                   <Arrow className="w-4 h-4" />

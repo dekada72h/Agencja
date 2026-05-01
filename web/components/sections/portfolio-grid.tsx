@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Reveal, StaggerChildren, StaggerItem } from "@/components/reveal";
 import { Arrow } from "@/components/icons";
+import { TiltCard } from "@/components/ui/tilt-card";
+import { MagneticButton } from "@/components/ui/magnetic-button";
 
 type Item = {
   href: string;
@@ -109,10 +111,10 @@ export function PortfolioGrid() {
             return (
               <StaggerItem key={item.href}>
                 <a href={item.href} className="block group">
-                  <motion.div
-                    whileHover={{ y: -4 }}
-                    transition={{ type: "spring", stiffness: 320, damping: 20 }}
-                    className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-ink-soft"
+                  <TiltCard
+                    intensity={6}
+                    glareOpacity={0.18}
+                    className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-ink-soft shadow-xl group-hover:shadow-2xl group-hover:shadow-primary/20 transition-shadow duration-500"
                   >
                     <Image
                       src={item.img}
@@ -123,6 +125,11 @@ export function PortfolioGrid() {
                       priority={idx < 3}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+                    {/* light beam sweep on hover */}
+                    <div
+                      aria-hidden
+                      className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-[1200ms] ease-out bg-gradient-to-r from-transparent via-white/15 to-transparent"
+                    />
                     <div className="absolute inset-0 p-6 flex flex-col justify-end">
                       <span className="inline-block w-fit text-[10px] font-semibold uppercase tracking-[0.2em] text-primary-light bg-white/10 backdrop-blur-sm rounded-full px-3 py-1">
                         {t(`cat.${item.categoryKey}`)}
@@ -135,7 +142,7 @@ export function PortfolioGrid() {
                         <Arrow className="w-4 h-4" />
                       </span>
                     </div>
-                  </motion.div>
+                  </TiltCard>
                 </a>
               </StaggerItem>
             );
@@ -143,13 +150,15 @@ export function PortfolioGrid() {
         </StaggerChildren>
 
         <div className="mt-12 text-center">
-          <Link
-            href="/portfolio"
-            className="group inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-ink font-medium hover:bg-primary hover:text-white transition-colors"
-          >
-            {t("viewall")}
-            <Arrow className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Link>
+          <MagneticButton strength={0.3}>
+            <Link
+              href="/portfolio"
+              className="group inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-ink font-medium hover:bg-primary hover:text-white transition-colors"
+            >
+              {t("viewall")}
+              <Arrow className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </MagneticButton>
         </div>
       </div>
     </section>

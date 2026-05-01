@@ -4,8 +4,10 @@ import { HeroHome } from "@/components/sections/hero-home";
 import { TechStackMarquee } from "@/components/sections/tech-stack-marquee";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { ProcessTerminal } from "@/components/sections/process-terminal";
+import { LighthouseScores } from "@/components/sections/lighthouse-scores";
 import { AboutSection } from "@/components/sections/about-section";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
+import { BeforeAfter } from "@/components/sections/before-after";
 import { CustomWork } from "@/components/sections/custom-work";
 import { CtaSection } from "@/components/sections/cta-section";
 
@@ -168,8 +170,10 @@ export default async function HomePage({
       <TechStackMarquee />
       <ServicesGrid />
       <ProcessTerminal />
+      <LighthouseScores />
       <AboutSection />
       <PortfolioGrid />
+      <BeforeAfter />
       <CustomWork />
       <CtaSection />
     </>

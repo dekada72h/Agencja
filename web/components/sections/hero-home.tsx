@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { Counter } from "@/components/counter";
 import { Arrow, TrendUp, Clock } from "@/components/icons";
 import { MagneticButton } from "@/components/ui/magnetic-button";
+import { DotPattern } from "@/components/ui/dot-pattern";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -16,6 +17,13 @@ export function HeroHome() {
 
   return (
     <section className="relative pt-32 pb-24 lg:pt-44 lg:pb-32 overflow-hidden">
+      {/* subtle dot grid texture */}
+      <DotPattern
+        className="text-gray-300/35 [mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]"
+        width={28}
+        height={28}
+        cr={1}
+      />
       {/* animated background shapes */}
       <motion.div
         aria-hidden
