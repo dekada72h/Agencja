@@ -8,7 +8,8 @@
       "Bash(dig *)",
       "Bash(nmap *)",
       "Bash(sslscan *)",
-      "Bash(nikto *)"
+      "Bash(nikto *)",
+      "Bash(mkdir -p:*)"
     ]
   }
 }

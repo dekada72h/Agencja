@@ -10,16 +10,20 @@ export function PostHero({
   title,
   category,
   dateDisplay,
+  modifiedDisplay,
   readtime,
   heroImage,
   heroAlt,
+  author = "Zespół Dekada72H",
 }: {
   title: string;
   category: string;
   dateDisplay: string;
+  modifiedDisplay?: string;
   readtime: string;
   heroImage: string;
   heroAlt: string;
+  author?: string;
 }) {
   return (
     <header className="relative pt-28 lg:pt-36 pb-12 overflow-hidden">
@@ -57,6 +61,14 @@ export function PostHero({
             <>
               <span aria-hidden className="text-gray-300">·</span>
               <span className="text-gray-500">{readtime}</span>
+            </>
+          )}
+          <span aria-hidden className="text-gray-300">·</span>
+          <span className="text-gray-500">Autor: <span className="text-ink font-medium">{author}</span></span>
+          {modifiedDisplay && modifiedDisplay !== dateDisplay && (
+            <>
+              <span aria-hidden className="text-gray-300">·</span>
+              <span className="text-emerald-600 font-medium">Aktualizacja: {modifiedDisplay}</span>
             </>
           )}
         </motion.div>

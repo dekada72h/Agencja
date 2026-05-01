@@ -137,6 +137,11 @@ export default async function BlogPostPage({
         title={fm.title}
         category={fm.category}
         dateDisplay={fm.date_display}
+        modifiedDisplay={
+          fm.modified && fm.modified !== fm.date
+            ? fm.modified.split("-").reverse().join(".")
+            : undefined
+        }
         readtime={fm.readtime}
         heroImage={fm.hero_image}
         heroAlt={fm.hero_alt}
