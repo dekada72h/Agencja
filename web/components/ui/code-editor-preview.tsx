@@ -346,14 +346,29 @@ export function CodeEditorPreview({ className }: { className?: string }) {
   const cssDone = cssChars >= CSS_TOTAL;
 
   // Preview level — keyed to which CSS rule has just completed
+  // (controls how much of the styling has been "applied" in preview).
   let level: 0 | 1 | 2 | 3 | 4 | 5 | 6 = 0;
-  if (htmlVisLines >= 11) level = 1; // raw HTML appears mid-typing
-  if (htmlDone) level = 1;
+  if (htmlVisLines >= 2) level = 1; // start showing raw HTML once <section> typed
   if (cssVisLines >= 8) level = 2; // .hero rule done
   if (cssVisLines >= 14) level = 3; // .badge done
   if (cssVisLines >= 20) level = 4; // .gradient done
   if (cssVisLines >= 28) level = 5; // .cta done
   if (cssDone) level = 6; // .cta:hover done
+
+  // Per-element HTML visibility — strictly tied to which HTML lines are typed.
+  // Indices below correspond to: line typed = element complete in source.
+  //   3:  badge </span> done
+  //   7:  </h1> done (heading + gradient inside)
+  //   8:  <p>…</p> done (lead)
+  //  10:  "Zacznij teraz" text done (button text-only render OK)
+  //  11:  <span class="arrow">→</span> done
+  const htmlElements = {
+    badge: htmlVisLines >= 4 || htmlDone,
+    h1: htmlVisLines >= 8 || htmlDone,
+    lead: htmlVisLines >= 9 || htmlDone,
+    button: htmlVisLines >= 11 || htmlDone,
+    arrow: htmlVisLines >= 12 || htmlDone,
+  };
 
   return (
     <div
@@ -368,7 +383,7 @@ export function CodeEditorPreview({ className }: { className?: string }) {
         htmlDone={htmlDone}
         cssDone={cssDone}
       />
-      <BrowserPreview level={level} hoverDemo={hoverDemo} />
+      <BrowserPreview level={level} elements={htmlElements} hoverDemo={hoverDemo} />
     </div>
   );
 }
@@ -497,11 +512,21 @@ function Tab({
 
 /* ── Browser Preview pane ── */
 
+type ElementsVisibility = {
+  badge: boolean;
+  h1: boolean;
+  lead: boolean;
+  button: boolean;
+  arrow: boolean;
+};
+
 function BrowserPreview({
   level,
+  elements,
   hoverDemo,
 }: {
   level: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+  elements: ElementsVisibility;
   hoverDemo: boolean;
 }) {
   return (
@@ -522,7 +547,7 @@ function BrowserPreview({
       </div>
 
       <div className="flex-1 p-5 lg:p-6 bg-gray-50 flex items-center justify-center min-h-[490px]">
-        <PreviewContent level={level} hoverDemo={hoverDemo} />
+        <PreviewContent level={level} elements={elements} hoverDemo={hoverDemo} />
       </div>
     </motion.div>
   );
@@ -530,9 +555,11 @@ function BrowserPreview({
 
 function PreviewContent({
   level,
+  elements,
   hoverDemo,
 }: {
   level: 0 | 1 | 2 | 3 | 4 | 5 | 6;
+  elements: ElementsVisibility;
   hoverDemo: boolean;
 }) {
   if (level === 0) {
@@ -545,8 +572,9 @@ function PreviewContent({
   }
 
   // ── Style tiers ──
-  // Each level layers on more styles. We render the SAME JSX regardless;
-  // only the inline style objects change based on `level`.
+  // Each `level` layers on more CSS rules; we use the same JSX, only
+  // inline style objects swap. Per-element visibility comes from
+  // `elements` (tied 1:1 to which HTML lines have been typed).
 
   const heroStyle: CSSProperties =
     level >= 2
@@ -619,7 +647,14 @@ function PreviewContent({
           fontSize: "0.95rem",
           boxShadow: "0 4px 12px rgba(0,0,0,0.10)",
         }
-      : { padding: "4px 10px", border: "1px solid #999", background: "#eee", marginTop: "8px" };
+      : { padding: "4px 10px", border: "1px solid #999", background: "#eee", marginTop: "8px", display: "inline-flex", alignItems: "center", gap: "6px" };
+
+  // Element fade-in animation — same for all elements
+  const fadeIn = {
+    initial: { opacity: 0, y: 6 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.32, ease: [0.22, 1, 0.36, 1] as const },
+  };
 
   return (
     <motion.div
@@ -629,52 +664,48 @@ function PreviewContent({
       style={heroStyle}
       className="w-full max-w-md transition-all duration-500"
     >
-      {/* badge */}
-      <motion.span
-        initial={false}
-        animate={{ scale: level >= 3 ? 1 : 0.95 }}
-        transition={{ duration: 0.4 }}
-        style={badgeStyle}
-      >
-        ✨ Nowość
-      </motion.span>
+      {/* badge — appears when </span> on line 3 typed */}
+      {elements.badge && (
+        <motion.span {...fadeIn} style={badgeStyle}>
+          ✨ Nowość
+        </motion.span>
+      )}
 
-      {/* heading */}
-      <h1 style={h1Style}>
-        Twoja firma w sieci
-        <span style={gradientStyle}>w 14 dni</span>
-      </h1>
+      {/* heading — appears when </h1> on line 7 typed */}
+      {elements.h1 && (
+        <motion.h1 {...fadeIn} style={h1Style}>
+          Twoja firma w sieci
+          <span style={gradientStyle}>w 14 dni</span>
+        </motion.h1>
+      )}
 
-      {/* lead */}
-      <p style={leadStyle}>Szybka, nowoczesna strona.</p>
+      {/* lead — appears when </p> on line 8 typed */}
+      {elements.lead && (
+        <motion.p {...fadeIn} style={leadStyle}>
+          Szybka, nowoczesna strona.
+        </motion.p>
+      )}
 
-      {/* CTA — auto-hover demo at level 6 */}
-      <motion.button
-        style={ctaStyle}
-        animate={
-          hoverDemo
-            ? {
-                y: [0, -3, -3, 0, 0],
-                boxShadow: [
-                  "0 4px 12px rgba(0,0,0,0.10)",
-                  "0 14px 30px rgba(0,0,0,0.22)",
-                  "0 14px 30px rgba(0,0,0,0.22)",
-                  "0 4px 12px rgba(0,0,0,0.10)",
-                  "0 4px 12px rgba(0,0,0,0.10)",
-                ],
-              }
-            : { y: 0 }
-        }
-        transition={{
-          duration: 3,
-          repeat: hoverDemo ? Infinity : 0,
-          ease: "easeInOut",
-          times: [0, 0.25, 0.55, 0.85, 1],
-        }}
-      >
-        Zacznij teraz
-        <motion.span
-          animate={hoverDemo ? { x: [0, 6, 6, 0, 0] } : { x: 0 }}
+      {/* CTA — appears when "Zacznij teraz" text on line 10 typed */}
+      {elements.button && (
+        <motion.button
+          {...fadeIn}
+          style={ctaStyle}
+          animate={
+            hoverDemo
+              ? {
+                  y: [0, -3, -3, 0, 0],
+                  boxShadow: [
+                    "0 4px 12px rgba(0,0,0,0.10)",
+                    "0 14px 30px rgba(0,0,0,0.22)",
+                    "0 14px 30px rgba(0,0,0,0.22)",
+                    "0 4px 12px rgba(0,0,0,0.10)",
+                    "0 4px 12px rgba(0,0,0,0.10)",
+                  ],
+                  opacity: 1,
+                }
+              : { y: 0, opacity: 1 }
+          }
           transition={{
             duration: 3,
             repeat: hoverDemo ? Infinity : 0,
@@ -682,9 +713,27 @@ function PreviewContent({
             times: [0, 0.25, 0.55, 0.85, 1],
           }}
         >
-          →
-        </motion.span>
-      </motion.button>
+          Zacznij teraz
+          {elements.arrow && (
+            <motion.span
+              initial={{ opacity: 0, x: -4 }}
+              animate={
+                hoverDemo
+                  ? { x: [0, 6, 6, 0, 0], opacity: 1 }
+                  : { x: 0, opacity: 1 }
+              }
+              transition={{
+                duration: hoverDemo ? 3 : 0.3,
+                repeat: hoverDemo ? Infinity : 0,
+                ease: "easeInOut",
+                times: hoverDemo ? [0, 0.25, 0.55, 0.85, 1] : undefined,
+              }}
+            >
+              →
+            </motion.span>
+          )}
+        </motion.button>
+      )}
     </motion.div>
   );
 }
