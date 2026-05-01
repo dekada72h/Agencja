@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
-
-type TocItem = { id: string; text: string };
+import type { TocItem } from "@/lib/blog-toc";
 
 /**
  * Auto Table of Contents — collapsible. Uses scroll-spy to highlight
@@ -115,30 +114,3 @@ export function Toc({ items }: { items: TocItem[] }) {
   );
 }
 
-/** Extract H2 headings from raw MDX source. Returns [{id, text}]. */
-export function extractToc(mdx: string): TocItem[] {
-  const lines = mdx.split("\n");
-  const items: TocItem[] = [];
-  let inFence = false;
-  for (const line of lines) {
-    if (line.trim().startsWith("```")) {
-      inFence = !inFence;
-      continue;
-    }
-    if (inFence) continue;
-    const m = line.match(/^##\s+(.+?)\s*$/);
-    if (m) {
-      const text = m[1].trim();
-      // slugify like rehype-slug — lowercase, replace non-alphanum with -, collapse
-      const id = text
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[̀-ͯ]/g, "")
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/(^-+|-+$)/g, "")
-        .slice(0, 80);
-      items.push({ id, text });
-    }
-  }
-  return items;
-}

@@ -12,7 +12,8 @@ import { PostHero } from "@/components/blog/post-hero";
 import { PostFaq } from "@/components/blog/post-faq";
 import { PostRelated } from "@/components/blog/post-related";
 import { PostCta } from "@/components/blog/post-cta";
-import { Toc, extractToc } from "@/components/blog/toc";
+import { Toc } from "@/components/blog/toc";
+import { extractToc } from "@/lib/blog-toc";
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
