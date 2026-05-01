@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "motion/react";
 import { Reveal } from "@/components/reveal";
 import {
   Terminal,
@@ -10,8 +11,29 @@ import { DotPattern } from "@/components/ui/dot-pattern";
 import { CodeEditorPreview } from "@/components/ui/code-editor-preview";
 
 export function ProcessTerminal() {
+  const reduce = useReducedMotion();
   return (
     <section className="relative py-24 lg:py-32 bg-gradient-to-br from-ink via-ink-soft to-ink overflow-hidden">
+      {/* Aurora — slow drifting blobs in primary/secondary/accent */}
+      <motion.div
+        aria-hidden
+        className="absolute -top-32 -left-32 w-[40rem] h-[40rem] rounded-full bg-primary/30 blur-[140px]"
+        animate={reduce ? undefined : { x: [0, 90, -30, 0], y: [0, 50, -40, 0] }}
+        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        aria-hidden
+        className="absolute top-1/3 -right-40 w-[36rem] h-[36rem] rounded-full bg-secondary/25 blur-[140px]"
+        animate={reduce ? undefined : { x: [0, -60, 30, 0], y: [0, -40, 40, 0] }}
+        transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        aria-hidden
+        className="absolute -bottom-40 left-1/4 w-[32rem] h-[32rem] rounded-full bg-accent/15 blur-[140px]"
+        animate={reduce ? undefined : { x: [0, 50, -50, 0], y: [0, -30, 30, 0] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       <DotPattern
         className="text-white/[0.06] [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"
         width={32}
@@ -26,7 +48,7 @@ export function ProcessTerminal() {
           </span>
           <h2 className="mt-4 font-display font-bold text-3xl md:text-4xl lg:text-5xl text-white">
             Twoja strona online{" "}
-            <span className="text-gradient-primary">w 10 dni</span>
+            <span className="text-gradient-shimmer">w 14 dni</span>
           </h2>
           <p className="mt-5 text-lg text-white/70 leading-relaxed">
             Od pierwszej rozmowy do uruchomienia produkcyjnego. Bez ukrytych
@@ -46,19 +68,19 @@ export function ProcessTerminal() {
               ✔ Discovery + briefing (dni 1-2)
             </AnimatedSpan>
             <AnimatedSpan className="text-emerald-400">
-              ✔ Wireframes + UX (dni 3-4)
+              ✔ Wireframes + UX (dni 3-5)
             </AnimatedSpan>
             <AnimatedSpan className="text-emerald-400">
-              ✔ Design system + UI (dni 5-6)
+              ✔ Design system + UI (dni 6-8)
             </AnimatedSpan>
             <AnimatedSpan className="text-emerald-400">
-              ✔ Development Next.js + Tailwind (dni 7-8)
+              ✔ Development Next.js + Tailwind (dni 9-11)
             </AnimatedSpan>
             <AnimatedSpan className="text-emerald-400">
-              ✔ SEO + Schema + Core Web Vitals (dzień 9)
+              ✔ SEO + Schema + Core Web Vitals (dni 12-13)
             </AnimatedSpan>
             <AnimatedSpan className="text-emerald-400">
-              ✔ Launch + analityka + monitoring (dzień 10)
+              ✔ Launch + analityka + monitoring (dzień 14)
             </AnimatedSpan>
             <AnimatedSpan className="text-gray-400 mt-2">
               Build size: 87KB &nbsp;·&nbsp; LCP: 1.4s &nbsp;·&nbsp; CLS: 0.00
