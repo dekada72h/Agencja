@@ -1,5 +1,73 @@
 # Security Audit – Dekada72H Infrastructure
 
+> ## 🚨 OPEN SECURITY DECISIONS (manual — non-automated)
+>
+> Te punkty **wymagają świadomej decyzji człowieka** i nie mogą być zaplanowane jako auto-task. Lokalizacja jedyna i centralna: **ten plik** (`Agencja/SECURITY-AUDIT.md`) – mimo że dotyczą całej infry / wielu repo. Powód: 1 VPS = 1 raport infra; pozostałe repo (skytech-solutions.de, kowalski-partners, domexpert) tylko cross-linkują tutaj.
+>
+> ### 1. HSTS preload list (`stsPreload: true` w Traefik dynamic.yml)
+>
+> **Status:** ❌ wyłączone (`stsPreload: false`). Plik: `/srv/traefik/dynamic.yml` na VPS.
+>
+> **Co to robi:** Po włączeniu i submisji domeny na <https://hstspreload.org/>, Google wpina domenę do **kodu Chrome/Firefox/Safari/Edge**. Przeglądarki **nigdy** nie wykonają HTTP requestu do tej domeny – nawet pierwszego, nawet po reinstalu, nawet w incognito. Eliminuje MITM downgrade attack na pierwszej wizycie usera.
+>
+> **DLACZEGO TO POWAŻNA DECYZJA — ŻELAZNA REGUŁA:**
+>
+> Submission jest **w jedną stronę**. Wycofanie się z preload listy zajmuje **6–12 tygodni** (czas na nowy release Chrome i propagację) – w międzyczasie:
+>
+> - 🔒 **Każda subdomena** musi serwować HTTPS z ważnym certem. `*.dekada72h.com`. Jeśli postawisz `dev.dekada72h.com` bez TLS – jest niedostępna z Chrome.
+> - 🔒 Jeśli **Let's Encrypt renew się zepsuje** i certs wygasną – domena jest niedostępna. Brak HTTP fallback (zazwyczaj można odpalić plain HTTP "tylko na chwilę by naprawić" – preload to wyklucza).
+> - 🔒 Jeśli **sprzedasz/oddasz domenę** – nowy właściciel nie może serwować HTTP. Tani redirect do nowej strony? Niemożliwy bez TLS.
+> - 🔒 **`includeSubDomains` jest wymagane** – nawet subdomeny które nie są twoje technicznie (np. cnames do third-party services) muszą być HTTPS.
+>
+> **Rekomendacja per domena (stan na 2026-05-01):**
+>
+> | Domena | Włączyć preload? | Uzasadnienie |
+> |---|---|---|
+> | `dekada72h.com` | ✅ TAK (kandydat) | Domena biznesowa, single-purpose, długoterminowa, brak planów na dev-subdomeny bez TLS |
+> | `kowalskipartners.space` | ✅ TAK (kandydat) | Statyczna strona klienta, single-purpose, długoterminowa |
+> | `domexpert.online` | ✅ TAK (kandydat) | jw. |
+> | `skytech-solutions.de` | ⚠️ ROZWAŻ | Może w przyszłości potrzebować dev/staging subdomeny |
+> | `skytech-solutions.pl` | ⚠️ ROZWAŻ | jw. |
+>
+> **Jak zaaplikować (gdy zdecydujesz):**
+>
+> 1. Edytuj `/srv/traefik/dynamic.yml` na VPS:
+>    ```yaml
+>    headers:
+>      stsSeconds: 31536000          # już jest
+>      stsIncludeSubdomains: true    # już jest
+>      stsPreload: true              # ← zmienić z false na true
+>    ```
+> 2. Restart Traefik: `cd /srv/traefik && docker compose restart traefik`
+> 3. Verify: `curl -ksI https://<domain>/ | grep -i strict-transport` musi zawierać `; preload`
+> 4. Submit każdej domeny ręcznie na <https://hstspreload.org/> i potwierdź własność.
+> 5. Czekaj ~6 tygodni na release Chrome z domeną na liście.
+>
+> **Test "ready to preload":** strona <https://hstspreload.org/> sama waliduje. Jeśli "eligible for preloading" – możesz, jeśli nie – pokazuje co poprawić.
+>
+> ### 2. Defense-in-depth per-user rate-limit w Next.js (Upstash Redis sliding window)
+>
+> **Status:** ❌ niezaimplementowane. Traefik ma per-IP rate-limit (10/min auth, 30/min public-api) co zatrzymuje większość ataków, ale przy CDN przed Traefikiem albo NAT-owanych ISP wszyscy użytkownicy dzielą jeden IP.
+>
+> **Decyzja:** czy chcemy ten dodatkowy poziom zabezpieczenia. Jeśli tak: integracja z Upstash (free tier) ~1 dnia pracy w `skytech-solutions.de`. Wymaga GitHub repo connection w Claude Code lub ręcznej pracy.
+>
+> ### 3. Konsolidacja `/srv/_backups/` (rok rolloff)
+>
+> Stare backupy `pre-audit-fix-2026-04-25/` mogą być usunięte po 2027-04-25 (rok retention). Niski priorytet – to są kilkudziesięcio-kilobajtowe configi YAML.
+>
+> ---
+>
+> **Zautomatyzowane follow-upy (nie wymagają twojej akcji):**
+>
+> | # | Co | Kiedy | Mechanizm |
+> |---|---|---|---|
+> | 1 | `apt autoremove --purge` (cleanup kernel-headers 6.8.0-110 po reboot) | 2026-05-02 12:00 UTC | systemd timer `audit-apt-cleanup.timer` na VPS |
+> | 2 | `fail2ban delignoreip 185.72.186.36` (zdjąć whitelist Kali audytora) | 2026-05-01 22:00 UTC | systemd timer `audit-f2b-whitelist-cleanup.timer` na VPS |
+>
+> Verify on VPS: `systemctl list-timers --all \| grep audit-`. Logi po wykonaniu: `journalctl -u audit-apt-cleanup.service` i `journalctl -u audit-f2b-whitelist-cleanup.service`.
+
+---
+
 **Data audytu:** 2026-05-01
 **Poprzedni audyt:** 2026-04-25 (zachowany w historii git)
 **Skanujący IP:** 185.72.186.36 (Kali Linux, IP whitelistowany w fail2ban na czas testów)

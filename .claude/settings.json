@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(npm audit)",
-      "Bash(ping *)"
+      "Bash(npm audit *)",
+      "Bash(ping *)",
+      "Bash(ssh dekada-vps:*)",
+      "Bash(dig *)",
+      "Bash(nmap *)",
+      "Bash(sslscan *)",
+      "Bash(nikto *)"
     ]
   }
 }

@@ -38,6 +38,18 @@ Statyczna strona internetowa agencji marketingowej **Dekada72H** z Wrocławia or
 
 ---
 
+> ## ⚠️ **OTWARTE DECYZJE BEZPIECZEŃSTWA — DO PODJĘCIA RĘCZNIE**
+>
+> Pełna lista w **[`SECURITY-AUDIT.md` → sekcja „Open Security Decisions"](SECURITY-AUDIT.md#-open-security-decisions-manual--non-automated)** na samej górze pliku.
+>
+> **Najważniejsze (stan 2026-05-01):**
+>
+> 1. **HSTS preload list** (`stsPreload: true`) — submission do listy Google jest **niewracalna na miesiące**. Wymaga świadomej decyzji per domena. Domeny biznesowe single-purpose (`dekada72h.com`, `kowalskipartners.space`, `domexpert.online`) są dobrymi kandydatami; `skytech-solutions.{de,pl}` raczej nie, jeśli planowane są dev-subdomeny. **Decyzja na potem.**
+>
+> Pozostałe follow-upy (kernel cleanup, fail2ban whitelist, per-user rate-limit Next.js) są zautomatyzowane lub nie wymagają decyzji. Szczegóły w `SECURITY-AUDIT.md`.
+
+---
+
 ## 🏆 Case Study — Dekada72H: Strona agencji + multi-domain hosting infrastruktury
 
 ### O projekcie
