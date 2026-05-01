@@ -87,9 +87,9 @@ Core Web Vitals to trzy kluczowe metryki, ktorymi Google mierzy real user experi
 
 ![Analytics dashboard - Core Web Vitals monitoring](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
 
-### LCP (Largest Contentful Paint) - cel <2.5s
+### LCP (Largest Contentful Paint) - cel &lt;2.5s
 
-LCP mierzy, ile czasu zajmuje zaladowanie najwiekszego widocznego elementu (zwykle hero image lub gloowny tekst H1). Cel: <2.5s = Good, 2.5-4.0s = Needs Improvement, >4.0s = Poor. W 2026 wiekszosc stron osiaga LCP 3-5s na mobile - to za wolno.
+LCP mierzy, ile czasu zajmuje zaladowanie najwiekszego widocznego elementu (zwykle hero image lub gloowny tekst H1). Cel: &lt;2.5s = Good, 2.5-4.0s = Needs Improvement, >4.0s = Poor. W 2026 wiekszosc stron osiaga LCP 3-5s na mobile - to za wolno.
 
 Jak zmierzyc: PageSpeed Insights, Lighthouse, Chrome DevTools Performance tab, web-vitals.js library. Najwazniejsze: real user data z Chrome User Experience Report (CrUX), nie tylko lab data.
 
@@ -97,9 +97,9 @@ Najczestsze przyczyny slow LCP: (1) wolny TTFB (Time To First Byte) z serwera - 
 
 Konkretne wdrozenia z najwiekszym wplywem: dodanie `<link rel="preload" href="hero.webp" as="image">` dla hero image moze poprawic LCP o 300-800ms. Przejscie z PNG na WebP/AVIF dla hero - 200-500ms. Premium hosting + CDN - 200-700ms TTFB improvement.
 
-### INP (Interaction to Next Paint) - cel <200ms
+### INP (Interaction to Next Paint) - cel &lt;200ms
 
-INP zastapilo FID (First Input Delay) w marcu 2024 jako oficjalna metryka Core Web Vitals. INP mierzy nie tylko pierwszy klik, ale wszystkie interakcje uzytkownika i ich czas odpowiedzi. Cel: <200ms = Good, 200-500ms = Needs Improvement, >500ms = Poor.
+INP zastapilo FID (First Input Delay) w marcu 2024 jako oficjalna metryka Core Web Vitals. INP mierzy nie tylko pierwszy klik, ale wszystkie interakcje uzytkownika i ich czas odpowiedzi. Cel: &lt;200ms = Good, 200-500ms = Needs Improvement, >500ms = Poor.
 
 INP to czesto najwiekszy problem w 2026 - poniewaz wiele stron nie zostalo przeoptymalizowanych po zmianie z FID. INP mierzy heavyweight interakcje, takie jak click na menu, sortowanie listy produktow, dodawanie do koszyka. JavaScript blokujacy main thread powoduje wolne INP.
 
@@ -107,9 +107,9 @@ Jak naprawic INP: (1) Minimalizuj long tasks (>50ms) - dziel kod na mniejsze fra
 
 Praktyczny tip: wlasciwie najwiecej INP problemow pochodzi z third-party scripts. Audit wszystkich scriptow zewnetrznych (analityka, ads, chat widgets), zoptymalizuj load timing (defer, async, lazy load on interaction), w skrajnych przypadkach usun te z najwiekszym kosztem performance.
 
-### CLS (Cumulative Layout Shift) - cel <0.1
+### CLS (Cumulative Layout Shift) - cel &lt;0.1
 
-CLS mierzy, jak bardzo elementy strony "skaczą" podczas ladowania. Cel: <0.1 = Good, 0.1-0.25 = Needs Improvement, >0.25 = Poor.
+CLS mierzy, jak bardzo elementy strony "skaczą" podczas ladowania. Cel: &lt;0.1 = Good, 0.1-0.25 = Needs Improvement, >0.25 = Poor.
 
 Najczestsze przyczyny CLS: (1) brak `width` i `height` na obrazkach -> tekst skacze gdy obrazek sie ladu, (2) ad slots bez zarezerwowanej przestrzeni -> reklamy "wpadaja" w content, (3) embeddowane iframes (YouTube, mapa) bez wymiarow, (4) FOUT/FOIT (Flash of Unstyled/Invisible Text) z custom fonts, (5) dynamicznie wstawiany content (banery cookie, popupy).
 
@@ -121,11 +121,11 @@ CLS jest najlatwiejszy do naprawy z trzech CWV, ale czesto jest pomijany. Pulapk
 
 | Branza | LCP cel | INP cel | CLS cel | Sredni 2026 |
 |---|---|---|---|---|
-| E-commerce | <2.0s | <150ms | <0.1 | LCP 3.4s, INP 280ms, CLS 0.18 |
-| News/Media | <2.5s | <200ms | <0.1 | LCP 3.8s, INP 320ms, CLS 0.22 |
-| SaaS B2B | <2.5s | <200ms | <0.1 | LCP 2.9s, INP 240ms, CLS 0.12 |
-| Lokalne firmy | <2.5s | <200ms | <0.1 | LCP 3.1s, INP 220ms, CLS 0.15 |
-| Blog/Content | <2.0s | <150ms | <0.1 | LCP 2.6s, INP 180ms, CLS 0.13 |
+| E-commerce | &lt;2.0s | &lt;150ms | &lt;0.1 | LCP 3.4s, INP 280ms, CLS 0.18 |
+| News/Media | &lt;2.5s | &lt;200ms | &lt;0.1 | LCP 3.8s, INP 320ms, CLS 0.22 |
+| SaaS B2B | &lt;2.5s | &lt;200ms | &lt;0.1 | LCP 2.9s, INP 240ms, CLS 0.12 |
+| Lokalne firmy | &lt;2.5s | &lt;200ms | &lt;0.1 | LCP 3.1s, INP 220ms, CLS 0.15 |
+| Blog/Content | &lt;2.0s | &lt;150ms | &lt;0.1 | LCP 2.6s, INP 180ms, CLS 0.13 |
 
 E-commerce ma najtrudniejsze cele bo wymaga najlepszych konwersji - na slow stronach koszyk porzucony jest 4x czesciej. SaaS B2B ma luzniejsze cele, bo uzytkownicy sa bardziej tolerancyjni dla narzedzi pracy. News musi byc szybki bo czytelnik ma skroma uwage.
 
