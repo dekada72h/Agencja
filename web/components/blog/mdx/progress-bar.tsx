@@ -8,28 +8,38 @@ import { useEffect, useState } from "react";
  * ProgressBar — animated horizontal bar with synchronized number counter.
  * Use inline in blog posts to visualize stats.
  *
- * <ProgressBar value={67} label="wzrost e-commerce w PL 2022-2026" suffix="%" />
+ * Accepts value as STRING (preferred for MDX) or NUMBER. We use string
+ * attributes in MDX because next-mdx-remote loses JSX-expression-as-
+ * number/string props through the RSC → client-component path (same
+ * bug that affected <Stat number={"X"}>).
+ *
+ * <ProgressBar value="67" label="wzrost e-commerce" suffix="%" />
  */
 export function ProgressBar({
   value,
   label,
   suffix = "%",
   color = "primary",
-  max = 100,
+  max = "100",
 }: {
-  value: number;
+  value: string | number;
   label: string;
   suffix?: string;
   color?: "primary" | "secondary" | "emerald" | "amber" | "rose";
-  max?: number;
+  max?: string | number;
 }) {
+  const numValue = typeof value === "string" ? Number(value) : value;
+  const numMax = typeof max === "string" ? Number(max) : max;
+  const safeValue = Number.isFinite(numValue) ? numValue : 0;
+  const safeMax = Number.isFinite(numMax) && numMax > 0 ? numMax : 100;
+
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
   const reduce = useReducedMotion();
   const mv = useMotionValue(0);
   const rounded = useTransform(mv, (v) => Math.round(v));
-  const [displayValue, setDisplayValue] = useState(reduce ? value : 0);
-  const pct = Math.min(100, Math.max(0, (value / max) * 100));
+  const [displayValue, setDisplayValue] = useState(reduce ? safeValue : 0);
+  const pct = Math.min(100, Math.max(0, (safeValue / safeMax) * 100));
 
   const colorMap = {
     primary: { bar: "from-primary to-secondary", text: "text-primary" },
@@ -43,16 +53,16 @@ export function ProgressBar({
   useEffect(() => {
     if (!inView) return;
     if (reduce) {
-      setDisplayValue(value);
+      setDisplayValue(safeValue);
       return;
     }
-    const controls = animate(mv, value, { duration: 1.5, ease: [0.22, 1, 0.36, 1] });
+    const controls = animate(mv, safeValue, { duration: 1.5, ease: [0.22, 1, 0.36, 1] });
     const unsub = rounded.on("change", (v) => setDisplayValue(v));
     return () => {
       controls.stop();
       unsub();
     };
-  }, [inView, reduce, value, mv, rounded]);
+  }, [inView, reduce, safeValue, mv, rounded]);
 
   return (
     <div ref={ref} className="not-prose my-4">
