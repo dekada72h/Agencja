@@ -29,31 +29,187 @@
 > | `skytech-solutions.de` | ⚠️ ROZWAŻ | Może w przyszłości potrzebować dev/staging subdomeny |
 > | `skytech-solutions.pl` | ⚠️ ROZWAŻ | jw. |
 >
-> **Jak zaaplikować (gdy zdecydujesz):**
+> ---
+> #### 🛠 Wariant A — włącz preload **dla wszystkich 5 domen jednocześnie** (1 minuta pracy)
 >
-> 1. Edytuj `/srv/traefik/dynamic.yml` na VPS:
->    ```yaml
->    headers:
->      stsSeconds: 31536000          # już jest
->      stsIncludeSubdomains: true    # już jest
->      stsPreload: true              # ← zmienić z false na true
->    ```
-> 2. Restart Traefik: `cd /srv/traefik && docker compose restart traefik`
-> 3. Verify: `curl -ksI https://<domain>/ | grep -i strict-transport` musi zawierać `; preload`
-> 4. Submit każdej domeny ręcznie na <https://hstspreload.org/> i potwierdź własność.
-> 5. Czekaj ~6 tygodni na release Chrome z domeną na liście.
+> Tylko jedna zmiana. Skopiuj i wklej w lokalnym terminalu:
 >
-> **Test "ready to preload":** strona <https://hstspreload.org/> sama waliduje. Jeśli "eligible for preloading" – możesz, jeśli nie – pokazuje co poprawić.
+> ```bash
+> # 1) Zaloguj się na VPS
+> ssh dekada-vps
+>
+> # 2) Backup obecnej konfiguracji
+> sudo cp /srv/traefik/dynamic.yml /srv/_backups/audit-2026-05-01/dynamic.yml.pre-preload.bak
+>
+> # 3) Flip false → true (idempotentne)
+> sudo sed -i 's/stsPreload: false/stsPreload: true/' /srv/traefik/dynamic.yml
+>
+> # 4) Restart Traefika (file watch reaguje na zmianę, ale restart pewniejszy)
+> cd /srv/traefik && sudo -u ubuntu docker compose restart traefik && sleep 5
+>
+> # 5) Verify — nagłówek MUSI zawierać "; preload" na końcu
+> for d in dekada72h.com domexpert.online kowalskipartners.space skytech-solutions.de skytech-solutions.pl; do
+>   echo -n "$d → "; curl -ksI https://$d/ | grep -i strict-transport
+> done
+> ```
+>
+> **Submission (per domena):** otwórz <https://hstspreload.org/>, wpisz domenę, sprawdź "Submit", powtórz dla każdej z 5 (lub mniejszej liczby).
+>
+> ---
+> #### 🛠 Wariant B — włącz preload **TYLKO dla wybranych domen** (np. dekada72h, kowalski, domexpert; pomiń skytech)
+>
+> Wymaga drugiego middleware w Traefik + zmiany compose labels per kontener. ~10 minut pracy.
+>
+> ```bash
+> ssh dekada-vps
+> sudo cp /srv/traefik/dynamic.yml /srv/_backups/audit-2026-05-01/dynamic.yml.pre-preload-split.bak
+>
+> # 1) Dodaj nowe middleware "security-headers-preload" do dynamic.yml — kopia security-headers z stsPreload: true
+> sudo tee -a /srv/traefik/dynamic.yml > /dev/null << 'EOF'
+>
+>     # Variant of security-headers WITH HSTS preload flag set.
+>     # Apply per-router only on domains submitted to hstspreload.org.
+>     security-headers-preload:
+>       headers:
+>         stsSeconds: 31536000
+>         stsIncludeSubdomains: true
+>         stsPreload: true
+>         contentTypeNosniff: true
+>         frameDeny: true
+>         referrerPolicy: "strict-origin-when-cross-origin"
+>         permissionsPolicy: "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+>         contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: blob: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://formspree.io https://images.unsplash.com; frame-ancestors 'none'; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+>         customResponseHeaders:
+>           Server: ""
+>           X-Powered-By: ""
+>           Cross-Origin-Opener-Policy: "same-origin"
+>           Cross-Origin-Resource-Policy: "same-origin"
+> EOF
+>
+> # 2) Per-router middleware override przez docker labels — przykład dla dekada72h:
+> #    edytuj /srv/sites/dekada72h.com/docker-compose.next.yml i do labels: dodaj
+> #    - "traefik.http.routers.dekada72h.middlewares=dekada72h-www,security-headers-preload@file"
+> #    (zastępuje default entryPoint middleware tylko dla tego routera)
+> sudo nano /srv/sites/dekada72h.com/docker-compose.next.yml
+> # zapisz i:
+> cd /srv/sites/dekada72h.com && sudo -u ubuntu docker compose -f docker-compose.next.yml up -d
+>
+> # 3) Powtórz (2) dla kowalskipartners.space i domexpert.online:
+> #    /srv/sites/kowalskipartners.space/docker-compose.yml
+> #    /srv/sites/domexpert.online/docker-compose.yml
+> # W każdym dodać do labels routera (np. kowalskipartners-space):
+> #    - "traefik.http.routers.<router-name>.middlewares=<existing>,security-headers-preload@file"
+>
+> # 4) Verify per domena
+> for d in dekada72h.com kowalskipartners.space domexpert.online; do
+>   echo -n "$d → "; curl -ksI https://$d/ | grep -i strict-transport
+> done
+> # skytech ma nadal bez "; preload"
+> for d in skytech-solutions.de skytech-solutions.pl; do
+>   echo -n "$d → "; curl -ksI https://$d/ | grep -i strict-transport
+> done
+> ```
+>
+> Submission per domena na <https://hstspreload.org/> — tylko te trzy.
+>
+> ---
+> #### 🛟 Rollback (jeśli zauważysz problem PRZED submitem na hstspreload)
+>
+> Tylko Traefik header się zmienia – żadne przeglądarki jeszcze nie zapamiętały preload. Bezpieczne wycofanie:
+>
+> ```bash
+> ssh dekada-vps
+> # przywróć oryginał z backupu
+> sudo cp /srv/_backups/audit-2026-05-01/dynamic.yml.pre-preload.bak /srv/traefik/dynamic.yml
+> # (jeśli wariant B) usuń security-headers-preload z dynamic.yml + przywróć compose labels
+> cd /srv/traefik && sudo -u ubuntu docker compose restart traefik
+> ```
+>
+> #### ⚠️ Rollback PO submisji na hstspreload — niemożliwy szybko
+>
+> Po submisji domeny i jej akceptacji przez Google: **wycofanie zajmuje 6–12 tygodni** (czas na nowy release Chrome i propagację). W tym czasie domena jest "uwięziona" w preload. Jest formularz removal request na <https://hstspreload.org/removal/> ale nie jest natychmiastowy. Dlatego **pomyśl 2× przed submitem.**
+>
+> #### 🧪 Test "ready to preload" przed submitem
+>
+> ```bash
+> # Skopiuj wynik na https://hstspreload.org/?domain=<domena> i sprawdź "preview"
+> curl -ksI https://dekada72h.com/ | grep -i strict-transport-security
+> # Powinno: max-age=31536000; includeSubDomains; preload
+> # Plus: HTTPS musi działać dla domain root + www + 3+ aktywnych subdomen
+> ```
 >
 > ### 2. Defense-in-depth per-user rate-limit w Next.js (Upstash Redis sliding window)
 >
 > **Status:** ❌ niezaimplementowane. Traefik ma per-IP rate-limit (10/min auth, 30/min public-api) co zatrzymuje większość ataków, ale przy CDN przed Traefikiem albo NAT-owanych ISP wszyscy użytkownicy dzielą jeden IP.
 >
-> **Decyzja:** czy chcemy ten dodatkowy poziom zabezpieczenia. Jeśli tak: integracja z Upstash (free tier) ~1 dnia pracy w `skytech-solutions.de`. Wymaga GitHub repo connection w Claude Code lub ręcznej pracy.
+> **Decyzja:** czy chcemy ten dodatkowy poziom zabezpieczenia. Jeśli tak: integracja z Upstash (free tier) ~1 dnia pracy w `skytech-solutions.de`.
+>
+> #### 🛠 Jak zrobić (gdy zdecydujesz)
+>
+> ```bash
+> # 1) Zarejestruj się na https://upstash.com/ (free tier wystarczy: 10k req/dzień)
+> # 2) Stwórz nowy Redis database, region: eu-west-1 lub eu-central-1
+> # 3) Skopiuj UPSTASH_REDIS_REST_URL i UPSTASH_REDIS_REST_TOKEN
+>
+> # 4) Lokalnie:
+> cd /home/kali/Desktop/skytech-solutions.de
+> npm install @upstash/ratelimit @upstash/redis
+>
+> # 5) Stwórz src/lib/ratelimit.ts:
+> cat > src/lib/ratelimit.ts << 'EOF'
+> import { Ratelimit } from "@upstash/ratelimit";
+> import { Redis } from "@upstash/redis";
+>
+> const redis = Redis.fromEnv(); // czyta UPSTASH_REDIS_REST_URL + _TOKEN
+>
+> export const authLimiter = new Ratelimit({
+>   redis,
+>   limiter: Ratelimit.slidingWindow(5, "1 m"), // 5 prób/min na user
+>   analytics: true,
+>   prefix: "rl:auth",
+> });
+>
+> export const publicLimiter = new Ratelimit({
+>   redis,
+>   limiter: Ratelimit.slidingWindow(15, "1 m"), // 15/min na user
+>   prefix: "rl:public",
+> });
+> EOF
+>
+> # 6) W każdym z 4 publicznych endpointów (src/app/api/{contact,leads,auth/forgot}/route.ts
+> #    + auth callback w src/lib/auth.ts) na początku POST handler dodaj:
+> #
+> #    import { authLimiter } from "@/lib/ratelimit";
+> #    const id = req.headers.get("x-forwarded-for") ?? "anon";
+> #    const { success } = await authLimiter.limit(id);
+> #    if (!success) return NextResponse.json({ error: "rate limited" }, { status: 429 });
+>
+> # 7) Dodaj do .env na VPS (/srv/sites/skytech-solutions/.env):
+> #    UPSTASH_REDIS_REST_URL=https://xxx.upstash.io
+> #    UPSTASH_REDIS_REST_TOKEN=AaXxXx...
+> #    + dopisać te 2 zmienne do environment: w docker-compose.yml
+>
+> # 8) Sync na VPS, rebuild, restart:
+> rsync -av --exclude=node_modules --exclude=.next --exclude=.git --exclude=.env src/ dekada-vps:/srv/sites/skytech-solutions/build/src/
+> rsync -av package.json package-lock.json dekada-vps:/srv/sites/skytech-solutions/build/
+> ssh dekada-vps 'cd /srv/sites/skytech-solutions && sudo -u ubuntu docker compose build web && sudo -u ubuntu docker compose up -d'
+> ```
+>
+> Po wdrożeniu Traefik per-IP zostaje jako pierwsza linia, Upstash łapie obejścia per-IP (CDN/NAT). Limity możesz tunować w jednym pliku.
 >
 > ### 3. Konsolidacja `/srv/_backups/` (rok rolloff)
 >
 > Stare backupy `pre-audit-fix-2026-04-25/` mogą być usunięte po 2027-04-25 (rok retention). Niski priorytet – to są kilkudziesięcio-kilobajtowe configi YAML.
+>
+> #### 🛠 Jak zrobić (po 2027-04-25)
+>
+> ```bash
+> ssh dekada-vps
+> sudo ls -la /srv/_backups/                       # sprawdź co tam jest
+> sudo du -sh /srv/_backups/*                      # rozmiary
+> sudo rm -rf /srv/_backups/pre-audit-fix-2026-04-25/   # usuń stare
+> # zachowaj audit-2026-05-01/ aż do 2027-05-01
+> ```
 >
 > ---
 >
