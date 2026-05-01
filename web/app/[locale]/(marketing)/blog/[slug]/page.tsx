@@ -12,6 +12,7 @@ import { PostHero } from "@/components/blog/post-hero";
 import { PostFaq } from "@/components/blog/post-faq";
 import { PostRelated } from "@/components/blog/post-related";
 import { PostCta } from "@/components/blog/post-cta";
+import { Toc, extractToc } from "@/components/blog/toc";
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();
@@ -148,6 +149,7 @@ export default async function BlogPostPage({
       />
 
       <article className="mx-auto max-w-[800px] px-6 lg:px-10 py-12 lg:py-16">
+        <Toc items={extractToc(post.content)} />
         <div
           className="
             prose prose-slate max-w-none prose-lg

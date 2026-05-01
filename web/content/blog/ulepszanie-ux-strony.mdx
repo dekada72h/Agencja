@@ -49,30 +49,45 @@ related:
     href: "/blog/jak-zwiekszyc-konwersje-na-stronie"
     title: "Jak Zwiekszyc Konwersje na Stronie - CRO w Praktyce"
     category: "Konwersje"
-    excerpt: ""
+    excerpt: "Praktyczny CRO 2026: techniki podnoszenia konwersji, A/B testy, optymalizacja formularzy i sciezek zakupowych."
   -
     href: "/blog/landing-page-co-to-jest"
     title: "Czym Jest Landing Page i Jak Go Zaprojektowac"
     category: "Konwersje"
-    excerpt: ""
+    excerpt: "Czym rozni sie landing page od strony WWW, jakie elementy musi miec i jak go zaprojektowac dla wysokiej konwersji."
   -
     href: "/blog/seo-pozycjonowanie-stron"
     title: "SEO i Pozycjonowanie Stron - Jak Wyprzedzic Konkurencje"
     category: "SEO"
-    excerpt: ""
+    excerpt: "Kompletny przewodnik po SEO 2026: on-page, techniczne, off-page, AI search i E-E-A-T - co podnosi pozycje w Google."
 ---
 
 88 procent użytkowników nie wraca na stronę po złym doświadczeniu UX. To nie jest losowa statystyka z marketingowego raportu - to dane z Forrester Research z 2024 roku, potwierdzone w polskim badaniu Gemius z 2025. Większość firm o tym wie, ale wciąż traktuje UX jako "miły dodatek" zamiast strategicznego elementu biznesu.
 
-Druga ważna dana: każda zainwestowana złotówka w UX zwraca się w stosunku 1 do 100. Forrester w 2023 roku przeanalizował 220 firm i pokazał, że dobrze zaprojektowane interakcje generują od 80 do 100 razy wyższy zwrot z inwestycji niż zaniedbane. A trzecia, którą warto pamiętać: jedna sekunda opóźnienia w ładowaniu strony to 7 procent spadku konwersji (Akamai 2024). Trzy sekundy opóźnienia to 21 procent mniej klientów.
+Druga ważna dana: każda zainwestowana złotówka w UX zwraca się w stosunku 1 do 100. Forrester w 2023 roku przeanalizował 220 firm i pokazał, że dobrze zaprojektowane interakcje generują od 80 do 100 razy wyższy zwrot z inwestycji niż zaniedbane.
+
+A trzecia, którą warto pamiętać: jedna sekunda opóźnienia w ładowaniu strony to 7 procent spadku konwersji (Akamai 2024). Trzy sekundy opóźnienia to 21 procent mniej klientów.
 
 Dobra wiadomość: większość zmian UX, które realnie wpływają na konwersje, NIE wymaga redesignu strony. To pojedyncze, mierzalne, wdrażane w 1-3 dni iteracje. W tym artykule pokazujemy 15 konkretnych zmian, które systematycznie poprawiają UX i konwersje - z konkretnymi danymi, przykładami i benchmarkami.
 
+<Tldr>
+- **88% uzytkownikow** nie wraca po zlym UX - jedna szansa na pierwsze wrazenie
+- **ROI 1:100** - kazda zlotowka w UX zwraca sie 80-100x (Forrester 2023)
+- **15 konkretnych zmian** zwiekszajacych konwersje bez redesignu strony
+- **Top 3 quick wins** to copy CTA, krotszy formularz i social proof above fold
+- **Mobile-first** - 60-70% ruchu z telefonow, projektuj na 375px (iPhone SE)
+- **Iteracja > redesign** - po pelnym redesignie konwersja spada 20-40% w 3 mies.
+</Tldr>
+
 <StatHighlight>
-  <Stat number={"88%"}>użytkowników nie wraca po złym UX</Stat>
-  <Stat number={"$1=$100"}>ROI inwestycji w UX (Forrester 2023)</Stat>
-  <Stat number={"7%"}>spadku konwersji za każdą sekundę opóźnienia</Stat>
+  <Stat number="88%">użytkowników nie wraca po złym UX</Stat>
+  <Stat number="$1=$100">ROI inwestycji w UX (Forrester 2023)</Stat>
+  <Stat number="7%">spadku konwersji za każdą sekundę opóźnienia</Stat>
 </StatHighlight>
+
+<ProgressBar value={88} label="uzytkownikow nie wraca na strone po zlym UX (Forrester 2024)" suffix="%" color="rose" />
+<ProgressBar value={7} label="spadek konwersji za kazda sekunde opoznienia ladowania" suffix="%" color="amber" />
+<ProgressBar value={50} label="wzrost completion rate przy skroceniu formularza z 11 do 4 pol" suffix="%" color="emerald" />
 
 ## UX vs UI vs CRO - co naprawdę oznaczają te terminy
 
@@ -231,6 +246,14 @@ Każda zmiana UX musi być mierzalna. Bez danych podejmujesz decyzje na ślepo.
 Workflow: zmierz baseline (4 tygodnie przed zmianą) → wprowadź zmianę → zmierz przez 4 tygodnie → porównaj. Statystyczna istotność wymaga minimum 100 konwersji w okresie testu (przy 1000 wizyt miesięcznie i 2 procent conversion).
 
 ## Najczęstsze UX antipatterns - 10 do unikania
+
+<KeyPoints title="UX bledy, ktore odstrasza klientow w 5 sekund" variant="warning">
+- **Pop-upy natychmiast po wejsciu** - psuja pierwsze wrazenie i Core Web Vitals
+- **Auto-playing video z dzwiekiem** - 92% uzytkownikow tego nienawidzi
+- **Hover dropdowns na mobile** - nie dzialaja, uzytkownik utkniety
+- **Carousels z auto-rotation** - <1% uzytkownikow klika dalsze slajdy
+- **Modal po modalu** - cookies + newsletter + chat = uzytkownik ucieka
+</KeyPoints>
 
 1. **Auto-playing video z dźwiękiem** - 92 procent użytkowników nienawidzi (NN/g 2024)
 2. **Pop-upy natychmiast po wejściu** - psują pierwsze wrażenie i Core Web Vitals

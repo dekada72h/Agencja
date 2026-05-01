@@ -46,30 +46,47 @@ related:
     href: "/blog/seo-pozycjonowanie-stron"
     title: "SEO i Pozycjonowanie Stron - Jak Wyprzedzic Konkurencje w Google"
     category: "SEO"
-    excerpt: ""
+    excerpt: "Kompletny przewodnik po SEO 2026: on-page, techniczne, off-page, E-E-A-T i AI search - wszystko, co podnosi pozycje."
   -
     href: "/blog/html-vs-wordpress"
     title: "HTML vs WordPress - Co Wybrac dla Strony Firmowej"
     category: "Strony WWW"
-    excerpt: ""
+    excerpt: "Porownanie HTML i WordPress pod katem szybkosci, bezpieczenstwa, kosztow i SEO dla firm uslugowych."
   -
     href: "/blog/ile-kosztuje-strona-internetowa"
     title: "Ile Kosztuje Strona Internetowa w 2026 - Pelny Cennik"
     category: "Strony WWW"
-    excerpt: ""
+    excerpt: "Realne ceny stron WWW 2026, ukryte koszty utrzymania i jak ocenic, czy oferta agencji jest uczciwa."
 ---
 
-W swiecie SEO 60% wszystkich problemow rankingowych ma podloze techniczne - wolne ladowanie, blokady crawlera, brak schema markup, blędy indeksacji, problemy z renderingiem JavaScript. A tylko 30% polskich firm regularnie wykonuje techniczny audyt SEO. Reszta inwestuje w content i linkbuilding na fundamencie, ktorego architektura jest fundamentalnie dziurawa - to jak budowanie wiezowca na piasku. Najlepsze tresci nie pomoga, jesli Googlebot nie moze ich efektywnie zaindeksowac.
+W swiecie SEO 60% wszystkich problemow rankingowych ma podloze techniczne - wolne ladowanie, blokady crawlera, brak schema markup, blędy indeksacji, problemy z renderingiem JavaScript. A tylko 30% polskich firm regularnie wykonuje techniczny audyt SEO.
 
-W 2026 roku Google uzywa ponad 200 sygnalow rankingowych - od oczywistych jak quality content i backlinki, przez Core Web Vitals (LCP, INP, CLS), po subtelnosci jak HTTP/3 support, edge caching latency czy schema markup nesting. Algorytmy uczace sie na milionach interakcji uzytkownikow rozumieja, kiedy strona realnie pomaga uzytkownikowi, a kiedy tylko udaje. 53% mobile uzytkownikow opuszcza strony, ktore laduja sie dluzej niz 3 sekundy - i Google to mierzy.
+Reszta inwestuje w content i linkbuilding na fundamencie, ktorego architektura jest fundamentalnie dziurawa - to jak budowanie wiezowca na piasku. Najlepsze tresci nie pomoga, jesli Googlebot nie moze ich efektywnie zaindeksowac.
+
+W 2026 roku Google uzywa ponad 200 sygnalow rankingowych - od oczywistych jak quality content i backlinki, przez Core Web Vitals (LCP, INP, CLS), po subtelnosci jak HTTP/3 support, edge caching latency czy schema markup nesting.
+
+Algorytmy uczace sie na milionach interakcji uzytkownikow rozumieja, kiedy strona realnie pomaga uzytkownikowi, a kiedy tylko udaje. 53% mobile uzytkownikow opuszcza strony, ktore laduja sie dluzej niz 3 sekundy - i Google to mierzy.
 
 Ten przewodnik to kompletny zestaw narzedzi technicznego SEO na 2026: Core Web Vitals z konkretnymi target i fix-ami, schema markup z najnowszymi rozszerzeniami, crawlability/indexability optimization, mobile-first audit, site speed (12 fixes z najwiekszym wplywem), HTTPS/security headers, hreflang dla miedzynarodowych projektow, JavaScript SEO i rendering. Z konkretnymi narzedziami, code snippets i benchmarks.
 
+<Tldr>
+- **60% stron ma problemy** z Core Web Vitals - to fundament technicznego SEO
+- **INP zastapilo FID** w marcu 2024 - cel <200ms, najczestszy problem to third-party scripts
+- **3 obowiazkowe schemas:** Organization/LocalBusiness, BreadcrumbList, WebSite z SearchAction
+- **Mobile-first indexing** - 75% wyszukiwan z mobile, ranking oparty na wersji mobilnej
+- **HTTPS + security headers** to baseline 2026 - HSTS, CSP, X-Frame-Options
+- **SSG/SSR > CSR** - statyczne strony i SSR daja najlepsze SEO dla content sites
+</Tldr>
+
 <StatHighlight>
-  <Stat number={"60%"}>stron ma problemy z Core Web Vitals (Google data 2025)</Stat>
-  <Stat number={"53%"}>mobile users opuszcza strony ladujace sie dluzej niz 3s</Stat>
-  <Stat number={"200+"}>sygnalow rankingowych Google w 2026 roku</Stat>
+  <Stat number="60%">stron ma problemy z Core Web Vitals (Google data 2025)</Stat>
+  <Stat number="53%">mobile users opuszcza strony ladujace sie dluzej niz 3s</Stat>
+  <Stat number="200+">sygnalow rankingowych Google w 2026 roku</Stat>
 </StatHighlight>
+
+<ProgressBar value={60} label="stron ma problemy z Core Web Vitals (Google 2025)" suffix="%" color="rose" />
+<ProgressBar value={53} label="mobile users opuszcza strony ladujace dluzej niz 3s" suffix="%" color="amber" />
+<ProgressBar value={75} label="wyszukiwan Google pochodzi z urzadzen mobilnych" suffix="%" color="primary" />
 
 ## Czym jest techniczne SEO i dlaczego to fundament
 
@@ -83,7 +100,16 @@ Wartosc technicznego SEO: jeden dobrze zrobiony audyt + wdrozenie moze zwiekszyc
 
 ## Core Web Vitals 2026 - LCP, INP, CLS
 
-Core Web Vitals to trzy kluczowe metryki, ktorymi Google mierzy real user experience. W 2026 INP zastapilo FID jako oficjalna metryka. Zeby twoja strona miala dobry CWV signal, wszystkie trzy musza byc w Good range na 75% wszystkich page views z 28-dniowego okna.
+Core Web Vitals to trzy kluczowe metryki, ktorymi Google mierzy real user experience. W 2026 INP zastapilo FID jako oficjalna metryka.
+
+Zeby twoja strona miala dobry CWV signal, wszystkie trzy musza byc w Good range na 75% wszystkich page views z 28-dniowego okna.
+
+<KeyPoints title="Targety Core Web Vitals 2026" variant="default">
+- **LCP (Largest Contentful Paint)** - cel <2,5s, najwiekszy element widoczny na ekranie
+- **INP (Interaction to Next Paint)** - cel <200ms, czas reakcji na interakcje uzytkownika
+- **CLS (Cumulative Layout Shift)** - cel <0,1, jak bardzo elementy "skacza" przy ladowaniu
+- **75% percentyl** - wymagane dla 75% page views z ostatnich 28 dni real user data
+</KeyPoints>
 
 ![Analytics dashboard - Core Web Vitals monitoring](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)
 
@@ -381,6 +407,14 @@ Dynamic rendering = serwer rozpoznaje user-agent (Googlebot vs human) i serwuje 
 W marcu 2024 Google deprecated dynamic rendering jako rekomendacje. Powod: niezgodnosc z principles (cloaking issues), nowoczesne SSR/SSG sa lepszym rozwiazaniem. W 2026 - jesli masz dynamic rendering, planuj migracje na SSR/SSG w nadchodzacych 12-18 miesiacach.
 
 ## Najczestsze bledy techniczne SEO
+
+<KeyPoints title="Top 5 najwiekszych grzechow SEO 2026" variant="warning">
+- **Slow LCP na mobile** - default WordPress install z hero image niezoptymalizowany (>4s)
+- **Brak schema markup** - basic Organization, BreadcrumbList nie wdrozone
+- **Bledne canonical** - duplicate content przez parametry URL psuje crawl budget
+- **Bledne robots.txt** - blokuje CSS/JS, Google nie moze poprawnie renderowac strony
+- **404 dla wazntych URL** po migracji bez 301 redirects = utrata rankingu
+</KeyPoints>
 
 10 fixes z najwiekszym wplywem na rankings, ktore widzimy regularnie w polskich firmach 2026:
 

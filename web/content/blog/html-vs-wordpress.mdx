@@ -49,17 +49,17 @@ related:
     href: "/blog/seo-techniczne-poradnik"
     title: "Techniczne SEO 2026 - Core Web Vitals, Schema, Crawlability"
     category: "SEO"
-    excerpt: ""
+    excerpt: "Praktyczny przewodnik po technicznym SEO 2026 - Core Web Vitals, schema markup i crawlability dla lepszego rankingu."
   -
     href: "/blog/ile-kosztuje-strona-internetowa"
     title: "Ile Kosztuje Strona Internetowa w 2026? Cennik i Ukryte Koszty"
     category: "Strony WWW"
-    excerpt: ""
+    excerpt: "Realne koszty stworzenia strony internetowej w 2026 - cennik, ukryte koszty utrzymania i porównanie różnych opcji."
   -
     href: "/blog/strona-internetowa-dla-firmy"
     title: "Strona Internetowa dla Firmy - Dlaczego w 2026 to Koniecznosc"
     category: "Strony WWW"
-    excerpt: ""
+    excerpt: "Dlaczego profesjonalna strona firmowa w 2026 to fundament biznesu - wpływ na wiarygodność, konwersje i pozyskiwanie klientów."
 ---
 
 Stoisz przed decyzją o stworzeniu strony internetowej dla swojej firmy i zastanawiasz się, jaką technologię
@@ -70,6 +70,15 @@ Stoisz przed decyzją o stworzeniu strony internetowej dla swojej firmy i zastan
 Jako [agencja z ponad 10-letnim doświadczeniem](/about), stworzyliśmy wiele stron w obu
             technologiach. Widzimy na co dzień, jak wybór platformy wpływa na sukces biznesowy naszych klientów. Dlatego
             chcemy podzielić się z Tobą naszą wiedzą, abyś mógł podjąć świadomą decyzję.
+
+<Tldr>
+- **Szybkosc**: HTML poniżej 1s vs WordPress 2-5s — różnica decyduje o pozycji w Google i konwersjach
+- **Bezpieczenstwo**: HTML ma minimalna powierzchnie ataku, WordPress to 90% wszystkich zhakowanych CMS
+- **Koszty 5-letnie**: HTML wygrywa znacząco — bez aktualizacji wtyczek, tańszy hosting, brak licencji premium
+- **Core Web Vitals**: HTML osiąga 95+ PageSpeed Score, typowy WordPress 40-65
+- **Kiedy WordPress?** Tylko jeśli prowadzisz blog z codziennymi publikacjami albo sklep z setkami SKU
+- **Trendy 2026**: Headless CMS (Sanity, Strapi) + AI buildery (v0.dev, Bolt) jeszcze bardziej przesuwają wagę na HTML
+</Tldr>
 
 ## Czym jest strona HTML?
 
@@ -111,10 +120,12 @@ Badania Google pokazują, że 53% użytkowników mobilnych opuszcza stronę, je�
                 sekundy. Każda sekunda opóźnienia zmniejsza konwersję o około 7%. Szybkość to nie luksus - to
                 konieczność.
 
+<ProgressBar value={53} label="uzytkownikow mobilnych opuszcza strone ladujaca sie >3s" suffix="%" color="rose" />
+
 <StatHighlight>
-  <Stat number={"< 1s"}>Typowy czas ładowania HTML</Stat>
-  <Stat number={"2-5s"}>Typowy czas ładowania WordPress</Stat>
-  <Stat number={"53%"}>Odrzuceń przy > 3s ładowania</Stat>
+  <Stat number="< 1s">Typowy czas ładowania HTML</Stat>
+  <Stat number="2-5s">Typowy czas ładowania WordPress</Stat>
+  <Stat number="53%">Odrzuceń przy > 3s ładowania</Stat>
 </StatHighlight>
 
 Oczywiście, WordPress można przyspieszyć za pomocą wtyczek cache'ujących, CDN i zoptymalizowanego hostingu.
@@ -149,6 +160,8 @@ WordPress to zupełnie inna historia. Jako najpopularniejszy CMS na świecie, je
 - 99,4% luk bezpieczeństwa w ekosystemie WordPress pochodzi z
                 motywów i wtyczek
 - 52% wszystkich luk jest spowodowanych nieaktualnymi wtyczkami
+
+<ProgressBar value={90} label="zhakowanych stron CMS to WordPress (z winy motywow i wtyczek)" suffix="%" color="rose" />
 
 To nie znaczy, że WordPress jest z natury niebezpieczny - sam rdzeń systemu jest dobrze zabezpieczony.
             Problem leży w dodatkach: motywach, wtyczkach i zaniedbaniu aktualizacji. Jeśli zdecydujesz się na
@@ -280,15 +293,17 @@ Od 2021 roku Google oficjalnie uczynil <a href="https://web.dev/articles/vitals"
                 reklamami, fontami i wtyczkami czesto generuje irytujace przesuniecia
 
 <StatHighlight>
-  <Stat number={"95+"}>Typowy PageSpeed Score strony HTML</Stat>
-  <Stat number={"40-65"}>Typowy PageSpeed Score WordPress</Stat>
-  <Stat number={"53%"}>Stron WordPress nie zdaje Core Web Vitals</Stat>
+  <Stat number="95+">Typowy PageSpeed Score strony HTML</Stat>
+  <Stat number="40-65">Typowy PageSpeed Score WordPress</Stat>
+  <Stat number="53%">Stron WordPress nie zdaje Core Web Vitals</Stat>
 </StatHighlight>
 
 Mozesz to sprawdzic sam - wejdz na strone **<a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>** od Google i przetestuj dowolna
             strone na WordPressie, a potem porownaj z nasza witryna. Roznica jest natychmiast widoczna. To nie marketing
             - to twarde dane, ktore Google uzywa do rankingu Twojej strony. Więcej o optymalizacji pod wyszukiwarki
             znajdziesz w naszym artykule o [SEO i pozycjonowaniu stron](/blog/seo-pozycjonowanie-stron).
+
+<ProgressBar value={53} label="stron WordPress nie zdaje testu Core Web Vitals Google" suffix="%" color="amber" />
 
 W praktyce oznacza to, ze strona HTML z identyczna trescia bedzie pozycjonowac sie wyzej w Google niz ta
                 sama tresc na WordPressie - po prostu dlatego, ze Google faworyzuje strony, ktore laduja sie szybko i
@@ -334,9 +349,9 @@ Po migracji na strone HTML stworzona od zera, z ta sama trescia i tym samym desi
             napisanym recznie):
 
 <StatHighlight>
-  <Stat number={"0,8s"}>Czas ladowania (z 4,2s)</Stat>
-  <Stat number={"96/100"}>PageSpeed Score (z 38/100)</Stat>
-  <Stat number={"-42%"}>Spadek wskaznika odrzucen</Stat>
+  <Stat number="0,8s">Czas ladowania (z 4,2s)</Stat>
+  <Stat number="96/100">PageSpeed Score (z 38/100)</Stat>
+  <Stat number="-42%">Spadek wskaznika odrzucen</Stat>
 </StatHighlight>
 
 - Czas ladowania spadl z 4,2s do 0,8s (poprawa o 81%)
@@ -346,6 +361,8 @@ Po migracji na strone HTML stworzona od zera, z ta sama trescia i tym samym desi
 - Koszty hostingu spadly z 120 zl/mies. do 25 zl/mies.
 - Koniec z regularnymi aktualizacjami WordPress, motywu i wtyczek
 - Zero incydentow bezpieczenstwa (wczesniej 2 wlamania w ciagu roku)
+
+<ProgressBar value={55} label="wzrost zapytan z formularza po migracji WordPress -> HTML" suffix="%" color="emerald" />
 
 Przy tym samym budzecie reklamowym (3000 zl/mies.) klient zaczal generowac 55% wiecej zapytan - nie
                 dzieki wiekszym wydatkom na reklamy, ale dzieki temu, ze ludzie, ktorzy klikali w reklame, faktycznie
@@ -373,6 +390,13 @@ WordPress natomiast wymaga ciaglej uwagi:
 W perspektywie 5 lat strona HTML to spokojny sen. Strona WordPress to ciagle "czy dzis cos sie nie
             zepsulo?". Wielu naszych klientow przychodzi do nas wlasnie z tego powodu - zmeczeni ciaglymi problemami z
             aktualizacjami i wtyczkami na WordPress.
+
+<KeyPoints title="Kiedy WordPress wygrywa - 4 konkretne scenariusze" variant="default">
+- **Blog z codzienna publikacja** — gdy edycja przez Twoj zespol jest priorytetem (alternatywa: HTML + headless CMS)
+- **Sklep internetowy z setkami SKU** — WooCommerce jest dojrzaly i tani na start (uwaga na koszty utrzymania)
+- **Calkowicie samodzielna obsluga bez programisty** — edytor wizualny WP wygrywa pod katem dostepnosci
+- **Bardzo ograniczony budzet startowy** — gotowe szablony WP startuja od 0 zl, ale platsisz w utrzymaniu
+</KeyPoints>
 
 ## Dostepnosc (Accessibility) - dlaczego to wazne i kto robi to lepiej?
 
@@ -463,7 +487,9 @@ Krajobraz tworzenia stron internetowych zmienia sie szybciej niz kiedykolwiek. T
 **AI buildery i generatory kodu** (Cursor, GitHub Copilot, v0.dev, Bolt) dramatycznie obnizaja koszt
             tworzenia stron HTML od zera. To, co kiedys wymagalo dziesiatek godzin recznego kodowania, dzis powstaje w
             kilka godzin z asysta AI. Programista pisze prompt, AI generuje czysty kod, programista weryfikuje i
-            optymalizuje. Efekt: koszt wlasnej strony HTML spadl o 40-60% w porownaniu z 2023 rokiem, a jakosc kodu
+            optymalizuje.
+
+Efekt: koszt wlasnej strony HTML spadl o 40-60% w porownaniu z 2023 rokiem, a jakosc kodu
             wzrosla. WordPress nie skorzystal w tym samym stopniu - sam ekosystem jest zbyt zlozony, zeby AI mogla go
             efektywnie automatyzowac.
 
