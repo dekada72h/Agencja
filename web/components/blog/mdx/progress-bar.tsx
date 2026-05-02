@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView, useMotionValue, useTransform, animate, useReducedMotion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
+import { motion, useInView, useMotionValue, animate, useReducedMotion } from "motion/react";
 
 /**
  * ProgressBar — animated horizontal bar with synchronized number counter.
@@ -34,10 +33,9 @@ export function ProgressBar({
   const safeMax = Number.isFinite(numMax) && numMax > 0 ? numMax : 100;
 
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-50px" });
+  const inView = useInView(ref, { once: true, amount: 0.2 });
   const reduce = useReducedMotion();
   const mv = useMotionValue(0);
-  const rounded = useTransform(mv, (v) => Math.round(v));
   const [displayValue, setDisplayValue] = useState(reduce ? safeValue : 0);
   const pct = Math.min(100, Math.max(0, (safeValue / safeMax) * 100));
 
@@ -56,13 +54,13 @@ export function ProgressBar({
       setDisplayValue(safeValue);
       return;
     }
-    const controls = animate(mv, safeValue, { duration: 1.5, ease: [0.22, 1, 0.36, 1] });
-    const unsub = rounded.on("change", (v) => setDisplayValue(v));
-    return () => {
-      controls.stop();
-      unsub();
-    };
-  }, [inView, reduce, safeValue, mv, rounded]);
+    const controls = animate(mv, safeValue, {
+      duration: 1.5,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (v) => setDisplayValue(Math.round(v)),
+    });
+    return () => controls.stop();
+  }, [inView, reduce, safeValue, mv]);
 
   return (
     <div ref={ref} className="not-prose my-4">
@@ -76,8 +74,8 @@ export function ProgressBar({
       <div className="relative h-2.5 rounded-full bg-gray-100 overflow-hidden">
         <motion.div
           className={`absolute inset-y-0 left-0 rounded-full bg-gradient-to-r ${c.bar}`}
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${pct}%` } : { width: 0 }}
+          initial={{ width: "0%" }}
+          animate={inView ? { width: `${pct}%` } : { width: "0%" }}
           transition={reduce ? { duration: 0 } : { duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
         />
       </div>
