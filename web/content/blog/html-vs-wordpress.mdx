@@ -120,7 +120,7 @@ Badania Google pokazują, że 53% użytkowników mobilnych opuszcza stronę, je�
                 sekundy. Każda sekunda opóźnienia zmniejsza konwersję o około 7%. Szybkość to nie luksus - to
                 konieczność.
 
-<ProgressBar value="53" label="uzytkownikow mobilnych opuszcza strone ladujaca sie >3s" suffix="%" color="rose" />
+<ProgressBar value={53} label="uzytkownikow mobilnych opuszcza strone ladujaca sie >3s" suffix="%" color="rose" />
 
 <StatHighlight>
   <Stat number="< 1s">Typowy czas ładowania HTML</Stat>
@@ -161,7 +161,7 @@ WordPress to zupełnie inna historia. Jako najpopularniejszy CMS na świecie, je
                 motywów i wtyczek
 - 52% wszystkich luk jest spowodowanych nieaktualnymi wtyczkami
 
-<ProgressBar value="90" label="zhakowanych stron CMS to WordPress (z winy motywow i wtyczek)" suffix="%" color="rose" />
+<ProgressBar value={90} label="zhakowanych stron CMS to WordPress (z winy motywow i wtyczek)" suffix="%" color="rose" />
 
 To nie znaczy, że WordPress jest z natury niebezpieczny - sam rdzeń systemu jest dobrze zabezpieczony.
             Problem leży w dodatkach: motywach, wtyczkach i zaniedbaniu aktualizacji. Jeśli zdecydujesz się na
@@ -276,7 +276,7 @@ Zobacz nasze [portfolio](/portfolio) - każdy projekt jest inny, bo każdy był 
 
 ## Core Web Vitals - dlaczego Google nagradza strony HTML?
 
-Od 2021 roku Google oficjalnie uczynil <a href=" P0  target="_blank" rel="noopener noreferrer">Core Web Vitals</a> jednym z kluczowych czynnikow rankingowych. To trzy
+Od 2021 roku Google oficjalnie uczynil <a href="https://web.dev/articles/vitals" target="_blank" rel="noopener noreferrer">Core Web Vitals</a> jednym z kluczowych czynnikow rankingowych. To trzy
             metryki, które mierzą doswiadczenie użytkownika na Twojej stronie - i to tutaj strony HTML maja ogromna,
             mierzalna przewage nad WordPress.
 
@@ -298,12 +298,12 @@ Od 2021 roku Google oficjalnie uczynil <a href=" P0  target="_blank" rel="noopen
   <Stat number="53%">Stron WordPress nie zdaje Core Web Vitals</Stat>
 </StatHighlight>
 
-Możesz to sprawdzic sam - wejdz na stronę **<a href=" P0  target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>** od Google i przetestuj dowolna
+Możesz to sprawdzic sam - wejdz na stronę **<a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>** od Google i przetestuj dowolna
             stronę na WordPressie, a potem porownaj z nasza witryna. Różnica jest natychmiast widoczna. To nie marketing
             - to twarde dane, które Google uzywa do rankingu Twojej strony. Więcej o optymalizacji pod wyszukiwarki
             znajdziesz w naszym artykule o [SEO i pozycjonowaniu stron](/blog/seo-pozycjonowanie-stron).
 
-<ProgressBar value="53" label="stron WordPress nie zdaje testu Core Web Vitals Google" suffix="%" color="amber" />
+<ProgressBar value={53} label="stron WordPress nie zdaje testu Core Web Vitals Google" suffix="%" color="amber" />
 
 W praktyce oznacza to, że strona HTML z identyczna treścią będzie pozycjonowac się wyzej w Google niz ta
                 sama treść na WordPressie - po prostu dlatego, że Google faworyzuje strony, które laduja się szybko i
@@ -338,9 +338,9 @@ W naszej agencji każdy projekt zaczyna się od projektowania mobilnego - najpie
 Zeby nie być goloslownymi, pokazzemy typowy scenariusz, który widzimy u naszych klientów decydujących się na
             przejscie z WordPress na stronę HTML.
 
-### Firma usługowa z Wrocławia - przed i po migracji
+### Firma uslugowa z Wrocławia - przed i po migracji
 
-Klient prowadzil firme usługowa że strona na WordPressie z motywem Divi i 22 aktywnymi wtyczkami. Strona
+Klient prowadzil firme uslugowa że strona na WordPressie z motywem Divi i 22 aktywnymi wtyczkami. Strona
             ladowala się 4,2 sekundy na komputerze i 6,8 sekundy na telefonie. PageSpeed Score wynosil 38/100 na mobile.
             Klient wydawal 3000 zl miesięcznie na Google Ads, ale wskaznik odrzucen (bounce rate) wynosil 68% -
             wiekszoscludzi opuszczala stronę zanim zdazyla się zaladowac.
@@ -362,7 +362,7 @@ Po migracji na stronę HTML stworzona od zera, z ta sama treścią i tym samym d
 - Koniec z regularnymi aktualizacjami WordPress, motywu i wtyczek
 - Zero incydentow bezpieczenstwa (wcześniej 2 wlamania w ciągu roku)
 
-<ProgressBar value="55" label="wzrost zapytan z formularza po migracji WordPress -> HTML" suffix="%" color="emerald" />
+<ProgressBar value={55} label="wzrost zapytan z formularza po migracji WordPress -> HTML" suffix="%" color="emerald" />
 
 Przy tym samym budzecie reklamowym (3000 zl/mies.) klient zaczal generowac 55% wiecej zapytan - nie
                 dzieki większym wydatkom na reklamy, ale dzieki temu, że ludzie, którzy klikali w reklamę, faktycznie
@@ -380,7 +380,7 @@ Strona HTML jest jak solidny dom z cegly - stoi stabilnie i możesz dobudowac ko
 
 WordPress natomiast wymaga ciaglej uwagi:
 
-- Aktualizacje rdzenia WordPress (4-5 razy rocznie, w tym duże aktualizacje co pół roku)
+- Aktualizacje rdzenia WordPress (4-5 razy rocznie, w tym duże aktualizacje co pol roku)
 - Aktualizacje motywu (jeśli tworca nadal go rozwija)
 - Aktualizacje każdej wtyczki z osobna (srednia strona WP ma 20-30 wtyczek)
 - Ryzyko konfliktu między wtyczkami po aktualizacji - często jedna aktualizacja "psuje" cała stronę
@@ -400,7 +400,7 @@ W perspektywie 5 lat strona HTML to spokojny sen. Strona WordPress to ciągle "c
 
 ## Dostępność (Accessibility) - dlaczego to wazne i kto robi to lepiej?
 
-Dostępność strony internetowej (<a href=" P0  target="_blank" rel="noopener noreferrer">WCAG</a>) to temat, który staje się coraz wazniejszy - zarowno z perspektywy
+Dostępność strony internetowej (<a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG</a>) to temat, który staje się coraz wazniejszy - zarowno z perspektywy
             etycznej, prawnej, jak i SEO. Google coraz bardziej faworyzuje strony, które sa dostepne dla wszystkich
             użytkowników, w tym osob z niepelnosprawnosciami.
 
